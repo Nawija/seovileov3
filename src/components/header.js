@@ -72,7 +72,7 @@ const Header = () => {
                                     : "text-gray-500 hoverLink font-bold"
                             }
                         >
-                            CKL Facades
+                            Seovileo
                         </p>
                     </Link>
                     <button
@@ -127,15 +127,15 @@ const Header = () => {
                         <li className="mx-8 my-2 px-2 py-2">
                             <Link
                                 onClick={falseMenu}
-                                aria-label="About Us"
+                                aria-label="portfolio"
                                 className={
                                     navbar
                                         ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
-                                to="/#about"
+                                to="/portfolio"
                             >
-                                About
+                                Portfolio
                             </Link>
                         </li>
                         <Link
@@ -161,35 +161,35 @@ const Header = () => {
                                         : "font-bold text-gray-300 transition-all duration-200 text-2xl w-max -mt-1"
                                 }
                             >
-                                CKL Facades
+                                Seovileo
                             </p>
                         </Link>
                         <li className="mx-8 my-2 px-2 py-2">
                             <Link
                                 onClick={falseMenu}
-                                aria-label="Services"
+                                aria-label="usługi"
                                 className={
                                     navbar
                                         ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
-                                to="/#services"
+                                to="/usługi"
                             >
-                                Services
+                                Usługi
                             </Link>
                         </li>
                         <li className="mx-8 my-2 px-2 py-2">
                             <Link
                                 onClick={falseMenu}
-                                aria-label="Contakt"
+                                aria-label="kontakt"
                                 className={
                                     navbar
                                         ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
-                                to="/#contact"
+                                to="/kontakt"
                             >
-                                Contakt
+                                Kontakt
                             </Link>
                         </li>
                     </ul>

@@ -3,16 +3,12 @@
  */
 
 module.exports = {
-    pathPrefix: "/CKL-Facades",
+    pathPrefix: "/seovileov3",
     siteMetadata: {
-        title: `Building envelope and facade design`,
-        description: `Technical and design services to the building envelope and facade industry`,
+        title: `Freelancer. Stwórz z nami swoja wizytówkę`,
+        description: `Freelancer. Stwórz z nami swoja wizytówkę`,
         author: `Seovileo`,
         siteUrl: `https://seovileo.pl/`,
-        titlePL: `Projekt przegród budowlanych i elewacji`,
-        descriptionPL: `Usługi techniczne i projektowe dla przemysłu przegród budowlanych i elewacji`,
-        authorPL: `Seovileo`,
-        siteUrlPL: `https://seovileo.pl/`,
     },
     plugins: [
         {

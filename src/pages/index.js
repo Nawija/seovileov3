@@ -1,14 +1,12 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
 const IndexPage = ({ data }) => {
     const {
-        allDatoCmsHeroTitle,
         allDatoCmsAbout,
         allDatoCmsAboutArticle,
         allDatoCmsInfoSection,
@@ -23,61 +21,10 @@ const IndexPage = ({ data }) => {
         allDatoCmsBadgesPotin,
     } = data;
 
-    const [changeLanguage, setLanguage] = useState(false);
-    const HandleLanguage = () => {
-        setLanguage(!changeLanguage);
-    };
     return (
         <Layout>
             <section className="relative flex items-center min-h-[16rem] justify-center w-full overflow-hidden">
-                <button
-                    onClick={HandleLanguage}
-                    className="absolute flex items-center justify-center top-[2.2vh] sm:top-[1.5vh] lg:top-10 z-[99] right-20 lg:right-12 p-2 rounded-full bg-gray-800 transition-all duration-100"
-                >
-                    <StaticImage
-                        height={20}
-                        width={20}
-                        alt="uk"
-                        placeholder="blurred"
-                        src="../assets/language/uk.png"
-                    />
-                    <div
-                        className={
-                            changeLanguage
-                                ? "absolute flex flex-col items-center justify-start rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-100 transition-transform duration-50"
-                                : "absolute rounded-lg mt-3 text-gray-100 top-full bg-gray-800 py-3 scale-0 transition-transform duration-50"
-                        }
-                    >
-                        <Link
-                            to="/"
-                            className="flex items-center justify-start px-6 w-full hover:bg-gray-700"
-                        >
-                            <StaticImage
-                                height={12}
-                                width={12}
-                                layout="fixed"
-                                alt="uk"
-                                placeholder="blurred"
-                                src="../assets/language/uk.png"
-                            />
-                            <p className="ml-2">English</p>
-                        </Link>
-                        <Link
-                            to="/pl"
-                            className="flex items-center justify-start px-6 mt-3 w-full hover:bg-gray-700"
-                        >
-                            <StaticImage
-                                height={12}
-                                width={12}
-                                layout="fixed"
-                                placeholder="blurred"
-                                alt="poland"
-                                src="../assets/language/poland.png"
-                            />
-                            <p className="ml-2">Polish</p>
-                        </Link>
-                    </div>
-                </button>
+                
                 <div className="relative -mt-8 w-full -z-20">
                     <StaticImage
                         className="h-full w-[230%] md:w-full"
@@ -90,16 +37,16 @@ const IndexPage = ({ data }) => {
                 </div>
 
                 <div className="absolute flex flex-col items-center justify-cente">
-                    {allDatoCmsHeroTitle.edges.map(({ node }) => (
+
                         <h1 className="text-xl md:w-[70%] mt-12 sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl lg:pt-12 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
-                            {node.heroTitle}
+                        Freelancer stwórz z nami swoja wizytówkę
                         </h1>
-                    ))}
+
                     <Link
                         to="/about-us"
-                        className="mt-2 lg:mt-6 hover:bg-black transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
+                        className="mt-2 lg:mt-6 hover:bg-zinc-800 transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
                     >
-                        Show More
+                        Portfolio
                     </Link>
                 </div>
 
