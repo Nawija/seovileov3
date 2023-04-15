@@ -4,11 +4,10 @@ import Seo from "../components/seo";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import { HeroCompon, ProjectsCompon } from "../components/index";
 
 const IndexPage = ({ data }) => {
     const {
-        allDatoCmsAbout,
-        allDatoCmsAboutArticle,
         allDatoCmsInfoSection,
         allDatoCmsAdvantage,
         allDatoCmsProjectHeader,
@@ -23,121 +22,8 @@ const IndexPage = ({ data }) => {
 
     return (
         <Layout>
-            <section className="relative flex items-center min-h-[16rem] justify-center w-full overflow-hidden">
-                
-                <div className="relative -mt-8 w-full -z-20">
-                    <StaticImage
-                        className="h-full w-[230%] md:w-full"
-                        quality={100}
-                        src="../assets/hero.png"
-                        loading="eager"
-                        alt="Facades project"
-                        placeholder="blurred"
-                    />
-                </div>
-
-                <div className="absolute flex flex-col items-center justify-cente">
-
-                        <h1 className="text-xl md:w-[70%] mt-12 sm:text-3xl md:text-3xl lg:text-3xl xl:text-5xl lg:pt-12 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
-                        Freelancer stwórz z nami swoja wizytówkę
-                        </h1>
-
-                    <Link
-                        to="/about-us"
-                        className="mt-2 lg:mt-6 hover:bg-zinc-800 transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
-                    >
-                        Portfolio
-                    </Link>
-                </div>
-
-                <div className="text-gray-300 hidden lg:flex text-sm absolute left-2 flex-col items-center justify-center uppercase -my-3">
-                    {["L", "I", "N", "K", "E", "D", "I", "N"].map(
-                        (letter, index) => (
-                            <p key={index}>{letter}</p>
-                        )
-                    )}
-                    <div className="h-8 w-[2px] my-4 bg-gray-600 rounded-3xl" />
-                    <Link
-                        to="https://www.linkedin.com/company/ckl-facades/?fbclid=IwAR2BI5yn7XTImJnXJ9Pl0OmsGPAA8fFKzTba0CPcDrkQxkUtcQJtEX_CIMQ"
-                        rel="noopener noreferrer"
-                    >
-                        <svg
-                            className="h-4 w-4"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                    </Link>
-                </div>
-            </section>
-
-            <section id="about" className="scroll-m-16 mt-10 mb-6 md:mb-16">
-                <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
-                    <div className="mb-10 md:mb-16">
-                        <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
-                            About Us
-                        </h2>
-
-                        {allDatoCmsAbout.edges.map(({ node }) => (
-                            <p className="max-w-screen-md text-gray-500 w-[70%] md:text-lg text-center mx-auto">
-                                {node.aboutUs}
-                            </p>
-                        ))}
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
-                        {allDatoCmsAboutArticle.edges.map(({ node }) => (
-                            <div className="flex flex-col md:flex-row items-start gap-4 lg:gap-6">
-                                <Link
-                                    to={node.slug}
-                                    className="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
-                                >
-                                    <GatsbyImage
-                                        className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
-                                        loading="eager"
-                                        image={getImage(
-                                            node.img.gatsbyImageData
-                                        )}
-                                        alt={node.img.alt || "Facades"}
-                                    />
-                                </Link>
-
-                                <div className="flex flex-col gap-2">
-                                    <span className="text-gray-400 text-sm">
-                                        {node.date}
-                                    </span>
-
-                                    <h2 className="text-gray-800 w-[93%] lg:w-[70%] text-xl font-bold">
-                                        <Link
-                                            to="/"
-                                            className="hoverLink  active:text-gray-900 transition duration-100"
-                                        >
-                                            {node.header}
-                                        </Link>
-                                    </h2>
-
-                                    <p className="text-gray-500 w-[93%] lg:w-[70%]">
-                                        {node.description}
-                                    </p>
-
-                                    <div>
-                                        <Link
-                                            to={node.slug}
-                                            className="linkColor hoverLink active:text-gray-900 font-semibold transition duration-100"
-                                        >
-                                            Read more
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <HeroCompon />
+            <ProjectsCompon />
 
             <section className="bg-white py-6 sm:py-8 lg:py-12">
                 <div className="mx-auto max-w-screen-xl px-4 md:px-8">
@@ -887,7 +773,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div className="lg:w-1/3 md:w-1/2 bg-gray-200 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6 rounded-2xl">
                         <h2 className="text-[#168585] font-bold text-lg mb-1 title-font">
-                        Form
+                            Form
                         </h2>
                         <p className="leading-relaxed mb-5 text-gray-600">
                             Write to us, we will reply within 24 hours
@@ -971,27 +857,6 @@ export const query = graphql`
             edges {
                 node {
                     heroTitle
-                }
-            }
-        }
-        allDatoCmsAbout {
-            edges {
-                node {
-                    aboutUs
-                }
-            }
-        }
-        allDatoCmsAboutArticle(limit: 4, sort: { date: DESC }) {
-            edges {
-                node {
-                    slug
-                    img {
-                        alt
-                        gatsbyImageData
-                    }
-                    header
-                    description
-                    date
                 }
             }
         }
