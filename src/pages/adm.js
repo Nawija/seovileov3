@@ -5,25 +5,36 @@ import { Link } from "gatsby";
 
 const Admin = () => (
     <Layout>
-        <section className="relative flex items-center min-h-[16rem] justify-center w-full">
-            <div className="w-full -mt-4 -z-20">
+        <section className="relative flex items-center justify-center w-full ">
+            <div className="relative w-full -z-20">
                 <StaticImage
-                    className="h-full w-[220%] md:w-full"
+                    className="h-40 lg:h-52 xl:h-56 w-full md:w-full"
                     quality={100}
                     src="../assets/hero.png"
+                    loading="eager"
+                    alt="Facades project"
                     placeholder="blurred"
                 />
+                <svg
+                    className="absolute -bottom-3 left-0 z-10"
+                    width="2004"
+                    height="154"
+                    viewBox="0 0 2004 154"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M0 37.9955C0 37.9955 458.5 122.495 1002 37.9955C1545.5 -46.5045 2004 37.9955 2004 37.9955V153.996H0V37.9955Z"
+                        fill="#ECECEC"
+                    />
+                </svg>
+                <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
             </div>
-            <p
-                className="absolute text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl capitalize text-white font-bold"
-            >
-                administration panel:
-            </p>
         </section>
-        <section className="mb-24 w-full flex flex-col items-center justify-center">
+        <section className="mb-52 mt-52 w-full flex flex-col items-center justify-center">
             <Link
-                to="https://cklfacades.admin.datocms.com/editor"
-                className="btn shadow-md hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 mt-12"
+                to="https://seovileo.admin.datocms.com/editor"
+                className="btn"
             >
                 Panel CMS
             </Link>

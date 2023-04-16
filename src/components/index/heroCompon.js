@@ -6,7 +6,7 @@ const HeroCompon = () => (
     <section className="relative flex items-center min-h-[16rem] justify-center w-full ">
         <div className="relative -mt-8 w-full -z-20">
             <StaticImage
-                className="h-96 lg:h-[41rem] w-full md:w-full"
+                className="h-96 lg:h-[38rem] w-full md:w-full"
                 quality={100}
                 src="../../assets/hero.png"
                 loading="eager"
@@ -26,7 +26,7 @@ const HeroCompon = () => (
                     fill="#ECECEC"
                 />
             </svg>
-            <div className="absolute w-full h-full top-0 left-0 bg-black/80" />
+            <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
         </div>
 
         <div className="absolute flex flex-col items-center justify-cente">

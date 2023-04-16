@@ -3,14 +3,14 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Footer = () => (
-    <div className="bg-gray-900 text-gray-400">
+    <div className="bg-gray-900 text-gray-400 bottom-0 translate-y-full absolute w-full">
         <footer className="mx-auto max-w-screen-2xl px-4 md:px-8">
             <div className="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
                 <div className="col-span-full lg:col-span-2">
                     <div className="mb-4 lg:-mt-2">
                         <Link
                             to="/"
-                            className="flex-col hover:scale-105 transition-all duration-300 flex h-auto w-20 mx-12 items-center justify-center"
+                            className="flex-col hover:scale-105 transition-all duration-300 flex h-auto w-20 items-center justify-center"
                             aria-label="logo"
                         >
                             <StaticImage
@@ -20,7 +20,7 @@ const Footer = () => (
                                 src="../assets/logoBrowser.png"
                             />
                             <p className="font-bold text-gray-300 transition-all duration-200 text-2xl w-max -mt-1">
-                                CKL Facades
+                                Seovileo
                             </p>
                         </Link>
                     </div>

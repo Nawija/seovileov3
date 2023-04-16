@@ -13,7 +13,10 @@ const IndexPage = ({ data }) => {
         <Layout>
             <HeroCompon />
 
-            <section id="projects" className="scroll-m-16 -mt-8 lg:-mt-4 mb-6 md:mb-16">
+            <section
+                id="projects"
+                className="-mt-8 lg:-mt-4 mb-6 md:mb-16"
+            >
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
@@ -34,7 +37,7 @@ const IndexPage = ({ data }) => {
                             <div className="flex flex-col md:flex-row items-start gap-4 lg:gap-6">
                                 <Link
                                     to={node.slug}
-                                    className="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
+                                    className="group w-full md:w-32 lg:w-40 h-56 md:h-32 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
                                 >
                                     <GatsbyImage
                                         className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
@@ -77,6 +80,9 @@ const IndexPage = ({ data }) => {
                         ))}
                     </div>
                 </div>
+                <div className="mx-auto text-center">
+                <Link className="text-center btn my-6 sm:my-10 xl:mt-20 xl:mb-8" to="/projekty">Więcej Projektów</Link>
+                </div>
             </section>
         </Layout>
     );
@@ -84,7 +90,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
     query MyQuery {
-        allDatoCmsPortfolio(sort: { data: DESC }) {
+        allDatoCmsPortfolio(sort: { data: DESC }, limit: 4) {
             edges {
                 node {
                     data
