@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 const HeroCompon = () => (
-    <section className="relative flex items-center min-h-[16rem] justify-center w-full overflow-hidden">
+    <section className="relative flex items-center min-h-[16rem] justify-center w-full ">
         <div className="relative -mt-8 w-full -z-20">
             <StaticImage
                 className="h-96 lg:h-[41rem] w-full md:w-full"
