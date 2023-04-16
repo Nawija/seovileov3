@@ -5,8 +5,8 @@
 module.exports = {
     pathPrefix: "/seovileov3",
     siteMetadata: {
-        title: `Freelancer. Stwórz z nami swoja wizytówkę`,
-        description: `Freelancer. Stwórz z nami swoja wizytówkę`,
+        title: `Freelancer Stwórz z nami swoja wizytówkę`,
+        description: `Freelancer Stwórz z nami swoja wizytówkę`,
         author: `Seovileo`,
         siteUrl: `https://seovileo.pl/`,
     },
@@ -14,7 +14,7 @@ module.exports = {
         {
             resolve: `gatsby-source-datocms`,
             options: {
-                apiToken: `8e49b0a85e31a25874cd0ce5eb14f2`,
+                apiToken: `0e6621bdd35bb44a65efb5a356263a`,
                 environment: `main`,
                 previewMode: false,
                 disableLiveReload: false,

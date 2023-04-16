@@ -14,7 +14,7 @@ const HeroCompon = () => (
                 placeholder="blurred"
             />
             <svg
-                className="absolute bottom-0 left-0 z-20"
+                className="absolute -bottom-3 left-0 z-10"
                 width="2004"
                 height="154"
                 viewBox="0 0 2004 154"
@@ -35,10 +35,10 @@ const HeroCompon = () => (
             </h1>
 
             <Link
-                to="/about-us"
+                to="/projekty"
                 className="mt-2 lg:mt-6 hover:bg-zinc-800 transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
             >
-                Portfolio
+                Projekty
             </Link>
         </div>
 
@@ -48,7 +48,7 @@ const HeroCompon = () => (
             ))}
             <div className="h-8 w-[2px] my-4 bg-gray-600 rounded-3xl" />
             <Link
-                to="https://www.linkedin.com/company/ckl-facades/?fbclid=IwAR2BI5yn7XTImJnXJ9Pl0OmsGPAA8fFKzTba0CPcDrkQxkUtcQJtEX_CIMQ"
+                to="/"
                 rel="noopener noreferrer"
             >
                 <svg

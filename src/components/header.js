@@ -49,7 +49,7 @@ const Header = () => {
                 <nav
                     className={
                         showMenu
-                            ? "max-w-screen-2xl mx-auto px-4 py-2 md:py-4 flex items-center justify-between w-full navTextColor bg-gray-800 transition-colors duration-100 z-50"
+                            ? "max-w-screen-2xl mx-auto px-4 py-2 md:py-4 flex items-center justify-between w-full navTextColor bg-black transition-colors duration-100 z-50"
                             : "max-w-screen-2xl mx-auto px-4 py-2 md:py-2 flex items-center justify-between lg:px-[15%] w-full navTextColor transition-colors duration-100 z-50"
                     }
                 >
@@ -58,7 +58,7 @@ const Header = () => {
                         className="flex lg:hidden items-center justify-center"
                         aria-label="logo"
                     >
-                        <div className="h-auto w-12 ">
+                        <div className="h-auto w-8 ">
                             <StaticImage
                                 quality={100}
                                 className="h-full w-full"
@@ -66,11 +66,7 @@ const Header = () => {
                             />
                         </div>
                         <p
-                            className={
-                                showMenu
-                                    ? "text-gray-100 font-bold"
-                                    : "text-gray-500 hoverLink font-bold"
-                            }
+                            className="text-gray-300 ml-1 tracking-wide font-bold"
                         >
                             Seovileo
                         </p>
@@ -105,7 +101,7 @@ const Header = () => {
                     <ul
                         className={
                             showMenu
-                                ? "absolute text-lg top-full left-0 pb-4 flex flex-col lg:static text-main text-center w-full bg-gray-800 opacity-100 transition duration-200 -translate-y-0 -z-10"
+                                ? "absolute text-lg top-full left-0 pb-4 flex flex-col lg:static text-main text-center w-full bg-black opacity-100 transition duration-200 -translate-y-0 -z-10"
                                 : "absolute top-full left-0 py-2 flex flex-col lg:opacity-100 lg:static lg:flex lg:flex-row lg:items-center lg:justify-center lg:top-0 lg:translate-y-0 lg:py-0 text-main text-center w-full opacity-0 -translate-y-full transition duration-100 -z-10 lg:z-10 lg:ml-8"
                         }
                     >
@@ -115,7 +111,7 @@ const Header = () => {
                                 aria-label="Home"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
+                                        ? "font-bold text-gray-300 lg:text-gray-600 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
                                 to="/"
@@ -130,7 +126,7 @@ const Header = () => {
                                 aria-label="portfolio"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
+                                        ? "font-bold text-gray-300 lg:text-gray-600 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
                                 to="/portfolio"
@@ -158,7 +154,7 @@ const Header = () => {
                                 className={
                                     navbar
                                         ? "hidden transition-all duration-200"
-                                        : "font-bold text-gray-300 transition-all duration-200 text-2xl w-max -mt-1"
+                                        : "font-bold text-gray-300 transition-all duration-200 text-2xl w-max"
                                 }
                             >
                                 Seovileo
@@ -170,7 +166,7 @@ const Header = () => {
                                 aria-label="usługi"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
+                                        ? "font-bold text-gray-300 lg:text-gray-600 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
                                 to="/usługi"
@@ -184,7 +180,7 @@ const Header = () => {
                                 aria-label="kontakt"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-500 hoverLink transition-colors duration-200"
+                                        ? "font-bold text-gray-300 lg:text-gray-600 hoverLink transition-colors duration-200"
                                         : "font-bold text-gray-300 hoverLink transition-colors duration-200"
                                 }
                                 to="/kontakt"
