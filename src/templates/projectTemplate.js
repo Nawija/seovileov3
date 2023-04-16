@@ -115,14 +115,14 @@ const ProjectTemplate = ({
                             </svg>
                             Seovileo
                         </Link>
-                        <div className="relative overflow-hidden top-0 flex py-2 lg:py-1 items-center justify-start lg:justify-center w-full bg-gray-200">
+                        <div className="relative overflow-hidden top-0 flex py-2 lg:py-1 items-center justify-start lg:justify-center w-full bg-gray-800">
                             <button
                                 onClick={web}
                                 className="absolute top-[50%] md:top-[45%] right-5 -translate-y-1/2 py-1 lg:py-2 text-gray-100 m-0 lg:px-5 px-2 bg-gradient-to-tl from-red-500 to-red-700 rounded-lg shadow-lg shadow-red-500 z-50"
                             >
                                 Zamknij
                             </button>
-                            <p className="relative left-0 text-start text-gray-700 text-xs p-2 w-3/4 lg:hidden">
+                            <p className="relative left-0 text-start text-gray-100 text-xs p-2 w-3/4 lg:hidden">
                                 Wiecej funkcji na PC
                             </p>
                             <button
@@ -183,7 +183,7 @@ const ProjectTemplate = ({
                             <div class="flex flex-col lg:flex-row items-center">
                                 <div>
                                     <GatsbyImage
-                                        className="h-80 w-80 md:h-96 md:w-96 lg:p-72 rounded-lg shadow-lg"
+                                        className="h-80 w-80 md:h-96 md:w-96 lg:py-72 lg:px-80 rounded-lg shadow-lg"
                                         image={getImage(
                                             datoCmsPortfolio.img.gatsbyImageData
                                         )}
@@ -191,7 +191,7 @@ const ProjectTemplate = ({
                                     />
                                 </div>
                                 <div class="mb-12 lg:mb-0">
-                                    <div class="block rounded-lg lg:shadow-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
+                                    <div class="block rounded-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
                                         <h1 class="text-3xl font-bold pb-2">
                                             {datoCmsPortfolio.naglowek}
                                         </h1>

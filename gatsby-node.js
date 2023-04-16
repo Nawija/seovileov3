@@ -13,7 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
     `);
 
-    const projectTemplate = path.resolve(`./src/templates/project.js`);
+    const projectTemplate = path.resolve(`./src/templates/projectTemplate.js`);
 
     queryProjects.data.allDatoCmsPortfolio.nodes.forEach((node) => {
         const { slug } = node;

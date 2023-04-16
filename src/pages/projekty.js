@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => {
                             <div className="flex flex-col items-center gap-4 lg:gap-6">
                                 <Link
                                     to={`/` + node.slug}
-                                    className="group w-full md:w-52 lg:w-52 h-56 md:h-52 lg:h-52 block self-center shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
+                                    className="group w-full md:w-52 lg:w-60 h-56 md:h-52 lg:h-52 block self-center shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
                                 >
                                     <GatsbyImage
                                         className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
