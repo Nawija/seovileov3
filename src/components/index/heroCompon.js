@@ -8,7 +8,7 @@ const HeroCompon = () => (
             <StaticImage
                 className="h-96 lg:h-[38rem] w-full md:w-full"
                 quality={100}
-                src="../../assets/hero.png"
+                src="https://images.unsplash.com/photo-1462556791646-c201b8241a94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2896&q=80"
                 loading="eager"
                 alt="Facades project"
                 placeholder="blurred"
@@ -30,13 +30,13 @@ const HeroCompon = () => (
         </div>
 
         <div className="absolute flex flex-col items-center justify-cente">
-            <h1 className="text-xl md:w-[70%] sm:text-3xl md:text-3xl lg:text-4xl -mt-12 xl:text-5xl lg:pt-12 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
-                Freelancer stwórz z nami swoja wizytówkę
+            <h1 className="text-2xl md:w-[70%] sm:text-3xl md:text-3xl lg:text-4xl -mt-12 xl:text-5xl lg:mt-4 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
+                Stwórz swoją idealną stronę internetową z niezależnym freelancerem
             </h1>
 
             <Link
                 to="/projekty"
-                className="mt-2 lg:mt-6 hover:bg-zinc-800 transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
+                className="mt-4 rounded-lg lg:mt-6 hover:bg-zinc-800 text-sm md:text-base transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
             >
                 Projekty
             </Link>
@@ -47,10 +47,7 @@ const HeroCompon = () => (
                 <p key={index}>{letter}</p>
             ))}
             <div className="h-8 w-[2px] my-4 bg-gray-600 rounded-3xl" />
-            <Link
-                to="/"
-                rel="noopener noreferrer"
-            >
+            <Link to="/" rel="noopener noreferrer">
                 <svg
                     className="h-4 w-4"
                     width="24"

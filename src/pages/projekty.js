@@ -37,57 +37,56 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section
-                className="scroll-m-16 -mt-8 lg:-mt-4 mb-6 md:mb-16"
-            >
+            <section className="mb-6 md:mb-16">
                 <div className="max-w-screen-2xl px-4 md:px-6 mx-auto">
-                    <div className="mb-10 md:mb-16">
-                        <p className="max-w-screen-md text-gray-500 w-[90%] md:text-lg text-center mx-auto">
-                            It is a long established fact that a reader will be
-                            distracted by the readable content of a page when
-                            looking at its layout. The point of using Lorem
-                            Ipsum is that it has a more-or-less normal
-                            distribution of letters, as opposed to using
-                        </p>
-                    </div>
+                    <div class="container -mt-12 px-6 mx-auto">
+                        <section class="mb-16 text-gray-800">
+                            <h1 class="text-3xl font-bold mb-4 text-center">
+                                Wszystkie Projekty
+                            </h1>
+                            <p className="max-w-screen-xl text-gray-700 w-[90%] sm:w-[70%] md:text-lg text-center mx-auto mb-4">
+                                It is a long established fact that a reader will
+                                be distracted by the readable content of a page
+                                when looking at its layout. The point of using
+                                Lorem Ipsum is that it has a more-or-less normal
+                                distribution of letters, as opposed to using
+                            </p>
 
-                    <div className="grid sm:grid-cols-2 md:grid-cols-3 text-center lg:grid-cols-4 xl:grid-cols-5 gap-8 sm:gap-12">
-                        {allDatoCmsPortfolio.edges.map(({ node }) => (
-                            <div className="flex flex-col items-center gap-4 lg:gap-6">
-                                <Link
-                                    to={`/` + node.slug}
-                                    className="group w-full md:w-52 lg:w-60 h-56 md:h-52 lg:h-52 block self-center shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
-                                >
-                                    <GatsbyImage
-                                        className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
-                                        loading="eager"
-                                        image={getImage(
-                                            node.img.gatsbyImageData
-                                        )}
-                                        alt={node.img.alt || "Facades"}
-                                    />
-                                </Link>
-
-                                <div className="flex flex-col gap-2">
-                                    <span className="text-gray-400 text-sm">
-                                        {node.date}
-                                    </span>
-
-                                    <h2 className="text-gray-800 w-[93%] lg:w-[90%] text-xl font-bold">
-                                        <Link
-                                            to={`/` + node.slug}
-                                            className="hoverLink  active:text-gray-900 transition duration-100"
-                                        >
-                                            {node.naglowek}
+                            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {allDatoCmsPortfolio.edges.map(({ node }) => (
+                                    <div
+                                        class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg"
+                                        data-mdb-ripple="true"
+                                        data-mdb-ripple-color="light"
+                                    >
+                                        <GatsbyImage
+                                            className="w-full h-96"
+                                            loading="eager"
+                                            image={getImage(
+                                                node.img.gatsbyImageData
+                                            )}
+                                            alt={node.img.alt || "Projekt Strona Internetowa"}
+                                        />
+                                        <Link to={`/` + node.slug}>
+                                            <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
+                                                <div class="flex justify-start items-end h-full">
+                                                    <div class="text-white m-6">
+                                                        <h2 class="font-bold text-lg mb-3">
+                                                            {node.naglowek}
+                                                        </h2>
+                                                        <p>
+                                                            <small>
+                                                                {node.data}
+                                                            </small>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </Link>
-                                    </h2>
-
-                                    <p className="text-gray-500 w-[93%] lg:w-[90%]">
-                                        {node.krotkiTekst}
-                                    </p>
-                                </div>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
+                        </section>
                     </div>
                 </div>
             </section>
