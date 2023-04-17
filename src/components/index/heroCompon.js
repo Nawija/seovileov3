@@ -1,17 +1,25 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import HeroVideo from "../../assets/hero.mp4"
 import { StaticImage } from "gatsby-plugin-image";
 
 const HeroCompon = () => (
-    <section className="relative flex items-center min-h-[16rem] justify-center w-full ">
+    <section className="relative flex items-center min-h-[16rem] max-h-[32rem] justify-center w-full ">
         <div className="relative -mt-8 w-full -z-20">
-            <StaticImage
-                className="h-96 lg:h-[38rem] w-full md:w-full"
+            {/* <StaticImage
+                className="h-96 lg:h-[38rem] w-full"
                 quality={100}
                 src="https://images.unsplash.com/photo-1582135739786-3bceafcaea85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
                 loading="eager"
                 alt="Strona Internetowa"
                 placeholder="blurred"
+            /> */}
+            <video
+                autoPlay
+                muted
+                loop
+                className="h-full w-full"
+                src={HeroVideo}
             />
             <svg
                 className="absolute -bottom-3 left-0 z-10"
@@ -26,18 +34,16 @@ const HeroCompon = () => (
                     fill="#f1f1f1"
                 />
             </svg>
-            <div className="absolute w-full mix-blend-multiply h-full top-0 left-0  bg-gradient-to-bl from-blue-500/80 to-gray-900/90" />
+            {/* <div className="absolute w-full mix-blend-multiply h-full top-0 left-0  bg-gradient-to-bl from-blue-500/80 to-gray-900/90" /> */}
         </div>
 
         <div className="absolute flex flex-col items-center justify-cente">
             <h1 className="text-2xl md:w-[70%] sm:text-3xl md:text-3xl lg:text-4xl -mt-12 xl:text-5xl lg:mt-4 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
-                Stwórz swoją idealną stronę internetową z niezależnym freelancerem
+                Stwórz swoją idealną stronę internetową z niezależnym
+                freelancerem
             </h1>
 
-            <Link
-                to="/projekty"
-                className="btnRed mt-4 lg:mt-6 border"
-            >
+            <Link to="/projekty" className="btnRed mt-4 lg:mt-6 border">
                 Projekty
             </Link>
         </div>

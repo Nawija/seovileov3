@@ -14,10 +14,6 @@ const IndexPage = ({ data }) => {
             <HeroCompon />
             <div class="container max-w-screen-xl lg:-mt-4 mb-6 md:mb-24 mx-auto">
                 <section class=" text-gray-800 text-center">
-                    <h2 class="text-3xl font-bold mb-20 w-[80%] mx-auto">
-                        Zalety Naszych Stron Internetowych
-                    </h2>
-
                     <div class="grid lg:gap-x-12 lg:grid-cols-3">
                         <div class="mb-12 lg:mb-0">
                             <div class="rounded-lg shadow-lg h-full block bg-white w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
