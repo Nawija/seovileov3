@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <HeroCompon />
-            <div class="container max-w-screen-xl lg:-mt-4 mb-6 md:mb-24 mx-auto">
+            <div class="container max-w-screen-xl mt-4 lg:-mt-4 mb-6 md:mb-24 mx-auto">
                 <section class=" text-gray-800 text-center">
                     <div class="grid lg:gap-x-12 lg:grid-cols-3">
                         <div class="mb-12 lg:mb-0">
