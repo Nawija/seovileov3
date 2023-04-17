@@ -36,11 +36,7 @@ const IndexPage = ({ data }) => {
                                         Wsparcie 24/7
                                     </h5>
                                     <p>
-                                        Laudantium totam quas cumque pariatur at
-                                        doloremque hic quos quia eius.
-                                        Reiciendis optio minus mollitia rerum
-                                        labore facilis inventore voluptatem ad,
-                                        quae quia sint. Ullam.
+                                    Dla klientów posiadających strony internetowe wsparcie 24/7 to kluczowe rozwiązanie. Dzięki temu klienci otrzymują szybką i profesjonalną pomoc w przypadku problemów z działaniem strony internetowej. Programiści zapewniają stałą dostępność i wsparcie, co pozwala na nieprzerwane działanie strony i minimalizuje ryzyko utraty klientów i szkód dla biznesu.
                                     </p>
                                 </div>
                             </div>
@@ -118,9 +114,7 @@ const IndexPage = ({ data }) => {
                 </section>
             </div>
 
-            <section></section>
-
-            <section id="projects" className="-mt-8 bg-white pt-24 px-6 ">
+            <section id="projects" className="-mt-8 bg-white py-20 px-6 ">
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
@@ -194,7 +188,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section class="text-gray-900 bg-white  body-font">
+            <section class="text-gray-900  body-font">
                 <div class="container px-5 py-24 mx-auto flex flex-col">
                     <div class="lg:w-[90%] mx-auto">
                         <div class="rounded-lg h-64 overflow-hidden">
@@ -268,7 +262,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section class="text-gray-900 body-font mx-auto">
+            <section class="text-gray-900 bg-white  body-font mx-auto">
                 <div class="container mx-auto flex max-w-screen-xl px-5 py-24 md:flex-row flex-col items-center">
                     <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                         <h3 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
@@ -292,7 +286,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section class="text-gray-900 bg-white  body-font mx-auto">
+            <section class="text-gray-900 body-font mx-auto">
                 <div class="container max-w-screen-xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                     <div class="order-1 lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-end md:text-right mb-16 md:mb-0 items-center text-center">
                         <h3 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
@@ -316,7 +310,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section class="text-gray-900 body-font mx-auto">
+            <section class="text-gray-900 bg-white  body-font mx-auto">
                 <div class="container mx-auto flex max-w-screen-xl px-5 py-24 md:flex-row flex-col items-center">
                     <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                         <h3 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
