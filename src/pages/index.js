@@ -141,9 +141,7 @@ const IndexPage = ({ data }) => {
                                     class="w-full"
                                 />
                                 <a href="#!">
-                                    <div
-                                        class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
-                                    ></div>
+                                    <div class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
                                 </a>
                             </div>
                             <h5 class="text-lg font-bold mb-3">
@@ -181,9 +179,7 @@ const IndexPage = ({ data }) => {
                                     class="w-full"
                                 />
                                 <a href="#!">
-                                    <div
-                                        class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
-                                    ></div>
+                                    <div class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
                                 </a>
                             </div>
 
@@ -220,9 +216,7 @@ const IndexPage = ({ data }) => {
                                     class="w-full"
                                 />
                                 <a href="#!">
-                                    <div
-                                        class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
-                                    ></div>
+                                    <div class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
                                 </a>
                             </div>
 
@@ -251,7 +245,52 @@ const IndexPage = ({ data }) => {
                 </section>
             </div>
 
-            <section id="projects" className="-mt-8 bg-white py-20 px-6 ">
+            <div id="projects" class="bg-white py-6 sm:py-8 lg:py-12">
+                <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+                    <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl xl:mb-12">
+                        Projekty
+                    </h2>
+                    <div class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
+                        {allDatoCmsPortfolio.edges.map(({ node }) => (
+                            <Link
+                                to={node.slug}
+                                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-52"
+                            >
+                                <GatsbyImage
+                                        className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
+                                        loading="eager"
+                                        image={getImage(
+                                            node.img.gatsbyImageData
+                                        )}
+                                        alt={node.img.alt || "Strona Internetowa"}
+                                    />
+
+                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+
+                                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
+                                    {node.naglowek}
+                                </span>
+                            </Link>
+                        ))}
+                    </div>
+                    <div class="flex items-start justify-between gap-8 sm:items-center">
+                        <p class="max-w-screen-sm text-sm text-gray-500 lg:text-base">
+                            This is a section of some simple filler text, also
+                            known as placeholder text. It shares some
+                            characteristics of a real written text.
+                        </p>
+
+                        <Link
+                            to="projekty"
+                            class="inline-block rounded-lg border border-gray-700 bg-white px-4 py-2 text-center text-sm font-semibold text-gray-700 outline-none ring-indigo-700 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base"
+                        >
+                            Wiecej Projektów
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+            {/* <section id="projects" className="-mt-8 bg-white py-20 px-6 ">
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-900 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
@@ -280,7 +319,7 @@ const IndexPage = ({ data }) => {
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
-                                        alt={node.img.alt || "Facades"}
+                                        alt={node.img.alt || "Strona Internetowa"}
                                     />
                                 </Link>
 
@@ -323,9 +362,7 @@ const IndexPage = ({ data }) => {
                         Więcej Projektów
                     </Link>
                 </div>
-            </section>
-
-            
+            </section> */}
 
             <section class="text-gray-900  body-font">
                 <div class="container px-5 py-24 mx-auto flex flex-col">
