@@ -111,8 +111,8 @@ const Header = () => {
                                 aria-label="Home"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
-                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
+                                        ? "font-bold lg:text-gray-600 hoverLink link transition-colors duration-200"
+                                        : "font-bold hoverLink link transition-colors duration-200"
                                 }
                                 to="/"
                             >
@@ -126,8 +126,8 @@ const Header = () => {
                                 aria-label="portfolio"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
-                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
+                                        ? "font-bold lg:text-gray-600 hoverLink link transition-colors duration-200"
+                                        : "font-bold hoverLink link transition-colors duration-200"
                                 }
                                 to="/portfolio"
                             >
@@ -140,8 +140,8 @@ const Header = () => {
                                 aria-label="portfolio"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
-                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
+                                        ? "font-bold lg:text-gray-600 hoverLink link transition-colors duration-200"
+                                        : "font-bold hoverLink link transition-colors duration-200"
                                 }
                                 to="/portfolio"
                             >
@@ -180,8 +180,8 @@ const Header = () => {
                                 aria-label="usługi"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
-                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
+                                        ? "font-bold lg:text-gray-600 hoverLink link transition-colors duration-200"
+                                        : "font-bold hoverLink link transition-colors duration-200"
                                 }
                                 to="/usługi"
                             >
@@ -194,8 +194,8 @@ const Header = () => {
                                 aria-label="portfolio"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
-                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
+                                        ? "font-bold lg:text-gray-600 hoverLink link transition-colors duration-200"
+                                        : "font-bold hoverLink link transition-colors duration-200"
                                 }
                                 to="/portfolio"
                             >
@@ -208,8 +208,8 @@ const Header = () => {
                                 aria-label="kontakt"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
-                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
+                                        ? "font-bold lg:text-gray-600 hoverLink link transition-colors duration-200"
+                                        : "font-bold hoverLink link transition-colors duration-200"
                                 }
                                 to="/kontakt"
                             >

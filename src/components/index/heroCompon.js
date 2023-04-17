@@ -1,25 +1,19 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import HeroVideo from "../../assets/hero.mp4"
+import { StaticImage } from "gatsby-plugin-image";
 
 const HeroCompon = () => (
     <section className="relative flex items-center max-h-[32rem] justify-center w-full ">
         <div className="relative -mt-8 w-full -z-20">
-            {/* <StaticImage
-                className="h-96 lg:h-[38rem] w-full"
+            <StaticImage
+                className="h-96 lg:h-[55rem] w-full"
                 quality={100}
-                src="https://images.unsplash.com/photo-1582135739786-3bceafcaea85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                src="https://images.unsplash.com/photo-1585769214083-0ac4bd33225f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
                 loading="eager"
                 alt="Strona Internetowa"
                 placeholder="blurred"
-            /> */}
-            <video
-                autoPlay
-                muted
-                loop
-                className="min-h-[20rem] -mt-10  w-full"
-                src={HeroVideo}
             />
+            <div className="absolute inset-0 w-full h-full bg-gray-900/70" />
             <svg
                 className="absolute -bottom-3 left-0 z-10"
                 width="2004"
@@ -37,7 +31,7 @@ const HeroCompon = () => (
         </div>
 
         <div className="absolute flex flex-col items-center justify-cente">
-            <h1 className="text-xl mt-7 md:w-[70%] sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl lg:mt-4 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
+            <h1 className="text-2xl md:w-[70%] sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl lg:mt-12 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
                 Stwórz swoją idealną stronę internetową z niezależnym
                 freelancerem
             </h1>
