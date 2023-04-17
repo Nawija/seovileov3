@@ -66,7 +66,7 @@ const Header = () => {
                             />
                         </div>
                         <p
-                            className="text-gray-300 ml-1 tracking-wide font-bold"
+                            className="text-gray-100 ml-1 tracking-wide font-bold"
                         >
                             Seovileo
                         </p>
@@ -111,8 +111,8 @@ const Header = () => {
                                 aria-label="Home"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-300 lg:text-gray-600 hoverLink transition-colors duration-200"
-                                        : "font-bold text-gray-300 hoverLink transition-colors duration-200"
+                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
+                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
                                 }
                                 to="/"
                             >
@@ -126,12 +126,26 @@ const Header = () => {
                                 aria-label="portfolio"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-300 lg:text-gray-600 hoverLink transition-colors duration-200"
-                                        : "font-bold text-gray-300 hoverLink transition-colors duration-200"
+                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
+                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
                                 }
                                 to="/portfolio"
                             >
-                                Portfolio
+                                Pomoc
+                            </Link>
+                        </li>
+                        <li className="mx-8 my-2 px-2 py-2">
+                            <Link
+                                onClick={falseMenu}
+                                aria-label="portfolio"
+                                className={
+                                    navbar
+                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
+                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
+                                }
+                                to="/portfolio"
+                            >
+                                Projekty
                             </Link>
                         </li>
                         <Link
@@ -154,7 +168,7 @@ const Header = () => {
                                 className={
                                     navbar
                                         ? "hidden transition-all duration-200"
-                                        : "font-bold text-gray-300 transition-all duration-200 text-2xl w-max"
+                                        : "font-bold text-gray-100 transition-all duration-200 text-2xl w-max"
                                 }
                             >
                                 Seovileo
@@ -166,8 +180,8 @@ const Header = () => {
                                 aria-label="usługi"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-300 lg:text-gray-600 hoverLink transition-colors duration-200"
-                                        : "font-bold text-gray-300 hoverLink transition-colors duration-200"
+                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
+                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
                                 }
                                 to="/usługi"
                             >
@@ -177,11 +191,25 @@ const Header = () => {
                         <li className="mx-8 my-2 px-2 py-2">
                             <Link
                                 onClick={falseMenu}
+                                aria-label="portfolio"
+                                className={
+                                    navbar
+                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
+                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
+                                }
+                                to="/portfolio"
+                            >
+                                Blog
+                            </Link>
+                        </li>
+                        <li className="mx-8 my-2 px-2 py-2">
+                            <Link
+                                onClick={falseMenu}
                                 aria-label="kontakt"
                                 className={
                                     navbar
-                                        ? "font-bold text-gray-300 lg:text-gray-600 hoverLink transition-colors duration-200"
-                                        : "font-bold text-gray-300 hoverLink transition-colors duration-200"
+                                        ? "font-bold text-gray-100 lg:text-gray-600 hoverLink transition-colors duration-200"
+                                        : "font-bold text-gray-100 hoverLink transition-colors duration-200"
                                 }
                                 to="/kontakt"
                             >

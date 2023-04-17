@@ -14,13 +14,13 @@ const IndexPage = ({ data }) => {
             <HeroCompon />
             <div class="container max-w-screen-xl lg:-mt-4 mb-6 md:mb-24 mx-auto">
                 <section class=" text-gray-800 text-center">
-                    <h2 class="text-3xl font-bold mb-20">
+                    <h2 class="text-3xl font-bold mb-20 w-[80%] mx-auto">
                         Zalety Naszych Stron Internetowych
                     </h2>
 
                     <div class="grid lg:gap-x-12 lg:grid-cols-3">
                         <div class="mb-12 lg:mb-0">
-                            <div class="rounded-lg shadow-lg h-full block bg-white">
+                            <div class="rounded-lg shadow-lg h-full block bg-white w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
                                 <div class="flex justify-center">
                                     <div class="p-4 bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 rounded-full shadow-lg inline-block -mt-8">
                                         <svg
@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
                         </div>
 
                         <div class="mb-12 lg:mb-0">
-                            <div class="rounded-lg shadow-lg h-full block bg-white">
+                            <div class="rounded-lg shadow-lg h-full block bg-white w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
                                 <div class="flex justify-center">
                                     <div class="p-4 bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 rounded-full shadow-lg inline-block -mt-8">
                                         <svg
@@ -82,7 +82,7 @@ const IndexPage = ({ data }) => {
                         </div>
 
                         <div class="">
-                            <div class="rounded-lg shadow-lg h-full block bg-white">
+                            <div class="rounded-lg shadow-lg h-full block bg-white w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
                                 <div class="flex justify-center">
                                     <div class="p-4 bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 rounded-full shadow-lg inline-block -mt-8">
                                         <svg
@@ -114,7 +114,7 @@ const IndexPage = ({ data }) => {
                 </section>
             </div>
 
-            <section id="projects" className="-mt-8 bg-white py-24 px-6 ">
+            <section id="projects" className="-mt-8 bg-white pt-24 px-6 ">
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
                         <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
@@ -180,7 +180,7 @@ const IndexPage = ({ data }) => {
                 </div>
                 <div className="mx-auto text-center">
                     <Link
-                        className="text-center btnBlue my-6 sm:my-10 xl:mt-20 xl:mb-8"
+                        className="text-center btn mt-6 md:mt-12 lg:mt-20"
                         to="/projekty"
                     >
                         Więcej Projektów

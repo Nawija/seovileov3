@@ -8,7 +8,7 @@ const HeroCompon = () => (
             <StaticImage
                 className="h-96 lg:h-[38rem] w-full md:w-full"
                 quality={100}
-                src="https://images.unsplash.com/photo-1625521416008-78e00551375b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                src="https://images.unsplash.com/photo-1582135739786-3bceafcaea85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
                 loading="eager"
                 alt="Strona Internetowa"
                 placeholder="blurred"
@@ -26,7 +26,7 @@ const HeroCompon = () => (
                     fill="#f1f1f1"
                 />
             </svg>
-            <div className="absolute w-full mix-blend-multiply h-full top-0 left-0  bg-gradient-to-bl from-emerald-500/80 to-gray-900/70" />
+            <div className="absolute w-full mix-blend-multiply h-full top-0 left-0  bg-gradient-to-bl from-blue-500/80 to-gray-900/90" />
         </div>
 
         <div className="absolute flex flex-col items-center justify-cente">
