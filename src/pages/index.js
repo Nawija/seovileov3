@@ -117,11 +117,11 @@ const IndexPage = ({ data }) => {
             <section id="projects" className="-mt-8 bg-white py-20 px-6 ">
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
                     <div className="mb-10 md:mb-16">
-                        <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
+                        <h2 className="text-gray-900 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
                             Projekty
                         </h2>
 
-                        <p className="max-w-screen-md text-gray-500 w-[90%] md:text-lg text-center mx-auto">
+                        <p className="max-w-screen-md text-gray-700 w-[90%] md:text-lg text-center mx-auto">
                             Chcesz zwiększyć swoją obecność w sieci i dotrzeć do
                             większej liczby potencjalnych klientów? Zleć mi
                             stworzenie strony internetowej, która skutecznie
@@ -161,7 +161,7 @@ const IndexPage = ({ data }) => {
                                         </Link>
                                     </h2>
 
-                                    <p className="text-gray-500 w-[93%] lg:w-[70%]">
+                                    <p className="text-gray-700 w-[93%] lg:w-[70%]">
                                         {node.krotkiTekst}
                                     </p>
 
@@ -242,20 +242,6 @@ const IndexPage = ({ data }) => {
                                     paleo intelligentsia pabst before they sold
                                     out four loko. 3 wolf moon brooklyn.
                                 </p>
-                                <a class="text-yellow-500 inline-flex items-center">
-                                    Learn More
-                                    <svg
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        class="w-4 h-4 ml-2"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                    </svg>
-                                </a>
                             </div>
                         </div>
                     </div>
