@@ -191,7 +191,7 @@ const ProjectTemplate = ({
                                     />
                                 </div>
                                 <div class="mb-12 lg:mb-0">
-                                    <div class="block rounded-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
+                                    <div class="block mt-12 rounded-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
                                         <h1 class="text-3xl font-bold pb-2">
                                             {datoCmsPortfolio.naglowek}
                                         </h1>

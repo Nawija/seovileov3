@@ -87,181 +87,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section class="text-gray-900 body-font bg-white">
-                <div class="container px-5 py-24 mx-auto">
-                    <div class="flex flex-wrap w-full mb-20 max-w-screen-lg mx-auto">
-                        <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-                            <h2 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-                                Zalety Naszych Stron Internetowych
-                            </h2>
-                            <div class="h-1 w-20 bg-yellow-500 rounded"></div>
-                        </div>
-                        <p class="lg:w-1/2 w-full leading-relaxed text-gray-700">
-                            Whatever cardigan tote bag tumblr hexagon brooklyn
-                            asymmetrical gentrify, subway tile poke
-                            farm-to-table. Franzen you probably haven't heard of
-                            them man bun deep jianbing selfies heirloom prism
-                            food truck ugh squid celiac humblebrag.
-                        </p>
-                    </div>
-                    <div class="flex flex-wrap -m-4">
-                        <div class="xl:w-1/4 md:w-1/2 p-4">
-                            <div class="bg-gray-100 shadow-lg p-6 rounded-lg">
-                                <StaticImage
-                                    class="h-40 rounded w-full object-cover object-center mb-6"
-                                    src="https://images.unsplash.com/photo-1661956602944-249bcd04b63f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                                    alt="content"
-                                />
-                                <h3 class="tracking-widest text-yellow-500 text-xs font-medium title-font">
-                                    SUBTITLE
-                                </h3>
-                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                                    Chichen Itza
-                                </h2>
-                                <p class="leading-relaxed text-base">
-                                    Fingerstache flexitarian street art 8-bit
-                                    waistcoat. Distillery hexagon disrupt edison
-                                    bulbche.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="xl:w-1/4 md:w-1/2 p-4">
-                            <div class="bg-gray-100 shadow-lg p-6 rounded-lg">
-                                <StaticImage
-                                    class="h-40 rounded w-full object-cover object-center mb-6"
-                                    src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                                    alt="content"
-                                />
-                                <h3 class="tracking-widest text-yellow-500 text-xs font-medium title-font">
-                                    SUBTITLE
-                                </h3>
-                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                                    Colosseum Roma
-                                </h2>
-                                <p class="leading-relaxed text-base">
-                                    Fingerstache flexitarian street art 8-bit
-                                    waistcoat. Distillery hexagon disrupt edison
-                                    bulbche.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="xl:w-1/4 md:w-1/2 p-4">
-                            <div class="bg-gray-100 shadow-lg p-6 rounded-lg">
-                                <StaticImage
-                                    class="h-40 rounded w-full object-cover object-center mb-6"
-                                    src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                                    alt="content"
-                                />
-                                <h3 class="tracking-widest text-yellow-500 text-xs font-medium title-font">
-                                    SUBTITLE
-                                </h3>
-                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                                    Great Pyramid of Giza
-                                </h2>
-                                <p class="leading-relaxed text-base">
-                                    Fingerstache flexitarian street art 8-bit
-                                    waistcoat. Distillery hexagon disrupt edison
-                                    bulbche.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="xl:w-1/4 md:w-1/2 p-4">
-                            <div class="bg-gray-100 shadow-lg p-6 rounded-lg">
-                                <StaticImage
-                                    class="h-40 rounded w-full object-cover object-center mb-6"
-                                    src="https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
-                                    alt="content"
-                                />
-                                <h3 class="tracking-widest text-yellow-500 text-xs font-medium title-font">
-                                    SUBTITLE
-                                </h3>
-                                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                                    San Francisco
-                                </h2>
-                                <p class="leading-relaxed text-base">
-                                    Fingerstache flexitarian street art 8-bit
-                                    waistcoat. Distillery hexagon disrupt edison
-                                    bulbche.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="text-gray-900 body-font mx-auto">
-                <div class="container mx-auto flex max-w-screen-xl px-5 py-24 md:flex-row flex-col items-center">
-                    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h3 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-                            Before they sold out
-                        </h3>
-                        <p class="mb-8 leading-relaxed">
-                            Copper mug try-hard pitchfork pour-over freegan
-                            heirloom neutra air plant cold-pressed tacos poke
-                            beard tote bag. Heirloom echo park mlkshk tote bag
-                            selvage hot chicken authentic tumeric truffaut
-                            hexagon try-hard chambray.
-                        </p>
-                    </div>
-                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        <StaticImage
-                            class="object-cover h-96 object-center rounded"
-                            alt="hero"
-                            src="https://images.unsplash.com/photo-1536329583941-14287ec6fc4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2848&q=80"
-                        />
-                    </div>
-                </div>
-            </section>
-
-            <section class="text-gray-900 bg-white body-font mx-auto">
-                <div class="container max-w-screen-xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                    <div class="order-1 lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-end md:text-right mb-16 md:mb-0 items-center text-center">
-                        <h3 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-                            Before they sold out
-                        </h3>
-                        <p class="mb-8 leading-relaxed">
-                            Copper mug try-hard pitchfork pour-over freegan
-                            heirloom neutra air plant cold-pressed tacos poke
-                            beard tote bag. Heirloom echo park mlkshk tote bag
-                            selvage hot chicken authentic tumeric truffaut
-                            hexagon try-hard chambray.
-                        </p>
-                    </div>
-                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        <StaticImage
-                            class="object-cover h-96 object-center rounded"
-                            alt="hero"
-                            src="https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"
-                        />
-                    </div>
-                </div>
-            </section>
-
-            <section class="text-gray-900 body-font mx-auto">
-                <div class="container mx-auto flex max-w-screen-xl px-5 py-24 md:flex-row flex-col items-center">
-                    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h3 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-                            Before they sold out
-                        </h3>
-                        <p class="mb-8 leading-relaxed">
-                            Copper mug try-hard pitchfork pour-over freegan
-                            heirloom neutra air plant cold-pressed tacos poke
-                            beard tote bag. Heirloom echo park mlkshk tote bag
-                            selvage hot chicken authentic tumeric truffaut
-                            hexagon try-hard chambray.
-                        </p>
-                    </div>
-                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                        <StaticImage
-                            class="object-cover h-96 object-center rounded"
-                            alt="hero"
-                            src="https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3024&q=80"
-                        />
-                    </div>
-                </div>
-            </section>
-
-            <section class="text-gray-900 bg-white body-font">
+            <section class="text-gray-900 bg-white  body-font">
                 <div class="container px-5 py-24 mx-auto flex flex-col">
                     <div class="lg:w-[90%] mx-auto">
                         <div class="rounded-lg h-64 overflow-hidden">
@@ -334,6 +160,80 @@ const IndexPage = ({ data }) => {
                     </div>
                 </div>
             </section>
+
+            <section class="text-gray-900 body-font mx-auto">
+                <div class="container mx-auto flex max-w-screen-xl px-5 py-24 md:flex-row flex-col items-center">
+                    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                        <h3 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+                            Before they sold out
+                        </h3>
+                        <p class="mb-8 leading-relaxed">
+                            Copper mug try-hard pitchfork pour-over freegan
+                            heirloom neutra air plant cold-pressed tacos poke
+                            beard tote bag. Heirloom echo park mlkshk tote bag
+                            selvage hot chicken authentic tumeric truffaut
+                            hexagon try-hard chambray.
+                        </p>
+                    </div>
+                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                        <StaticImage
+                            class="object-cover h-96 object-center rounded"
+                            alt="hero"
+                            src="https://images.unsplash.com/photo-1536329583941-14287ec6fc4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2848&q=80"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section class="text-gray-900 bg-white  body-font mx-auto">
+                <div class="container max-w-screen-xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                    <div class="order-1 lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-end md:text-right mb-16 md:mb-0 items-center text-center">
+                        <h3 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+                            Before they sold out
+                        </h3>
+                        <p class="mb-8 leading-relaxed">
+                            Copper mug try-hard pitchfork pour-over freegan
+                            heirloom neutra air plant cold-pressed tacos poke
+                            beard tote bag. Heirloom echo park mlkshk tote bag
+                            selvage hot chicken authentic tumeric truffaut
+                            hexagon try-hard chambray.
+                        </p>
+                    </div>
+                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                        <StaticImage
+                            class="object-cover h-96 object-center rounded"
+                            alt="hero"
+                            src="https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section class="text-gray-900 body-font mx-auto">
+                <div class="container mx-auto flex max-w-screen-xl px-5 py-24 md:flex-row flex-col items-center">
+                    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                        <h3 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+                            Before they sold out
+                        </h3>
+                        <p class="mb-8 leading-relaxed">
+                            Copper mug try-hard pitchfork pour-over freegan
+                            heirloom neutra air plant cold-pressed tacos poke
+                            beard tote bag. Heirloom echo park mlkshk tote bag
+                            selvage hot chicken authentic tumeric truffaut
+                            hexagon try-hard chambray.
+                        </p>
+                    </div>
+                    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                        <StaticImage
+                            class="object-cover h-96 object-center rounded"
+                            alt="hero"
+                            src="https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3024&q=80"
+                        />
+                    </div>
+                </div>
+            </section>
+
+
         </Layout>
     );
 };

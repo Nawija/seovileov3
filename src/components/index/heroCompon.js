@@ -8,7 +8,7 @@ const HeroCompon = () => (
             <StaticImage
                 className="h-96 lg:h-[38rem] w-full md:w-full"
                 quality={100}
-                src="https://images.unsplash.com/photo-1462556791646-c201b8241a94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2896&q=80"
+                src="../../assets/hero.png"
                 loading="eager"
                 alt="Facades project"
                 placeholder="blurred"
@@ -23,7 +23,7 @@ const HeroCompon = () => (
             >
                 <path
                     d="M0 37.9955C0 37.9955 458.5 122.495 1002 37.9955C1545.5 -46.5045 2004 37.9955 2004 37.9955V153.996H0V37.9955Z"
-                    fill="#ECECEC"
+                    fill="#f1f1f1"
                 />
             </svg>
             <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
