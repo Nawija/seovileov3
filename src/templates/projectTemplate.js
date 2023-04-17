@@ -183,7 +183,7 @@ const ProjectTemplate = ({
                             <div class="flex flex-col lg:flex-row items-center">
                                 <div>
                                     <GatsbyImage
-                                        className="h-80 w-80 md:h-96 md:w-96 lg:py-72 lg:px-80 rounded-lg shadow-lg"
+                                        className="h-72 w-72 md:h-96 md:w-96 lg:py-72 lg:px-80 rounded-lg shadow-lg"
                                         image={getImage(
                                             datoCmsPortfolio.img.gatsbyImageData
                                         )}
@@ -202,7 +202,7 @@ const ProjectTemplate = ({
                                         <Link
                                             to="/projekty"
                                             type="button"
-                                            class="inline-block mb-4 px-7 mr-4 py-3 bg-gray-800 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
+                                            class="btn my-1 mr-4"
                                             data-mdb-ripple="true"
                                             data-mdb-ripple-color="light"
                                         >
@@ -212,7 +212,7 @@ const ProjectTemplate = ({
                                         <button
                                             onClick={web}
                                             type="button"
-                                            class="inline-block px-7 py-3 bg-gray-800 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
+                                            class="btnEmerald my-1"
                                             data-mdb-ripple="true"
                                             data-mdb-ripple-color="light"
                                         >

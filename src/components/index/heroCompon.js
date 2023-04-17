@@ -8,9 +8,9 @@ const HeroCompon = () => (
             <StaticImage
                 className="h-96 lg:h-[38rem] w-full md:w-full"
                 quality={100}
-                src="../../assets/hero.png"
+                src="https://images.unsplash.com/photo-1625521416008-78e00551375b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
                 loading="eager"
-                alt="Facades project"
+                alt="Strona Internetowa"
                 placeholder="blurred"
             />
             <svg
@@ -26,7 +26,7 @@ const HeroCompon = () => (
                     fill="#f1f1f1"
                 />
             </svg>
-            <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
+            <div className="absolute w-full mix-blend-multiply h-full top-0 left-0  bg-gradient-to-bl from-emerald-500/80 to-gray-900/70" />
         </div>
 
         <div className="absolute flex flex-col items-center justify-cente">
@@ -36,7 +36,7 @@ const HeroCompon = () => (
 
             <Link
                 to="/projekty"
-                className="mt-4 rounded-lg lg:mt-6 hover:bg-zinc-800 text-sm md:text-base transition-colors duration-200 text-white bg-zinc-800/20 border py-2 px-3"
+                className="btnRed mt-4 lg:mt-6 border"
             >
                 Projekty
             </Link>
