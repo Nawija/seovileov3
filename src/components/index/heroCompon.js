@@ -18,7 +18,7 @@ const HeroCompon = () => (
                 autoPlay
                 muted
                 loop
-                className="h-full w-full"
+                className="min-h-[20rem] -mt-12  w-full"
                 src={HeroVideo}
             />
             <svg
@@ -38,7 +38,7 @@ const HeroCompon = () => (
         </div>
 
         <div className="absolute flex flex-col items-center justify-cente">
-            <h1 className="text-2xl md:w-[70%] sm:text-3xl md:text-3xl lg:text-4xl -mt-12 xl:text-5xl lg:mt-4 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
+            <h1 className="text-2xl mt-7 md:w-[70%] sm:text-3xl md:text-3xl lg:text-4xl -mt-12 xl:text-5xl lg:mt-4 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
                 Stwórz swoją idealną stronę internetową z niezależnym
                 freelancerem
             </h1>

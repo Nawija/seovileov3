@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
                                 </div>
                                 <div class="p-6">
                                     <h5 class="text-lg font-semibold mb-4">
-                                        Support 24/7
+                                        Wsparcie 24/7
                                     </h5>
                                     <p>
                                         Laudantium totam quas cumque pariatur at
@@ -64,14 +64,19 @@ const IndexPage = ({ data }) => {
                                 </div>
                                 <div class="p-6">
                                     <h5 class="text-lg font-semibold mb-4">
-                                        Safe and solid
+                                        Technologia Premium
                                     </h5>
                                     <p>
-                                        Eum nostrum fugit numquam, voluptates
-                                        veniam neque quibusdam ullam aspernatur
-                                        odio soluta, quisquam dolore animi
-                                        mollitia a omnis praesentium, expedita
-                                        nobis!
+                                        Nowoczesne technologie oferują wiele
+                                        korzyści dla stron internetowych.
+                                        Pozwalają one na łatwe dostosowanie
+                                        witryny do wymagań SEO i pozycjonowania
+                                        w wyszukiwarkach, a także na poprawę
+                                        jakości użytkowania dla odwiedzających.
+                                        Dzięki nowoczesnej technologii, strony
+                                        internetowe stają się bardziej
+                                        funkcjonalne co przekłada się na lepsze
+                                        wyniki i większą skuteczność w biznesie.
                                     </p>
                                 </div>
                             </div>
@@ -95,13 +100,16 @@ const IndexPage = ({ data }) => {
                                 </div>
                                 <div class="p-6">
                                     <h5 class="text-lg font-semibold mb-4">
-                                        Extremely fast
+                                        Ekstremalnie Szybki
                                     </h5>
                                     <p>
-                                        Enim cupiditate, minus nulla dolor
-                                        cumque iure eveniet facere ullam beatae
-                                        hic voluptatibus dolores exercitationem?
-                                        Facilis debitis aspernatur amet nisi?
+                                        Tworzę strony internetowe które ładują
+                                        sie z prędkością światła dzięki
+                                        wykorzystaniu pre-renderingu i ładowaniu
+                                        treści tylko wtedy, gdy są potrzebne.
+                                        Dzięki temu strony internetowe działają
+                                        niezwykle szybko i są bardziej
+                                        responsywne dla użytkowników
                                     </p>
                                 </div>
                             </div>
@@ -109,6 +117,8 @@ const IndexPage = ({ data }) => {
                     </div>
                 </section>
             </div>
+
+            <section></section>
 
             <section id="projects" className="-mt-8 bg-white pt-24 px-6 ">
                 <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
