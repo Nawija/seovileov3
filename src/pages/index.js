@@ -123,169 +123,94 @@ const IndexPage = ({ data }) => {
                 </section>
             </div>
 
-            <div class="container max-w-screen-lg my-16 px-6 mx-auto">
+            {/* <div
+                class="container max-w-screen-xl my-16 px-6 mx-auto"
+            >
                 <section class="mb-32 text-gray-800 text-center lg:text-left">
                     <h2 class="text-3xl font-bold mb-12 text-center">
-                        Aktualności
-                    </h2>
-
-                    <div class="grid lg:grid-cols-3 gap-x-6">
-                        <div class="mb-12 lg:mb-0">
-                            <div
-                                class="shadow-lg rounded-lg relative overflow-hidden bg-no-repeat bg-cover mb-6"
-                                data-mdb-ripple="true"
-                                data-mdb-ripple-color="light"
-                            >
-                                <img
-                                    src="https://mdbootstrap.com/img/new/standard/city/041.jpg"
-                                    class="w-full"
-                                />
-                                <a href="#!">
-                                    <div class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                                </a>
-                            </div>
-                            <h5 class="text-lg font-bold mb-3">
-                                Hollywood Exhibition
-                            </h5>
-                            <div class="mb-3 text-red-600 font-medium text-sm flex items-center justify-center lg:justify-start">
-                                <svg
-                                    class="w-4 h-4 mr-2"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M216 23.86c0-23.8-30.65-32.77-44.15-13.04C48 191.85 224 200 224 288c0 35.63-29.11 64.46-64.85 63.99-35.17-.45-63.15-29.77-63.15-64.94v-85.51c0-21.7-26.47-32.23-41.43-16.5C27.8 213.16 0 261.33 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-193-168-296.14z"
-                                    />
-                                </svg>
-                                Hot news
-                            </div>
-                            <p class="text-gray-500">
-                                Ut pretium ultricies dignissim. Sed sit amet mi
-                                eget urna placerat vulputate. Ut vulputate est
-                                non quam dignissim elementum. Donec a
-                                ullamcorper diam.
-                            </p>
-                        </div>
-
-                        <div class="mb-12 lg:mb-0">
-                            <div
-                                class="shadow-lg rounded-lg relative overflow-hidden bg-no-repeat bg-cover mb-6"
-                                data-mdb-ripple="true"
-                                data-mdb-ripple-color="light"
-                            >
-                                <img
-                                    src="https://mdbootstrap.com/img/new/standard/city/045.jpg"
-                                    class="w-full"
-                                />
-                                <a href="#!">
-                                    <div class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                                </a>
-                            </div>
-
-                            <h5 class="text-lg font-bold mb-3">Big Apple</h5>
-                            <div class="mb-3 text-blue-600 font-medium text-sm flex items-center justify-center lg:justify-start">
-                                <svg
-                                    class="w-4 h-4 mr-2"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M437.2 403.5L320 215V64h8c13.3 0 24-10.7 24-24V24c0-13.3-10.7-24-24-24H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h8v151L10.8 403.5C-18.5 450.6 15.3 512 70.9 512h306.2c55.7 0 89.4-61.5 60.1-108.5zM137.9 320l48.2-77.6c3.7-5.2 5.8-11.6 5.8-18.4V64h64v160c0 6.9 2.2 13.2 5.8 18.4l48.2 77.6h-172z"
-                                    />
-                                </svg>
-                                Experiment
-                            </div>
-                            <p class="text-gray-500">
-                                Suspendisse in volutpat massa. Nulla facilisi.
-                                Sed aliquet diam orci, nec ornare metus semper
-                                sed. Integer volutpat ornare erat sit amet
-                                rutrum.
-                            </p>
-                        </div>
-
-                        <div class="mb-0">
-                            <div
-                                class="shadow-lg rounded-lg relative overflow-hidden bg-no-repeat bg-cover mb-6"
-                                data-mdb-ripple="true"
-                                data-mdb-ripple-color="light"
-                            >
-                                <img
-                                    src="https://mdbootstrap.com/img/new/standard/city/047.jpg"
-                                    class="w-full"
-                                />
-                                <a href="#!">
-                                    <div class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                                </a>
-                            </div>
-
-                            <h5 class="text-lg font-bold mb-3">Sun City</h5>
-                            <div class="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center lg:justify-start">
-                                <svg
-                                    class="w-4 h-4 mr-2"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"
-                                >
-                                    <path
-                                        fill="currentColor"
-                                        d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"
-                                    />
-                                </svg>
-                                Family friendly
-                            </div>
-                            <p class="text-gray-500">
-                                Curabitur tristique, mi a mollis sagittis, metus
-                                felis mattis arcu, non vehicula nisl dui quis
-                                diam. Mauris ut risus eget massa volutpat
-                                feugiat. Donec.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <div id="projects" class="bg-white py-6 sm:py-8 lg:py-12">
-                <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-                    <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-8 lg:text-3xl xl:mb-12">
                         Projekty
                     </h2>
-                    <div class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-6">
                         {allDatoCmsPortfolio.edges.map(({ node }) => (
-                            <Link
-                                to={node.slug}
-                                class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-52"
-                            >
-                                <GatsbyImage
-                                        className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
-                                        loading="eager"
-                                        image={getImage(
-                                            node.img.gatsbyImageData
-                                        )}
-                                        alt={node.img.alt || "Strona Internetowa"}
-                                    />
-
-                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-                                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
+                            <div class="mb-12 lg:mb-0">
+                                <div
+                                    class="shadow-lg rounded-lg relative overflow-hidden bg-no-repeat bg-cover mb-6"
+                                    data-mdb-ripple="true"
+                                    data-mdb-ripple-color="light"
+                                >
+                                    <Link to={node.slug}>
+                                        <GatsbyImage
+                                            className="w-full h-52 hover:scale-110 transition-transform duration-200"
+                                            loading="eager"
+                                            image={getImage(
+                                                node.img.gatsbyImageData
+                                            )}
+                                            alt={
+                                                node.img.alt ||
+                                                "Strona Internetowa"
+                                            }
+                                        />
+                                    </Link>
+                                </div>
+                                <h3 class="text-lg font-bold mb-3">
                                     {node.naglowek}
-                                </span>
-                            </Link>
+                                </h3>
+                                <div class="mb-3 text-red-600 font-medium text-sm flex items-center justify-center lg:justify-start">
+                                    <svg
+                                        class="w-4 h-4 mr-2"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 384 512"
+                                    >
+                                        <path
+                                            fill="currentColor"
+                                            d="M216 23.86c0-23.8-30.65-32.77-44.15-13.04C48 191.85 224 200 224 288c0 35.63-29.11 64.46-64.85 63.99-35.17-.45-63.15-29.77-63.15-64.94v-85.51c0-21.7-26.47-32.23-41.43-16.5C27.8 213.16 0 261.33 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-193-168-296.14z"
+                                        />
+                                    </svg>
+                                    Hot news
+                                </div>
+                                <p class="text-gray-500">{node.krotkiTekst}</p>
+                            </div>
                         ))}
                     </div>
-                    <div class="flex items-start justify-between gap-8 sm:items-center">
+                </section>
+            </div> */}
+
+            <div class="bg-white py-6 sm:py-8 lg:py-12">
+                <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+                    <div class="flex items-start mb-6 justify-between gap-8 sm:items-center">
                         <p class="max-w-screen-sm text-sm text-gray-500 lg:text-base">
                             This is a section of some simple filler text, also
-                            known as placeholder text. It shares some
-                            characteristics of a real written text.
+                            known as placeholder text. some simple filler text, also
+                            known as placeholder text.
                         </p>
 
                         <Link
                             to="projekty"
-                            class="inline-block rounded-lg border border-gray-700 bg-white px-4 py-2 text-center text-sm font-semibold text-gray-700 outline-none ring-indigo-700 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base"
+                            class="inline-block rounded-lg border border-gray-700 bg-white px-4 py-2 text-center text-sm sm:font-semibold text-gray-700 outline-none ring-indigo-700 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3"
                         >
                             Wiecej Projektów
                         </Link>
+                    </div>
+                    <div class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
+                        {allDatoCmsPortfolio.edges.map(({ node }) => (
+                            <Link
+                                to={node.slug}
+                                class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-52"
+                            >
+                                <GatsbyImage
+                                    className="w-full h-52 hover:scale-110 transition-transform duration-200"
+                                    loading="eager"
+                                    image={getImage(node.img.gatsbyImageData)}
+                                    alt={node.img.alt || "Strona Internetowa"}
+                                />
+                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+
+                                <span class="absolute ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
+                                    {node.naglowek}
+                                </span>
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </div>
