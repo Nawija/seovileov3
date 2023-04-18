@@ -80,7 +80,7 @@ const IndexPage = ({ data }) => {
                                         Nowoczesne technologie oferują wiele
                                         korzyści dla stron internetowych.
                                         Pozwalają one na łatwe dostosowanie
-                                        witryny do wymagań SEO i pozycjonowania
+                                        SEO i pozycjonowania
                                         w wyszukiwarkach, a także na poprawę
                                         jakości użytkowania dla odwiedzających.
                                     </p>
@@ -121,62 +121,9 @@ const IndexPage = ({ data }) => {
                 </section>
             </div>
 
-            {/* <div
-                class="container max-w-screen-xl my-16 px-6 mx-auto"
-            >
-                <section class="mb-32 text-gray-800 text-center lg:text-left">
-                    <h2 class="text-3xl font-bold mb-12 text-center">
-                        Projekty
-                    </h2>
-
-                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-6">
-                        {allDatoCmsPortfolio.edges.map(({ node }) => (
-                            <div class="mb-12 lg:mb-0">
-                                <div
-                                    class="shadow-lg rounded-lg relative overflow-hidden bg-no-repeat bg-cover mb-6"
-                                    data-mdb-ripple="true"
-                                    data-mdb-ripple-color="light"
-                                >
-                                    <Link to={node.slug}>
-                                        <GatsbyImage
-                                            className="w-full h-52 hover:scale-110 transition-transform duration-200"
-                                            loading="eager"
-                                            image={getImage(
-                                                node.img.gatsbyImageData
-                                            )}
-                                            alt={
-                                                node.img.alt ||
-                                                "Strona Internetowa"
-                                            }
-                                        />
-                                    </Link>
-                                </div>
-                                <h3 class="text-lg font-bold mb-3">
-                                    {node.naglowek}
-                                </h3>
-                                <div class="mb-3 text-red-600 font-medium text-sm flex items-center justify-center lg:justify-start">
-                                    <svg
-                                        class="w-4 h-4 mr-2"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 384 512"
-                                    >
-                                        <path
-                                            fill="currentColor"
-                                            d="M216 23.86c0-23.8-30.65-32.77-44.15-13.04C48 191.85 224 200 224 288c0 35.63-29.11 64.46-64.85 63.99-35.17-.45-63.15-29.77-63.15-64.94v-85.51c0-21.7-26.47-32.23-41.43-16.5C27.8 213.16 0 261.33 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-193-168-296.14z"
-                                        />
-                                    </svg>
-                                    Hot news
-                                </div>
-                                <p class="text-gray-500">{node.krotkiTekst}</p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-            </div> */}
-
             <div class="bg-white py-6 sm:py-8 lg:py-12">
                 <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-                    <div class="flex items-start mb-6 justify-between gap-8 sm:items-center">
+                    <div class="flex items-start mb-12 justify-between gap-8 sm:items-center">
                         <p class="max-w-screen-sm text-sm text-gray-500 lg:text-base">
                             This is a section of some simple filler text, also
                             known as placeholder text. some simple filler text,
@@ -184,7 +131,7 @@ const IndexPage = ({ data }) => {
                         </p>
 
                         <Link
-                            to="projekty"
+                            to="/projekty"
                             class="inline-block rounded-lg border border-gray-700 bg-white px-4 py-2 text-center text-sm sm:font-semibold text-gray-700 outline-none ring-indigo-700 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3"
                         >
                             Wiecej Projektów
@@ -204,7 +151,7 @@ const IndexPage = ({ data }) => {
                                 />
                                 <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
 
-                                <span class="absolute ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">
+                                <span class="absolute bg-gray-900/50 text-sm rounded-3xl px-2 ml-2 mb-3 inline-block text-white md:ml-3">
                                     {node.naglowek}
                                 </span>
                             </Link>
@@ -213,79 +160,6 @@ const IndexPage = ({ data }) => {
                 </div>
             </div>
 
-            {/* <section id="projects" className="-mt-8 bg-white py-20 px-6 ">
-                <div className="max-w-screen-xl px-4 md:px-8 mx-auto">
-                    <div className="mb-10 md:mb-16">
-                        <h2 className="text-gray-900 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
-                            Projekty
-                        </h2>
-
-                        <p className="max-w-screen-md text-gray-700 w-[90%] md:text-lg text-center mx-auto">
-                            Chcesz zwiększyć swoją obecność w sieci i dotrzeć do
-                            większej liczby potencjalnych klientów? Zleć mi
-                            stworzenie strony internetowej, która skutecznie
-                            przyciągnie uwagę i zbuduje pozytywny wizerunek
-                            Twojej firmy
-                        </p>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
-                        {allDatoCmsPortfolio.edges.map(({ node }) => (
-                            <div className="flex flex-col md:flex-row items-start gap-4 lg:gap-6">
-                                <Link
-                                    to={node.slug}
-                                    className="group w-full md:w-32 lg:w-52 h-56 md:h-32 lg:h-48 block self-start shrink-0 overflow-hidden rounded-lg relative"
-                                >
-                                    <GatsbyImage
-                                        className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
-                                        loading="eager"
-                                        image={getImage(
-                                            node.img.gatsbyImageData
-                                        )}
-                                        alt={node.img.alt || "Strona Internetowa"}
-                                    />
-                                </Link>
-
-                                <div className="flex flex-col gap-2">
-                                    <span className="text-gray-400 text-sm">
-                                        {node.date}
-                                    </span>
-
-                                    <h2 className="text-gray-800 w-[93%] lg:w-[70%] text-xl font-bold">
-                                        <Link
-                                            to="/"
-                                            className="hoverLink  active:text-gray-900 transition duration-100"
-                                        >
-                                            {node.naglowek}
-                                        </Link>
-                                    </h2>
-
-                                    <p className="text-gray-700 w-[93%] lg:w-[70%]">
-                                        {node.krotkiTekst}
-                                    </p>
-
-                                    <div>
-                                        <Link
-                                            to={node.slug}
-                                            className="linkColor font-bold active:text-gray-900 py-1"
-                                        >
-                                            Zobacz
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="mx-auto text-center">
-                    <Link
-                        className="text-center btn mt-6 md:mt-12 lg:mt-20"
-                        to="/projekty"
-                    >
-                        Więcej Projektów
-                    </Link>
-                </div>
-            </section> */}
 
             <section class="text-gray-900  body-font">
                 <div class="container px-5 py-24 mx-auto flex flex-col">
