@@ -6,9 +6,9 @@ const HeroCompon = () => (
     <section className="relative flex items-center max-h-[32rem] justify-center w-full ">
         <div className="relative -mt-8 w-full -z-20">
             <StaticImage
-                className="h-96 lg:h-[55rem] w-full"
+                className="h-96 lg:h-[48rem] w-full"
                 quality={100}
-                src="https://images.unsplash.com/photo-1585769214083-0ac4bd33225f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                src="https://images.unsplash.com/photo-1454779132693-e5cd0a216ed3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
                 loading="eager"
                 alt="Strona Internetowa"
                 placeholder="blurred"
@@ -27,11 +27,10 @@ const HeroCompon = () => (
                     fill="#f1f1f1"
                 />
             </svg>
-            {/* <div className="absolute w-full mix-blend-multiply h-full top-0 left-0  bg-gradient-to-bl from-blue-500/80 to-gray-900/90" /> */}
         </div>
 
         <div className="absolute flex flex-col items-center justify-cente">
-            <h1 className="text-2xl md:w-[70%] sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl lg:mt-12 xl:py-0 font-bold text-gray-100 text-center lg:w-[60%] px-6">
+            <h1 className="text-2xl md:w-[70%] sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl lg:mt-12 xl:py-0 font-bold text-gray-100 text-center px-6">
                 Stwórz swoją idealną stronę internetową z niezależnym
                 freelancerem
             </h1>
