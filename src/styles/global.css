@@ -4,6 +4,7 @@
 
 html {
     scroll-padding-top: 50px;
+
 }
 
 body {
@@ -30,7 +31,7 @@ body {
 .linkColor {
     color: #357b0a;
 }
-.link{
+.link {
     color: rgb(243, 244, 246);
 }
 
