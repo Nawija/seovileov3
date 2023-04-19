@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import { useState } from "react";
@@ -169,11 +169,11 @@ const ProjectTemplate = ({
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
                             image={getImage(
-                                datoCmsPortfolio.img.gatsbyImageData
+                                datoCmsPortfolio.imgbg.gatsbyImageData
                             )}
-                            alt={datoCmsPortfolio.img.alt}
+                            alt={datoCmsPortfolio.imgbg.alt}
                         />
-                        <div className="w-full h-full bg-gray-900/80 absolute top-0 left-0" />
+                        <div className="w-full h-full bg-gray-800/80 absolute top-0 left-0" />
                     </div>
                 </section>
 
@@ -288,6 +288,10 @@ export const query = graphql`
         datoCmsPortfolio(slug: { eq: $slug }) {
             data
             img {
+                alt
+                gatsbyImageData
+            }
+            imgbg {
                 alt
                 gatsbyImageData
             }
