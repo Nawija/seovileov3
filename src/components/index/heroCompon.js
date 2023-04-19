@@ -6,7 +6,7 @@ const HeroCompon = () => (
     <section className="relative flex items-center max-h-[32rem] justify-center w-full ">
         <div className="relative -mt-8 w-full -z-20">
             <StaticImage
-                className="h-96 lg:h-[48rem] w-full"
+                className="h-[38rem] lg:h-[48rem] w-full"
                 quality={100}
                 src="https://images.unsplash.com/photo-1644325349124-d1756b79dd42?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2075&q=80"
                 loading="eager"

@@ -42,7 +42,7 @@ const Header = () => {
                     className={
                         !navbar
                             ? "h-full w-full mx-auto py-1 absolute top-0 -z-10 transition-colors duration-300"
-                            : "h-full w-full mx-auto py-1 bg-white absolute top-0 -z-10 transition-colors duration-300"
+                            : "h-full w-full mx-auto py-1 bg-white shadow-lg absolute top-0 -z-10 transition-colors duration-300"
                     }
                 ></div>
                 <nav
@@ -105,7 +105,7 @@ const Header = () => {
                         className={
                             showMenu
                                 ? "absolute text-lg top-full left-0 pb-4 flex flex-col lg:static text-main text-center w-full bg-gray-900 opacity-100 transition duration-200 -translate-y-0 -z-10"
-                                : "absolute top-full left-0 py-2 flex flex-col lg:opacity-100 lg:static lg:flex lg:flex-row lg:items-center lg:justify-center lg:top-0 lg:translate-y-0 lg:py-0 text-main text-center w-full opacity-0 -translate-y-full transition duration-100 -z-10 lg:z-10 lg:ml-8"
+                                : "absolute top-full left-0 py-2 flex flex-col lg:opacity-100 lg:static lg:flex lg:flex-row lg:items-center lg:justify-end lg:top-0 lg:translate-y-0 lg:py-0 text-main text-center w-full opacity-0 -translate-y-full transition duration-100 -z-10 lg:z-10 lg:ml-8"
                         }
                     >
                         <li className="mx-8 my-2 px-2 py-2">

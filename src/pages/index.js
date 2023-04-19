@@ -12,11 +12,11 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <HeroCompon />
-            <div class="container max-w-screen-xl mt-4 lg:-mt-4 mb-6 md:mb-24 mx-auto">
+            <div class="container max-w-screen-xl mt-4 lg:-mt-20 mb-6 md:mb-24 mx-auto">
                 <section class=" text-gray-800 text-center">
-                    <div class="grid lg:gap-x-12 lg:grid-cols-3">
+                    <div class="grid lg:gap-x-12 md:grid-cols-3 lg:px-4">
                         <div class="mb-12 lg:mb-0">
-                            <div class="rounded-lg shadow-lg h-full block bg-white w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
+                            <div class="rounded-lg shadow-xl h-full block bg-white/60 backdrop-blur-xl w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
                                 <div class="flex justify-center">
                                     <div class="p-4 bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 rounded-full shadow-lg inline-block -mt-8">
                                         <svg
@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
                         </div>
 
                         <div class="mb-12 lg:mb-0">
-                            <div class="rounded-lg shadow-lg h-full block bg-white w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
+                            <div class="rounded-lg shadow-xl h-full block bg-white/60 backdrop-blur-xl w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
                                 <div class="flex justify-center">
                                     <div class="p-4 bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 rounded-full shadow-lg inline-block -mt-8">
                                         <svg
@@ -79,17 +79,17 @@ const IndexPage = ({ data }) => {
                                     <p>
                                         Nowoczesne technologie oferują wiele
                                         korzyści dla stron internetowych.
-                                        Pozwalają one na łatwe dostosowanie
-                                        SEO i pozycjonowania
-                                        w wyszukiwarkach, a także na poprawę
-                                        jakości użytkowania dla odwiedzających.
+                                        Pozwalają one na łatwe dostosowanie SEO
+                                        i pozycjonowania w wyszukiwarkach, a
+                                        także na poprawę jakości użytkowania dla
+                                        odwiedzających.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="">
-                            <div class="rounded-lg shadow-lg h-full block bg-white w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
+                            <div class="rounded-lg shadow-xl h-full block bg-white/60 backdrop-blur-xl w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
                                 <div class="flex justify-center">
                                     <div class="p-4 bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 rounded-full shadow-lg inline-block -mt-8">
                                         <svg
@@ -120,6 +120,10 @@ const IndexPage = ({ data }) => {
                     </div>
                 </section>
             </div>
+
+            <section>
+                <h2>Usługi</h2>
+            </section>
 
             <div class="bg-white py-6 sm:py-8 lg:py-12">
                 <div class="mx-auto max-w-screen-xl px-4 md:px-8">
@@ -159,7 +163,6 @@ const IndexPage = ({ data }) => {
                     </div>
                 </div>
             </div>
-
 
             <section class="text-gray-900  body-font">
                 <div class="container px-5 py-24 mx-auto flex flex-col">
