@@ -48,4 +48,31 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         });
     });
+
+
+
+
+
+    const queryBlog = await graphql(`
+        {
+            allDatoCmsBlog {
+                nodes {
+                    slug
+                }
+            }
+        }
+    `);
+
+    const blogTemplate = path.resolve(`./src/templates/blogTemplate.js`);
+
+    queryBlog.data.allDatoCmsBlog.nodes.forEach((node) => {
+        const { slug } = node;
+        createPage({
+            path: `/blog/` + slug,
+            component: blogTemplate,
+            context: {
+                slug,
+            },
+        });
+    });
 };

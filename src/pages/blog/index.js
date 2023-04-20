@@ -6,12 +6,12 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
 const IndexPage = ({ data }) => {
-    const { allDatoCmsUslugi } = data;
+    const { allDatoCmsBlog } = data;
 
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <section className="relative object-bottom flex items-center min-h-[13rem] overflow-hidden h-24 justify-center w-full">
+                <div className="relative object-bottom flex items-center min-h-[13rem] overflow-hidden h-24 justify-center w-full">
                     <div className="w-full -mt-4 -z-20 ">
                         <StaticImage
                             className="w-full h-full object-cover object-center absolute inset-0"
@@ -19,30 +19,30 @@ const IndexPage = ({ data }) => {
                             alt="projekt strona internetowa"
                         />
                         <div className="w-full h-full bg-black/80 absolute top-0 left-0" />
-                        <div className="absolute left-[10%] flex flex-col items-start justify-center text-white">
-                            <div className="flex items-center justify-center text-sm font-semibold ">
-                                <Link className="text-orange-500" to="/">
-                                    Strona Główna
-                                </Link>
-                                <span className="mx-2">\</span>
-                                <p>Blog</p>
-                            </div>
-                            <p className="text-2xl ">Blog</p>
-                        </div>
                     </div>
-                </section>
+                    <div className="absolute left-[10%] flex flex-col items-start justify-center text-white">
+                        <div className="flex items-center justify-center text-sm font-semibold ">
+                            <Link className="text-orange-500" to="/">
+                                Strona Główna
+                            </Link>
+                            <span className="mx-2">\</span>
+                            <p>Blog</p>
+                        </div>
+                        <h1 className="text-2xl">Blog</h1>
+                    </div>
+                </div>
 
-                <section className="py-4 md:py-6 lg:py-12 max-w-screen-xl mx-auto">
+                <section className="py-8 md:py-10 max-w-screen-xl px-4 md:px-6 mx-auto">
                     <div class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 md:gap-6 xl:gap-8">
-                        {allDatoCmsUslugi.edges.map(({ node }) => (
+                        {allDatoCmsBlog.edges.map(({ node }) => (
                             <div>
                                 <Link
                                     to={node.slug}
-                                    class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-52"
+                                    class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-62"
                                 >
                                     <GatsbyImage
-                                        className="w-full h-52 group-hover:scale-110 transition-transform duration-200"
-                                        loading="lazy"
+                                        className="w-full h-62 group-hover:scale-110 transition-transform duration-200"
+                                        loading="eager"
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
@@ -60,15 +60,7 @@ const IndexPage = ({ data }) => {
                                         {node.title}
                                     </h2>
                                     <div className=" bg-gradient-to-r from-amber-400 w-1/3 h-1 rounded-3xl mb-4" />
-                                    <p>
-                                        Strona internetowa dla restauracji:
-                                        Byłem zaangażowany w projekt tworzenia
-                                        strony internetowej dla restauracji,
-                                        która specjalizuje się w kuchni
-                                        włoskiej. Strona była zoptymalizowana
-                                        pod kątem wydajności i zawierała wiele
-                                        zaawansowanych funkcjonalności
-                                    </p>
+                                    <p>{node.smallDescription}</p>
                                 </div>
                             </div>
                         ))}
@@ -81,16 +73,22 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
     query MyQuery {
-        allDatoCmsUslugi(sort: { position: ASC }) {
+        allDatoCmsBlog(sort: { position: ASC }) {
             edges {
                 node {
+                    description
                     img {
                         alt
                         gatsbyImageData
                     }
-                    opis
-                    title
                     slug
+                    smallDescription
+                    title
+                    tag {
+                        description
+                        title
+                        twitterCard
+                    }
                 }
             }
         }
