@@ -121,8 +121,46 @@ const IndexPage = ({ data }) => {
                 </section>
             </div>
 
-            <section>
-                <h2>Usługi</h2>
+            <section className="lg:-mt-10 max-w-screen-2xl mx-auto">
+                <h2 className="text-center text-2xl md:text-3xl text-gray-700 font-bold tracking-wide ">
+                    Usługi
+                </h2>
+                <div className="flex flex-col px-4 md:flex-row my-6 md:mb-16">
+                    <div className="bg-gray-900 h-72 md:h-96 rounded-lg md:w-1/2 order-1 md:order-0"></div>
+                    <div className="md:w-1/2">
+                        <p class=" px-2 md:px-12 md:pt-6 text-gray-500 lg:text-base">
+                            This is a section of some simple filler text, also
+                            known as placeholder text. some simple filler text,
+                            also known as placeholder text. This is a section of
+                            some simple filler text, also known as placeholder
+                            text. some simple filler text, also known as
+                            placeholder text.This is a section of some simple
+                            filler text, also known as placeholder text. some
+                            simple filler text, also known as placeholder text.
+                            This is a section of some simple filler text, also
+                            known as placeholder text. some simple filler text,
+                            also known as placeholder text.
+                            This is a section of some simple filler text, also
+                            known as placeholder text. some simple filler text,
+                            also known as placeholder text.
+                            This is a section of some simple filler text, also
+                            known as placeholder text. some simple filler text,
+                            also known as placeholder text.
+                        </p>
+                        <p class=" px-2 md:px-12 pb-6 md:pt-6 text-gray-500 lg:text-base">
+                            This is a section of some simple filler text, also
+                            known as placeholder text. some simple filler text,
+                            also known as placeholder text. This is a section of
+                            some simple filler text, also known as placeholder
+                            text. some simple filler text, also known as
+                            placeholder text.This is a section of some simple
+                            filler text, also known as placeholder text. some
+                            simple filler text, also known as placeholder text.
+                            This is a section of some simple filler text, also
+                            known as placeholder text. some simple filler text
+                        </p>
+                    </div>
+                </div>
             </section>
 
             <div class="bg-white py-6 sm:py-8 lg:py-12">

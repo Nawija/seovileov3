@@ -108,7 +108,7 @@ const Header = () => {
                                 : "absolute top-full left-0 py-2 flex flex-col lg:opacity-100 lg:static lg:flex lg:flex-row lg:items-center lg:justify-end lg:top-0 lg:translate-y-0 lg:py-0 text-main text-center w-full opacity-0 -translate-y-full transition duration-100 -z-10 lg:z-10 lg:ml-8"
                         }
                     >
-                        <li className="mx-8 my-2 px-2 py-2">
+                        <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={falseMenu}
                                 aria-label="Home"
@@ -123,7 +123,7 @@ const Header = () => {
                             </Link>
                         </li>
 
-                        <li className="mx-8 my-2 px-2 py-2">
+                        <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={falseMenu}
                                 aria-label="portfolio"
@@ -137,7 +137,7 @@ const Header = () => {
                                 Pomoc
                             </Link>
                         </li>
-                        <li className="mx-8 my-2 px-2 py-2">
+                        <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={falseMenu}
                                 aria-label="portfolio"
@@ -151,7 +151,7 @@ const Header = () => {
                                 Projekty
                             </Link>
                         </li>
-                        <li className="mx-8 my-2 px-2 py-2">
+                        <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={falseMenu}
                                 aria-label="usługi"
@@ -165,7 +165,7 @@ const Header = () => {
                                 Usługi
                             </Link>
                         </li>
-                        <li className="mx-8 my-2 px-2 py-2">
+                        <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={falseMenu}
                                 aria-label="portfolio"
@@ -179,7 +179,7 @@ const Header = () => {
                                 Blog
                             </Link>
                         </li>
-                        <li className="mx-8 my-2 px-2 py-2">
+                        <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={falseMenu}
                                 aria-label="kontakt"
