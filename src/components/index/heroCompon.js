@@ -30,7 +30,7 @@ const HeroCompon = () => (
         </div>
 
         <div className="absolute flex flex-col items-center justify-cente">
-            <h1 className="text-2xl md:w-[70%] sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl lg:mt-12 xl:py-0 font-bold text-gray-100 text-center px-6">
+            <h1 className="text-2xl md:w-[70%] sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl xl:py-0 font-bold text-gray-100 text-center px-6">
                 Stwórz swoją idealną stronę internetową z niezależnym
                 freelancerem
             </h1>

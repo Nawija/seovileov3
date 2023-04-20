@@ -7,8 +7,12 @@ html {
 }
 
 body {
-    font-family: Rajdhani, sans-serif;
+    font-family: Open Sans, sans-serif;
     background-color: #f1f1f1;
+}
+
+.titleSection{
+    color: #333c51;
 }
 
 .background-radial-gradient {

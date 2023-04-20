@@ -31,8 +31,8 @@ module.exports = {
                 ],
                 web: [
                     {
-                        name: `Rajdhani`,
-                        file: `https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap`,
+                        name: `Open Sans`,
+                        file: `https://fonts.googleapis.com/css2?family=Coming+Soon&family=Open+Sans:wght@400;500;600;700&display=swap'`,
                     },
                 ],
             },
@@ -42,10 +42,10 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-              name: `src`,
-              path: `${__dirname}/src`,
+                name: `src`,
+                path: `${__dirname}/src`,
             },
-          },
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         {

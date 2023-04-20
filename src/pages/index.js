@@ -12,83 +12,11 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <HeroCompon />
-            <div class="container max-w-screen-xl mt-4 lg:-mt-20 mb-6 md:mb-24 mx-auto">
-                <section class=" text-gray-800 text-center">
+
+            <section class="container max-w-screen-xl mt-4 lg:-mt-20 mb-6 md:mb-24 mx-auto">
+                <div class=" text-gray-800 text-center">
                     <div class="grid lg:gap-x-12 md:grid-cols-3 lg:px-4">
                         <div class="mb-12 lg:mb-0">
-                            <div class="rounded-lg shadow-xl h-full block bg-white/60 backdrop-blur-xl w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
-                                <div class="flex justify-center">
-                                    <div class="p-4 bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 rounded-full shadow-lg inline-block -mt-8">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="h-8 w-8"
-                                            viewBox="0 0 24 24"
-                                            stroke-width="2"
-                                            stroke="white"
-                                            fill="none"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        >
-                                            <path
-                                                stroke="none"
-                                                d="M0 0h24v24H0z"
-                                                fill="none"
-                                            ></path>
-                                            <path d="M12 4l-8 4l8 4l8 -4l-8 -4"></path>
-                                            <path d="M4 12l8 4l8 -4"></path>
-                                            <path d="M4 16l8 4l8 -4"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="p-6">
-                                    <h5 class="text-lg font-semibold mb-4">
-                                        Wsparcie 24/7
-                                    </h5>
-                                    <p>
-                                        Dla klientów posiadających strony
-                                        internetowe wsparcie 24/7 to kluczowe
-                                        rozwiązanie. Dzięki temu klienci
-                                        otrzymują szybką i profesjonalną pomoc w
-                                        przypadku problemów z działaniem strony
-                                        internetowej
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-12 lg:mb-0">
-                            <div class="rounded-lg shadow-xl h-full block bg-white/60 backdrop-blur-xl w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
-                                <div class="flex justify-center">
-                                    <div class="p-4 bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 rounded-full shadow-lg inline-block -mt-8">
-                                        <svg
-                                            class="w-8 h-8 text-white"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 512 512"
-                                        >
-                                            <path
-                                                fill="currentColor"
-                                                d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"
-                                            ></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="p-6">
-                                    <h5 class="text-lg font-semibold mb-4">
-                                        Technologia Premium
-                                    </h5>
-                                    <p>
-                                        Nowoczesne technologie oferują wiele
-                                        korzyści dla stron internetowych.
-                                        Pozwalają one na łatwe dostosowanie SEO
-                                        i pozycjonowania w wyszukiwarkach, a
-                                        także na poprawę jakości użytkowania dla
-                                        odwiedzających.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="">
                             <div class="rounded-lg shadow-xl h-full block bg-white/60 backdrop-blur-xl w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
                                 <div class="flex justify-center">
                                     <div class="p-4 bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 rounded-full shadow-lg inline-block -mt-8">
@@ -104,8 +32,8 @@ const IndexPage = ({ data }) => {
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="p-6">
-                                    <h3 class="text-lg font-semibold mb-4">
+                                <div class="px-2 py-6 sm:px-6">
+                                    <h3 class="text-lg font-bold mb-4">
                                         Szybkość działania
                                     </h3>
                                     <p>
@@ -120,29 +48,115 @@ const IndexPage = ({ data }) => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </div>
 
-            <section className="lg:-mt-10 py-10 max-w-screen-2xl mx-auto">
-                <h2 className="text-center text-xl md:text-2xl text-gray-700 font-bold tracking-wide ">
-                    Strona Internetowa
+                        <div class="mb-12 lg:mb-0">
+                            <div class="rounded-lg shadow-xl h-full block bg-white/60 backdrop-blur-xl w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
+                                <div class="flex justify-center">
+                                    <div class="p-4 bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 rounded-full shadow-lg inline-block -mt-8">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-8 w-8 scale-110"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="2"
+                                            stroke="white"
+                                            fill="none"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path
+                                                stroke="none"
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                            ></path>
+                                            <path d="M7 8h-3a1 1 0 0 0 -1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-3"></path>
+                                            <path d="M14 16h-4v-8h4"></path>
+                                            <path d="M11 12h2"></path>
+                                            <path d="M17 8m0 1a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-6 sm:px-6">
+                                    <h5 class="text-lg font-bold mb-4">
+                                        Przyjazna SEO
+                                    </h5>
+                                    <p>
+                                        Dla klientów posiadających strony
+                                        internetowe wsparcie 24/7 to kluczowe
+                                        rozwiązanie. Dzięki temu klienci
+                                        otrzymują szybką i profesjonalną pomoc w
+                                        przypadku problemów z działaniem strony
+                                        internetowej
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="rounded-lg shadow-xl h-full block bg-white/60 backdrop-blur-xl w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
+                                <div class="flex justify-center">
+                                    <div class="p-4 bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 rounded-full shadow-lg inline-block -mt-8">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-8 w-8 scale-125"
+                                            viewBox="0 0 24 24"
+                                            stroke-width="2"
+                                            stroke="currentColor"
+                                            fill="none"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path
+                                                stroke="none"
+                                                d="M0 0h24v24H0z"
+                                                fill="none"
+                                            ></path>
+                                            <path
+                                                d="M18 4a1 1 0 0 1 .783 .378l.074 .108l3 5a1 1 0 0 1 -.032 1.078l-.08 .103l-8.53 9.533a1.7 1.7 0 0 1 -1.215 .51c-.4 0 -.785 -.14 -1.11 -.417l-.135 -.126l-8.5 -9.5a1 1 0 0 1 -.172 -1.067l.06 -.115l3.013 -5.022l.064 -.09a.982 .982 0 0 1 .155 -.154l.089 -.064l.088 -.05l.05 -.023l.06 -.025l.109 -.032l.112 -.02l.117 -.005h12zm-8.886 3.943a1 1 0 0 0 -1.371 .343l-.6 1l-.06 .116a1 1 0 0 0 .177 1.07l2 2.2l.09 .088a1 1 0 0 0 1.323 -.02l.087 -.09a1 1 0 0 0 -.02 -1.323l-1.501 -1.65l.218 -.363l.055 -.103a1 1 0 0 0 -.398 -1.268z"
+                                                stroke-width="0"
+                                                fill="white"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-6 sm:px-6">
+                                    <h5 class="text-lg font-bold mb-4">
+                                        Technologia Premium
+                                    </h5>
+                                    <p>
+                                        Nowoczesne technologie oferują wiele
+                                        korzyści dla stron internetowych.
+                                        Pozwalają one na łatwe dostosowanie SEO
+                                        i pozycjonowania w wyszukiwarkach, a
+                                        także na poprawę jakości użytkowania dla
+                                        odwiedzających.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="lg:-mt-10 py-10 md:pt-0 lg:pt-10 max-w-screen-2xl mx-auto">
+                <h2 className="text-center px-12 text-xl md:text-2xl titleSection font-bold tracking-wide ">
+                    Szybka <strong>Strona Internetowa</strong>
                 </h2>
-                <div className="flex flex-col px-4 md:flex-row my-6 md:mb-16">
-                    <div className="bg-gray-800 h-72 md:h-96 rounded-3xl md:w-1/2 order-1 md:order-0">
+                <div className=" bg-gradient-to-r from-amber-400 w-[26%] h-1 rounded-3xl mb-12 mx-auto" />
+                <div className="flex flex-col lg:mt-20 px-4 lg:flex-row my-6 md:mb-16">
+                    <div className="sm:h-72 md:h-72 w-[80%] lg:w-1/2 mx-auto lg:my-auto flex sm:mt-3 md:mt-24 items-center justify-center order-1 lg:order-0">
                         <StaticImage
-                            className="-mt-20"
+                            className="lg:-mt-20"
                             src="../assets/speedTest.png"
                         />
                     </div>
-                    <div className="md:w-1/2">
-                        <p class=" px-2 md:px-12 md:font-bold text-gray-600 text-sm">
+                    <div className="lg:w-3/4 lg:px-2">
+                        <p class=" px-2 md:px-12 font-bold text-emerald-600 text-sm">
                             TECHNOLOGIA GATSBY
                         </p>
-                        <p class=" px-2 md:px-12 text-gray-600 text-2xl mb-4 md:mb-0">
+                        <p class=" px-2 md:px-12 text-gray-700 font-bold text-2xl mb-4 md:mb-0">
                             UZYSKAJ NAJSZYBSZĄ STRONĘ INTERNETOWĄ!
                         </p>
-                        <p class=" px-2 md:px-12 md:pt-6 text-gray-600">
+                        <p class=" px-2 md:px-12 md:pt-6 text-gray-700">
                             Nasze strony internetowe tworzymy w technologii
                             Gatsby, aby zapewnić naszym klientom najlepsze
                             doświadczenie użytkownika. Dzięki szybkości i
@@ -152,7 +166,7 @@ const IndexPage = ({ data }) => {
                             pozwala nam łączyć dane z wielu źródeł i tworzyć
                             dynamiczne strony internetowe.
                         </p>
-                        <p class=" px-2 md:px-12 pb-6 md:pt-6 text-gray-600">
+                        <p class=" px-2 md:px-12 pb-6 md:pt-6 text-gray-700">
                             Optymalizacja SEO sprawia, że nasze strony są łatwo
                             widoczne dla wyszukiwarek i znajdują się na szczycie
                             wyników wyszukiwania. Wsparcie i dobre praktyki, na
@@ -164,26 +178,19 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <div class="bg-gray-100 py-6 sm:py-8 lg:py-12">
+            <section class="bg-white py-6 sm:py-8 lg:py-12">
                 <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-                    <h2 className="text-start text-xl md:text-2xl mb-4 text-gray-700 font-bold tracking-wide ">
+                    <h3 className="text-center sm:text-start text-xl md:text-2xl mb-4 text-gray-700 font-bold tracking-wide ">
                         Usługi
-                    </h2>
-                    <div class="flex items-start mb-12 justify-between gap-8 sm:items-center">
-                        <p class="max-w-screen-sm text-sm text-gray-500 lg:text-base">
+                    </h3>
+                    <div class="flex flex-col sm:flex-row mb-12 justify-between gap-8 items-center">
+                        <p class="max-w-screen-sm text-center sm:text-start text-gray-500 lg:text-base">
                             Oferuję szeroki zakres usług związanych z
                             projektowaniem i tworzeniem szybkich stron
                             internetowych
                         </p>
-
-                        <Link
-                            to="/projekty"
-                            class="inline-block rounded-lg border border-gray-700 bg-white px-4 py-2 text-center text-sm sm:font-semibold text-gray-700 outline-none ring-indigo-700 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3"
-                        >
-                            Wiecej Usług
-                        </Link>
                     </div>
-                    <div class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
+                    <div class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mb-8 xl:grid-cols-4 md:gap-6 xl:gap-8">
                         {allDatoCmsUslugi.edges.map(({ node }) => (
                             <div>
                                 <Link
@@ -191,8 +198,8 @@ const IndexPage = ({ data }) => {
                                     class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-52"
                                 >
                                     <GatsbyImage
-                                        className="w-full h-52 hover:scale-110 transition-transform duration-200"
-                                        loading="eager"
+                                        className="w-full h-52 group-hover:scale-110 transition-transform duration-200"
+                                        loading="lazy"
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
@@ -201,47 +208,60 @@ const IndexPage = ({ data }) => {
                                         }
                                     />
                                     <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+                                    <p className="absolute group text-white text-sm rounded-xl font-semibold bg-gray-900/70 py-2 px-4 bottom-2 right-4">
+                                        Zobacz
+                                    </p>
                                 </Link>
-                                <h2 class="text-sm inline-block mb-4 text-gray-800">
-                                    {node.title}
-                                </h2>
-                                <p>
-                                Strona internetowa dla restauracji: Byłem zaangażowany w projekt tworzenia strony internetowej dla restauracji, która specjalizuje się w kuchni włoskiej. Strona była zoptymalizowana pod kątem wydajności i zawierała wiele zaawansowanych funkcjonalności
-                                </p>
+                                <div className="p-2">
+                                    <h2 class="text-lg font-bold text-start  text-gray-800">
+                                        {node.title}
+                                    </h2>
+                                    <div className=" bg-gradient-to-r from-amber-400 w-1/3 h-1 rounded-3xl mb-4" />
+                                    <p>
+                                        Strona internetowa dla restauracji:
+                                        Byłem zaangażowany w projekt tworzenia
+                                        strony internetowej dla restauracji,
+                                        która specjalizuje się w kuchni
+                                        włoskiej. Strona była zoptymalizowana
+                                        pod kątem wydajności i zawierała wiele
+                                        zaawansowanych funkcjonalności
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="bg-white py-6 sm:py-8 lg:py-12">
-                <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-                    <h2 className="text-start text-xl md:text-2xl mb-4 text-gray-700 font-bold tracking-wide ">
-                        Projekty www
-                    </h2>
-                    <div class="flex items-start mb-12 justify-between gap-8 sm:items-center">
-                        <p class="max-w-screen-sm text-sm text-gray-500 lg:text-base">
+            <section class=" py-6 sm:py-8 lg:py-12">
+                <div class="mx-auto max-w-screen-xl px-2 md:px-10">
+                    <div class="flex flex-row justify-between mb-4 px-4 items-center">
+                        <h3 className="text-center sm:text-start text-xl md:text-2xl  text-gray-700 font-bold tracking-wide ">
+                            Projekty www
+                        </h3>
+                        <Link
+                            to="/projekty"
+                            class="btnEmerald"
+                        >
+                            Wiecej Projektów
+                        </Link>
+                    </div>
+                    <div class="flex flex-col sm:flex-row mb-12 justify-between gap-8 items-center">
+                        <p class="max-w-screen-sm px-4 text-center sm:text-start text-gray-500 lg:text-base">
                             Każdy z tych projektów był realizowany w technologii
                             GatsbyJS i zawierał wiele zaawansowanych
                             funkcjonalności, co pozwoliło na uzyskanie bardzo
                             szybkich i responsywnych stron internetowych
                         </p>
-
-                        <Link
-                            to="/projekty"
-                            class="inline-block rounded-lg border border-gray-700 bg-white px-4 py-2 text-center text-sm sm:font-semibold text-gray-700 outline-none ring-indigo-700 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3"
-                        >
-                            Wiecej Projektów
-                        </Link>
                     </div>
-                    <div class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
+                    <div class="mb-4 grid grid-cols-2 gap-4 sm:px-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-4 md:gap-12 lg:gap-4 xl:gap-8">
                         {allDatoCmsPortfolio.edges.map(({ node }) => (
                             <Link
                                 to={node.slug}
-                                class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-52"
+                                class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-64"
                             >
                                 <GatsbyImage
-                                    className="w-full h-52 hover:scale-110 transition-transform duration-200"
+                                    className="w-full h-full hover:scale-110 transition-transform duration-200"
                                     loading="eager"
                                     image={getImage(node.img.gatsbyImageData)}
                                     alt={node.img.alt || "Strona Internetowa"}
@@ -255,9 +275,9 @@ const IndexPage = ({ data }) => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <section class="text-gray-900  body-font">
+            <section class="text-gray-900 bg-white  body-font">
                 <div class="container px-5 py-24 mx-auto flex flex-col">
                     <div class="lg:w-[90%] mx-auto">
                         <div class="rounded-lg h-64 overflow-hidden">
@@ -410,7 +430,7 @@ export const query = graphql`
                 }
             }
         }
-        allDatoCmsUslugi(sort: { meta: { firstPublishedAt: DESC } }) {
+        allDatoCmsUslugi(sort: { position: ASC }) {
             edges {
                 node {
                     img {
