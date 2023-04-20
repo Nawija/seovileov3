@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 import { HeroCompon } from "../components/index";
 
 const IndexPage = ({ data }) => {
-    const { allDatoCmsPortfolio } = data;
+    const { allDatoCmsPortfolio, allDatoCmsUslugi } = data;
 
     return (
         <Layout>
@@ -105,14 +105,17 @@ const IndexPage = ({ data }) => {
                                     </div>
                                 </div>
                                 <div class="p-6">
-                                    <h5 class="text-lg font-semibold mb-4">
-                                        Ekstremalnie Szybka
-                                    </h5>
+                                    <h3 class="text-lg font-semibold mb-4">
+                                        Szybkość działania
+                                    </h3>
                                     <p>
-                                        Tworzę strony internetowe które ładują
-                                        sie z prędkością światła dzięki
-                                        wykorzystaniu pre-renderingu i ładowaniu
-                                        treści tylko wtedy, gdy są potrzebne.
+                                        Dzięki wykorzystaniu technologii
+                                        GatsbyJS tworzymy strony internetowe,
+                                        które działają bardzo szybko. Nasze
+                                        strony ładują się w mgnieniu oka, co
+                                        przekłada się na pozytywne doświadczenie
+                                        użytkownika i lepsze wyniki w
+                                        wyszukiwarkach.
                                     </p>
                                 </div>
                             </div>
@@ -126,7 +129,7 @@ const IndexPage = ({ data }) => {
                     Strona Internetowa
                 </h2>
                 <div className="flex flex-col px-4 md:flex-row my-6 md:mb-16">
-                    <div className="bg-gray-900 h-72 md:h-96 rounded-3xl md:w-1/2 order-1 md:order-0">
+                    <div className="bg-gray-800 h-72 md:h-96 rounded-3xl md:w-1/2 order-1 md:order-0">
                         <StaticImage
                             className="-mt-20"
                             src="../assets/speedTest.png"
@@ -163,41 +166,49 @@ const IndexPage = ({ data }) => {
 
             <div class="bg-gray-100 py-6 sm:py-8 lg:py-12">
                 <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-                <h2 className="text-start text-xl md:text-2xl mb-4 text-gray-700 font-bold tracking-wide ">
-                    Usługi
-                </h2>
+                    <h2 className="text-start text-xl md:text-2xl mb-4 text-gray-700 font-bold tracking-wide ">
+                        Usługi
+                    </h2>
                     <div class="flex items-start mb-12 justify-between gap-8 sm:items-center">
                         <p class="max-w-screen-sm text-sm text-gray-500 lg:text-base">
-                            This is a section of some simple filler text, also
-                            known as placeholder text. some simple filler text,
-                            also known as placeholder text.
+                            Oferuję szeroki zakres usług związanych z
+                            projektowaniem i tworzeniem szybkich stron
+                            internetowych
                         </p>
 
                         <Link
                             to="/projekty"
                             class="inline-block rounded-lg border border-gray-700 bg-white px-4 py-2 text-center text-sm sm:font-semibold text-gray-700 outline-none ring-indigo-700 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3"
                         >
-                            Wiecej Usługi
+                            Wiecej Usług
                         </Link>
                     </div>
                     <div class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
-                        {allDatoCmsPortfolio.edges.map(({ node }) => (
-                            <Link
-                                to={node.slug}
-                                class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-52"
-                            >
-                                <GatsbyImage
-                                    className="w-full h-52 hover:scale-110 transition-transform duration-200"
-                                    loading="eager"
-                                    image={getImage(node.img.gatsbyImageData)}
-                                    alt={node.img.alt || "Strona Internetowa"}
-                                />
-                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-
-                                <span class="absolute bg-gray-900/50 text-sm rounded-3xl px-2 ml-2 mb-3 inline-block text-white md:ml-3">
-                                    {node.naglowek}
-                                </span>
-                            </Link>
+                        {allDatoCmsUslugi.edges.map(({ node }) => (
+                            <div>
+                                <Link
+                                    to={node.slug}
+                                    class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-52"
+                                >
+                                    <GatsbyImage
+                                        className="w-full h-52 hover:scale-110 transition-transform duration-200"
+                                        loading="eager"
+                                        image={getImage(
+                                            node.img.gatsbyImageData
+                                        )}
+                                        alt={
+                                            node.img.alt || "Strona Internetowa"
+                                        }
+                                    />
+                                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+                                </Link>
+                                <h2 class="text-sm inline-block mb-4 text-gray-800">
+                                    {node.title}
+                                </h2>
+                                <p>
+                                Strona internetowa dla restauracji: Byłem zaangażowany w projekt tworzenia strony internetowej dla restauracji, która specjalizuje się w kuchni włoskiej. Strona była zoptymalizowana pod kątem wydajności i zawierała wiele zaawansowanych funkcjonalności
+                                </p>
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -205,14 +216,15 @@ const IndexPage = ({ data }) => {
 
             <div class="bg-white py-6 sm:py-8 lg:py-12">
                 <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-                <h2 className="text-start text-xl md:text-2xl mb-4 text-gray-700 font-bold tracking-wide ">
-                    Projekty www
-                </h2>
+                    <h2 className="text-start text-xl md:text-2xl mb-4 text-gray-700 font-bold tracking-wide ">
+                        Projekty www
+                    </h2>
                     <div class="flex items-start mb-12 justify-between gap-8 sm:items-center">
                         <p class="max-w-screen-sm text-sm text-gray-500 lg:text-base">
-                            This is a section of some simple filler text, also
-                            known as placeholder text. some simple filler text,
-                            also known as placeholder text.
+                            Każdy z tych projektów był realizowany w technologii
+                            GatsbyJS i zawierał wiele zaawansowanych
+                            funkcjonalności, co pozwoliło na uzyskanie bardzo
+                            szybkich i responsywnych stron internetowych
                         </p>
 
                         <Link
@@ -394,6 +406,19 @@ export const query = graphql`
                     link
                     naglowek
                     seoTekst
+                    slug
+                }
+            }
+        }
+        allDatoCmsUslugi(sort: { meta: { firstPublishedAt: DESC } }) {
+            edges {
+                node {
+                    img {
+                        alt
+                        gatsbyImageData
+                    }
+                    opis
+                    title
                     slug
                 }
             }

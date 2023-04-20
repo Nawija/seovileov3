@@ -5,7 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const queryProjects = await graphql(`
         {
-            allDatoCmsPortfolio{
+            allDatoCmsPortfolio {
                 nodes {
                     slug
                 }
@@ -20,6 +20,29 @@ exports.createPages = async ({ graphql, actions }) => {
         createPage({
             path: slug,
             component: projectTemplate,
+            context: {
+                slug,
+            },
+        });
+    });
+
+    const queryUsługi = await graphql(`
+        {
+            allDatoCmsUslugi {
+                nodes {
+                    slug
+                }
+            }
+        }
+    `);
+
+    const uslugiTemplate = path.resolve(`./src/templates/uslugiTemplate.js`);
+
+    queryUsługi.data.allDatoCmsUslugi.nodes.forEach((node) => {
+        const { slug } = node;
+        createPage({
+            path: slug,
+            component: uslugiTemplate,
             context: {
                 slug,
             },
