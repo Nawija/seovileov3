@@ -121,50 +121,93 @@ const IndexPage = ({ data }) => {
                 </section>
             </div>
 
-            <section className="lg:-mt-10 max-w-screen-2xl mx-auto">
-                <h2 className="text-center text-2xl md:text-3xl text-gray-700 font-bold tracking-wide ">
-                    Usługi
+            <section className="lg:-mt-10 py-10 max-w-screen-2xl mx-auto">
+                <h2 className="text-center text-xl md:text-2xl text-gray-700 font-bold tracking-wide ">
+                    Strona Internetowa
                 </h2>
                 <div className="flex flex-col px-4 md:flex-row my-6 md:mb-16">
-                    <div className="bg-gray-900 h-72 md:h-96 rounded-lg md:w-1/2 order-1 md:order-0"></div>
+                    <div className="bg-gray-900 h-72 md:h-96 rounded-3xl md:w-1/2 order-1 md:order-0">
+                        <StaticImage
+                            className="-mt-20"
+                            src="../assets/speedTest.png"
+                        />
+                    </div>
                     <div className="md:w-1/2">
-                        <p class=" px-2 md:px-12 md:pt-6 text-gray-500 lg:text-base">
-                            This is a section of some simple filler text, also
-                            known as placeholder text. some simple filler text,
-                            also known as placeholder text. This is a section of
-                            some simple filler text, also known as placeholder
-                            text. some simple filler text, also known as
-                            placeholder text.This is a section of some simple
-                            filler text, also known as placeholder text. some
-                            simple filler text, also known as placeholder text.
-                            This is a section of some simple filler text, also
-                            known as placeholder text. some simple filler text,
-                            also known as placeholder text.
-                            This is a section of some simple filler text, also
-                            known as placeholder text. some simple filler text,
-                            also known as placeholder text.
-                            This is a section of some simple filler text, also
-                            known as placeholder text. some simple filler text,
-                            also known as placeholder text.
+                        <p class=" px-2 md:px-12 md:font-bold text-gray-600 text-sm">
+                            TECHNOLOGIA GATSBY
                         </p>
-                        <p class=" px-2 md:px-12 pb-6 md:pt-6 text-gray-500 lg:text-base">
-                            This is a section of some simple filler text, also
-                            known as placeholder text. some simple filler text,
-                            also known as placeholder text. This is a section of
-                            some simple filler text, also known as placeholder
-                            text. some simple filler text, also known as
-                            placeholder text.This is a section of some simple
-                            filler text, also known as placeholder text. some
-                            simple filler text, also known as placeholder text.
-                            This is a section of some simple filler text, also
-                            known as placeholder text. some simple filler text
+                        <p class=" px-2 md:px-12 text-gray-600 text-2xl mb-4 md:mb-0">
+                            UZYSKAJ NAJSZYBSZĄ STRONĘ INTERNETOWĄ!
+                        </p>
+                        <p class=" px-2 md:px-12 md:pt-6 text-gray-600">
+                            Nasze strony internetowe tworzymy w technologii
+                            Gatsby, aby zapewnić naszym klientom najlepsze
+                            doświadczenie użytkownika. Dzięki szybkości i
+                            wydajności, nasze strony są łatwo dostępne dla
+                            każdego, bez względu na urządzenie, z jakiego
+                            korzystają. Integracja z różnymi źródłami danych
+                            pozwala nam łączyć dane z wielu źródeł i tworzyć
+                            dynamiczne strony internetowe.
+                        </p>
+                        <p class=" px-2 md:px-12 pb-6 md:pt-6 text-gray-600">
+                            Optymalizacja SEO sprawia, że nasze strony są łatwo
+                            widoczne dla wyszukiwarek i znajdują się na szczycie
+                            wyników wyszukiwania. Wsparcie i dobre praktyki, na
+                            jakich opiera się Gatsby, zapewniają nam
+                            bezpieczeństwo i pewność, że nasze strony są zawsze
+                            najlepszej jakości.
                         </p>
                     </div>
                 </div>
             </section>
 
+            <div class="bg-gray-100 py-6 sm:py-8 lg:py-12">
+                <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+                <h2 className="text-start text-xl md:text-2xl mb-4 text-gray-700 font-bold tracking-wide ">
+                    Usługi
+                </h2>
+                    <div class="flex items-start mb-12 justify-between gap-8 sm:items-center">
+                        <p class="max-w-screen-sm text-sm text-gray-500 lg:text-base">
+                            This is a section of some simple filler text, also
+                            known as placeholder text. some simple filler text,
+                            also known as placeholder text.
+                        </p>
+
+                        <Link
+                            to="/projekty"
+                            class="inline-block rounded-lg border border-gray-700 bg-white px-4 py-2 text-center text-sm sm:font-semibold text-gray-700 outline-none ring-indigo-700 transition duration-100 hover:bg-gray-100 focus-visible:ring active:bg-gray-200 md:px-8 md:py-3"
+                        >
+                            Wiecej Usługi
+                        </Link>
+                    </div>
+                    <div class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
+                        {allDatoCmsPortfolio.edges.map(({ node }) => (
+                            <Link
+                                to={node.slug}
+                                class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-52"
+                            >
+                                <GatsbyImage
+                                    className="w-full h-52 hover:scale-110 transition-transform duration-200"
+                                    loading="eager"
+                                    image={getImage(node.img.gatsbyImageData)}
+                                    alt={node.img.alt || "Strona Internetowa"}
+                                />
+                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+
+                                <span class="absolute bg-gray-900/50 text-sm rounded-3xl px-2 ml-2 mb-3 inline-block text-white md:ml-3">
+                                    {node.naglowek}
+                                </span>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
             <div class="bg-white py-6 sm:py-8 lg:py-12">
                 <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+                <h2 className="text-start text-xl md:text-2xl mb-4 text-gray-700 font-bold tracking-wide ">
+                    Projekty www
+                </h2>
                     <div class="flex items-start mb-12 justify-between gap-8 sm:items-center">
                         <p class="max-w-screen-sm text-sm text-gray-500 lg:text-base">
                             This is a section of some simple filler text, also
