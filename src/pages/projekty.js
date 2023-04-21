@@ -36,10 +36,10 @@ const IndexPage = ({ data }) => {
                 <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
             </div>
 
-                <section class="container -mt-40 lg:-mt-32 px-6 mx-auto">
+                <section class="container -mt-24 lg:-mt-32 px-2 mx-auto">
                     <section class=" mb-6 md:mb-12 text-gray-800">
                         <div class="container mx-auto xl:px-32 text-center lg:text-left">
-                            <div class="flex flex-col lg:flex-row items-center">
+                            <div class="flex flex-col lg:flex-row items-center lg:items-start">
                                 <div>
                                     <StaticImage
                                         className="h-72 w-72 xl:py-64 xl:px-64 rounded-lg shadow-lg"
@@ -47,12 +47,12 @@ const IndexPage = ({ data }) => {
                                         alt="projekt strona internetowa"
                                     />
                                 </div>
-                                <div class="mb-12 lg:mb-0">
-                                    <div class=" block mt-12 rounded-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 sm:text-start">
+                                <div class="mb-6 lg:mb-0">
+                                    <div class=" block lg:mt-12 rounded-lg py-4 lg:py-12 md:px-12 lg:-mr-14 sm:text-start">
                                         <h1 class="text-3xl font-bold pb-2">
                                             Projekty Stron Internetowych
                                         </h1>
-                                        <p class="text-gray-700 mb-4 pb-2">
+                                        <p class="text-gray-700 text-start pl-3 mb-4 pb-2">
                                             Freelancer, który tworzy strony
                                             internetowe, to specjalista z
                                             doświadczeniem w projektowaniu i
@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
                                             przetestować ich funkcjonalność i
                                             interaktywność.
                                         </p>
-                                        <p class="text-gray-700 mb-4 pb-2">
+                                        <p class="text-gray-700 text-start pl-3 mb-4 pb-2">
                                             Oglądając te projekty, możesz
                                             znaleźć inspirację dla swojego
                                             własnego projektu lub po prostu

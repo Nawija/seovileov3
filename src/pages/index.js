@@ -239,7 +239,10 @@ const IndexPage = ({ data }) => {
                         <h3 className="text-center sm:text-start text-xl md:text-2xl  text-gray-700 font-bold tracking-wide ">
                             Projekty www
                         </h3>
-                        <Link to="/projekty" class="btnEmerald">
+                        <Link
+                            to="/projekty"
+                            class="px-3 py-3 text-white font-medium text-sm rounded bg-gradient-to-tr from-emerald-800 to-emerald-600 shadow-emerald-800 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-200"
+                        >
                             Wiecej Projektów
                         </Link>
                     </div>
