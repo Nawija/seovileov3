@@ -11,7 +11,7 @@ body {
     background-color: #f1f1f1;
 }
 
-.titleSection{
+.titleSection {
     color: #333c51;
 }
 
@@ -35,7 +35,12 @@ body {
     color: #357b0a;
 }
 .link {
+    font-size: 14px;
     color: rgb(243, 244, 246);
+}
+.linkFooter {
+    color: #828996;
+    font-size: 14px;
 }
 
 .hoverLink:hover {

@@ -26,8 +26,8 @@ const Footer = () => (
                     </div>
 
                     <p className="mb-6  sm:pr-8">
-                        Technical and design services to the building envelope
-                        and facade industry
+                        Stwórz swoją idealną stronę internetową z niezależnym
+                        freelancerem
                     </p>
 
                     <div className="flex">
@@ -58,7 +58,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/"
-                                className=" transition duration-100 hoverLink"
+                                className=" transition linkFooter duration-100 hoverLink"
                             >
                                 Home
                             </Link>
@@ -67,7 +67,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/#about"
-                                className=" transition duration-100 hoverLink"
+                                className=" transition duration-100 hoverLink linkFooter"
                             >
                                 About
                             </Link>
@@ -76,7 +76,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/#services"
-                                className=" transition duration-100 hoverLink"
+                                className=" transition duration-100 hoverLink linkFooter"
                             >
                                 Services
                             </Link>
@@ -93,7 +93,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/projects"
-                                className=" transition duration-100 hoverLink"
+                                className=" transition duration-100 hoverLink linkFooter"
                             >
                                 Projects
                             </Link>
@@ -102,7 +102,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="https://www.linkedin.com/company/ckl-facades/jobs/"
-                                className=" transition duration-100 hoverLink"
+                                className=" transition duration-100 hoverLink linkFooter"
                             >
                                 Jobs
                             </Link>
@@ -119,7 +119,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/#contact"
-                                className=" transition duration-100 hoverLink"
+                                className=" transition duration-100 hoverLink linkFooter"
                             >
                                 Contact
                             </Link>
@@ -128,7 +128,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/#contact"
-                                className=" transition duration-100 hoverLink"
+                                className=" transition duration-100 hoverLink linkFooter"
                             >
                                 Chat
                             </Link>
@@ -145,7 +145,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/privacy-policy"
-                                className=" transition duration-100 hoverLink"
+                                className=" transition duration-100 hoverLink linkFooter"
                             >
                                 Privacy Policy
                             </Link>
@@ -154,7 +154,7 @@ const Footer = () => (
                         <div>
                             <Link
                                 to="/cookies"
-                                className=" transition duration-100 hoverLink"
+                                className=" transition duration-100 hoverLink linkFooter"
                             >
                                 Cookies
                             </Link>

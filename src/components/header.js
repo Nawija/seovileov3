@@ -67,7 +67,7 @@ const Header = () => {
                         <p
                             className={
                                 navbar
-                                    ? "text-gray-600 ml-1 tracking-wide font-bold"
+                                    ? "text-slate-800 ml-1 tracking-wide font-bold"
                                     : "text-gray-100 ml-1 tracking-wide font-bold"
                             }
                         >

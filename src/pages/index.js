@@ -138,10 +138,10 @@ const IndexPage = ({ data }) => {
             </section>
 
             <section className="lg:-mt-10 py-10 md:pt-0 lg:pt-10 max-w-screen-2xl mx-auto">
-                <h2 className="text-center px-12 text-xl md:text-2xl titleSection font-bold tracking-wide ">
+                <h2 className="text-center px-12 text-xl md:text-2xl titleSection font-bold -tracking-wide ">
                     Szybka <strong>Strona Internetowa</strong>
                 </h2>
-                <div className=" bg-gradient-to-r from-amber-400 w-[26%] h-1 rounded-3xl mb-12 mx-auto" />
+                <div className=" bg-gradient-to-r from-amber-400 w-[24%] h-1 rounded-3xl mb-12 mx-auto" />
                 <div className="flex flex-col lg:mt-20 px-4 lg:flex-row my-6 md:mb-16">
                     <div className="sm:h-72 md:h-72 w-[80%] lg:w-1/2 mx-auto lg:my-auto flex sm:mt-3 md:mt-24 items-center justify-center order-1 lg:order-0">
                         <StaticImage
