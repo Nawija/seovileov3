@@ -132,9 +132,9 @@ const Header = () => {
                                         ? "font-semibold lg:text-gray-600 hoverLink link transition-colors duration-200"
                                         : "font-semibold hoverLink link transition-colors duration-200"
                                 }
-                                to="/portfolio"
+                                to="/poradnik"
                             >
-                                Pomoc
+                                Poradnik
                             </Link>
                         </li>
                         <li className="mx-5 my-2 px-2 py-2">
@@ -146,7 +146,7 @@ const Header = () => {
                                         ? "font-semibold lg:text-gray-600 hoverLink link transition-colors duration-200"
                                         : "font-semibold hoverLink link transition-colors duration-200"
                                 }
-                                to="/portfolio"
+                                to="/projekty"
                             >
                                 Projekty
                             </Link>

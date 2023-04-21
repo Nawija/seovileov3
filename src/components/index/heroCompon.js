@@ -8,7 +8,7 @@ const HeroCompon = () => (
             <StaticImage
                 className="h-[38rem] lg:h-[48rem] w-full"
                 quality={100}
-                src="https://images.unsplash.com/photo-1644325349124-d1756b79dd42?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2075&q=80"
+                src="../../assets/hero.png"
                 loading="eager"
                 alt="Strona Internetowa"
                 placeholder="blurred"

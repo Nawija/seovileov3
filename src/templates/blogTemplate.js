@@ -21,6 +21,7 @@ const ProjectTemplate = ({
                         />
                         <div className="w-full h-full bg-gray-800/80 absolute top-0 left-0" />
                     </div>
+                    
                 </section>
 
                 <section class="container -mt-36 lg:-mt-20 px-6 mx-auto">

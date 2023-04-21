@@ -12,7 +12,7 @@ const Admin = () => (
                     quality={100}
                     src="../assets/hero.png"
                     loading="eager"
-                    alt="Facades project"
+                    alt="Seovileo Strony internetowe"
                     placeholder="blurred"
                 />
                 <svg
@@ -25,19 +25,44 @@ const Admin = () => (
                 >
                     <path
                         d="M0 37.9955C0 37.9955 458.5 122.495 1002 37.9955C1545.5 -46.5045 2004 37.9955 2004 37.9955V153.996H0V37.9955Z"
-                        fill="#ECECEC"
+                        fill="#f1f1f1"
                     />
                 </svg>
                 <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
             </div>
         </section>
-        <section className="mb-52 mt-52 w-full flex flex-col items-center justify-center">
+        <section className="mb-52 mt-32 w-full flex flex-col items-center justify-center">
             <Link
-                to="https://seovileo.admin.datocms.com/editor"
-                className="btn"
+                to="/"
+                className="flex items-center mb-12 justify-center"
+                aria-label="logo"
             >
-                Panel CMS
+                <div className="h-auto w-16 ">
+                    <StaticImage
+                        quality={100}
+                        className="h-full w-full"
+                        src="../assets/logoBrowser.png"
+                    />
+                </div>
+                <p className="text-gray-700 text-2xl ml-2 tracking-wide font-semibold">
+                    Seovileo
+                </p>
             </Link>
+
+            <div className="flex items-center justify-center">
+                <Link
+                    to="https://seovileo.admin.datocms.com/editor"
+                    className="btn mr-6"
+                >
+                    Panel CMS
+                </Link>
+                <Link
+                    to="https://seovileo.admin.datocms.com/editor"
+                    className="btn"
+                >
+                    Analityka
+                </Link>
+            </div>
         </section>
     </Layout>
 );

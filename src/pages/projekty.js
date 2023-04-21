@@ -11,24 +11,38 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <section className="relative object-bottom flex items-center min-h-[13rem] overflow-hidden h-24 justify-center w-full">
-                    <div className="w-full -mt-4 -z-20 ">
-                        <StaticImage
-                            className="w-full h-full object-cover object-center absolute inset-0"
-                            src="https://images.unsplash.com/photo-1598121210875-08d6cf351459?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
-                            alt="projekt strona internetowa"
-                        />
-                        <div className="w-full h-full bg-gray-900/80 absolute top-0 left-0" />
-                    </div>
-                </section>
+            <div className="relative w-full -z-20">
+                <StaticImage
+                    className="h-40 lg:h-52 xl:h-56 w-full md:w-full"
+                    quality={100}
+                    src="../assets/hero.png"
+                    loading="eager"
+                    alt="Seovileo Strony internetowe"
+                    placeholder="blurred"
+                />
+                <svg
+                    className="absolute -bottom-3 left-0 z-10"
+                    width="2004"
+                    height="154"
+                    viewBox="0 0 2004 154"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M0 37.9955C0 37.9955 458.5 122.495 1002 37.9955C1545.5 -46.5045 2004 37.9955 2004 37.9955V153.996H0V37.9955Z"
+                        fill="#f1f1f1"
+                    />
+                </svg>
+                <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
+            </div>
 
-                <section class="container -mt-36 lg:-mt-20 px-6 mx-auto">
+                <section class="container -mt-40 lg:-mt-32 px-6 mx-auto">
                     <section class=" mb-6 md:mb-12 text-gray-800">
                         <div class="container mx-auto xl:px-32 text-center lg:text-left">
                             <div class="flex flex-col lg:flex-row items-center">
                                 <div>
                                     <StaticImage
-                                        className="h-80 w-80 md:h-96 md:w-96 lg:py-72 lg:px-80 rounded-lg shadow-lg"
+                                        className="h-72 w-72 xl:py-64 xl:px-64 rounded-lg shadow-lg"
                                         src="https://images.unsplash.com/photo-1598121210875-08d6cf351459?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
                                         alt="projekt strona internetowa"
                                     />

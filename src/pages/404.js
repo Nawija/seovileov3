@@ -26,7 +26,7 @@ const NotFoundPage = () => (
                 >
                     <path
                         d="M0 37.9955C0 37.9955 458.5 122.495 1002 37.9955C1545.5 -46.5045 2004 37.9955 2004 37.9955V153.996H0V37.9955Z"
-                        fill="#ECECEC"
+                        fill="#f1f1f1"
                     />
                 </svg>
                 <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
@@ -44,15 +44,15 @@ const NotFoundPage = () => (
                         />
                     </div>
                     <div class="flex flex-col items-center justify-center sm:items-start md:py-24 lg:py-32">
-                        <p class="mb-4 text-4xl font-semibold uppercase text-orange-400 md:text-5xl">
+                        <h1 class="mb-4 text-5xl font-semibold uppercase text-orange-500 md:text-7xl">
                             Error 404
-                        </p>
-                        <h1 class="mb-2 text-center text-2xl font-bold text-gray-800 sm:text-left md:text-3xl">
-                            Uupsss...
                         </h1>
+                        <p class="mb-2 text-center text-lg font-semibold text-gray-800 sm:text-left">
+                            Uupsss...
+                        </p>
 
-                        <p class="mb-8 text-center text-gray-500 sm:text-left text-lg md:text-xl">
-                            Nie znaleziono strony
+                        <p class="mb-8 text-center capitalize text-gray-800 sm:text-left text-lg">
+                            Coś poszło nie tak
                         </p>
 
                         <Link href="/" class="btn">
