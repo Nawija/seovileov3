@@ -33,9 +33,9 @@ const IndexPage = ({ data }) => {
                                     </div>
                                 </div>
                                 <div class="px-2 py-6 sm:px-6">
-                                    <h3 class="text-lg font-bold mb-4">
+                                    <h2 class="text-lg font-bold mb-4">
                                         Szybkość działania
-                                    </h3>
+                                    </h2>
                                     <p>
                                         Dzięki wykorzystaniu technologii
                                         GatsbyJS tworzymy strony internetowe,
@@ -76,9 +76,9 @@ const IndexPage = ({ data }) => {
                                     </div>
                                 </div>
                                 <div class="px-2 py-6 sm:px-6">
-                                    <h5 class="text-lg font-bold mb-4">
+                                    <h2 class="text-lg font-bold mb-4">
                                         Przyjazna SEO
-                                    </h5>
+                                    </h2>
                                     <p>
                                         Dla klientów posiadających strony
                                         internetowe wsparcie 24/7 to kluczowe
@@ -119,9 +119,9 @@ const IndexPage = ({ data }) => {
                                     </div>
                                 </div>
                                 <div class="px-2 py-6 sm:px-6">
-                                    <h5 class="text-lg font-bold mb-4">
+                                    <h2 class="text-lg font-bold mb-4">
                                         Technologia Premium
-                                    </h5>
+                                    </h2>
                                     <p>
                                         Nowoczesne technologie oferują wiele
                                         korzyści dla stron internetowych.
@@ -335,8 +335,7 @@ const IndexPage = ({ data }) => {
             </section>
 
             <section class="mb-40">
-                <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
-                </nav>
+                <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between"></nav>
 
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -355,11 +354,11 @@ const IndexPage = ({ data }) => {
                             y2="0"
                         >
                             <stop
-                                stop-color="hsl(217, 88%, 33.7%)"
+                                stop-color="hsl(221, 61%, 13%)"
                                 offset="0"
                             ></stop>
                             <stop
-                                stop-color="hsl(217, 88%, 75.1%)"
+                                stop-color="hsl(221, 46%, 36%)"
                                 offset="1"
                             ></stop>
                         </linearGradient>
@@ -449,37 +448,37 @@ const IndexPage = ({ data }) => {
                 <div class="container mx-auto px-6 md:px-12 xl:px-32">
                     <div class="text-center text-gray-800">
                         <div
-                            class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12"
+                            class="block rounded-lg shadow-xl px-6 py-10 md:py-12 md:px-10"
                             style={{
                                 "margin-top": "180px",
                                 "background-color": "hsla(0, 0%, 100%, 0.8)",
-                                "backdrop-filter": "saturate(200%) blur(15px)",
+                                "backdrop-filter": "saturate(200%) blur(8px)",
                             }}
                         >
-                            <h3 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">
+                            <h3 class="text-3xl md:text-4xl xl:text-5xl font-semibold tracking-tight mb-6">
                                 Zdobądz Przewage dzięki <br />
-                                <span class="text-amber-500">
+                                <strong class="text-amber-500 mt-1 lg:drop-shadow-md">
                                     Stronie Internetowej
-                                </span>
+                                </strong>
                             </h3>
-                            <a
-                                class="inline-block px-7 py-3 mb-2 md:mb-0 mr-0 md:mr-2 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                            <Link
+                                to="/projekty"
+                                class="btnOrange mr-4"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
-                                href="#!"
                                 role="button"
                             >
                                 Projekty
-                            </a>
-                            <a
-                                class="inline-block px-7 py-3 font-medium text-sm bg-transparent text-blue-600 text leading-tight uppercase rounded hover:text-blue-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out"
+                            </Link>
+                            <Link
+                                to="/kontakt"
+                                class="inline-block px-7 py-3 font-semibold text-sm bg-transparent text-gray-900 leading-tight uppercase rounded hover:text-gray-700 hover:bg-gray-100 focus:bg-gray-100 hover:shadow-md focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-200"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
-                                href="#!"
                                 role="button"
                             >
-                                Learn more
-                            </a>
+                                Kontakt &#8594;
+                            </Link>
                         </div>
                     </div>
                 </div>
