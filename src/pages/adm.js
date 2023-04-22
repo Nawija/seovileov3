@@ -12,8 +12,8 @@ const Admin = () => (
                     quality={100}
                     src="../assets/hero.png"
                     loading="eager"
-                    alt="Seovileo Strony internetowe"
                     placeholder="blurred"
+                    alt="Seovileo Strony internetowe"
                 />
                 <svg
                     className="absolute -bottom-3 left-0 z-10"
@@ -41,6 +41,8 @@ const Admin = () => (
                     <StaticImage
                         quality={100}
                         className="h-full w-full"
+                        loading="eager"
+                        placeholder="blurred"
                         src="../assets/logoBrowser.png"
                     />
                 </div>

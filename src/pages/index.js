@@ -141,22 +141,25 @@ const IndexPage = ({ data }) => {
                 <h2 className="text-center px-12 text-xl md:text-2xl titleSection font-bold -tracking-wide ">
                     Szybka <strong>Strona Internetowa</strong>
                 </h2>
-                <div className=" bg-gradient-to-r from-amber-400 w-[24%] h-1 rounded-3xl mb-12 mx-auto" />
+                <div className=" bg-gradient-to-r from-amber-400 w-[30%] md:w-[20%] h-1 rounded-3xl mb-12 mx-auto" />
                 <div className="flex flex-col lg:mt-20 px-4 lg:flex-row my-6 md:mb-16">
                     <div className="sm:h-72 md:h-72 w-[80%] lg:w-1/2 mx-auto lg:my-auto flex sm:mt-3 md:mt-24 items-center justify-center order-1 lg:order-0">
                         <StaticImage
                             className="lg:-mt-20"
+                            loading="eager"
+                            placeholder="blurred"
                             src="../assets/speedTest.png"
+                            alt="test szybkosci strony internetowej"
                         />
                     </div>
                     <div className="lg:w-3/4 lg:px-2">
-                        <p class=" px-2 md:px-12 font-bold text-emerald-600 text-sm">
+                        <p class=" px-2 md:px-12 font-bold text-emerald-700 text-sm">
                             TECHNOLOGIA GATSBY
                         </p>
-                        <p class=" px-2 md:px-12 text-gray-700 font-bold text-2xl mb-4 md:mb-0">
+                        <p class=" px-2 md:px-12 text-gray-700 font-bold text-xl mb-4 md:mb-0">
                             UZYSKAJ NAJSZYBSZĄ STRONĘ INTERNETOWĄ!
                         </p>
-                        <p class=" px-2 md:px-12 md:pt-6 text-gray-700">
+                        <p class=" px-2 md:px-12 md:mt-4 text-gray-700">
                             Nasze strony internetowe tworzymy w technologii
                             Gatsby, aby zapewnić naszym klientom najlepsze
                             doświadczenie użytkownika. Dzięki szybkości i
@@ -166,7 +169,7 @@ const IndexPage = ({ data }) => {
                             pozwala nam łączyć dane z wielu źródeł i tworzyć
                             dynamiczne strony internetowe.
                         </p>
-                        <p class=" px-2 md:px-12 pb-6 md:pt-6 text-gray-700">
+                        <p class=" px-2 md:px-12 pb-6 mt-3 md:mt-4 text-gray-700">
                             Optymalizacja SEO sprawia, że nasze strony są łatwo
                             widoczne dla wyszukiwarek i znajdują się na szczycie
                             wyników wyszukiwania. Wsparcie i dobre praktyki, na
@@ -191,15 +194,15 @@ const IndexPage = ({ data }) => {
                         </p>
                     </div>
                     <div class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mb-8 xl:grid-cols-4 md:gap-6 xl:gap-8">
-                        {allDatoCmsUslugi.edges.map(({ node }) => (
-                            <div>
+                        {/* <div>
                                 <Link
                                     to={node.slug}
-                                    class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-52"
+                                    class="group relative flex  items-end mx-auto overflow-hidden rounded-xl bg-gray-100 shadow-xl h-48 md:h-52 w-48 md:w-52"
                                 >
                                     <GatsbyImage
-                                        className="w-full h-52 group-hover:scale-110 transition-transform duration-200"
+                                        className="w-full h-full group-hover:scale-110 transition-transform duration-200"
                                         loading="lazy"
+                                        placeholder="blurred"
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
@@ -227,6 +230,19 @@ const IndexPage = ({ data }) => {
                                         zaawansowanych funkcjonalności
                                     </p>
                                 </div>
+                            </div> */}
+                        {allDatoCmsUslugi.edges.map(({ node }) => (
+                            <div className="relative border-2 border-t-4 border-t-emerald-300 group rounded-xl shadow-lg bg-white p-6 pb-12">
+                                <GatsbyImage
+                                    className="w-20 h-20 group-hover:imgSlideTop transition-transform duration-200"
+                                    loading="lazy"
+                                    placeholder="blurred"
+                                    image={getImage(node.img.gatsbyImageData)}
+                                    alt={node.img.alt || "Strona Internetowa"}
+                                />
+                                <h2 className="font-bold mb-3 mt-1">{node.title}</h2>
+                                <p>{node.opis}</p>
+                                <Link to={node.slug} className="px-3 py-2 text-black text-sm font-semibold absolute bottom-2 right-2">Zobacz Więcej</Link>
                             </div>
                         ))}
                     </div>

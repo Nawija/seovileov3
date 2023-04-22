@@ -61,6 +61,8 @@ const Header = () => {
                             <StaticImage
                                 quality={100}
                                 className="h-full w-full"
+                                loading="eager"
+                                placeholder="blurred"
                                 src="../assets/logoBrowser.png"
                             />
                         </div>
