@@ -141,9 +141,9 @@ const IndexPage = ({ data }) => {
                 <h2 className="text-center px-12 text-xl md:text-2xl titleSection font-bold -tracking-wide ">
                     Szybka <strong>Strona Internetowa</strong>
                 </h2>
-                <div className=" bg-gradient-to-r from-amber-400 w-[30%] md:w-[20%] h-1 rounded-3xl mb-12 mx-auto" />
-                <div className="flex flex-col lg:mt-20 px-4 lg:flex-row my-6 md:mb-16">
-                    <div className="sm:h-72 md:h-72 w-[80%] lg:w-1/2 mx-auto lg:my-auto flex sm:mt-3 md:mt-24 items-center justify-center order-1 lg:order-0">
+                <div className=" bg-gradient-to-r from-amber-400 w-[30%] md:w-[20%] h-1 rounded-3xl xl:mb-12 mx-auto" />
+                <div className="flex flex-col bg-white lg:bg-transparent lg:mt-20 px-4 lg:flex-row my-6 md:mb-16">
+                    <div className="sm:w-4/5 -mt-6 w-full lg:w-1/2 mx-auto lg:my-auto flex mb-8 items-center justify-center lg:order-1">
                         <StaticImage
                             className="lg:-mt-20"
                             loading="eager"
@@ -152,7 +152,7 @@ const IndexPage = ({ data }) => {
                             alt="test szybkosci strony internetowej"
                         />
                     </div>
-                    <div className="lg:w-3/4 lg:px-2">
+                    <div className="lg:w-[60%] lg:px-2">
                         <p class=" px-2 md:px-12 font-bold text-emerald-700 text-sm">
                             TECHNOLOGIA GATSBY
                         </p>
@@ -232,7 +232,7 @@ const IndexPage = ({ data }) => {
                                 </div>
                             </div> */}
                         {allDatoCmsUslugi.edges.map(({ node }) => (
-                            <div className="relative border-2 border-t-4 border-t-emerald-300 group rounded-xl shadow-lg bg-white p-6 pb-12">
+                            <div className="relative border-2 border-t-4 border-t-emerald-500 group rounded-xl shadow-lg bg-white p-6 pb-12">
                                 <GatsbyImage
                                     className="w-20 h-20 group-hover:imgSlideTop transition-transform duration-200"
                                     loading="lazy"

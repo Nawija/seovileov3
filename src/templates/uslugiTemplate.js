@@ -12,7 +12,7 @@ const ProjectTemplate = ({
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <section className="relative object-bottom flex items-center min-h-[13rem] overflow-hidden h-24 justify-center w-full">
+                <section className="relative object-bottom flex items-center min-h-[11rem] overflow-hidden justify-center w-full">
                     <div className="w-full -mt-4 -z-20 ">
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
@@ -37,11 +37,11 @@ const ProjectTemplate = ({
                                     />
                                 </div>
                                 <div class="mb-12 lg:mb-0">
-                                    <div class="block mt-12 rounded-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
+                                    <div class="block mt-16 rounded-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
                                         <h1 class="text-3xl font-bold pb-2">
                                             {datoCmsUslugi.title}
                                         </h1>
-                                        <p class="text-gray-500 mb-4 pb-2">
+                                        <p class="text-gray-500 text-lg mb-4 pb-2">
                                             {datoCmsUslugi.opis}
                                         </p>
 
@@ -55,14 +55,14 @@ const ProjectTemplate = ({
                                             Projekty
                                         </Link>
 
-                                        <button
-                                            type="button"
+                                        <Link
+                                            to="/kontakt"
                                             class="btnEmerald my-1"
                                             data-mdb-ripple="true"
                                             data-mdb-ripple-color="light"
                                         >
-                                            Wiecej
-                                        </button>
+                                            Kontakt
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -71,10 +71,10 @@ const ProjectTemplate = ({
                 </section>
 
                 <section className="mt-2 mb-16 max-w-screen-xl mx-auto">
-                    <p className="ml-4 lg:ml-[10vw] mb-4">Wiecej Usług:</p>
+                    <p className="ml-4 lg:ml-[10vw] mb-4 font-semibold">Wiecej Usług:</p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
                         {allDatoCmsUslugi.edges.map(({ node }) => (
-                            <div className="flex mx-6 flex-col md:flex-row items-start gap-4 lg:gap-6">
+                            <div className="flex mx-6 flex-col md:flex-row items-start justify-center gap-4 lg:gap-6">
                                 <Link
                                     to={`/` + node.slug}
                                     className="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
@@ -120,7 +120,7 @@ const ProjectTemplate = ({
     );
 };
 
-export const Head = () => <Seo title="Usługi" />;
+export const Head = ({data: { datoCmsUslugi }}) => <Seo title={datoCmsUslugi.title} />;
 
 export default ProjectTemplate;
 
