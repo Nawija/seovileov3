@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { HeroCompon } from "../components/index";
+import LiveBacground from "../components/liveBacground";
 
 const IndexPage = ({ data }) => {
     const { allDatoCmsPortfolio, allDatoCmsUslugi } = data;
@@ -138,12 +139,12 @@ const IndexPage = ({ data }) => {
             </section>
 
             <section className="lg:-mt-10 py-10 md:pt-0 lg:pt-10 max-w-screen-2xl mx-auto">
-                <h2 className="text-center px-12 text-xl md:text-2xl titleSection font-bold -tracking-wide ">
+                <h2 className="text-center px-12 text-lg uppercase md:text-xl titleSection font-bold -tracking-wider drop-shadow-lg ">
                     Szybka <strong>Strona Internetowa</strong>
                 </h2>
-                <div className=" bg-gradient-to-r from-amber-400 w-[30%] md:w-[20%] h-1 rounded-3xl xl:mb-12 mx-auto" />
-                <div className="flex flex-col bg-white lg:bg-transparent lg:mt-20 px-4 lg:flex-row my-6 md:mb-16">
-                    <div className="sm:w-4/5 -mt-6 w-full lg:w-1/2 mx-auto lg:my-auto flex mb-8 items-center justify-center lg:order-1">
+                <div className=" bg-gradient-to-r from-amber-400 w-[30%] md:w-[20%] h-1 rounded-3xl mb-12 mx-auto" />
+                <div className="flex flex-col bg-white lg:bg-transparent lg:mt-20 px-4 lg:flex-row py-6 md:pb-16">
+                    <div className="sm:w-4/5 -mt-16 w-full lg:w-1/2 mx-auto lg:my-auto flex mb-8 items-center justify-center lg:order-1">
                         <StaticImage
                             className="lg:-mt-20"
                             loading="eager"
@@ -181,75 +182,92 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section class="bg-white py-6 sm:py-8 lg:py-12">
+            <section class="md:-mt-24 -mt-12  pb-24 pt-16 lg:py-48 relative ">
+                <svg
+                    className="absolute w-full -top-1 left-0 z-10"
+                    viewBox="0 0 2004 154"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        className=" fill-white lg:fill-[#f1f1f1]"
+                        d="M0 116.001C0 116.001 458.5 31.5011 1002 116.001C1545.5 200.501 2004 116.001 2004 116.001V9.15527e-05H0V116.001Z"
+                    />
+                </svg>
+                <svg
+                    className="absolute w-full -bottom-1 left-0 z-10"
+                    viewBox="0 0 2004 94"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M2004 22.9898C2004 22.9898 1545.5 74.7165 1002 22.9898C458.5 -28.7372 0 22.9898 0 22.9898V94H2004V22.9898Z"
+                        fill="#F1F1F1"
+                    />
+                </svg>
+
+                <LiveBacground />
+                <div className="absolute inset-0 -z-20 w-full h-full bg-gradient-to-t from-[#1f2d57] to-[#0C1530]" />
+                <StaticImage
+                    className="absolute h-full w-full top-0 left-0 -z-10 opacity-5"
+                    quality={100}
+                    placeholder="blurred"
+                    src="https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1693&q=80"
+                />
+
                 <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-                    <h3 className="text-center sm:text-start text-xl md:text-2xl mb-4 text-gray-700 font-bold tracking-wide ">
+                    <h3 className="text-center sm:text-start text-xl md:text-2xl mb-4 text-amber-400 font-bold tracking-wide ">
                         Usługi
                     </h3>
                     <div class="flex flex-col sm:flex-row mb-12 justify-between gap-8 items-center">
-                        <p class="max-w-screen-sm text-center sm:text-start text-gray-500 lg:text-base">
+                        <p class="max-w-screen-sm text-center sm:text-start text-gray-200 lg:text-base">
                             Oferuję szeroki zakres usług związanych z
                             projektowaniem i tworzeniem szybkich stron
                             internetowych
                         </p>
                     </div>
                     <div class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mb-8 xl:grid-cols-4 md:gap-6 xl:gap-8">
-                        {/* <div>
-                                <Link
-                                    to={node.slug}
-                                    class="group relative flex  items-end mx-auto overflow-hidden rounded-xl bg-gray-100 shadow-xl h-48 md:h-52 w-48 md:w-52"
-                                >
-                                    <GatsbyImage
-                                        className="w-full h-full group-hover:scale-110 transition-transform duration-200"
-                                        loading="lazy"
-                                        placeholder="blurred"
-                                        image={getImage(
-                                            node.img.gatsbyImageData
-                                        )}
-                                        alt={
-                                            node.img.alt || "Strona Internetowa"
-                                        }
-                                    />
-                                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-                                    <p className="absolute group text-white text-sm rounded-xl font-semibold bg-gray-900/70 py-2 px-4 bottom-2 right-4">
-                                        Zobacz
-                                    </p>
-                                </Link>
-                                <div className="p-2">
-                                    <h2 class="text-lg font-bold text-start  text-gray-800">
-                                        {node.title}
-                                    </h2>
-                                    <div className=" bg-gradient-to-r from-amber-400 w-1/3 h-1 rounded-3xl mb-4" />
-                                    <p>
-                                        Strona internetowa dla restauracji:
-                                        Byłem zaangażowany w projekt tworzenia
-                                        strony internetowej dla restauracji,
-                                        która specjalizuje się w kuchni
-                                        włoskiej. Strona była zoptymalizowana
-                                        pod kątem wydajności i zawierała wiele
-                                        zaawansowanych funkcjonalności
-                                    </p>
-                                </div>
-                            </div> */}
                         {allDatoCmsUslugi.edges.map(({ node }) => (
-                            <div className="relative border-2 border-t-4 border-t-emerald-500 group rounded-xl shadow-lg bg-white p-6 pb-12">
+                            <Link
+                                to={node.slug}
+                                className="relative border-2 border-t-4 border-t-blue-200 hover:border-t-emerald-300 group rounded-xl hover:scale-105 hover:shadow-xl shadow-lg bg-gray-100 p-6 pb-12 transition-all duration-200"
+                            >
                                 <GatsbyImage
-                                    className="w-20 h-20 group-hover:imgSlideTop transition-transform duration-200"
+                                    className="w-20 h-20 transition-transform duration-200"
                                     loading="lazy"
                                     placeholder="blurred"
                                     image={getImage(node.img.gatsbyImageData)}
                                     alt={node.img.alt || "Strona Internetowa"}
                                 />
-                                <h2 className="font-bold mb-3 mt-1">{node.title}</h2>
+                                <h2 className="font-bold mb-3 mt-1">
+                                    {node.title}
+                                </h2>
                                 <p>{node.opis}</p>
-                                <Link to={node.slug} className="px-3 py-2 text-black text-sm font-semibold absolute bottom-2 right-2">Zobacz Więcej</Link>
-                            </div>
+                                <p
+                                    to={node.slug}
+                                    className="px-3 py-2 text-black text-sm font-bold absolute bottom-2 right-2"
+                                >
+                                    Zobacz Więcej &#8594;
+                                </p>
+                            </Link>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <section class=" py-6 sm:py-8 lg:py-12">
+            <section class="relative pt-6 sm:pt-8 lg:pt-12 pb-16 sm:pb-24 lg:pb-32">
+                <svg
+                    className="absolute -bottom-2 w-full left-0 z-10"
+                    viewBox="0 0 2004 75"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M2004 24.1561C2004 24.1561 1270 -28.018 1002 24.1561C734 76.3303 0 24.1561 0 24.1561V74.0144H2004V24.1561Z"
+                        fill="white"
+                    />
+                </svg>
+
                 <div class="mx-auto max-w-screen-xl px-2 md:px-10">
                     <div class="flex flex-row justify-between mb-4 px-4 items-center">
                         <h3 className="text-center sm:text-start text-xl md:text-2xl  text-gray-700 font-bold tracking-wide ">
@@ -272,36 +290,50 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div class="mb-4 grid grid-cols-2 gap-4 sm:px-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-4 md:gap-12 lg:gap-4 xl:gap-8">
                         {allDatoCmsPortfolio.edges.map(({ node }) => (
-                            <Link
-                                to={node.slug}
-                                class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-64"
-                            >
-                                <GatsbyImage
-                                    className="w-full h-full hover:scale-110 transition-transform duration-200"
-                                    loading="eager"
-                                    image={getImage(node.img.gatsbyImageData)}
-                                    alt={node.img.alt || "Strona Internetowa"}
-                                />
-                                <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+                            <div>
+                                <Link
+                                    to={node.slug}
+                                    class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-64"
+                                >
+                                    <GatsbyImage
+                                        className="w-full h-full hover:scale-110 transition-transform duration-200"
+                                        loading="eager"
+                                        image={getImage(
+                                            node.img.gatsbyImageData
+                                        )}
+                                        alt={
+                                            node.img.alt || "Strona Internetowa"
+                                        }
+                                    />
+                                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-500 via-transparent to-transparent opacity-50"></div>
 
-                                <span class="absolute bg-gray-900/50 text-sm rounded-3xl px-2 ml-2 mb-3 inline-block text-white md:ml-3">
-                                    {node.naglowek}
-                                </span>
-                            </Link>
+                                    <span class="absolute bg-gray-900/50 text-sm rounded-3xl px-2 ml-2 mb-3 inline-block text-white md:ml-3">
+                                        {node.naglowek}
+                                    </span>
+                                </Link>
+                                <p
+                                    to={node.slug}
+                                    className="px-3 py-2 text-black text-sm font-bold absolute bottom-2 right-2"
+                                >
+                                    Zobacz Więcej &#8594;
+                                </p>
+                            </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <section class="text-gray-900 bg-white  body-font">
+            <section class="text-gray-900 bg-white relative  body-font">
                 <div class="container px-5 py-24 mx-auto flex flex-col">
                     <div class="lg:w-[90%] mx-auto">
-                        <div class="rounded-lg h-64 overflow-hidden">
+                        <div class="rounded-lg h-64 overflow-hidden relative">
                             <StaticImage
-                                alt="content"
-                                class="object-cover object-center h-full w-full"
-                                src="https://images.unsplash.com/photo-1462556791646-c201b8241a94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2896&q=80"
+                                className="absolute h-full w-full top-0 left-0"
+                                quality={100}
+                                placeholder="blurred"
+                                src="https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1693&q=80"
                             />
+                            <div className="absolute inset-0 w-full h-full z-10 bg-gray-900/70" />
                         </div>
                         <div class="flex flex-col sm:flex-row mt-10">
                             <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
@@ -353,8 +385,30 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section class="mb-40">
-                <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between"></nav>
+            <section class="pb-40 overflow-hidden relative">
+                <div className="absolute inset-0 -z-20 w-full h-full bg-gradient-to-t from-[#1f2d57] to-[#0C1530]" />
+                <svg
+                    className="absolute -top-2 w-full left-0 z-10"
+                    viewBox="0 0 2004 75"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M0 50.8259C0 50.8259 734 103 1002 50.8259C1270 -1.34822 2004 50.8259 2004 50.8259V0.967644H0V50.8259Z"
+                        fill="white"
+                    />
+                </svg>
+                <svg
+                    className="absolute -bottom-2 w-full left-0 z-10"
+                    viewBox="0 0 2004 75"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M2004 24.1561C2004 24.1561 1270 -28.018 1002 24.1561C734 76.3303 0 24.1561 0 24.1561V74.0144H2004V24.1561Z"
+                        fill="white"
+                    />
+                </svg>
 
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -464,8 +518,8 @@ const IndexPage = ({ data }) => {
                     </g>
                 </svg>
 
-                <div class="container mx-auto px-6 md:px-12 xl:px-32">
-                    <div class="text-center text-gray-800">
+                <div class="flex items-center justify-center mx-auto px-6 md:px-12 xl:px-32">
+                    <div class="text-center text-gray-700">
                         <div
                             class="block rounded-lg shadow-xl px-6 py-10 md:py-12 md:px-10"
                             style={{
@@ -474,7 +528,7 @@ const IndexPage = ({ data }) => {
                                 "backdrop-filter": "saturate(200%) blur(8px)",
                             }}
                         >
-                            <h3 class="text-3xl md:text-4xl xl:text-5xl font-semibold tracking-tight mb-6">
+                            <h3 class="text-xl md:text-2xl xl:text-3xl font-semibold tracking-tight mb-6">
                                 Zdobądz Przewage dzięki <br />
                                 <strong class="text-amber-500 mt-1 lg:drop-shadow-md">
                                     Stronie Internetowej
@@ -491,7 +545,7 @@ const IndexPage = ({ data }) => {
                             </Link>
                             <Link
                                 to="/kontakt"
-                                class="inline-block px-7 py-3 font-semibold text-sm bg-transparent text-gray-900 leading-tight uppercase rounded hover:text-gray-700 hover:bg-gray-100 focus:bg-gray-100 hover:shadow-md focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-200"
+                                class="inline-block px-7 py-3 font-semibold text-sm hover:shadow-lg text-gray-900 leading-tight uppercase rounded hover:text-gray-700 bg-gray-100 focus:bg-gray-100 shadow-md focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-200"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
                                 role="button"

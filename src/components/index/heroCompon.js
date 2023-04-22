@@ -19,6 +19,7 @@ const HeroCompon = () => {
                     placeholder="blurred"
                 />
                 <div className="absolute inset-0 w-full h-full bg-gray-900/70" />
+                
                 <svg
                     className="absolute -bottom-3 left-0 z-10"
                     width="2004"
