@@ -269,13 +269,13 @@ const IndexPage = ({ data }) => {
                 </svg>
 
                 <div class="mx-auto max-w-screen-xl px-2 md:px-10">
-                    <div class="flex flex-row justify-between mb-4 px-3 items-center">
+                    <div class="flex flex-col sm:flex-row justify-between mb-4 px-3 items-center">
                         <h3 className="text-center sm:text-start text-xl md:text-2xl  text-gray-700 font-bold tracking-wide ">
                             Projekty www
                         </h3>
                         <Link
                             to="/projekty"
-                            class="px-3 py-3 text-white text-center font-medium text-sm rounded bg-gradient-to-tr from-emerald-800 to-emerald-600 shadow-emerald-800 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-200"
+                            class="px-3 py-3 text-white mt-3 sm:mt-0 text-center font-medium text-sm rounded bg-gradient-to-tr from-emerald-800 to-emerald-600 shadow-emerald-800 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-200"
                         >
                             Wiecej Projektów
                         </Link>
