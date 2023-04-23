@@ -1,4 +1,4 @@
-import HeroCompon from "./HeroCompon";
+import HeroCompon from "./heroCompon";
 import CardsHeroCompon from "./CardsHeroCompon";
 import SpeedTestCompon from "./SpeedTestCompon";
 import ServicesCompon from "./ServicesCompon";

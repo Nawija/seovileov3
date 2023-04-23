@@ -97,7 +97,7 @@ const CalcPrice = () => {
                         name="optionTxt1"
                     />
                 </div>
-                <input id={sum} checked className="hidden" />
+                <input id={sum} checked className="h-1 w-1" />
                 <div className="flex items-center justify-between">
                     <p className="font-bold text-emerald-700">Sum: {sum}</p>
                     <button className="btn" type="submit">
