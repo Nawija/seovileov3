@@ -142,9 +142,9 @@ const IndexPage = ({ data }) => {
                 <h2 className="text-center px-12 text-lg uppercase md:text-xl titleSection font-bold -tracking-wider drop-shadow-lg ">
                     Szybka <strong>Strona Internetowa</strong>
                 </h2>
-                <div className=" bg-gradient-to-r from-amber-400 w-[30%] md:w-[18%] h-1 rounded-3xl mb-12 mx-auto" />
+                <div className=" bg-gradient-to-r from-amber-400 w-[30%] md:w-[18%] h-1 rounded-3xl mb-20 lg:mb-6 mx-auto" />
                 <div className="flex flex-col bg-gray-800 lg:bg-transparent lg:mt-20 px-4 lg:flex-row py-6 md:pb-16">
-                    <div className="sm:w-4/5 -mt-16 w-full lg:w-1/2 mx-auto lg:my-auto flex mb-8 items-center justify-center lg:order-1">
+                    <div className="sm:w-4/5 -mt-24 w-full lg:w-1/2 mx-auto lg:my-auto flex mb-8 items-center justify-center lg:order-1">
                         <StaticImage
                             className="lg:-mt-20"
                             loading="eager"
@@ -325,7 +325,7 @@ const IndexPage = ({ data }) => {
             </section>
 
             <section class="text-gray-900 bg-white relative  body-font">
-                <div class="container px-5 py-24 mx-auto flex flex-col">
+                <div class="container px-5 pt-24 mx-auto flex flex-col">
                     <div class="lg:w-[90%] mx-auto">
                         <div class="rounded-lg h-64 overflow-hidden relative">
                             <StaticImage
@@ -338,47 +338,50 @@ const IndexPage = ({ data }) => {
                         </div>
                         <div class="flex flex-col sm:flex-row mt-10">
                             <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                                <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
-                                    <svg
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        class="w-10 h-10"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                                        <circle cx="12" cy="7" r="4"></circle>
-                                    </svg>
+                                <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-100 text-gray-400">
+                                    <StaticImage
+                                        className="w-12 h-12 mt-1"
+                                        src="../assets/logoBrowser.png"
+                                    />
                                 </div>
                                 <div class="flex flex-col items-center text-center justify-center">
-                                    <h4 class="font-medium title-font mt-4 text-gray-900 text-lg">
-                                        Phoebe Caulfield
+                                    <h4 class="font-medium capitalize title-font mt-4 text-gray-900 text-lg">
+                                        Strony internetowe
                                     </h4>
-                                    <div class="w-12 h-1 bg-yellow-500 rounded mt-2 mb-4"></div>
+                                    <div class="w-12 h-1 bg-amber-400 rounded mt-2 mb-4"></div>
                                     <p class="text-base">
-                                        Raclette knausgaard hella meggs normcore
-                                        williamsburg enamel pin sartorial venmo
-                                        tbh hot chicken gentrify portland.
+                                        Optymalizacja SEO sprawia, że nasze
+                                        strony są łatwo widoczne dla
+                                        wyszukiwarek i znajdują się na szczycie
+                                        wyników wyszukiwania. Wsparcie i dobre
+                                        praktyki, na jakich opiera się Gatsby,
+                                        zapewniają nam bezpieczeństwo i pewność,
+                                        że nasze strony są zawsze najlepszej
+                                        jakości.
                                     </p>
                                 </div>
                             </div>
                             <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                                 <p class="leading-relaxed text-lg mb-4">
-                                    Meggings portland fingerstache lyft,
-                                    post-ironic fixie man bun banh mi umami
-                                    everyday carry hexagon locavore direct trade
-                                    art party. Locavore small batch listicle
-                                    gastropub farm-to-table lumbersexual salvia
-                                    messenger bag. Coloring book flannel
-                                    truffaut craft beer drinking vinegar
-                                    sartorial, disrupt fashion axe normcore meh
-                                    butcher. Portland 90's scenester
-                                    vexillologist forage post-ironic
-                                    asymmetrical, chartreuse disrupt butcher
-                                    paleo intelligentsia pabst before they sold
-                                    out four loko. 3 wolf moon brooklyn.
+                                    Nasze strony internetowe tworzymy w
+                                    technologii Gatsby, aby zapewnić naszym
+                                    klientom najlepsze doświadczenie
+                                    użytkownika. Dzięki szybkości i wydajności,
+                                    nasze strony są łatwo dostępne dla każdego,
+                                    bez względu na urządzenie, z jakiego
+                                    korzystają. Integracja z różnymi źródłami
+                                    danych pozwala nam łączyć dane z wielu
+                                    źródeł i tworzyć dynamiczne strony
+                                    internetowe.
+                                </p>
+                                <p class="leading-relaxed text-lg mb-4">
+                                Optymalizacja SEO sprawia, że
+                                    nasze strony są łatwo widoczne dla
+                                    wyszukiwarek i znajdują się na szczycie
+                                    wyników wyszukiwania. Wsparcie i dobre
+                                    praktyki, na jakich opiera się Gatsby,
+                                    zapewniają nam bezpieczeństwo i pewność, że
+                                    nasze strony są zawsze najlepszej jakości.
                                 </p>
                             </div>
                         </div>
@@ -402,7 +405,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
                         <StaticImage
-                            class="object-cover h-96 object-center rounded"
+                            class="object-cover h-96 object-center rounded-lg"
                             alt="hero"
                             src="https://images.unsplash.com/photo-1536329583941-14287ec6fc4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2848&q=80"
                         />
@@ -410,7 +413,7 @@ const IndexPage = ({ data }) => {
                 </div>
             </section>
 
-            <section class="text-gray-900 body-font mx-auto">
+            <section class="text-gray-900 bg-gray-50 body-font mx-auto">
                 <div class="container max-w-screen-xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                     <div class="md:order-1 lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-end md:text-right mb-16 md:mb-0 items-center text-center">
                         <h3 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
@@ -426,7 +429,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
                         <StaticImage
-                            class="object-cover h-96 object-center rounded"
+                            class="object-cover h-96 object-center rounded-lg"
                             alt="hero"
                             src="https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"
                         />
@@ -450,7 +453,7 @@ const IndexPage = ({ data }) => {
                     </div>
                     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
                         <StaticImage
-                            class="object-cover h-96 object-center rounded"
+                            class="object-cover h-96 object-center rounded-lg"
                             alt="hero"
                             src="https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3024&q=80"
                         />

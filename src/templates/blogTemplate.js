@@ -24,11 +24,11 @@ const ProjectTemplate = ({
                     
                 </section>
 
-                <section class="container -mt-36 lg:-mt-20 px-6 mx-auto">
+                <section class="container -mt-32 lg:-mt-20 px-3 mx-auto">
                     <section class=" mb-6 md:mb-12 text-gray-800">
-                        <div class="container mx-auto xl:px-32 text-center lg:text-left">
-                            <div class="flex flex-col lg:flex-row items-center lg:items-start">
-                                <div>
+                        <div class="container mx-auto xl:px-32 text-start lg:text-left">
+                            <div class="flex flex-col lg:flex-row items-center md:items-start">
+                                <div className="lg:py-12 md:px-12 lg:-mr-14">
                                     <GatsbyImage
                                         className="h-72 w-72 xl:py-64 xl:px-64 rounded-lg shadow-lg"
                                         image={getImage(
@@ -37,8 +37,8 @@ const ProjectTemplate = ({
                                         alt={datoCmsBlog.img.alt}
                                     />
                                 </div>
-                                <div class="mb-12 lg:mb-0 pl-4">
-                                    <div class="block mt-16 rounded-lg px-6 py-3 lg:py-12 md:px-12 lg:-mr-14 text-start">
+                                <div class="pl-2">
+                                    <div class="block mt-1 lg:mt-16 rounded-lg py-3 lg:py-12 md:px-12 lg:-mr-14 text-start">
                                         <h1 class="text-3xl font-bold pb-2">
                                             {datoCmsBlog.title}
                                         </h1>

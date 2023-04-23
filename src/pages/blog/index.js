@@ -11,17 +11,17 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <div className="relative object-bottom flex items-center min-h-[13rem] overflow-hidden h-24 justify-center w-full">
+                <div className="relative object-bottom flex items-center min-h-[11rem] overflow-hidden justify-center w-full">
                     <div className="w-full -mt-4 -z-20 ">
                         <StaticImage
                             className="w-full h-full object-cover object-center absolute inset-0"
                             src="https://images.unsplash.com/photo-1598662779094-110c2bad80b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2446&q=80"
                             alt="projekt strona internetowa"
                         />
-                        <div className="w-full h-full bg-black/80 absolute top-0 left-0" />
+                        <div className="w-full h-full bg-black/80 absolute inset-0" />
                     </div>
                     <div className="absolute left-[10%] flex flex-col items-start justify-center text-white">
-                        <div className="flex items-center justify-center text-sm font-semibold ">
+                        <div className="flex items-center justify-center text-sm font-semibold mt-4">
                             <Link className="text-orange-500" to="/">
                                 Strona Główna
                             </Link>

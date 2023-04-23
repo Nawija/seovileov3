@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
                             <div class="flex flex-col lg:flex-row items-center lg:items-start">
                                 <div>
                                     <StaticImage
-                                        className="h-72 w-72 xl:py-64 xl:px-64 rounded-lg shadow-lg"
+                                        className="h-72 w-72 xl:py-60 xl:px-60 rounded-lg shadow-lg"
                                         src="https://images.unsplash.com/photo-1598121210875-08d6cf351459?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
                                         alt="projekt strona internetowa"
                                     />
@@ -105,7 +105,7 @@ const IndexPage = ({ data }) => {
                 </section>
 
                 <section className="mt-2 mb-16 max-w-screen-xl mx-auto">
-                    <p className="ml-4 lg:ml-[10vw] mb-4">Wiecej Projektów:</p>
+                    <p className="ml-4 lg:ml-[10vw] mb-4 font-semibold">Wiecej Projektów:</p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
                         {allDatoCmsPortfolio.edges.map(({ node }) => (
                             <div className="flex mx-6 flex-col md:flex-row items-start gap-4 lg:gap-6">
