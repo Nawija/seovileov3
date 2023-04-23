@@ -34,7 +34,7 @@ const ThxForm = () => (
         <section className="mb-52 mt-32 w-full flex flex-col items-center justify-center">
             <Link
                 to="/"
-                className="flex items-center mb-12 justify-center"
+                className="flex items-center mb-6 justify-center"
                 aria-label="logo"
             >
                 <div className="h-auto w-16 ">
@@ -51,7 +51,7 @@ const ThxForm = () => (
                 </p>
             </Link>
 
-            <p className="text-xl">Dziekujemy za zgłoszenie</p>
+            <p className="text-xl font-bold mb-6">Dziekujemy za zgłoszenie</p>
 
             <div className="flex items-center justify-center">
                 <Link
