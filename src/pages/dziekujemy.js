@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
-const Kontakt = () => (
+const Admin = () => (
     <Layout>
         <section className="relative flex items-center justify-center w-full ">
             <div className="relative w-full -z-20">
@@ -12,8 +12,8 @@ const Kontakt = () => (
                     quality={100}
                     src="../assets/hero.png"
                     loading="eager"
-                    alt="Seovileo Strony internetowe"
                     placeholder="blurred"
+                    alt="Seovileo Strony internetowe"
                 />
                 <svg
                     className="absolute -bottom-3 left-0 z-10"
@@ -25,7 +25,7 @@ const Kontakt = () => (
                 >
                     <path
                         d="M0 37.9955C0 37.9955 458.5 122.495 1002 37.9955C1545.5 -46.5045 2004 37.9955 2004 37.9955V153.996H0V37.9955Z"
-                        fill="#f1f1f1"
+                        fill="#f8f8f8"
                     />
                 </svg>
                 <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
@@ -41,17 +41,21 @@ const Kontakt = () => (
                     <StaticImage
                         quality={100}
                         className="h-full w-full"
+                        loading="eager"
+                        placeholder="blurred"
                         src="../assets/logoBrowser.png"
                     />
                 </div>
                 <p className="text-gray-700 text-2xl ml-2 tracking-wide font-semibold">
-                Wkrótce :)
+                    Seovileo
                 </p>
             </Link>
 
+            <p className="text-xl font-semibold">Dziekujemy za zgłoszenie</p>
+
             <div className="flex items-center justify-center">
                 <Link
-                    to="/"
+                    to="https://seovileo.admin.datocms.com/editor"
                     className="btn mr-6"
                 >
                     Strona Główna
@@ -61,4 +65,4 @@ const Kontakt = () => (
     </Layout>
 );
 
-export default Kontakt;
+export default Admin;

@@ -124,21 +124,6 @@ const Header = () => {
                                 Home
                             </Link>
                         </li>
-
-                        <li className="mx-5 my-2 px-2 py-2">
-                            <Link
-                                onClick={falseMenu}
-                                aria-label="portfolio"
-                                className={
-                                    navbar
-                                        ? "font-semibold lg:text-gray-600 hoverLink link transition-colors duration-200"
-                                        : "font-semibold hoverLink link transition-colors duration-200"
-                                }
-                                to="/poradnik"
-                            >
-                                Poradnik
-                            </Link>
-                        </li>
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={falseMenu}
@@ -165,6 +150,20 @@ const Header = () => {
                                 to="/usługi"
                             >
                                 Usługi
+                            </Link>
+                        </li>
+                        <li className="mx-5 my-2 px-2 py-2">
+                            <Link
+                                onClick={falseMenu}
+                                aria-label="portfolio"
+                                className={
+                                    navbar
+                                        ? "font-semibold lg:text-amber-500 hoverLink link transition-colors duration-200"
+                                        : "font-semibold hoverLink link transition-colors duration-200"
+                                }
+                                to="/wycena"
+                            >
+                                Darmowa Wycena
                             </Link>
                         </li>
                         <li className="mx-5 my-2 px-2 py-2">

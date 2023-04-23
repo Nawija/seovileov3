@@ -199,7 +199,7 @@ const ProjectTemplate = ({
                                         </p>
 
                                         <Link
-                                            to="/projekty"
+                                            to="/projekty/#projekty"
                                             type="button"
                                             class="btn my-1 mr-4"
                                             data-mdb-ripple="true"
@@ -278,7 +278,7 @@ const ProjectTemplate = ({
     );
 };
 
-export const Head = () => <Seo title="Projekty" />;
+export const Head = ({data: { datoCmsPortfolio }}) => <Seo title={datoCmsPortfolio.naglowek} />;
 
 export default ProjectTemplate;
 

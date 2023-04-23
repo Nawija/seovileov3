@@ -11,30 +11,30 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-            <div className="relative w-full -z-20">
-                <StaticImage
-                    className="h-40 lg:h-52 xl:h-56 w-full md:w-full"
-                    quality={100}
-                    src="../assets/hero.png"
-                    loading="eager"
-                    alt="Seovileo Strony internetowe"
-                    placeholder="blurred"
-                />
-                <svg
-                    className="absolute -bottom-3 left-0 z-10"
-                    width="2004"
-                    height="154"
-                    viewBox="0 0 2004 154"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M0 37.9955C0 37.9955 458.5 122.495 1002 37.9955C1545.5 -46.5045 2004 37.9955 2004 37.9955V153.996H0V37.9955Z"
-                        fill="#f1f1f1"
+                <div className="relative w-full -z-20">
+                    <StaticImage
+                        className="h-40 lg:h-52 xl:h-56 w-full md:w-full"
+                        quality={100}
+                        src="../assets/hero.png"
+                        loading="eager"
+                        alt="Seovileo Strony internetowe"
+                        placeholder="blurred"
                     />
-                </svg>
-                <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
-            </div>
+                    <svg
+                        className="absolute -bottom-3 left-0 z-10"
+                        width="2004"
+                        height="154"
+                        viewBox="0 0 2004 154"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M0 37.9955C0 37.9955 458.5 122.495 1002 37.9955C1545.5 -46.5045 2004 37.9955 2004 37.9955V153.996H0V37.9955Z"
+                            fill="#f8f8f8"
+                        />
+                    </svg>
+                    <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
+                </div>
 
                 <section class="container -mt-24 lg:-mt-32 px-2 mx-auto">
                     <section class=" mb-6 md:mb-12 text-gray-800">
@@ -80,23 +80,24 @@ const IndexPage = ({ data }) => {
                                         </p>
 
                                         <Link
-                                            to="/projekty"
+                                            to="/usługi"
                                             type="button"
                                             className="btn my-1 mr-4"
                                             data-mdb-ripple="true"
                                             data-mdb-ripple-color="light"
                                         >
-                                            Projekty
+                                            Usługi
                                         </Link>
 
-                                        <button
+                                        <Link
+                                            to="/kontakt"
                                             type="button"
                                             className="btnOrange my-1"
                                             data-mdb-ripple="true"
                                             data-mdb-ripple-color="light"
                                         >
                                             Kontakt
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -104,8 +105,13 @@ const IndexPage = ({ data }) => {
                     </section>
                 </section>
 
-                <section className="mt-2 mb-16 max-w-screen-xl mx-auto">
-                    <p className="ml-4 lg:ml-[10vw] mb-4 font-semibold">Wiecej Projektów:</p>
+                <section
+                    id="projekty"
+                    className="mt-2 scroll-m-11 mb-16 max-w-screen-xl mx-auto"
+                >
+                    <p className="ml-4 lg:ml-[10vw] mb-4 font-semibold">
+                        Projekty:
+                    </p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
                         {allDatoCmsPortfolio.edges.map(({ node }) => (
                             <div className="flex mx-6 flex-col md:flex-row items-start gap-4 lg:gap-6">

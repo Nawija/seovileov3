@@ -23,20 +23,20 @@ const ProjectTemplate = ({
                     </div>
                 </section>
 
-                <section class="container -mt-24 lg:-mt-20 px-3 mx-auto">
+                <section class="container px-3 mx-auto">
                     <section class=" mb-6 md:mb-12 text-gray-800">
                         <div class="container mx-auto xl:px-32 text-center lg:text-left">
                             <div class="flex flex-col lg:flex-row items-start">
                                 <div>
                                     <GatsbyImage
-                                        className="h-72 w-72 xl:py-64 xl:px-64 rounded-lg shadow-lg"
+                                        className="h-72 w-72 -mt-24 lg:-mt-36 xl:py-64 xl:px-64 rounded-lg"
                                         image={getImage(
                                             datoCmsUslugi.img.gatsbyImageData
                                         )}
                                         alt={datoCmsUslugi.img.alt}
                                     />
                                 </div>
-                                <div class="mb-12 lg:mb-0">
+                                <div class="mb-3 lg:mb-0">
                                     <div class="block mt-2 rounded-lg py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
                                         <h1 class="text-3xl font-bold pb-2">
                                             {datoCmsUslugi.title}
@@ -46,7 +46,7 @@ const ProjectTemplate = ({
                                         </p>
 
                                         <Link
-                                            to="/projekty"
+                                            to="/projekty/#projekty"
                                             type="button"
                                             class="btn my-1 mr-4"
                                             data-mdb-ripple="true"

@@ -26,7 +26,7 @@ const NotFoundPage = () => (
                 >
                     <path
                         d="M0 37.9955C0 37.9955 458.5 122.495 1002 37.9955C1545.5 -46.5045 2004 37.9955 2004 37.9955V153.996H0V37.9955Z"
-                        fill="#f1f1f1"
+                        fill="#f8f8f8"
                     />
                 </svg>
                 <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
