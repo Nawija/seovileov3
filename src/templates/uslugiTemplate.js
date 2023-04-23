@@ -13,23 +13,23 @@ const ProjectTemplate = ({
         <Layout>
             <div className="overflow-hidden w-full z-10">
                 <section className="relative object-bottom flex items-center min-h-[11rem] overflow-hidden justify-center w-full">
-                    <div className="w-full -mt-4 -z-20 ">
+                    <div className="w-full -mt-4">
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
                             image={getImage(datoCmsUslugi.img.gatsbyImageData)}
                             alt={datoCmsUslugi.img.alt}
                         />
-                        <div className="w-full h-full bg-gray-800/80 absolute top-0 left-0" />
+                        <div className="w-full h-full bg-gray-900/90 bg-blend-multiply absolute top-0 left-0" />
                     </div>
                 </section>
 
-                <section class="container -mt-36 lg:-mt-20 px-6 mx-auto">
+                <section class="container -mt-24 lg:-mt-20 px-3 mx-auto">
                     <section class=" mb-6 md:mb-12 text-gray-800">
                         <div class="container mx-auto xl:px-32 text-center lg:text-left">
-                            <div class="flex flex-col lg:flex-row items-center">
+                            <div class="flex flex-col lg:flex-row items-start">
                                 <div>
                                     <GatsbyImage
-                                        className="h-72 w-72 md:h-96 md:w-96 lg:py-72 lg:px-80 rounded-lg shadow-lg"
+                                        className="h-72 w-72 xl:py-64 xl:px-64 rounded-lg shadow-lg"
                                         image={getImage(
                                             datoCmsUslugi.img.gatsbyImageData
                                         )}
@@ -37,7 +37,7 @@ const ProjectTemplate = ({
                                     />
                                 </div>
                                 <div class="mb-12 lg:mb-0">
-                                    <div class="block mt-16 rounded-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
+                                    <div class="block mt-2 rounded-lg py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
                                         <h1 class="text-3xl font-bold pb-2">
                                             {datoCmsUslugi.title}
                                         </h1>

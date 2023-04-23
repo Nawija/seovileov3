@@ -47,12 +47,12 @@ const IndexPage = ({ data }) => {
                                         alt="projekt strona internetowa"
                                     />
                                 </div>
-                                <div class="mb-6 lg:mb-0">
-                                    <div class=" block lg:mt-12 rounded-lg py-4 lg:py-12 md:px-12 lg:-mr-14 sm:text-start">
+                                <div class="mb-6 lg:mb-0 pl-4">
+                                    <div class=" block lg:mt-12 rounded-lg py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
                                         <h1 class="text-3xl font-bold pb-2">
                                             Projekty Stron Internetowych
                                         </h1>
-                                        <p class="text-gray-700 text-start pl-3 mb-4 pb-2">
+                                        <p class="text-gray-700 text-start mb-4 pb-2">
                                             Freelancer, który tworzy strony
                                             internetowe, to specjalista z
                                             doświadczeniem w projektowaniu i
@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
                                             przetestować ich funkcjonalność i
                                             interaktywność.
                                         </p>
-                                        <p class="text-gray-700 text-start pl-3 mb-4 pb-2">
+                                        <p class="text-gray-700 text-start mb-4 pb-2">
                                             Oglądając te projekty, możesz
                                             znaleźć inspirację dla swojego
                                             własnego projektu lub po prostu

@@ -142,7 +142,7 @@ const IndexPage = ({ data }) => {
                 <h2 className="text-center px-12 text-lg uppercase md:text-xl titleSection font-bold -tracking-wider drop-shadow-lg ">
                     Szybka <strong>Strona Internetowa</strong>
                 </h2>
-                <div className=" bg-gradient-to-r from-amber-400 w-[30%] md:w-[20%] h-1 rounded-3xl mb-12 mx-auto" />
+                <div className=" bg-gradient-to-r from-amber-400 w-[30%] md:w-[18%] h-1 rounded-3xl mb-12 mx-auto" />
                 <div className="flex flex-col bg-gray-800 lg:bg-transparent lg:mt-20 px-4 lg:flex-row py-6 md:pb-16">
                     <div className="sm:w-4/5 -mt-16 w-full lg:w-1/2 mx-auto lg:my-auto flex mb-8 items-center justify-center lg:order-1">
                         <StaticImage
@@ -208,12 +208,14 @@ const IndexPage = ({ data }) => {
 
                 <LiveBacground />
                 <div className="absolute inset-0 -z-20 w-full h-full bg-gradient-to-t from-[#1f2d57] to-[#0C1530]" />
-                <StaticImage
-                    className="absolute h-full w-full inset-0 -z-10 opacity-10 md:opacity-5"
-                    quality={100}
-                    placeholder="blurred"
-                    src="https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1693&q=80"
-                />
+                <div className=" relative h-full w-full -z-10 inset-0">
+                    <StaticImage
+                        className="absolute h-full w-full  opacity-10 md:opacity-5"
+                        quality={100}
+                        placeholder="blurred"
+                        src="https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1693&q=80"
+                    />
+                </div>
 
                 <div class="mx-auto max-w-screen-xl px-4 md:px-8">
                     <h3 className="text-center sm:text-start text-xl md:text-2xl mb-4 text-amber-400 font-bold tracking-wide ">
