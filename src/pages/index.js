@@ -208,14 +208,12 @@ const IndexPage = ({ data }) => {
 
                 <LiveBacground />
                 <div className="absolute inset-0 -z-20 w-full h-full bg-gradient-to-t from-[#1f2d57] to-[#0C1530]" />
-                <div className=" relative h-full w-full -z-10 inset-0">
-                    <StaticImage
-                        className="absolute h-full w-full  opacity-10 md:opacity-5"
-                        quality={100}
-                        placeholder="blurred"
-                        src="https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1693&q=80"
-                    />
-                </div>
+                <StaticImage
+                    className="hidden lg:flex inset-0 absolute h-full w-full opacity-10"
+                    quality={100}
+                    placeholder="blurred"
+                    src="https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1693&q=80"
+                />
 
                 <div class="mx-auto max-w-screen-xl px-4 md:px-8">
                     <h3 className="text-center sm:text-start text-xl md:text-2xl mb-4 text-amber-400 font-bold tracking-wide ">
