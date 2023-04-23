@@ -209,7 +209,7 @@ const IndexPage = ({ data }) => {
                 <LiveBacground />
                 <div className="absolute inset-0 -z-20 w-full h-full bg-gradient-to-t from-[#1f2d57] to-[#0C1530]" />
                 <StaticImage
-                    className="absolute h-full w-full top-0 left-0 -z-10 opacity-5"
+                    className="absolute h-full w-full inset-0 -z-10 opacity-10 md:opacity-5"
                     quality={100}
                     placeholder="blurred"
                     src="https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1693&q=80"
@@ -269,13 +269,13 @@ const IndexPage = ({ data }) => {
                 </svg>
 
                 <div class="mx-auto max-w-screen-xl px-2 md:px-10">
-                    <div class="flex flex-row justify-between mb-4 px-4 items-center">
+                    <div class="flex flex-row justify-between mb-4 px-3 items-center">
                         <h3 className="text-center sm:text-start text-xl md:text-2xl  text-gray-700 font-bold tracking-wide ">
                             Projekty www
                         </h3>
                         <Link
                             to="/projekty"
-                            class="px-3 py-3 text-white font-medium text-sm rounded bg-gradient-to-tr from-emerald-800 to-emerald-600 shadow-emerald-800 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-200"
+                            class="px-3 py-3 text-white text-center font-medium text-sm rounded bg-gradient-to-tr from-emerald-800 to-emerald-600 shadow-emerald-800 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-200"
                         >
                             Wiecej Projektów
                         </Link>
