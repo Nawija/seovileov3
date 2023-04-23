@@ -16,8 +16,8 @@ const Layout = ({ children }) => {
     `);
 
     return (
-        <div className=" relative text-base max-w-[2000px] mx-auto">
-            <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <div className="relative text-base max-w-[2000px] mx-auto">
+            <Header siteTitle={data.site.siteMetadata?.title || `Seovileo`} />
             <main className="w-full overflow-hidden">{children}</main>
 
             <Footer />

@@ -40,11 +40,10 @@ const ProjectTemplate = ({
             <div
                 className={
                     hiddenBody
-                        ? "h-[0vh] w-full rounded-xl overflow-hidden"
+                        ? "h-0 w-full overflow-hidden"
                         : "overflow-hidden w-full z-10"
                 }
             >
-
                 {!showLive ? (
                     ""
                 ) : (
@@ -118,11 +117,11 @@ const ProjectTemplate = ({
                         <div className="relative overflow-hidden top-0 flex py-2 lg:py-1 items-center justify-start lg:justify-center w-full bg-gray-800">
                             <button
                                 onClick={web}
-                                className="absolute top-[50%] md:top-[45%] right-5 -translate-y-1/2 py-1 lg:py-2 text-gray-100 m-0 lg:px-5 px-2 bg-gradient-to-tl from-red-500 to-red-700 rounded-lg shadow-lg shadow-red-500 z-50"
+                                className="absolute top-[50%] md:top-[45%] right-2 lg:right-5 -translate-y-1/2 py-1 lg:py-2 text-gray-100 m-0 lg:px-5 px-2 bg-gradient-to-tl from-red-500 to-red-700 rounded-lg text-sm shadow-red-500 z-50"
                             >
                                 Zamknij
                             </button>
-                            <p className="relative left-0 text-start text-gray-100 text-xs p-2 w-3/4 lg:hidden">
+                            <p className="relative left-0 text-start font-semibold text-gray-100 text-xs p-2 w-3/4 lg:hidden">
                                 Wiecej funkcji na PC
                             </p>
                             <button
