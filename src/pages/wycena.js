@@ -49,9 +49,15 @@ const CalcPrice = () => {
                     <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
                 </div>
             </section>
-            <div>
+            <form
+                className="p-6 bg-gray-200 w-1/2 mx-auto rounded-xl mb-44"
+                action="https://public.herotofu.com/v1/d1061fe0-e21a-11ed-8300-fd92f9e8911a"
+                method="post"
+                accept-charset="UTF-8"
+            >
                 <div>
                     <input
+                        className="mr-2"
                         type="radio"
                         id="option1"
                         name="options"
@@ -62,6 +68,7 @@ const CalcPrice = () => {
                 </div>
                 <div>
                     <input
+                        className="mr-2"
                         type="radio"
                         id="option2"
                         name="options"
@@ -72,6 +79,7 @@ const CalcPrice = () => {
                 </div>
                 <div>
                     <input
+                        className="mr-2"
                         type="radio"
                         id="option3"
                         name="options"
@@ -80,8 +88,23 @@ const CalcPrice = () => {
                     />
                     <label htmlFor="option3">Option 3</label>
                 </div>
-                <p>Sum: {sum}</p>
-            </div>
+                <div className="flex flex-col items-start justify-start px-1 py-2">
+                    <label htmlFor="optionTxt1">Option 3</label>
+                    <input
+                        className="mr-2 w-1/2 h-32 rounded-xl"
+                        type="text"
+                        id="optionTxt1"
+                        name="optionTxt1"
+                    />
+                </div>
+                <input id={sum} checked className="hidden" />
+                <div className="flex items-center justify-between">
+                    <p className="font-bold text-emerald-700">Sum: {sum}</p>
+                    <button className="btn" type="submit">
+                        Wyślij
+                    </button>
+                </div>
+            </form>
         </Layout>
     );
 };

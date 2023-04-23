@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
-const Admin = () => (
+const ThxForm = () => (
     <Layout>
         <section className="relative flex items-center justify-center w-full ">
             <div className="relative w-full -z-20">
@@ -51,11 +51,11 @@ const Admin = () => (
                 </p>
             </Link>
 
-            <p className="text-xl font-semibold">Dziekujemy za zgłoszenie</p>
+            <p className="text-xl">Dziekujemy za zgłoszenie</p>
 
             <div className="flex items-center justify-center">
                 <Link
-                    to="https://seovileo.admin.datocms.com/editor"
+                    to="/"
                     className="btn mr-6"
                 >
                     Strona Główna
@@ -65,4 +65,4 @@ const Admin = () => (
     </Layout>
 );
 
-export default Admin;
+export default ThxForm;
