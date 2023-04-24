@@ -1,43 +1,26 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Layout from "../components/layout";
-import { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
 const CalcPrice = () => {
-    const [selectedValue, setSelectedValue] = useState(null);
-    const [selectedValue2, setSelectedValue2] = useState(null);
-    const [sum, setSum] = useState(0);
+    const [values, setValues] = useState([
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+    ]);
+    const totalValue = values.reduce((acc, cur) => acc + cur, 0);
 
-    const handleValueChange = (event) => {
-        const newValue = event.target.value;
-        setSelectedValue(newValue);
-        calculateSum(newValue, selectedValue2);
-    };
-
-    const handleOptionN1Change = (event) => {
-        const newValue = event.target.value;
-        setSelectedValue2(newValue);
-        calculateSum(selectedValue, newValue);
-    };
-    const handleOptionN2Change = (event) => {
-        const newValue = event.target.value;
-        setSelectedValue2(newValue);
-        calculateSum(selectedValue, newValue);
-    };
-    const handleOptionN3Change = (event) => {
-        const newValue = event.target.value;
-        setSelectedValue2(newValue);
-        calculateSum(selectedValue, newValue);
-    };
-    const handleOptionN4Change = (event) => {
-        const newValue = event.target.value;
-        setSelectedValue2(newValue);
-        calculateSum(selectedValue, newValue);
-    };
-
-    const calculateSum = (value1, value2) => {
-        const sum = parseInt(value1) + (value2 ? parseInt(value2) : 0);
-        setSum(sum);
+    const handleRadioChange = (event) => {
+        const { name, value } = event.target;
+        const index = parseInt(name);
+        const newValues = [...values];
+        newValues[index] = parseInt(value);
+        setValues(newValues);
     };
 
     return (
@@ -69,251 +52,337 @@ const CalcPrice = () => {
                 </div>
             </section>
             <form
-                className="p-6 bg-gray-200 w-[90%] sm:w-4/5 md:w-3/5 lg:w-1/2 mx-auto rounded-xl mb-12 md:mb-20 lg:mb-24"
+                className="p-6 bg-gray-200 w-[90%] sm:w-4/5 md:w-3/5 lg:w-1/2 mx-auto rounded-xl mb-12 md:mb-2 mt-20 lg:mb-2 mt-24"
                 action="https://public.herotofu.com/v1/d1061fe0-e21a-11ed-8300-fd92f9e8911a"
                 method="post"
                 accept-charset="UTF-8"
             >
-                <div className="mb-2">
+                <div className="mb-2 mt-2">
                     <p className="font-semibold mb-1">
                         Typ strony internetowej *
                     </p>
-                    <div className="ml-2">
+                    <div className="ml-2 py-2">
                         <div>
                             <input
-                                className="mr-2"
+                                className="mr-2 scale-110"
                                 type="radio"
-                                id="option1"
-                                name="options1"
+                                id="q1"
+                                name="0"
                                 value="1200"
-                                checked={selectedValue === "1200"}
-                                onChange={handleValueChange}
+                                checked={values[0] === 1200}
+                                onChange={handleRadioChange}
                             />
-                            <label htmlFor="option1">Multi Page</label>
+                            <label htmlFor="q1">Multi Page</label>
                         </div>
                         <div>
                             <input
-                                className="mr-2"
+                                className="mr-2 scale-110"
                                 type="radio"
-                                id="option2"
-                                name="options2"
+                                id="q2"
+                                name="0"
                                 value="900"
-                                checked={selectedValue === "900"}
-                                onChange={handleValueChange}
+                                checked={values[0] === 900}
+                                onChange={handleRadioChange}
                             />
-                            <label htmlFor="option2">Landing Page</label>
+                            <label htmlFor="q2">Landing Page</label>
                         </div>
                         <div>
                             <input
-                                className="mr-2"
+                                className="mr-2 scale-110"
                                 type="radio"
-                                id="option3"
-                                name="options3"
+                                id="q3"
+                                name="0"
                                 value="700"
-                                checked={selectedValue === "700"}
-                                onChange={handleValueChange}
+                                checked={values[0] === 700}
+                                onChange={handleRadioChange}
                             />
-                            <label htmlFor="option3">Blog</label>
+                            <label htmlFor="q3">Blog</label>
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-start justify-start px-1 py-2">
+                <div className="flex flex-col items-start justify-start px-1 py-3">
                     <label className="font-semibold mb-1" htmlFor="t1">
                         Opisz swoją firmę
                     </label>
                     <textarea
-                        className="mr-2 w-full px-4 py-2 rounded-xl"
+                        className="mr-2 w-full px-4 py-3 h-24 rounded-xl"
                         type="text"
                         id="t1"
                         name="OpisFirmy"
                     />
                 </div>
 
-                <div className="flex flex-col items-start justify-start px-1 py-2">
+                <div className="flex flex-col items-start justify-start px-1 py-3">
                     <label className="font-semibold mb-1" htmlFor="t2">
                         Zakres usług
                     </label>
                     <textarea
-                        className="mr-2 w-full px-4 py-2 rounded-xl"
+                        className="mr-2 w-full px-4 py-3 h-24 rounded-xl"
                         type="text"
                         id="t2"
                         name="ZakresUsług"
                     />
-                    <p className="text-sm text-gray-700 mt-1 px-1">
+                    <p className="text-sm text-gray-700 mt-1 px-1 md:w-[80%]">
                         Opisz zakres usług jakie wykonuje Twoja firma, ma to
                         również wpływ na ilość podstron.
                     </p>
                 </div>
-                <div className="flex flex-col items-start justify-start px-1 py-2">
+                <div className="flex flex-col items-start justify-start px-1 py-3">
                     <label className="font-semibold mb-1" htmlFor="t3">
                         Opisz konkurencję
                     </label>
                     <textarea
-                        className="mr-2 w-full px-4 py-2 rounded-xl"
+                        className="mr-2 w-full px-4 py-3 h-24 rounded-xl"
                         type="text"
                         id="t3"
                         name="Konkurencja"
                     />
-                    <p className="text-sm text-gray-700 mt-1 px-1">
+                    <p className="text-sm text-gray-700 mt-1 px-1 md:w-[80%]">
                         Możesz opisać konkurencję lub załączyć linki do ich
                         stron internetowych.
                     </p>
                 </div>
-                <div className="flex flex-col items-start justify-start px-1 py-2">
+                <div className="flex flex-col items-start justify-start px-1 py-3">
                     <label className="font-semibold mb-1" htmlFor="t4">
                         Posiadasz identyfikację wizualną firmy?
                     </label>
                     <textarea
-                        className="mr-2 w-full px-4 py-2 rounded-xl"
+                        className="mr-2 w-full px-4 py-3 h-24 rounded-xl"
                         type="text"
                         id="t4"
                         name="IdentyfikacjaFirmy"
                     />
-                    <p className="text-sm text-gray-700 mt-1 px-1">
+                    <p className="text-sm text-gray-700 mt-1 px-1 md:w-[80%]">
                         Opisz czy posiadasz kolory firmowe, logo lub wykonane
                         grafiki jak wizytówki czy grafiki socialmedia. Będzie to
                         miało wpływ na ujednolicenie strony z Twoją marką.
                     </p>
                 </div>
-                <div className="flex flex-col items-start justify-start px-1 py-2">
+                <div className="flex flex-col items-start justify-start px-1 py-3">
                     <label className="font-semibold mb-1" htmlFor="t5">
                         Wygląd strony - Inspirację
                     </label>
                     <textarea
-                        className="mr-2 w-full px-4 py-2 rounded-xl"
+                        className="mr-2 w-full px-4 py-3 h-24 rounded-xl"
                         type="text"
                         id="t5"
-                        placeholder="Pomoze okreslic Twoje oczekiwaniawzgledem wygladu strony internetowej np: kolorystyki i ukladu sekcji"
+                        placeholder="Pomoze okreslic oczekiwania wzgledem wygladu strony internetowej"
                         name="Inspiracja"
                     />
-                    <p className="text-sm text-gray-700 mt-1 px-1">
+                    <p className="text-sm text-gray-700 mt-1 px-1 md:w-[80%]">
                         Jeżeli istnieją strony, które Ci się podobają to załącz
                         powyżej linki do nich lub skorzystaj z takich źródeł
-                        inspiracji jak pinterest.com
+                        inspiracji jak{" "}
+                        <Link
+                            className="text-gray-700 underline"
+                            to="https://pl.pinterest.com/search/pins/?q=web%20design&rs=typed"
+                        >
+                            pinterest.com
+                        </Link>
                     </p>
                 </div>
 
-                <div className="mb-2">
+                <div className="mb-2 mt-2">
                     <p className="font-semibold mb-1">Posiadasz domenę?</p>
-                    <div className="ml-2">
+                    <div className="ml-2 py-2">
                         <div>
                             <input
-                                className="mr-2"
+                                className="mr-2 scale-110"
                                 type="radio"
-                                id="optionN1"
-                                name="optionsN1"
+                                id="q4"
+                                name="1"
                                 value="0"
-                                checked={selectedValue2 === "0"}
-                                onChange={handleOptionN1Change}
+                                checked={values[1] === 0}
+                                onChange={handleRadioChange}
                             />
-                            <label htmlFor="optionN1">Tak</label>
+                            <label htmlFor="q4">Tak</label>
                         </div>
                         <div>
                             <input
-                                className="mr-2"
+                                className="mr-2 scale-110"
                                 type="radio"
-                                id="optionN2"
-                                name="optionsN2"
+                                id="q5"
+                                name="1"
                                 value="50"
-                                checked={selectedValue2 === "50"}
-                                onChange={handleOptionN1Change}
+                                checked={values[1] === 50}
+                                onChange={handleRadioChange}
                             />
-                            <label htmlFor="optionN2">Nie</label>
+                            <label htmlFor="q5">Nie</label>
                         </div>
                     </div>
                 </div>
 
-                <div className="mb-2">
+                <div className="mb-2 mt-2">
                     <p className="font-semibold mb-1">Posiadasz Hosting?</p>
-                    <div className="ml-2">
+                    <div className="ml-2 py-2">
                         <div>
                             <input
-                                className="mr-2"
+                                className="mr-2 scale-110"
                                 type="radio"
-                                id="optionN7"
-                                name="optionsN7"
+                                id="q6"
+                                name="2"
                                 value="0"
-                                checked={selectedValue2 === "0"}
-                                onChange={handleOptionN3Change}
                             />
-                            <label htmlFor="optionN7">Tak</label>
+                            <label htmlFor="q6">Tak</label>
                         </div>
                         <div>
                             <input
-                                className="mr-2"
+                                className="mr-2 scale-110"
                                 type="radio"
-                                id="optionN8"
-                                name="optionsN8"
-                                value="50"
-                                checked={selectedValue2 === "0"}
-                                onChange={handleOptionN3Change}
+                                id="q7"
+                                name="2"
+                                value="0"
                             />
-                            <label htmlFor="optionN8">Nie</label>
+                            <label htmlFor="q7">Nie</label>
                         </div>
                     </div>
                 </div>
 
-                <div className="mb-2">
+                <div className="mb-2 mt-2">
                     <p className="font-semibold mb-1">
                         Ile podstron ma posiadać strona internetowa? *
                     </p>
-                    <div className="ml-2">
+                    <div className="ml-2 py-2">
                         <div>
                             <input
-                                className="mr-2"
+                                className="mr-2 scale-110"
                                 type="radio"
-                                id="optionN3"
-                                name="optionsN3"
+                                id="q8"
+                                name="3"
                                 value="0"
-                                checked={selectedValue2 === "0"}
-                                onChange={handleOptionN2Change}
+                                checked={values[3] === 0}
+                                onChange={handleRadioChange}
                             />
-                            <label htmlFor="optionN3">1-3 podstron</label>
+                            <label htmlFor="q8">1-3 podstron</label>
                         </div>
                         <div>
                             <input
-                                className="mr-2"
+                                className="mr-2 scale-110"
                                 type="radio"
-                                id="optionN3"
-                                name="optionsN3"
+                                id="q9"
+                                name="3"
                                 value="200"
-                                checked={selectedValue2 === "200"}
-                                onChange={handleOptionN2Change}
+                                checked={values[3] === 200}
+                                onChange={handleRadioChange}
                             />
-                            <label htmlFor="optionN3">4-6 podstron</label>
+                            <label htmlFor="q9">4-6 podstron</label>
                         </div>
                         <div>
                             <input
-                                className="mr-2"
+                                className="mr-2 scale-110"
                                 type="radio"
-                                id="optionN3"
-                                name="optionsN3"
+                                id="q10"
+                                name="3"
                                 value="400"
-                                checked={selectedValue2 === "400"}
-                                onChange={handleOptionN2Change}
+                                checked={values[3] === 400}
+                                onChange={handleRadioChange}
                             />
-                            <label htmlFor="optionN3">7-9 podstron</label>
+                            <label htmlFor="q10">7-9 podstron</label>
                         </div>
                         <div>
                             <input
-                                className="mr-2"
+                                className="mr-2 scale-110"
                                 type="radio"
-                                id="optionN3"
-                                name="optionsN3"
+                                id="q11"
+                                name="3"
                                 value="600"
-                                checked={selectedValue2 === "600"}
-                                onChange={handleOptionN2Change}
+                                checked={values[3] === 600}
+                                onChange={handleRadioChange}
                             />
-                            <label htmlFor="optionN3">Więcej</label>
+                            <label htmlFor="q11">Więcej</label>
                         </div>
+                        <p className="text-sm text-gray-700 mt-1 px-1 md:w-[80%]">
+                            Możesz to wywnioskować z pola "Zakres Usług". Każda
+                            usługa powinna posiadać podstronę. W przypadku
+                            wyboru "Więcej" Wycena zostanie ustalona
+                            indywidualnie.
+                        </p>
                     </div>
                 </div>
 
-                <div className="flex items-center justify-between px-4 mt-4">
-                    <p className="font-bold text-emerald-700">
-                        Suma: <span className="scale-110">{sum}</span>PLN
+                <div className="mb-2 mt-2">
+                    <p className="font-semibold mb-1">Funkcjonalności</p>
+                    <div className="ml-2 py-2">
+                        <div>
+                            <input
+                                className="mr-2 scale-110"
+                                type="checkbox"
+                                id="q12"
+                                name="4"
+                                value="50"
+                                checked={values[4] === 50}
+                                onChange={handleRadioChange}
+                            />
+                            <label htmlFor="q12">Sekcja Blog</label>
+                        </div>
+                        <div>
+                            <input
+                                className="mr-2 scale-110"
+                                type="checkbox"
+                                id="q13"
+                                name="5"
+                                value="50"
+                                checked={values[5] === 50}
+                                onChange={handleRadioChange}
+                            />
+                            <label htmlFor="q13">Sekcja Newsy</label>
+                        </div>
+                        <div>
+                            <input
+                                className="mr-2 scale-110"
+                                type="checkbox"
+                                id="q14"
+                                name="Funkcjonalność"
+                            />
+                            <label htmlFor="q14">Formularze kontaktowe</label>
+                        </div>
+                        <div>
+                            <input
+                                className="mr-2 scale-110"
+                                type="checkbox"
+                                id="q15"
+                                name="6"
+                                value="100"
+                                checked={values[6] === 100}
+                                onChange={handleRadioChange}
+                            />
+                            <label htmlFor="q15">Mapa Google Maps</label>
+                        </div>
+                        <div>
+                            <input
+                                className="mr-2 scale-110"
+                                type="checkbox"
+                                id="q16"
+                                name="7"
+                                value="400"
+                                checked={values[7] === 400}
+                                onChange={handleRadioChange}
+                            />
+                            <label htmlFor="q16">Kalkulator wyceny</label>
+                        </div>
+                        <div>
+                            <input
+                                className="mr-2 scale-110"
+                                type="checkbox"
+                                id="q17"
+                                name="7"
+                                value="200"
+                                checked={values[8] === 200}
+                                onChange={handleRadioChange}
+                            />
+                            <label htmlFor="q17">Chat Online</label>
+                        </div>
+                    </div>
+                    Kto dostarczy treści? *
+                </div>
+
+                <div className="flex items-center justify-between px-1 mt-8 md:mt-16">
+                    <p className="font-bold w-28 md:text-xl text-emerald-700">
+                        Cena: {totalValue}
                     </p>
-                    <button className="btn">Wyślij Zapytanie</button>
+                    <button className="inline-block px-3 md:px-7 py-3 bgLogoColor text-white font-medium text-sm leading-snug uppercase rounded bg-gradient-to-tr from-gray-900 to-gray-700 shadow-gray-900 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-200 ease-in-out;">
+                        Wyślij Zapytanie
+                    </button>
                 </div>
             </form>
         </Layout>
