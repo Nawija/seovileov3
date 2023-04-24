@@ -12,7 +12,7 @@ const ProjectTemplate = ({
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <section className="relative object-bottom flex items-center min-h-[13rem] overflow-hidden h-24 justify-center w-full">
+                <section className="relative object-bottom flex items-center min-h-[12rem] max-h-[13rem] overflow-hidden justify-center w-full">
                     <div className="w-full -mt-4 -z-20 ">
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
@@ -125,7 +125,7 @@ const ProjectTemplate = ({
     );
 };
 
-export const Head = () => <Seo title="Projekty" />;
+export const Head = () => <Seo title="Seovileo" />;
 
 export default ProjectTemplate;
 
