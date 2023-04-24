@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-import LiveBacground from "../liveBacground";
+import LiveBackground from "../liveBackground";
 
 const ServicesCompon = () => {
     const data = useStaticQuery(graphql`
@@ -47,7 +47,7 @@ const ServicesCompon = () => {
                 />
             </svg>
 
-            <LiveBacground />
+            <LiveBackground />
             <div className="absolute inset-0 -z-20 w-full h-full bg-gradient-to-t from-[#1f2d57] to-[#0C1530]" />
             <StaticImage
                 className="inset-0 absolute h-full w-full opacity-10"

@@ -1,13 +1,13 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import LiveBacground from "../liveBacground";
+import LiveBackground from "../liveBackground";
 
 const HeroCompon = () => {
     return (
         <section className="relative flex items-center max-h-[32rem] justify-center w-full ">
         
-            <LiveBacground />
+            <LiveBackground />
 
             <div className="relative -mt-8 w-full -z-20">
                 <StaticImage

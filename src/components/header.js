@@ -161,7 +161,7 @@ const Header = () => {
                                         ? "font-semibold lg:text-amber-500 hoverLink link transition-colors duration-200"
                                         : "font-semibold hoverLink link transition-colors duration-200"
                                 }
-                                to="/wycena"
+                                to="/darmowa-wycena"
                             >
                                 Darmowa Wycena
                             </Link>
