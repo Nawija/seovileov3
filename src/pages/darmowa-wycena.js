@@ -52,7 +52,7 @@ const CalcPrice = () => {
                 </div>
             </section>
             <form
-                className="p-6 bg-gray-200 w-[90%] sm:w-4/5 md:w-3/5 lg:w-1/2 mx-auto rounded-xl mb-12 md:mb-2 mt-20 lg:mb-2 mt-24"
+                className="p-6 bg-gray-200 w-[90%] sm:w-4/5 md:w-3/5 lg:w-1/2 mx-auto rounded-xl mb-12 md:mb-2 -mt-12 md:-mt-4 lg:mb-24"
                 action="https://public.herotofu.com/v1/d1061fe0-e21a-11ed-8300-fd92f9e8911a"
                 method="post"
                 accept-charset="UTF-8"
@@ -373,7 +373,35 @@ const CalcPrice = () => {
                             <label htmlFor="q17">Chat Online</label>
                         </div>
                     </div>
-                    Kto dostarczy treści? *
+                    <div className="mb-2 mt-2">
+                        <p className="font-semibold mb-1">
+                            Kto dostarczy treści? *
+                        </p>
+                        <div className="ml-2 py-2">
+                            <div>
+                                <input
+                                    className="mr-2 scale-110"
+                                    type="radio"
+                                    id="q18"
+                                    name="treści"
+                                />
+                                <label htmlFor="q18">Zleceniodawca (Ty)</label>
+                            </div>
+                            <div>
+                                <input
+                                    className="mr-2 scale-110"
+                                    type="radio"
+                                    id="q19"
+                                    name="treści"
+                                />
+                                <label htmlFor="q19">Wykonawca</label>
+                            </div>
+                            <p className="text-sm text-gray-700 mt-1 px-1 md:w-[80%]">
+                                W przypadku wyboru wykonawcy, cena napisania
+                                tekstów jest wyceniana indywidualnie.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="flex items-center justify-between px-1 mt-8 md:mt-16">
