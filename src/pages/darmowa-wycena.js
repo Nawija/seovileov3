@@ -4,15 +4,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
 const CalcPrice = () => {
-    const [values, setValues] = useState([
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-    ]);
+    const initialValues = Array.from({ length: 8 }, () => null);
+    const [values, setValues] = useState(initialValues);
+
+
     const totalValue = values.reduce((acc, cur) => acc + cur, 0);
 
     const handleRadioChange = (event) => {
@@ -365,7 +360,7 @@ const CalcPrice = () => {
                                 className="mr-2 scale-110"
                                 type="checkbox"
                                 id="q17"
-                                name="7"
+                                name="8"
                                 value="200"
                                 checked={values[8] === 200}
                                 onChange={handleRadioChange}
