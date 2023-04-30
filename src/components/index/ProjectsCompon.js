@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 
 const ProjectsCompon = () => {
     const data = useStaticQuery(graphql`
@@ -25,7 +25,7 @@ const ProjectsCompon = () => {
     `);
 
     return (
-        <section class="relative pt-6 sm:pt-8 lg:pt-12 sm:pb-16 lg:pb-24">
+        <section class="relative pt-6 sm:pt-8 lg:pt-12 sm:pb-16 lg:pb-24 bg-slate-200">
             <div class="mx-auto max-w-screen-xl px-2 md:px-10">
                 <div class="flex flex-col sm:flex-row justify-between mb-4 px-3 items-center">
                     <h3 className="text-center sm:text-start text-xl md:text-2xl  text-gray-700 font-bold tracking-wide ">

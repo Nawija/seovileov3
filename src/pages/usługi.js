@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import LiveBackground from "../components/liveBackground";
+import ArticleCompon from "../components/ArticleCompon";
 
 const Usługi = () => {
     const data = useStaticQuery(graphql`
@@ -51,7 +52,7 @@ const Usługi = () => {
                     <div className="absolute w-full h-full top-0 left-0 bg-gray-900/80" />
                 </div>
             </div>
-            <section class="text-gray-700 body-font -mt-16">
+            <section class="text-gray-700 body-font -mt-16 lg:-mt-20">
                 <div class="container px-5 py-24 mx-auto max-w-screen-xl">
                     <div class="flex flex-wrap w-full mb-20">
                         <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
@@ -70,8 +71,8 @@ const Usługi = () => {
                     </div>
                     <div class="flex items-stretch flex-wrap -m-4">
                         {data.allDatoCmsUslugi.edges.map(({ node }) => (
-                            <div class="xl:w-1/4 md:w-1/2 p-4">
-                                <div class="bg-gray-100 p-6 rounded-lg">
+                            <div class="xl:w-1/4 md:w-1/2 p-4 flex items-stretch justify-start flex-col">
+                                <div class="bg-gray-100 h-full p-6 rounded-lg shadow-lg flex items-stretch justify-start flex-col">
                                     <GatsbyImage
                                         className="h-auto rounded w-3/4 mx-auto object-cover mb-6"
                                         loading="eager"
@@ -98,6 +99,7 @@ const Usługi = () => {
                     </div>
                 </div>
             </section>
+            <ArticleCompon />
         </Layout>
     );
 };

@@ -4,7 +4,6 @@ import SpeedTestCompon from "./SpeedTestCompon";
 import ServicesCompon from "./ServicesCompon";
 import ProjectsCompon from "./ProjectsCompon";
 import MediaCompon from "./MediaCompon";
-import ArticleCompon from "./ArticleCompon";
 
 export {
     HeroCompon,
@@ -13,5 +12,4 @@ export {
     ServicesCompon,
     ProjectsCompon,
     MediaCompon,
-    ArticleCompon,
 };

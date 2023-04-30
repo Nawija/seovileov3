@@ -9,7 +9,7 @@ import {
     ServicesCompon,
     ProjectsCompon,
     MediaCompon,
-    ArticleCompon,
+
 } from "../components/index";
 
 const IndexPage = () => {
@@ -21,7 +21,7 @@ const IndexPage = () => {
             <ServicesCompon />
             <ProjectsCompon />
             <MediaCompon />
-            <ArticleCompon />
+
         </Layout>
     );
 };

@@ -43,7 +43,7 @@ const ServicesCompon = () => {
             >
                 <path
                     d="M2004 22.9898C2004 22.9898 1545.5 74.7165 1002 22.9898C458.5 -28.7372 0 22.9898 0 22.9898V94H2004V22.9898Z"
-                    fill="#f8f8f8"
+                    fill="#e2e8f0"
                 />
             </svg>
 
@@ -71,7 +71,7 @@ const ServicesCompon = () => {
                     {data.allDatoCmsUslugi.edges.map(({ node }) => (
                         <Link
                             to={node.slug}
-                            className="relative border-2 border-t-4 border-t-blue-200 hover:border-t-emerald-300 group rounded-xl hover:scale-105 hover:shadow-xl shadow-lg bg-gray-100 p-6 pb-12 transition-all duration-200"
+                            className="relative border-2 border-t-4 w-[85%] sm:w-full mx-auto border-t-blue-200 hover:border-t-emerald-300 group rounded-xl hover:scale-105 hover:shadow-xl shadow-lg bg-gradient-to-b from-slate-50 to-gray-300 p-6 pb-12 transition-all duration-200"
                         >
                             <GatsbyImage
                                 className="w-20 h-20 transition-transform duration-200"
@@ -80,7 +80,7 @@ const ServicesCompon = () => {
                                 image={getImage(node.img.gatsbyImageData)}
                                 alt={node.img.alt || "Strona Internetowa"}
                             />
-                            <h2 className="font-bold mb-3 mt-1">
+                            <h2 className="font-bold my-3 mt-1 text-gray-700">
                                 {node.title}
                             </h2>
                             <p>{node.opis}</p>

@@ -30,8 +30,8 @@ const ArticleCompon = () => {
                         : "order-1 lg:pl-24 md:pl-16 md:items-end md:text-right";
                 const changeBg =
                     index % 2 === 0
-                        ? "bg-white"
-                        : "bg-gray-50";
+                        ? "bg-gray-100"
+                        : "";
                 return (
                     <section
                         key={node.id}
