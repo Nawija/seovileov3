@@ -5,6 +5,20 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 
+import {
+    FacebookIcon,
+    TwitterIcon,
+    PinterestIcon,
+    WhatsappIcon,
+} from "react-share";
+
+import {
+    FacebookShareButton,
+    TwitterShareButton,
+    PinterestShareButton,
+    WhatsappShareButton,
+} from "react-share";
+
 const ProjectTemplate = ({
     pageContext: { slug },
     data: { datoCmsBlog, allDatoCmsBlog },
@@ -12,17 +26,16 @@ const ProjectTemplate = ({
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <section className="relative object-bottom flex items-center min-h-[12rem] max-h-[13rem] overflow-hidden justify-center w-full">
+                <div className="relative object-bottom flex items-center min-h-[12rem] max-h-[13rem] overflow-hidden justify-center w-full">
                     <div className="w-full -mt-4 -z-20 ">
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
                             image={getImage(datoCmsBlog.img.gatsbyImageData)}
-                            alt={datoCmsBlog.img.alt}
+                            alt={datoCmsBlog.img.alt || "strona www"}
                         />
                         <div className="w-full h-full bg-gray-800/80 absolute top-0 left-0" />
                     </div>
-                    
-                </section>
+                </div>
 
                 <section class="container -mt-32 lg:-mt-20 px-3 mx-auto">
                     <section class=" mb-6 md:mb-12 text-gray-800">
@@ -36,6 +49,67 @@ const ProjectTemplate = ({
                                         )}
                                         alt={datoCmsBlog.img.alt}
                                     />
+                                    <div className="flex items-start justify-end mx-3 space-x-4 my-4">
+                                        <div className=" space-x-4">
+                                            <FacebookShareButton
+                                                url={`https://seovileo.pl/${datoCmsBlog.slug}`}
+                                                quote={datoCmsBlog.title}
+                                                hashtag="#seovileo"
+                                            >
+                                                <div className="w-6 h-6">
+                                                    <FacebookIcon
+                                                        size={35}
+                                                        round={true}
+                                                    />
+                                                </div>
+                                            </FacebookShareButton>
+                                            <TwitterShareButton
+                                                url={`https://seovileo.pl/${datoCmsBlog.slug}`}
+                                                title={datoCmsBlog.title}
+                                                hashtags={[
+                                                    "seovileo",
+                                                    "strona internetowa",
+                                                ]}
+                                            >
+                                                <div className="w-6 h-6">
+                                                    <TwitterIcon
+                                                        size={35}
+                                                        round={true}
+                                                    />
+                                                </div>
+                                            </TwitterShareButton>
+                                            <PinterestShareButton
+                                                url={`https://seovileo.pl/${datoCmsBlog.slug}`}
+                                                media={datoCmsBlog.img.url}
+                                                summary={
+                                                    datoCmsBlog.smallDescription
+                                                }
+                                                source="Seovileo.pl"
+                                            >
+                                                <div className="w-6 h-6">
+                                                    <PinterestIcon
+                                                        size={35}
+                                                        round={true}
+                                                    />
+                                                </div>
+                                            </PinterestShareButton>
+                                            <WhatsappShareButton
+                                                url={`https://seovileo.pl/${datoCmsBlog.slug}`}
+                                                title={datoCmsBlog.title}
+                                                summary={
+                                                    datoCmsBlog.smallDescription
+                                                }
+                                                source="Seovileo.pl"
+                                            >
+                                                <div className="w-6 h-6">
+                                                    <WhatsappIcon
+                                                        size={35}
+                                                        round={true}
+                                                    />
+                                                </div>
+                                            </WhatsappShareButton>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="pl-2">
                                     <div class="block mt-1 lg:mt-16 rounded-lg py-3 lg:py-12 md:px-12 lg:-mr-14 text-start">
@@ -72,7 +146,9 @@ const ProjectTemplate = ({
                 </section>
 
                 <section className="mt-2 mb-16 max-w-screen-xl mx-auto">
-                    <p className="ml-4 lg:ml-[10vw] mb-4 font-semibold">Wiecej Postów:</p>
+                    <p className="ml-4 lg:ml-[10vw] mb-4 font-semibold">
+                        Wiecej Postów:
+                    </p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
                         {allDatoCmsBlog.edges.map(({ node }) => (
                             <div className="flex mx-6 flex-col md:flex-row items-start gap-4 lg:gap-6">
@@ -134,6 +210,7 @@ export const query = graphql`
         datoCmsBlog(slug: { eq: $slug }) {
             description
             img {
+                url
                 alt
                 gatsbyImageData
             }

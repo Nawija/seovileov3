@@ -10,6 +10,20 @@ import Desktop from "../assets/liveSvg/desktop.svg";
 import Tablet from "../assets/liveSvg/tablet.svg";
 import Phone from "../assets/liveSvg/phone.svg";
 
+import {
+    FacebookIcon,
+    TwitterIcon,
+    PinterestIcon,
+    WhatsappIcon,
+} from "react-share";
+
+import {
+    FacebookShareButton,
+    TwitterShareButton,
+    PinterestShareButton,
+    WhatsappShareButton,
+} from "react-share";
+
 const ProjectTemplate = ({
     pageContext: { slug },
     data: { datoCmsPortfolio, allDatoCmsPortfolio },
@@ -188,6 +202,67 @@ const ProjectTemplate = ({
                                         )}
                                         alt={datoCmsPortfolio.img.alt}
                                     />
+                                    <div className="flex items-start justify-end mx-3 space-x-4 my-4">
+                                        <div className=" space-x-4">
+                                            <FacebookShareButton
+                                                url={`https://seovileo.pl/${datoCmsPortfolio.slug}`}
+                                                quote={datoCmsPortfolio.title}
+                                                hashtag="#seovileo"
+                                            >
+                                                <div className="w-6 h-6">
+                                                    <FacebookIcon
+                                                        size={35}
+                                                        round={true}
+                                                    />
+                                                </div>
+                                            </FacebookShareButton>
+                                            <TwitterShareButton
+                                                url={`https://seovileo.pl/${datoCmsPortfolio.slug}`}
+                                                title={datoCmsPortfolio.title}
+                                                hashtags={[
+                                                    "seovileo",
+                                                    "strona internetowa",
+                                                ]}
+                                            >
+                                                <div className="w-6 h-6">
+                                                    <TwitterIcon
+                                                        size={35}
+                                                        round={true}
+                                                    />
+                                                </div>
+                                            </TwitterShareButton>
+                                            <PinterestShareButton
+                                                url={`https://seovileo.pl/${datoCmsPortfolio.slug}`}
+                                                media={datoCmsPortfolio.img.url}
+                                                summary={
+                                                    datoCmsPortfolio.smallDescription
+                                                }
+                                                source="Seovileo.pl"
+                                            >
+                                                <div className="w-6 h-6">
+                                                    <PinterestIcon
+                                                        size={35}
+                                                        round={true}
+                                                    />
+                                                </div>
+                                            </PinterestShareButton>
+                                            <WhatsappShareButton
+                                                url={`https://seovileo.pl/${datoCmsPortfolio.slug}`}
+                                                title={datoCmsPortfolio.title}
+                                                summary={
+                                                    datoCmsPortfolio.smallDescription
+                                                }
+                                                source="Seovileo.pl"
+                                            >
+                                                <div className="w-6 h-6">
+                                                    <WhatsappIcon
+                                                        size={35}
+                                                        round={true}
+                                                    />
+                                                </div>
+                                            </WhatsappShareButton>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="mb-12 lg:mb-0">
                                     <div class="block mt-12 rounded-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
@@ -278,7 +353,9 @@ const ProjectTemplate = ({
     );
 };
 
-export const Head = ({data: { datoCmsPortfolio }}) => <Seo title={datoCmsPortfolio.naglowek} />;
+export const Head = ({ data: { datoCmsPortfolio } }) => (
+    <Seo title={datoCmsPortfolio.naglowek} />
+);
 
 export default ProjectTemplate;
 
@@ -287,6 +364,7 @@ export const query = graphql`
         datoCmsPortfolio(slug: { eq: $slug }) {
             data
             img {
+                url
                 alt
                 gatsbyImageData
             }

@@ -128,6 +128,7 @@ export const query = graphql`
     query MyQuery($slug: String) {
         datoCmsUslugi(slug: { eq: $slug }) {
             img {
+                url
                 alt
                 gatsbyImageData
             }

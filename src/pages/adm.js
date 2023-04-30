@@ -2,10 +2,12 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import LiveBackground from "../components/liveBackground";
 
 const Admin = () => (
     <Layout>
         <section className="relative flex items-center justify-center w-full ">
+            <LiveBackground />
             <div className="relative w-full -z-20">
                 <StaticImage
                     className="h-40 lg:h-52 xl:h-56 w-full md:w-full"

@@ -2,10 +2,12 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import LiveBackground from "../components/liveBackground";
 
 const Kontakt = () => (
     <Layout>
         <section className="relative flex items-center justify-center w-full ">
+            <LiveBackground />
             <div className="relative w-full -z-20">
                 <StaticImage
                     className="h-40 lg:h-52 xl:h-56 w-full md:w-full"
@@ -45,15 +47,12 @@ const Kontakt = () => (
                     />
                 </div>
                 <p className="text-gray-700 text-2xl ml-2 tracking-wide font-semibold">
-                Wkrótce :)
+                    Wkrótce :)
                 </p>
             </Link>
 
             <div className="flex items-center justify-center">
-                <Link
-                    to="/"
-                    className="btn mr-6"
-                >
+                <Link to="/" className="btn mr-6">
                     Strona Główna
                 </Link>
             </div>

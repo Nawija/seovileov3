@@ -12,6 +12,10 @@ module.exports = {
     },
     plugins: [
         {
+            resolve: `gatsby-transformer-remark`,
+            options: {},
+        },
+        {
             resolve: `gatsby-source-datocms`,
             options: {
                 apiToken: `0e6621bdd35bb44a65efb5a356263a`,

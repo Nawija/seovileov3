@@ -5,12 +5,8 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Header = () => {
     const [showMenu, setMenu] = useState(false);
-    const HandleMenu = () => {
-        setMenu(!showMenu);
-    };
-    const falseMenu = () => {
-        setMenu(false);
-    };
+    const handleMenu = () => setMenu(!showMenu);
+    const closeMenu = () => setMenu(false);
 
     const [navbar, setNavbar] = useState(false);
 
@@ -78,7 +74,7 @@ const Header = () => {
                     </Link>
                     <button
                         aria-label="Menu"
-                        onClick={HandleMenu}
+                        onClick={handleMenu}
                         className="group lg:hidden bg-gray-100 p-2.5 transition-colors duration-200 z-50 rounded-lg"
                     >
                         <div
@@ -112,7 +108,7 @@ const Header = () => {
                     >
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
-                                onClick={falseMenu}
+                                onClick={closeMenu}
                                 aria-label="Home"
                                 className={
                                     navbar
@@ -126,7 +122,7 @@ const Header = () => {
                         </li>
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
-                                onClick={falseMenu}
+                                onClick={closeMenu}
                                 aria-label="portfolio"
                                 className={
                                     navbar
@@ -140,7 +136,7 @@ const Header = () => {
                         </li>
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
-                                onClick={falseMenu}
+                                onClick={closeMenu}
                                 aria-label="usługi"
                                 className={
                                     navbar
@@ -154,7 +150,7 @@ const Header = () => {
                         </li>
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
-                                onClick={falseMenu}
+                                onClick={closeMenu}
                                 aria-label="portfolio"
                                 className={
                                     navbar
@@ -168,7 +164,7 @@ const Header = () => {
                         </li>
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
-                                onClick={falseMenu}
+                                onClick={closeMenu}
                                 aria-label="portfolio"
                                 className={
                                     navbar
@@ -182,7 +178,7 @@ const Header = () => {
                         </li>
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
-                                onClick={falseMenu}
+                                onClick={closeMenu}
                                 aria-label="kontakt"
                                 className={
                                     navbar

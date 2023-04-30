@@ -4,16 +4,18 @@ import Seo from "../components/seo";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import LiveBackground from "../components/liveBackground";
 
 const IndexPage = ({ data }) => {
     const { allDatoCmsPortfolio } = data;
 
     return (
         <Layout>
-            <div className="overflow-hidden w-full z-10">
+            <div className="relative overflow-hidden w-full">
                 <div className="relative w-full -z-20">
+                    <LiveBackground />
                     <StaticImage
-                        className="h-40 lg:h-52 xl:h-56 w-full md:w-full"
+                        className="h-40 lg:h-52 xl:h-56 w-full md:w-full -z-20"
                         quality={100}
                         src="../assets/hero.png"
                         loading="eager"
