@@ -2,8 +2,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { graphql } from "gatsby";
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import {
     FacebookIcon,
@@ -117,7 +116,12 @@ const ProjectTemplate = ({
                                             {datoCmsBlog.title}
                                         </h1>
                                         <p class="text-gray-500 text-lg mb-4 pb-2">
-                                            {datoCmsBlog.description}
+
+                                            <div
+                                                dangerouslySetInnerHTML={{
+                                                    __html: datoCmsBlog.description,
+                                                }}
+                                            />
                                         </p>
 
                                         <Link
