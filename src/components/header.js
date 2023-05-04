@@ -148,14 +148,14 @@ const Header = () => {
                                 Usługi
                             </Link>
                         </li>
-                        <li className="mx-5 my-2 px-2 py-2">
+                        <li className="mx-5 my-2 px-2 py-2 order-1 lg:order-0">
                             <Link
                                 onClick={closeMenu}
                                 aria-label="portfolio"
                                 className={
                                     navbar
-                                        ? "font-semibold lg:text-amber-500 hoverLink link transition-colors duration-200"
-                                        : "font-semibold hoverLink link transition-colors duration-200"
+                                        ? "font-semibold text-amber-300 text-[14px] border border-amber-300 py-2 px-3 bg-gradient-to-br from-orange-500 to-black rounded-xl shadow-lg lg:ml-12 transition-colors duration-200"
+                                        : "font-semibold text-amber-500 text-[14px] border border-amber-500 py-2 px-3 rounded-xl shadow-lg lg:ml-12 shadow-amber-500/30 transition-colors duration-200"
                                 }
                                 to="/darmowa-wycena"
                             >

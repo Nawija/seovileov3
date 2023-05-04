@@ -23,7 +23,7 @@ const ServicesCompon = () => {
     `);
 
     return (
-        <section class="md:-mt-24 -mt-12  pb-24 pt-16 lg:py-48 relative ">
+        <section class="md:-mt-24 -mt-12  pb-24 pt-16 lg:py-36 relative ">
             <svg
                 className="absolute w-full -top-1 left-0 z-10"
                 viewBox="0 0 2004 154"
@@ -31,7 +31,7 @@ const ServicesCompon = () => {
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <path
-                    className=" fill-[#1f2937] lg:fill-[#f8f8f8]"
+                    className="fill-[#f8f8f8]"
                     d="M0 116.001C0 116.001 458.5 31.5011 1002 116.001C1545.5 200.501 2004 116.001 2004 116.001V9.15527e-05H0V116.001Z"
                 />
             </svg>
@@ -48,6 +48,7 @@ const ServicesCompon = () => {
             </svg>
 
             <LiveBackground />
+
             <div className="absolute inset-0 -z-20 w-full h-full bg-gradient-to-t from-[#1f2d57] to-[#0C1530]" />
             <StaticImage
                 className="inset-0 absolute h-full w-full opacity-10"
@@ -67,23 +68,25 @@ const ServicesCompon = () => {
                         i tworzeniem szybkich stron internetowych
                     </p>
                 </div>
-                <div class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mb-8 xl:grid-cols-4 md:gap-6 xl:gap-8">
+                <div class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 md:mb-8 xl:grid-cols-4 md:gap-6 xl:gap-8">
                     {data.allDatoCmsUslugi.edges.map(({ node }) => (
                         <Link
                             to={node.slug}
-                            className="relative border-2 border-t-4 w-[85%] sm:w-full mx-auto border-t-blue-200 hover:border-t-emerald-300 group rounded-xl hover:scale-105 hover:shadow-xl shadow-lg bg-gradient-to-b from-slate-50 to-gray-300 p-6 pb-12 transition-all duration-200"
+                            className="relative border-2 border-t-4 w-[85%] sm:w-full mx-auto border-t-blue-200 hover:border-t-emerald-300 group rounded-xl hover:scale-105 hover:shadow-xl shadow-lg bg-gradient-to-b from-slate-50 to-gray-300 mb-8 sm:mb-0 p-6 pb-12 transition-all duration-200"
                         >
-                            <GatsbyImage
-                                className="w-20 h-20 transition-transform duration-200"
-                                loading="lazy"
-                                placeholder="blurred"
-                                image={getImage(node.img.gatsbyImageData)}
-                                alt={node.img.alt || "Strona Internetowa"}
-                            />
-                            <h2 className="font-bold my-3 mt-1 text-gray-700">
+                            <div className="p-2 w-20 h-20 -mt-12 rounded-full shadow-md shadow-emerald-800 bg-gradient-to-br from-emerald-500 to-emerald-900">
+                                <GatsbyImage
+                                    className="w-full h-full"
+                                    loading="lazy"
+                                    placeholder="blurred"
+                                    image={getImage(node.img.gatsbyImageData)}
+                                    alt={node.img.alt || "Strona Internetowa"}
+                                />
+                            </div>
+                            <h2 className="font-bold my-3 text-gray-700">
                                 {node.title}
                             </h2>
-                            <p>{node.opis}</p>
+                            <p className="font-medium text-sm">{node.opis}</p>
                             <p
                                 to={node.slug}
                                 className="px-3 py-2 text-black text-sm font-bold absolute bottom-2 right-2"

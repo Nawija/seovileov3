@@ -33,20 +33,20 @@ const ProjectsCompon = () => {
                     </h3>
                     <Link
                         to="/projekty"
-                        class="px-3 py-3 text-white mt-3 sm:mt-0 text-center font-medium text-sm rounded bg-gradient-to-tr from-emerald-800 to-emerald-600 shadow-emerald-800 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-200"
+                        class="px-2 py-2 text-white mt-4 sm:mt-0 text-center font-medium text-sm rounded bg-gradient-to-tr from-emerald-800 to-emerald-600 shadow-emerald-800 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-200"
                     >
                         Wiecej Projektów
                     </Link>
                 </div>
                 <div class="flex flex-col sm:flex-row mb-12 justify-between gap-8 items-center">
-                    <p class="max-w-screen-sm px-4 text-center sm:text-start text-gray-500 lg:text-base">
+                    <p class="max-w-screen-sm px-4 text-sm font-medium text-center sm:text-start text-gray-500 lg:text-base">
                         Każdy z tych projektów był realizowany w technologii
                         GatsbyJS i zawierał wiele zaawansowanych
                         funkcjonalności, co pozwoliło na uzyskanie bardzo
                         szybkich i responsywnych stron internetowych
                     </p>
                 </div>
-                <div class="mb-4 grid grid-cols-2 gap-4 sm:px-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-4 md:gap-12 lg:gap-4 xl:gap-8">
+                <div class="pb-6 grid grid-cols-2 gap-4 sm:px-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-12 lg:gap-4 xl:gap-8">
                     {data.allDatoCmsPortfolio.edges.map(({ node }) => (
                         <div>
                             <Link
@@ -65,23 +65,24 @@ const ProjectsCompon = () => {
                                     {node.naglowek}
                                 </span>
                             </Link>
-                            <div className="flex flex-col items-end justify-center text-end mt-4">
+                            <div className="flex flex-col items-start justify-center text-start mt-4">
                                 <div className="flex w-full px-4 mb-4 md:flex-row flex-wrap flex-col items-center justify-between">
-                                    <p className="text-gray-600 text-sm">
+                                    <p className="text-gray-600 text-center sm:text-start sm:w-[40%] text-sm">
                                         {node.data}
                                     </p>
-                                    <p className="text-gray-800 font-semibold">
-                                        <strong className="font-semibold">
+                                    <p className="text-gray-800 font-medium text-center sm:text-start sm:w-[80%] text-sm">
+                                        <strong className="font-medium">
                                             Strona Internetowa
-                                        </strong>
+                                        </strong>{" "}
+                                        {node.naglowek}
                                     </p>
+                                    <Link
+                                        to={node.slug}
+                                        className="text-center border border-transparent shadow-md px-2 mt-2 py-2 text-emerald-600 drop-shadow-md md:hover:bg-slate-200 transition-colors duration-200 md:font-bold text-sm rounded-lg font-semibold"
+                                    >
+                                        Zobacz Projekt &#8594;
+                                    </Link>
                                 </div>
-                                <Link
-                                    to={node.slug}
-                                    className="text-center py-2 text-emerald-700 border-gray-700 text-sm rounded-lg font-bold"
-                                >
-                                    Zobacz Projekt &#8594;
-                                </Link>
                             </div>
                         </div>
                     ))}

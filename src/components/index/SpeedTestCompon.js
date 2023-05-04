@@ -8,7 +8,7 @@ const SpeedTestCompon = () => {
                 Szybka <strong>Strona Internetowa</strong>
             </h2>
             <div className=" bg-gradient-to-r from-amber-400 w-[30%] md:w-[18%] h-1 rounded-3xl mb-20 lg:mb-6 mx-auto" />
-            <div className="flex flex-col bg-gray-800 lg:bg-transparent lg:mt-20 px-4 lg:flex-row py-6 md:pb-16">
+            <div className="flex flex-col lg:mt-20 px-4 lg:flex-row py-6 md:pb-16">
                 <div className="sm:w-4/5 -mt-24 w-full lg:w-1/2 mx-auto lg:my-auto flex mb-8 items-center justify-center lg:order-1">
                     <StaticImage
                         className="lg:-mt-20"
@@ -22,10 +22,10 @@ const SpeedTestCompon = () => {
                     <p class=" px-2 md:px-12 font-bold text-emerald-700 text-sm">
                         TECHNOLOGIA GATSBY
                     </p>
-                    <p class=" px-2 md:px-12 text-gray-100 lg:text-gray-700 font-bold text-xl mb-4 md:mb-0">
+                    <p class=" px-2 md:px-12 text-gray-700 font-bold text-xl mb-4 md:mb-0">
                         UZYSKAJ NAJSZYBSZĄ STRONĘ INTERNETOWĄ!
                     </p>
-                    <p class=" px-2 md:px-12 md:mt-4 text-gray-300 lg:text-gray-700">
+                    <p class=" px-2 md:px-12 md:mt-4 text-gray-700">
                         Nasze strony internetowe tworzymy w technologii Gatsby,
                         aby zapewnić naszym klientom najlepsze doświadczenie
                         użytkownika. Dzięki szybkości i wydajności, nasze strony
@@ -34,7 +34,7 @@ const SpeedTestCompon = () => {
                         źródłami danych pozwala nam łączyć dane z wielu źródeł i
                         tworzyć dynamiczne strony internetowe.
                     </p>
-                    <p class=" px-2 md:px-12 pb-6 mt-3 md:mt-4 text-gray-300 lg:text-gray-700">
+                    <p class=" px-2 md:px-12 pb-6 mt-3 md:mt-4 text-gray-700">
                         Optymalizacja SEO sprawia, że nasze strony są łatwo
                         widoczne dla wyszukiwarek i znajdują się na szczycie
                         wyników wyszukiwania. Wsparcie i dobre praktyki, na
