@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const ProjectsCompon = () => {
     const data = useStaticQuery(graphql`
@@ -25,7 +25,7 @@ const ProjectsCompon = () => {
     `);
 
     return (
-        <section class="relative pt-6 sm:pt-8 lg:pt-12 sm:pb-16 lg:pb-24 bg-slate-200">
+        <section class="relative pt-6 sm:pt-8 lg:pt-12 pb-10 bg-slate-100">
             <div class="mx-auto max-w-screen-xl px-2 md:px-10">
                 <div class="flex flex-col sm:flex-row justify-between mb-4 px-3 items-center">
                     <h3 className="text-center sm:text-start text-xl md:text-2xl  text-gray-700 font-bold tracking-wide ">
@@ -61,7 +61,7 @@ const ProjectsCompon = () => {
                                 />
                                 <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-500 via-transparent to-transparent opacity-50"></div>
 
-                                <span class="absolute bg-gray-900/50 text-sm rounded-3xl px-2 ml-2 mb-3 inline-block text-white md:ml-3">
+                                <span class="absolute bg-gray-900/50 text-[12px] rounded-3xl px-2 ml-2 mb-3 inline-block text-white md:ml-3">
                                     {node.naglowek}
                                 </span>
                             </Link>
@@ -78,7 +78,7 @@ const ProjectsCompon = () => {
                                     </p>
                                     <Link
                                         to={node.slug}
-                                        className="text-center border border-transparent shadow-md px-2 mt-2 py-2 text-emerald-600 drop-shadow-md md:hover:bg-slate-200 transition-colors duration-200 md:font-bold text-sm rounded-lg font-semibold"
+                                        className="text-center border-b-2 border-emerald-600 px-2 mt-2 py-2 text-emerald-600 md:hover:tracking-wider md:hover:text-amber-500 md:hover:border-amber-400  transition-all duration-200 md:font-bold text-sm rounded-lg font-semibold"
                                     >
                                         Zobacz Projekt &#8594;
                                     </Link>

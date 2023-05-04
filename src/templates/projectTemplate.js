@@ -177,7 +177,7 @@ const ProjectTemplate = ({
                     </div>
                 )}
 
-                <section className="relative object-bottom flex items-center min-h-[13rem] overflow-hidden h-24 justify-center w-full">
+                <section className="relative object-bottom flex items-center min-h-[13rem] overflow-hidden max-h-24 justify-center w-full">
                     <div className="w-full -mt-4 -z-20 ">
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
@@ -186,7 +186,7 @@ const ProjectTemplate = ({
                             )}
                             alt={datoCmsPortfolio.imgbg.alt}
                         />
-                        <div className="w-full h-full bg-gray-800/80 absolute top-0 left-0" />
+                        <div className="w-full h-full bg-gray-800/50 absolute top-0 left-0" />
                     </div>
                 </section>
 

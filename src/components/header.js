@@ -65,8 +65,8 @@ const Header = () => {
                         <p
                             className={
                                 navbar
-                                    ? "text-slate-800 ml-1 tracking-wide font-bold"
-                                    : "text-gray-100 ml-1 tracking-wide font-bold"
+                                    ? "text-slate-500 ml-1 -tracking-wide transition-all duration-200 font-bold"
+                                    : "text-gray-100 ml-1 tracking-wide transition-all duration-200 font-bold"
                             }
                         >
                             Seovileo
@@ -154,7 +154,7 @@ const Header = () => {
                                 aria-label="portfolio"
                                 className={
                                     navbar
-                                        ? "font-semibold text-amber-300 text-[14px] border border-amber-300 py-2 px-3 bg-gradient-to-br from-orange-500 to-black rounded-xl shadow-lg lg:ml-12 transition-colors duration-200"
+                                        ? "font-semibold text-amber-500 text-[14px] border border-amber-500 drop-shadow-md py-2 px-3 rounded-xl shadow-lg lg:ml-12 transition-colors duration-200"
                                         : "font-semibold text-amber-500 text-[14px] border border-amber-500 py-2 px-3 rounded-xl shadow-lg lg:ml-12 shadow-amber-500/30 transition-colors duration-200"
                                 }
                                 to="/darmowa-wycena"

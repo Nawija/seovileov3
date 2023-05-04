@@ -26,9 +26,9 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <div className="relative flex items-center min-h-[7rem] md:min-h-[10rem] overflow-hidden justify-center w-full">
+                <div className="relative flex items-center h-[7rem] md:h-[15rem] overflow-hidden justify-center w-full">
                     <LiveBackground />
-                    <div className="relative w-full min-h-[7rem] md:min-h-[10rem] -mt-4 -z-20 ">
+                    <div className="relative w-full h-full -mt-4 -z-20 ">
                         <StaticImage
                             quality={100}
                             loading="eager"

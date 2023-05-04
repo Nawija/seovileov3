@@ -3,7 +3,6 @@ import Layout from "../components/layout";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import LiveBackground from "../components/liveBackground";
-import ArticleCompon from "../components/ArticleCompon";
 
 const Usługi = () => {
     const data = useStaticQuery(graphql`
@@ -71,8 +70,11 @@ const Usługi = () => {
                     </div>
                     <div class="flex items-stretch flex-wrap -m-4">
                         {data.allDatoCmsUslugi.edges.map(({ node }) => (
-                            <div class="xl:w-1/4 md:w-1/2 p-4 flex items-stretch justify-start flex-col">
-                                <div class="bg-gray-100 h-full p-6 rounded-lg shadow-lg flex items-stretch justify-start flex-col">
+                            <Link
+                                to={`/` + node.slug}
+                                class="xl:w-1/4 md:w-1/2 p-4 flex items-stretch justify-start flex-col"
+                            >
+                                <div class="bg-gray-100 h-full p-6 rounded-lg shadow-lg flex items-stretch justify-start flex-col relative">
                                     <GatsbyImage
                                         className="h-auto rounded w-3/4 mx-auto object-cover mb-6"
                                         loading="eager"
@@ -84,22 +86,24 @@ const Usługi = () => {
                                             node.img.alt || "Strona Internetowa"
                                         }
                                     />
-                                    <h3 class="tracking-widest text-yellow-500 text-xs font-medium title-font">
+                                    <h3 class="tracking-widest text-amber-500 text-[12px] font-bold title-font">
                                         Usługa
                                     </h3>
                                     <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
                                         {node.title}
                                     </h2>
-                                    <p class="leading-relaxed text-base">
+                                    <p class="leading-relaxed text-base pb-10">
                                         {node.opis}
                                     </p>
+                                    <p className="absolute right-2 bottom-2 px-2 py-1 text-sm font-bold">
+                                        Więcej
+                                    </p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
             </section>
-            <ArticleCompon />
         </Layout>
     );
 };

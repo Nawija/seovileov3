@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 const SpeedTestCompon = () => {
     return (
         <section class="text-gray-900 bg-white relative  body-font">
-            <div class="container px-5 pt-24 mx-auto flex flex-col">
+            <div class="container px-5 py-20 mx-auto flex flex-col">
                 <div class="lg:w-[90%] mx-auto">
                     <div class="rounded-lg h-64 overflow-hidden relative">
                         <StaticImage
