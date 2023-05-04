@@ -108,7 +108,7 @@ seovileo@email.com"
 
                 <div>
                     <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
-                        Quick Links
+                        Szybkie Linki
                     </div>
 
                     <nav className="flex flex-col gap-4">
@@ -123,19 +123,27 @@ seovileo@email.com"
 
                         <div>
                             <Link
-                                to="/#about"
+                                to="/projekty"
                                 className=" transition duration-100 hoverLink linkFooter"
                             >
-                                About
+                                Projekty
                             </Link>
                         </div>
 
                         <div>
                             <Link
-                                to="/#services"
+                                to="/usługi"
                                 className=" transition duration-100 hoverLink linkFooter"
                             >
-                                Services
+                                Usługi
+                            </Link>
+                        </div>
+                        <div>
+                            <Link
+                                to="/kontakt"
+                                className=" transition duration-100 hoverLink linkFooter"
+                            >
+                                Kontakt
                             </Link>
                         </div>
                     </nav>
@@ -143,25 +151,25 @@ seovileo@email.com"
 
                 <div>
                     <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
-                        Company
+                        Portfolio
                     </div>
 
                     <nav className="flex flex-col gap-4">
                         <div>
                             <Link
-                                to="/projects"
+                                to="/projekty"
                                 className=" transition duration-100 hoverLink linkFooter"
                             >
-                                Projects
+                                Projekty
                             </Link>
                         </div>
 
                         <div>
                             <Link
-                                to="https://www.linkedin.com/company/ckl-facades/jobs/"
+                                to="/budowa"
                                 className=" transition duration-100 hoverLink linkFooter"
                             >
-                                Jobs
+                                Praca
                             </Link>
                         </div>
                     </nav>
@@ -175,19 +183,19 @@ seovileo@email.com"
                     <nav className="flex flex-col gap-4">
                         <div>
                             <Link
-                                to="/#contact"
+                                to="/kontakt"
                                 className=" transition duration-100 hoverLink linkFooter"
                             >
-                                Contact
+                                Kontakt
                             </Link>
                         </div>
 
                         <div>
                             <Link
-                                to="/#contact"
+                                to="/kontakt"
                                 className=" transition duration-100 hoverLink linkFooter"
                             >
-                                Chat
+                                Czat
                             </Link>
                         </div>
                     </nav>
@@ -195,22 +203,22 @@ seovileo@email.com"
 
                 <div>
                     <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
-                        Legal
+                        FAQ
                     </div>
 
                     <nav className="flex flex-col gap-4">
                         <div>
                             <Link
-                                to="/privacy-policy"
+                                to="/budowa"
                                 className=" transition duration-100 hoverLink linkFooter"
                             >
-                                Privacy Policy
+                                Polityka prywatności
                             </Link>
                         </div>
 
                         <div>
                             <Link
-                                to="/cookies"
+                                to="/budowa"
                                 className=" transition duration-100 hoverLink linkFooter"
                             >
                                 Cookies
