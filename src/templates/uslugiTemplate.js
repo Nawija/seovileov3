@@ -12,14 +12,14 @@ const ProjectTemplate = ({
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <section className="relative object-bottom flex items-center min-h-[11rem] overflow-hidden justify-center w-full">
+                <section className="relative object-bottom flex items-center h-[11rem] overflow-hidden justify-center w-full">
                     <div className="w-full -mt-4">
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
                             image={getImage(datoCmsUslugi.img.gatsbyImageData)}
                             alt={datoCmsUslugi.img.alt}
                         />
-                        <div className="w-full h-full bg-gray-900/90 bg-blend-multiply absolute top-0 left-0" />
+                        <div className="w-full h-full bg-gray-900/80 md:bg-gray-900/90 bg-blend-multiply absolute top-0 left-0" />
                     </div>
                 </section>
 
