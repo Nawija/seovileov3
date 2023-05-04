@@ -7,7 +7,7 @@ const Footer = () => (
         <footer className="mx-auto max-w-screen-2xl px-4 md:px-8">
             <div className="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
                 <div className="col-span-full lg:col-span-2">
-                    <div className="mb-4 lg:-mt-2">
+                    <div className=" ml-4 mb-4 lg:-mt-2">
                         <Link
                             to="/"
                             className="flex-col hover:scale-105 transition-all duration-300 flex h-auto w-20 items-center justify-center"
@@ -31,21 +31,78 @@ const Footer = () => (
                     </p>
 
                     <div className="flex">
-                        <Link
-                            to="https://www.linkedin.com/company/ckl-facades/?fbclid=IwAR2BI5yn7XTImJnXJ9Pl0OmsGPAA8fFKzTba0CPcDrkQxkUtcQJtEX_CIMQ"
-                            className=" transition duration-100 hover:text-gray-500 "
-                        >
-                            <svg
-                                className="h-5 w-5"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                                xmlns="http://www.w3.org/2000/svg"
+                        <span class="inline-flex">
+                            <Link
+                                to="https://www.facebook.com/seovileo/"
+                                class="text-gray-500"
                             >
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                        </Link>
+                                <svg
+                                    fill="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    class="w-5 h-5"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                </svg>
+                            </Link>
+                            <Link
+                                to="https://twitter.com/seovileo"
+                                class="ml-4 text-gray-500"
+                            >
+                                <svg
+                                    fill="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    class="w-5 h-5"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                                </svg>
+                            </Link>
+                            <Link
+                                to="https://www.instagram.com/seovileo/"
+                                class="ml-4 text-gray-500"
+                            >
+                                <svg
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    class="w-5 h-5"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <rect
+                                        width="20"
+                                        height="20"
+                                        x="2"
+                                        y="2"
+                                        rx="5"
+                                        ry="5"
+                                    ></rect>
+                                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                                </svg>
+                            </Link>
+                            <Link
+                                to="mailto:
+seovileo@email.com"
+                                class="ml-4 text-gray-500"
+                            >
+                                <svg
+                                    fill="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    class="w-5 h-5"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                                </svg>
+                            </Link>
+                        </span>
                     </div>
                 </div>
 
