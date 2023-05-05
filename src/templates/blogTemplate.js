@@ -38,7 +38,7 @@ const ProjectTemplate = ({
                     </div>
                 </div>
 
-                <section class="container -mt-32 lg:-mt-20 px-3 mx-auto">
+                <section class="container -mt-32 lg:-mt-24 px-3 mx-auto">
                     <section class=" mb-6 md:mb-12 text-gray-800">
                         <div class="container mx-auto xl:px-32 text-start lg:text-left">
                             <div class="flex flex-col lg:flex-row items-center md:items-start">
@@ -113,7 +113,7 @@ const ProjectTemplate = ({
                                     </div>
                                 </div>
                                 <div class="pl-2">
-                                    <div class="block mt-1 lg:mt-16 rounded-lg py-3 lg:py-12 md:px-12 lg:-mr-14 text-start">
+                                    <div class="block mt-1 lg:mt-20 -tracking-wide rounded-lg py-3 lg:py-12 md:px-12 lg:-mr-14 text-start">
                                         <h1 class="text-3xl font-bold capitalize pb-2 mb-5">
                                             {datoCmsBlog.title}
                                         </h1>
