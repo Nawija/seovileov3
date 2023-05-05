@@ -368,10 +368,6 @@ export const query = graphql`
                 alt
                 gatsbyImageData(layout: FULL_WIDTH)
             }
-            imgbg {
-                alt
-                gatsbyImageData(layout: FULL_WIDTH)
-            }
             krotkiTekst
             link
             naglowek
