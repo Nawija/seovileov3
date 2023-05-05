@@ -88,7 +88,7 @@ export const query = graphql`
                     img {
                         url
                         alt
-                        gatsbyImageData
+                        gatsbyImageData(layout: FULL_WIDTH)
                     }
                     slug
                     smallDescription
