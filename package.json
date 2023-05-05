@@ -1,9 +1,9 @@
 {
-    "name": "Seovileo",
+    "name": "seovileo",
     "private": true,
-    "description": "A simple starter to get up and developing quickly with Gatsby",
+    "description": "strony internetowe",
     "version": "0.1.0",
-    "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+    "author": "Seovileo <seovileo@gmail.com>",
     "dependencies": {
         "gatsby": "^5.7.0",
         "gatsby-omni-font-loader": "^2.0.2",

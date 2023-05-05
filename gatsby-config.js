@@ -5,8 +5,8 @@
 module.exports = {
     pathPrefix: "/seovileov3",
     siteMetadata: {
-        title: `Freelancer Stwórz z nami swoja wizytówkę`,
-        description: `Freelancer Stwórz z nami swoja wizytówkę`,
+        title: `Stwórz swoja stronę internetową`,
+        description: `Błyskawiczne strony internetowe, które zapewniają szybkie i płynne wrażenia użytkownikom. Korzystam z najnowszych technologii`,
         author: `Seovileo`,
         siteUrl: `https://seovileo.pl/`,
     },
