@@ -6,7 +6,7 @@ module.exports = {
     pathPrefix: "/seovileov3",
     siteMetadata: {
         title: `Stwórz swoja stronę internetową`,
-        description: `Błyskawiczne strony internetowe, które zapewniają szybkie i płynne wrażenia użytkownikom. Njnowszye technologie`,
+        description: `Błyskawiczne strony internetowe, które zapewniają szybkie i płynne wrażenia użytkownikom. Najnowszye technologie`,
         author: `Seovileo`,
         siteUrl: `https://seovileo.pl/`,
     },
