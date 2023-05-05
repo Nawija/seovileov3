@@ -7,8 +7,8 @@ import LiveBackground from "../components/liveBackground";
 
 const CalcPrice = () => {
     const data = useStaticQuery(graphql`
-        query {
-            allDatoCmsBlog(sort: { position: ASC }) {
+        {
+            allDatoCmsBlog(sort: { position: ASC }, limit: 5) {
                 edges {
                     node {
                         description

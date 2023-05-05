@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
                             <div class="flex flex-col lg:flex-row items-center lg:items-start">
                                 <div className="-rotate-[10deg] mb-2 -z-10">
                                     <StaticImage
-                                    quality={100}
+                                        quality={100}
                                         className="h-72 w-72 xl:py-52 xl:px-52 rounded-lg shadow-lg"
                                         src="../assets/projekty.png"
                                         alt="projekty stron internetowych"
@@ -169,7 +169,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
     query MyQuery {
-        allDatoCmsPortfolio(sort: { data: DESC }) {
+        allDatoCmsPortfolio(sort: { data: DESC }, limit: 4) {
             edges {
                 node {
                     data
