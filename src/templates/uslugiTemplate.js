@@ -5,6 +5,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 
+import "../styles/template.css";
+
 const ProjectTemplate = ({
     pageContext: { slug },
     data: { datoCmsUslugi, allDatoCmsUslugi },
@@ -19,11 +21,11 @@ const ProjectTemplate = ({
                             image={getImage(datoCmsUslugi.img.gatsbyImageData)}
                             alt={datoCmsUslugi.img.alt}
                         />
-                        <div className="w-full h-full bg-gray-900/80 md:bg-gray-900/90 bg-blend-multiply absolute top-0 left-0" />
+                        <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-t from-amber-500/30 to-indigo-800/90" />
                     </div>
                 </section>
 
-                <section class="container px-3 mx-auto">
+                <section class="container px-6 mx-auto">
                     <section class=" mb-6 md:mb-12 text-gray-800">
                         <div class="container mx-auto xl:px-32 text-center lg:text-left">
                             <div class="flex flex-col lg:flex-row items-start">
@@ -70,38 +72,19 @@ const ProjectTemplate = ({
                     </section>
                 </section>
 
-                <section className="max-w-screen-xl px-6 w-full mx-auto mb-4 md:mb-12 lg:mb-20">
-                    <h2 className="font-semibold text-xl mb-2">Profesjonalna strona internetowa</h2>
-                    <p className="mb-6">
-                        jeśli chcesz wyróżnić się w internecie i dotrzeć do
-                        większej liczby potencjalnych klientów, to warto
-                        zainwestować w profesjonalną stronę internetową. Dzięki
-                        niej Twoja firma będzie mogła zaprezentować swoją ofertę
-                        w sposób atrakcyjny i czytelny, a potencjalni klienci
-                        będą mieli łatwy dostęp do informacji o Twojej firmie i
-                        jej usługach. Jeśli nie wiesz, jak zacząć, to skontaktuj
-                        się ze mną! Jestem specjalistą w projektowaniu i
-                        tworzeniu nowoczesnych stron internetowych dla różnych
-                        branż. Moje doświadczenie pozwala mi na stworzenie dla
-                        Ciebie strony internetowej, która wyróżni Twoją firmę na
-                        tle konkurencji. Dlaczego warto ze mną współpracować? Po
-                        pierwsze, oferuję indywidualne podejście do każdego
-                        projektu. Zawsze dokładnie analizuję potrzeby klienta i
-                        proponuję najlepsze rozwiązania, tak aby strona
-                        internetowa była nie tylko funkcjonalna, ale także
-                        zgodna z oczekiwaniami klienta. Po drugie, oferuję
-                        konkurencyjne ceny za tworzenie stron internetowych.
-                        Stawiam na uczciwość i przejrzystość w mojej ofercie,
-                        dzięki czemu nasi klienci zawsze wiedzą, co płacą i za
-                        co. Jeśli chcesz poznać szczegóły mojej oferty i
-                        dowiedzieć się, jak mogę pomóc Ci w stworzeniu
-                        profesjonalnej strony internetowej dla Twojej firmy,
-                        skontaktuj się ze mną już dziś! Razem stworzymy unikalną
-                        stronę internetową, która przyciągnie uwagę klientów i
-                        zwiększy zainteresowanie Twoją ofertą.
-                    </p>
-
-                    <Link to="/darmowa-wycena" className="px-4 py-2 bg-gradient-to-br from-gray-600 to bg-gray-800 text-white">Kalkulator Wyceny</Link>
+                <section
+                    id="descriptionHtml"
+                    className="max-w-screen-xl px-6 w-full mx-auto mb-4 md:mb-12 lg:mb-20"
+                >
+                    <h2 className="font-semibold text-xl mb-2">
+                        {datoCmsUslugi.titlebig}
+                    </h2>
+                    <div
+                        className="mb-6"
+                        dangerouslySetInnerHTML={{
+                            __html: datoCmsUslugi.descriptionbig,
+                        }}
+                    />
                 </section>
 
                 <section className="mt-2 mb-16 max-w-screen-xl mx-auto">
@@ -172,7 +155,9 @@ export const query = graphql`
             }
             opis
             title
+            titlebig
             slug
+            descriptionbig
         }
         allDatoCmsUslugi(sort: { meta: { firstPublishedAt: DESC } }) {
             edges {
