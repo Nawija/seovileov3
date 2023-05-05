@@ -21,7 +21,7 @@ const ProjectTemplate = ({
                             image={getImage(datoCmsUslugi.img.gatsbyImageData)}
                             alt={datoCmsUslugi.img.alt}
                         />
-                        <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-t from-amber-500/30 to-indigo-800/90" />
+                        <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b bg-blend-multiply from-black/90 to-indigo-500/90" />
                     </div>
                 </section>
 
