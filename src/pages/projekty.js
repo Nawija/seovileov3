@@ -42,11 +42,12 @@ const IndexPage = ({ data }) => {
                     <section class=" mb-6 md:mb-12 text-gray-800">
                         <div class="container mx-auto xl:px-32 text-center lg:text-left">
                             <div class="flex flex-col lg:flex-row items-center lg:items-start">
-                                <div>
+                                <div className="-rotate-[10deg] mb-2 -z-10">
                                     <StaticImage
-                                        className="h-72 w-72 xl:py-60 xl:px-60 rounded-lg shadow-lg"
-                                        src="https://images.unsplash.com/photo-1598121210875-08d6cf351459?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
-                                        alt="projekt strona internetowa"
+                                    quality={100}
+                                        className="h-72 w-72 xl:py-52 xl:px-52 rounded-lg shadow-lg"
+                                        src="../assets/projekty.png"
+                                        alt="projekty stron internetowych"
                                     />
                                 </div>
                                 <div class="mb-6 lg:mb-0 pl-4">
