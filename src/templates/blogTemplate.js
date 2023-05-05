@@ -4,6 +4,8 @@ import Seo from "../components/seo";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql, Link } from "gatsby";
 
+import "../styles/template.css";
+
 import {
     FacebookIcon,
     TwitterIcon,
@@ -26,7 +28,7 @@ const ProjectTemplate = ({
         <Layout>
             <div className="overflow-hidden w-full z-10">
                 <div className="relative object-bottom flex items-center min-h-[12rem] max-h-[13rem] overflow-hidden justify-center w-full">
-                    <div className="w-full -mt-4 -z-20 ">
+                    <div className="w-full -mt-4 -z-20">
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
                             image={getImage(datoCmsBlog.img.gatsbyImageData)}
@@ -112,12 +114,12 @@ const ProjectTemplate = ({
                                 </div>
                                 <div class="pl-2">
                                     <div class="block mt-1 lg:mt-16 rounded-lg py-3 lg:py-12 md:px-12 lg:-mr-14 text-start">
-                                        <h1 class="text-3xl font-bold pb-2">
+                                        <h1 class="text-3xl font-bold capitalize pb-2 mb-5">
                                             {datoCmsBlog.title}
                                         </h1>
                                         <p class="text-gray-500 text-lg mb-4 pb-2">
 
-                                            <div
+                                            <div id="descriptionHtml"
                                                 dangerouslySetInnerHTML={{
                                                     __html: datoCmsBlog.description,
                                                 }}
@@ -157,7 +159,7 @@ const ProjectTemplate = ({
                         {allDatoCmsBlog.edges.map(({ node }) => (
                             <div className="flex mx-6 flex-col md:flex-row items-start gap-4 lg:gap-6">
                                 <Link
-                                    to={`/` + node.slug}
+                                    to={`/blog/` + node.slug}
                                     className="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
                                 >
                                     <GatsbyImage
@@ -176,20 +178,20 @@ const ProjectTemplate = ({
 
                                     <h2 className="text-gray-800 w-full md:w-[70%] text-xl font-bold">
                                         <Link
-                                            to={`/` + node.slug}
-                                            className="hoverLink active:text-gray-900 transition duration-100"
+                                            to={`/blog/` + node.slug}
+                                            className="hoverLink active:text-gray-900 capitalize transition duration-100"
                                         >
                                             {node.title}
                                         </Link>
                                     </h2>
 
-                                    <p className="text-gray-500 w-full md:w-[70%]">
+                                    <p className="text-gray-500 w-full capitalize md:w-[70%]">
                                         {node.smallDescription}
                                     </p>
 
                                     <div>
                                         <Link
-                                            to={`/` + node.slug}
+                                            to={`/blog/` + node.slug}
                                             className="linkColor hoverLink active:text-gray-900 font-semibold transition duration-100"
                                         >
                                             Zobacz

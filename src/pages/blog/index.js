@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <div className="relative flex items-center h-[7rem] md:h-[15rem] overflow-hidden justify-center w-full">
+                <div className="relative flex items-center h-[8.5rem] md:h-[15rem] overflow-hidden justify-center w-full">
                     <LiveBackground />
                     <div className="relative w-full h-full -mt-4 -z-20 ">
                         <StaticImage
@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => {
                 <section className="py-8 md:py-10 max-w-screen-xl px-4 md:px-6 mx-auto">
                     <div class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 md:gap-6 xl:gap-8">
                         {allDatoCmsBlog.edges.map(({ node }) => (
-                            <div className="w-[90%] mx-auto">
+                            <div className="mx-auto">
                                 <div className="relative group">
                                     <Link
                                         to={node.slug}
@@ -64,10 +64,10 @@ const IndexPage = ({ data }) => {
                                 </div>
 
                                 <div className="p-2">
-                                    <h2 class="text-lg font-bold text-start text-gray-800">
+                                    <h2 class="text-lg font-bold -tracking-wide capitalize text-start text-gray-800">
                                         {node.title}
                                     </h2>
-                                    <div className=" bg-gradient-to-r from-amber-400 w-1/3 h-1 rounded-3xl mb-4" />
+                                    <div className=" bg-gradient-to-r capitalize from-amber-400 w-1/3 h-1 rounded-3xl mb-4" />
                                     <p>{node.smallDescription}</p>
                                 </div>
                             </div>
