@@ -28,6 +28,8 @@ const ProjectTemplate = ({
     pageContext: { slug },
     data: { datoCmsPortfolio, allDatoCmsPortfolio },
 }) => {
+    const image = getImage(datoCmsPortfolio.img);
+
     const [showLive, setLive] = useState(false);
     const [hiddenBody, setBody] = useState(false);
     const [showUrlLive, setUrlLive] = useState();
@@ -195,9 +197,7 @@ const ProjectTemplate = ({
                                 <div>
                                     <GatsbyImage
                                         className="h-72 w-72 md:h-96 md:w-96 lg:py-72 lg:px-80 rounded-lg shadow-lg"
-                                        image={getImage(
-                                            datoCmsPortfolio.img.gatsbyImageData
-                                        )}
+                                        image={image}
                                         alt={datoCmsPortfolio.img.alt}
                                     />
                                     <div className="flex items-start justify-end mx-3 space-x-4 my-4">
@@ -298,7 +298,9 @@ const ProjectTemplate = ({
                 </section>
 
                 <section className="mt-2 mb-16 max-w-screen-xl mx-auto">
-                    <p className="ml-4 lg:ml-[10vw] mb-4 font-bold text-sm">Wiecej Projektów:</p>
+                    <p className="ml-4 lg:ml-[10vw] mb-4 font-bold text-sm">
+                        Wiecej Projektów:
+                    </p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
                         {allDatoCmsPortfolio.edges.map(({ node }) => (
                             <div className="flex mx-6 flex-col md:flex-row items-start gap-4 lg:gap-6">
@@ -364,11 +366,11 @@ export const query = graphql`
             img {
                 url
                 alt
-                gatsbyImageData
+                gatsbyImageData(layout: FULL_WIDTH)
             }
             imgbg {
                 alt
-                gatsbyImageData
+                gatsbyImageData(layout: FULL_WIDTH)
             }
             krotkiTekst
             link
@@ -382,7 +384,7 @@ export const query = graphql`
                     data
                     img {
                         alt
-                        gatsbyImageData
+                        gatsbyImageData(layout: FULL_WIDTH)
                     }
                     krotkiTekst
                     link

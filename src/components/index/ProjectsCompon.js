@@ -11,7 +11,7 @@ const ProjectsCompon = () => {
                         data
                         img {
                             alt
-                            gatsbyImageData
+                            gatsbyImageData(layout: FULL_WIDTH)
                         }
                         krotkiTekst
                         link
