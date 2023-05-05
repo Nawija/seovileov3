@@ -6,20 +6,6 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import LiveBackground from "../../components/liveBackground";
 
-import {
-    FacebookIcon,
-    TwitterIcon,
-    PinterestIcon,
-    WhatsappIcon,
-} from "react-share";
-
-import {
-    FacebookShareButton,
-    TwitterShareButton,
-    PinterestShareButton,
-    WhatsappShareButton,
-} from "react-share";
-
 const IndexPage = ({ data }) => {
     const { allDatoCmsBlog } = data;
 
@@ -30,7 +16,7 @@ const IndexPage = ({ data }) => {
                     <LiveBackground />
                     <div className="relative w-full h-full -mt-4 -z-20 ">
                         <StaticImage
-                            quality={100}
+                            quality={50}
                             loading="eager"
                             className="w-full h-full absolute inset-0"
                             src="../../assets/blogHero.jpg"
@@ -75,61 +61,6 @@ const IndexPage = ({ data }) => {
                                             Zobacz
                                         </p>
                                     </Link>
-                                    <div className="absolute left-2 bottom-2 flex space-x-4 mb-4">
-                                        <FacebookShareButton
-                                            url={`https://seovileo.pl/${node.slug}`}
-                                            quote={node.title}
-                                            hashtag="#seovileo.pl"
-                                        >
-                                            <div className="w-5 h-5 grayscale hover:grayscale-0 transition duration-200 opacity-80 hover:opacity-100">
-                                                <FacebookIcon
-                                                    size={30}
-                                                    round={true}
-                                                />
-                                            </div>
-                                        </FacebookShareButton>
-                                        <TwitterShareButton
-                                            url={`https://seovileo.pl/${node.slug}`}
-                                            title={node.title}
-                                            hashtags={[
-                                                "seovileo.pl",
-                                                "strony internetowe",
-                                            ]}
-                                        >
-                                            <div className="w-5 h-5 grayscale hover:grayscale-0 transition duration-200 opacity-80 hover:opacity-100">
-                                                <TwitterIcon
-                                                    size={30}
-                                                    round={true}
-                                                />
-                                            </div>
-                                        </TwitterShareButton>
-                                        <PinterestShareButton
-                                            url={`https://seovileo.pl/${node.slug}`}
-                                            media={node.img.url}
-                                            summary={node.smallDescription}
-                                            source="Seovileo.pl"
-                                        >
-                                            <div className="w-5 h-5 grayscale hover:grayscale-0 transition duration-200 opacity-80 hover:opacity-100">
-                                                <PinterestIcon
-                                                    size={30}
-                                                    round={true}
-                                                />
-                                            </div>
-                                        </PinterestShareButton>
-                                        <WhatsappShareButton
-                                            url={`https://seovileo.pl/${node.slug}`}
-                                            title={node.title}
-                                            summary={node.smallDescription}
-                                            source="Seovileo.pl"
-                                        >
-                                            <div className="w-5 h-5 grayscale hover:grayscale-0 transition duration-200 opacity-80 hover:opacity-100">
-                                                <WhatsappIcon
-                                                    size={30}
-                                                    round={true}
-                                                />
-                                            </div>
-                                        </WhatsappShareButton>
-                                    </div>
                                 </div>
 
                                 <div className="p-2">
