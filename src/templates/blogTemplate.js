@@ -118,8 +118,8 @@ const ProjectTemplate = ({
                                             {datoCmsBlog.title}
                                         </h1>
                                         <p class="text-gray-500 text-lg mb-4 pb-2">
-
-                                            <div id="descriptionHtml"
+                                            <div
+                                                id="descriptionHtml"
                                                 dangerouslySetInnerHTML={{
                                                     __html: datoCmsBlog.description,
                                                 }}
@@ -207,7 +207,9 @@ const ProjectTemplate = ({
     );
 };
 
-export const Head = () => <Seo title="Seovileo" />;
+export const Head = ({ data: { datoCmsBlog } }) => (
+    <Seo title={datoCmsBlog.title} />
+);
 
 export default ProjectTemplate;
 
