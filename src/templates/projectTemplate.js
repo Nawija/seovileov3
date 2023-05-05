@@ -177,16 +177,14 @@ const ProjectTemplate = ({
                     </div>
                 )}
 
-                <section className="relative object-bottom flex items-center min-h-[13rem] overflow-hidden max-h-24 justify-center w-full">
-                    <div className="w-full -mt-4 -z-20 ">
-                        <GatsbyImage
-                            className="w-full h-full object-cover object-center absolute inset-0"
-                            image={getImage(
-                                datoCmsPortfolio.imgbg.gatsbyImageData
-                            )}
-                            alt={datoCmsPortfolio.imgbg.alt}
-                        />
-                        <div className="w-full h-full bg-gray-800/50 absolute top-0 left-0" />
+                <section className="relative flex items-center min-h-[13rem] overflow-hidden max-h-24 justify-center w-full">
+                    <div
+                        className="w-full h-40 bg-contain bg-repeat"
+                        style={{
+                            backgroundImage: `url(${datoCmsPortfolio.img.url})`,
+                        }}
+                    >
+                        <div className="w-full h-full bg-gradient-to-r from-amber-800/50 to-emerald-800/90 absolute top-0 left-0" />
                     </div>
                 </section>
 
@@ -265,7 +263,7 @@ const ProjectTemplate = ({
                                     </div>
                                 </div>
                                 <div class="mb-12 lg:mb-0">
-                                    <div class="block mt-12 rounded-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
+                                    <div class="block rounded-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
                                         <h1 class="text-3xl font-bold pb-2">
                                             {datoCmsPortfolio.naglowek}
                                         </h1>
@@ -300,7 +298,7 @@ const ProjectTemplate = ({
                 </section>
 
                 <section className="mt-2 mb-16 max-w-screen-xl mx-auto">
-                    <p className="ml-4 lg:ml-[10vw] mb-4">Wiecej Projektów:</p>
+                    <p className="ml-4 lg:ml-[10vw] mb-4 font-bold text-sm">Wiecej Projektów:</p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
                         {allDatoCmsPortfolio.edges.map(({ node }) => (
                             <div className="flex mx-6 flex-col md:flex-row items-start gap-4 lg:gap-6">

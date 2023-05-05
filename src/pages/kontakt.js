@@ -387,7 +387,7 @@ const Kontakt = () => (
                         to="mailto:seovileo@email.com"
                         class="text-amber-500 w-max mx-auto"
                     >
-                        seovileo@email.com
+                        seovileo@gmail.com
                     </Link>
                 </div>
                 <form
