@@ -61,7 +61,7 @@ const Admin = () => (
                     Panel CMS
                 </Link>
                 <Link
-                    to="https://seovileo.admin.datocms.com/editor"
+                    to="https://analytics.google.com/analytics/web/?authuser=2#/p374328772/reports/reportinghub?params=_u..nav%3Dmaui"
                     className="btn"
                 >
                     Analityka
