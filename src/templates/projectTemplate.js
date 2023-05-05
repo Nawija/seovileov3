@@ -186,11 +186,11 @@ const ProjectTemplate = ({
                             backgroundImage: `url(${datoCmsPortfolio.img.url})`,
                         }}
                     >
-                        <div className="w-full h-full bg-gradient-to-r from-amber-800/50 to-emerald-800/90 absolute top-0 left-0" />
+                        <div className="w-full h-full bg-gradient-to-tr from-amber-800/50 to-emerald-900 absolute top-0 left-0" />
                     </div>
                 </section>
 
-                <section class="container -mt-36 lg:-mt-20 px-6 mx-auto">
+                <section class="container -mt-36 lg:-mt-28 px-6 mx-auto">
                     <section class=" mb-6 md:mb-12 text-gray-800">
                         <div class="container mx-auto xl:px-32 text-center lg:text-left">
                             <div class="flex flex-col lg:flex-row items-center">
