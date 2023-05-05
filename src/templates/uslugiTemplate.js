@@ -74,9 +74,9 @@ const ProjectTemplate = ({
 
                 <section
                     id="descriptionHtml"
-                    className="max-w-screen-xl px-6 w-full mx-auto mb-4 md:mb-12 lg:mb-20"
+                    className="max-w-screen-lg px-6 w-full mx-auto mb-4 md:mb-12 lg:mb-20"
                 >
-                    <h2 className="font-semibold text-xl mb-2">
+                    <h2 className="font-semibold -tracking-wide text-xl md:text-2xl mb-2">
                         {datoCmsUslugi.titlebig}
                     </h2>
                     <div
