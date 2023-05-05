@@ -23,6 +23,17 @@ const ProjectTemplate = ({
                         />
                         <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b bg-blend-multiply from-black/90 to-indigo-500/90" />
                     </div>
+                    <svg
+                        className="absolute w-full -bottom-1 left-0 z-0"
+                        viewBox="0 0 2004 94"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M2004 22.9898C2004 22.9898 1545.5 74.7165 1002 22.9898C458.5 -28.7372 0 22.9898 0 22.9898V94H2004V22.9898Z"
+                            fill="#f1f5f9"
+                        />
+                    </svg>
                 </section>
 
                 <section class="container px-6 mx-auto">
