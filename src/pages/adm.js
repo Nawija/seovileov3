@@ -62,9 +62,15 @@ const Admin = () => (
                 </Link>
                 <Link
                     to="https://analytics.google.com/analytics/web/?authuser=2#/p374328772/reports/reportinghub?params=_u..nav%3Dmaui"
-                    className="btn"
+                    className="btn mr-6"
                 >
                     Analityka
+                </Link>
+                <Link
+                    to="https://app.herotofu.com/"
+                    className="btn"
+                >
+                    Hero Tofu
                 </Link>
             </div>
         </section>
