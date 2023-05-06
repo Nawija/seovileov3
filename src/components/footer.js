@@ -37,6 +37,7 @@ const Footer = () => (
                                 class="text-gray-500"
                             >
                                 <svg
+                                    aria-label="facebook"
                                     fill="currentColor"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
@@ -52,6 +53,7 @@ const Footer = () => (
                                 class="ml-4 text-gray-500"
                             >
                                 <svg
+                                    aria-label="twitter"
                                     fill="currentColor"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
@@ -67,6 +69,7 @@ const Footer = () => (
                                 class="ml-4 text-gray-500"
                             >
                                 <svg
+                                    aria-label="instagram"
                                     fill="none"
                                     stroke="currentColor"
                                     stroke-linecap="round"
@@ -92,6 +95,7 @@ seovileo@email.com"
                                 class="ml-4 text-gray-500"
                             >
                                 <svg
+                                    aria-label="czat"
                                     fill="currentColor"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"

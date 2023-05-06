@@ -78,7 +78,7 @@ const ProjectsCompon = () => {
                                     </p>
                                     <Link
                                         to={node.slug}
-                                        className="text-center border-b-2 border-emerald-600 px-2 mt-2 py-2 text-emerald-600 md:hover:tracking-wider md:hover:text-amber-500 md:hover:border-amber-400  transition-all duration-200 md:font-bold text-sm rounded-lg font-semibold"
+                                        className="text-center border-b-2 border-emerald-700 px-2 mt-2 py-2 text-emerald-700 md:hover:tracking-wider md:hover:text-amber-500 md:hover:border-amber-400  transition-all duration-200 md:font-bold text-sm rounded-lg font-semibold"
                                     >
                                         Zobacz Projekt &#8594;
                                     </Link>
