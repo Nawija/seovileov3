@@ -40,6 +40,7 @@ module.exports = {
                 pageSize: 500,
             },
         },
+
         {
             resolve: `gatsby-omni-font-loader`,
             options: {
@@ -54,6 +55,22 @@ module.exports = {
                         file: `https://fonts.googleapis.com/css2?family=Coming+Soon&family=Open+Sans:wght@400;500;600;700&display=swap'`,
                     },
                 ],
+            },
+        },
+        {
+            resolve: "gatsby-plugin-web-font-loader",
+            options: {
+                google: {
+                    families: ["Open Sans"],
+                    display: "swap",
+                },
+                custom: {
+                    families: ["my-custom-font"],
+                    urls: [
+                        "/src/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2",
+                    ],
+                    fontDisplay: "swap",
+                },
             },
         },
         "gatsby-plugin-postcss",
