@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-const SpeedTestCompon = () => {
+const MediaCompon = () => {
     return (
         <section class="text-gray-900 bg-white relative  body-font">
             <div class="container px-5 py-20 mx-auto flex flex-col">
@@ -9,7 +9,8 @@ const SpeedTestCompon = () => {
                     <div class="rounded-lg h-64 overflow-hidden relative">
                         <StaticImage
                             className="absolute h-full w-full top-0 left-0"
-                            quality={100}
+                            quality={30}
+                            width={300}
                             loading="lazy"
                             placeholder="blurred"
                             alt="strony internetowe tło"
@@ -71,4 +72,4 @@ const SpeedTestCompon = () => {
     );
 };
 
-export default SpeedTestCompon;
+export default MediaCompon;
