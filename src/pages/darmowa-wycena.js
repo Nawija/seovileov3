@@ -29,22 +29,22 @@ const CalcPrice = () => {
             }
         }
     `);
-    const initialValues = Array.from({ length: 8 }, () => null);
+    const initialValues = Array.from({ length: 9 }, () => null);
     const [values, setValues] = useState(initialValues);
 
     const totalValue = values.reduce((acc, cur) => acc + cur, 0);
 
     const handleRadioChange = (event) => {
-        const { name, value } = event.target;
-        const index = parseInt(name);
+        const { id, value } = event.target;
+        const index = parseInt(id);
         const newValues = [...values];
         newValues[index] = parseInt(value);
         setValues(newValues);
     };
 
     const handleCheckboxChange = (event) => {
-        const { name, value, checked } = event.target;
-        const index = parseInt(name);
+        const { id, value, checked } = event.target;
+        const index = parseInt(id);
         const newValues = [...values];
         newValues[index] = checked ? parseInt(value) : null;
         setValues(newValues);
@@ -125,37 +125,37 @@ const CalcPrice = () => {
                                 <input
                                     className="mr-2 scale-110"
                                     type="radio"
-                                    id="q1"
-                                    name="0"
+                                    id="0"
+                                    name="Multi Page"
                                     value="1200"
                                     checked={values[0] === 1200}
                                     onChange={handleRadioChange}
                                 />
-                                <label htmlFor="q1">Multi Page</label>
+                                <label htmlFor="0">Multi Page</label>
                             </div>
                             <div>
                                 <input
                                     className="mr-2 scale-110"
                                     type="radio"
-                                    id="q2"
-                                    name="0"
+                                    id="0"
+                                    name="Landing Page"
                                     value="900"
                                     checked={values[0] === 900}
                                     onChange={handleRadioChange}
                                 />
-                                <label htmlFor="q2">Landing Page</label>
+                                <label htmlFor="0">Landing Page</label>
                             </div>
                             <div>
                                 <input
                                     className="mr-2 scale-110"
                                     type="radio"
-                                    id="q3"
-                                    name="0"
+                                    id="0"
+                                    name="Blog"
                                     value="700"
                                     checked={values[0] === 700}
                                     onChange={handleRadioChange}
                                 />
-                                <label htmlFor="q3">Blog</label>
+                                <label htmlFor="0">Blog</label>
                             </div>
                         </div>
                     </div>
@@ -249,25 +249,25 @@ const CalcPrice = () => {
                                 <input
                                     className="mr-2 scale-110"
                                     type="radio"
-                                    id="q4"
-                                    name="1"
+                                    id="1"
+                                    name="Domena Tak"
                                     value="0"
                                     checked={values[1] === 0}
                                     onChange={handleRadioChange}
                                 />
-                                <label htmlFor="q4">Tak</label>
+                                <label htmlFor="1">Tak</label>
                             </div>
                             <div>
                                 <input
                                     className="mr-2 scale-110"
                                     type="radio"
-                                    id="q5"
-                                    name="1"
+                                    id="1"
+                                    name="Domena Nie"
                                     value="50"
                                     checked={values[1] === 50}
                                     onChange={handleRadioChange}
                                 />
-                                <label htmlFor="q5">Nie</label>
+                                <label htmlFor="1">Nie</label>
                             </div>
                         </div>
                     </div>
@@ -279,21 +279,25 @@ const CalcPrice = () => {
                                 <input
                                     className="mr-2 scale-110"
                                     type="radio"
-                                    id="q6"
-                                    name="2"
+                                    id="2"
+                                    name="Hosting Tak"
                                     value="0"
+                                    checked={values[2] === 0}
+                                    onChange={handleRadioChange}
                                 />
-                                <label htmlFor="q6">Tak</label>
+                                <label htmlFor="2">Tak</label>
                             </div>
                             <div>
                                 <input
                                     className="mr-2 scale-110"
                                     type="radio"
-                                    id="q7"
-                                    name="2"
-                                    value="0"
+                                    id="2"
+                                    name="Hosting Nie"
+                                    value="50"
+                                    checked={values[2] === 50}
+                                    onChange={handleRadioChange}
                                 />
-                                <label htmlFor="q7">Nie</label>
+                                <label htmlFor="2">Nie</label>
                             </div>
                         </div>
                     </div>
@@ -307,49 +311,49 @@ const CalcPrice = () => {
                                 <input
                                     className="mr-2 scale-110"
                                     type="radio"
-                                    id="q8"
-                                    name="3"
+                                    id="3"
+                                    name="1-3 podstron"
                                     value="0"
                                     checked={values[3] === 0}
                                     onChange={handleRadioChange}
                                 />
-                                <label htmlFor="q8">1-3 podstron</label>
+                                <label htmlFor="3">1-3 podstron</label>
                             </div>
                             <div>
                                 <input
                                     className="mr-2 scale-110"
                                     type="radio"
-                                    id="q9"
-                                    name="3"
+                                    id="3"
+                                    name="4-6 podstron"
                                     value="200"
                                     checked={values[3] === 200}
                                     onChange={handleRadioChange}
                                 />
-                                <label htmlFor="q9">4-6 podstron</label>
+                                <label htmlFor="3">4-6 podstron</label>
                             </div>
                             <div>
                                 <input
                                     className="mr-2 scale-110"
                                     type="radio"
-                                    id="q10"
-                                    name="3"
+                                    id="3"
+                                    name="7-9 podstron"
                                     value="400"
                                     checked={values[3] === 400}
                                     onChange={handleRadioChange}
                                 />
-                                <label htmlFor="q10">7-9 podstron</label>
+                                <label htmlFor="3">7-9 podstron</label>
                             </div>
                             <div>
                                 <input
                                     className="mr-2 scale-110"
                                     type="radio"
-                                    id="q11"
-                                    name="3"
+                                    id="3"
+                                    name="Więcej Stron 9+"
                                     value="600"
                                     checked={values[3] === 600}
                                     onChange={handleRadioChange}
                                 />
-                                <label htmlFor="q11">Więcej</label>
+                                <label htmlFor="3">Więcej</label>
                             </div>
                             <p className="text-sm text-gray-700 mt-1 px-1 md:w-[80%]">
                                 Możesz to wywnioskować z pola "Zakres Usług".
@@ -367,32 +371,32 @@ const CalcPrice = () => {
                                 <input
                                     className="mr-2 scale-110"
                                     type="checkbox"
-                                    id="q12"
-                                    name="4"
+                                    id="4"
+                                    name="Sekcja Blog"
                                     value="50"
                                     checked={values[4] === 50}
                                     onChange={handleCheckboxChange}
                                 />
-                                <label htmlFor="q12">Sekcja Blog</label>
+                                <label htmlFor="4">Sekcja Blog</label>
                             </div>
                             <div>
                                 <input
                                     className="mr-2 scale-110"
                                     type="checkbox"
-                                    id="q13"
-                                    name="5"
+                                    id="5"
+                                    name="Sekcja Newsy"
                                     value="50"
                                     checked={values[5] === 50}
                                     onChange={handleCheckboxChange}
                                 />
-                                <label htmlFor="q13">Sekcja Newsy</label>
+                                <label htmlFor="5">Sekcja Newsy</label>
                             </div>
                             <div>
                                 <input
                                     className="mr-2 scale-110"
                                     type="checkbox"
                                     id="q14"
-                                    name="Funkcjonalność"
+                                    name="Formularze kontaktowe"
                                 />
                                 <label htmlFor="q14">
                                     Formularze kontaktowe
@@ -402,37 +406,37 @@ const CalcPrice = () => {
                                 <input
                                     className="mr-2 scale-110"
                                     type="checkbox"
-                                    id="q15"
-                                    name="6"
+                                    id="6"
+                                    name="Mapa Google Maps"
                                     value="100"
                                     checked={values[6] === 100}
                                     onChange={handleCheckboxChange}
                                 />
-                                <label htmlFor="q15">Mapa Google Maps</label>
+                                <label htmlFor="6">Mapa Google Maps</label>
                             </div>
                             <div>
                                 <input
                                     className="mr-2 scale-110"
                                     type="checkbox"
-                                    id="q16"
-                                    name="7"
+                                    id="7"
+                                    name="Kalkulator wyceny"
                                     value="400"
                                     checked={values[7] === 400}
                                     onChange={handleCheckboxChange}
                                 />
-                                <label htmlFor="q16">Kalkulator wyceny</label>
+                                <label htmlFor="7">Kalkulator wyceny</label>
                             </div>
                             <div>
                                 <input
                                     className="mr-2 scale-110"
                                     type="checkbox"
-                                    id="q17"
-                                    name="8"
+                                    id="8"
+                                    name="Chat Online"
                                     value="200"
                                     checked={values[8] === 200}
                                     onChange={handleCheckboxChange}
                                 />
-                                <label htmlFor="q17">Chat Online</label>
+                                <label htmlFor="8">Chat Online</label>
                             </div>
                         </div>
                         <div className="mb-2 mt-2">
@@ -445,10 +449,11 @@ const CalcPrice = () => {
                                         className="mr-2 scale-110"
                                         type="radio"
                                         id="q18"
-                                        name="treści"
+                                        name="Treści"
+                                        value="Zleceniodawca (Ty)"
                                     />
                                     <label htmlFor="q18">
-                                        Zleceniodawca (Ty)
+                                        Zleceniodawca
                                     </label>
                                 </div>
                                 <div>
@@ -456,7 +461,8 @@ const CalcPrice = () => {
                                         className="mr-2 scale-110"
                                         type="radio"
                                         id="q19"
-                                        name="treści"
+                                        name="Treści"
+                                        value="Wykonawca"
                                     />
                                     <label htmlFor="q19">Wykonawca</label>
                                 </div>
@@ -464,6 +470,16 @@ const CalcPrice = () => {
                                     W przypadku wyboru wykonawcy, cena napisania
                                     tekstów jest wyceniana indywidualnie.
                                 </p>
+                                <div>
+                                    <input
+                                        checked
+                                        className="mr-2 hidden"
+                                        type="radio"
+                                        id="totalValue"
+                                        value={totalValue}
+                                        name="SUMA WYCENY"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
