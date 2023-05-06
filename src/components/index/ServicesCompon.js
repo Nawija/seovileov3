@@ -11,7 +11,10 @@ const ServicesCompon = () => {
                     node {
                         img {
                             alt
-                            gatsbyImageData(layout: FULL_WIDTH)
+                            gatsbyImageData(
+                                layout: FULL_WIDTH
+                                formats: [AUTO, WEBP]
+                            )
                         }
                         opis
                         title
@@ -78,7 +81,7 @@ const ServicesCompon = () => {
                             <div className="p-2 w-20 h-20 -mt-12 rounded-full shadow-md shadow-sky-500 bg-gradient-to-br from-emerald-300 to-blue-600">
                                 <GatsbyImage
                                     className="w-full h-full"
-                                    loading="eager"
+                                    loading="lazy"
                                     placeholder="blurred"
                                     image={getImage(node.img.gatsbyImageData)}
                                     alt={node.title}

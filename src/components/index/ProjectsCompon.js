@@ -11,7 +11,10 @@ const ProjectsCompon = () => {
                         data
                         img {
                             alt
-                            gatsbyImageData(layout: FULL_WIDTH)
+                            gatsbyImageData(
+                                layout: FULL_WIDTH
+                                formats: [AUTO, WEBP]
+                            )
                         }
                         krotkiTekst
                         link
