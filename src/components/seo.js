@@ -24,6 +24,8 @@ function Seo({ description, title, children }) {
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
+      <meta http-equiv="X-Robots-Tag" content="index" />
+      <meta name="keywords" content="seovileo strona internetowa www seo" />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
