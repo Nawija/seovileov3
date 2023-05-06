@@ -5,9 +5,13 @@
 html {
     scroll-padding-top: 50px;
 }
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/ComingSoon-Regular.ttf") format("ttf");
+    font-display: swap;
+}
 
 body {
-    font-family: Open Sans, sans-serif;
     background-color: #f8f8f8;
 }
 
