@@ -13,7 +13,7 @@ const NotFoundPage = () => (
                 <StaticImage
                     className="h-40 lg:h-52 xl:h-56 w-full md:w-full"
                     quality={100}
-                    src="../assets/hero.png"
+                    src="../assets/hero.jpg"
                     loading="eager"
                     alt="Facades project"
                     placeholder="blurred"
