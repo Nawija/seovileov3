@@ -14,9 +14,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-gtag`,
             options: {
-                trackingIds: [
-                    "G-9RH800R54W",
-                ],
+                trackingIds: ["G-9RH800R54W"],
                 pluginConfig: {
                     head: true,
                 },
@@ -54,15 +52,20 @@ module.exports = {
         },
         "gatsby-plugin-postcss",
         `gatsby-plugin-image`,
+        `gatsby-source-filesystem`,
+        `gatsby-transformer-sharp`,
         {
-            resolve: `gatsby-source-filesystem`,
+            resolve: `gatsby-plugin-sharp`,
             options: {
-                name: `src`,
-                path: `${__dirname}/src`,
+                fluid: {
+                    maxWidth: 1200,
+                    maxHeight: 800,
+                    sizes: [320, 768, 1024, 1280],
+                    breakpoints: [320, 768, 1024],
+                    fit: "inside",
+                },
             },
         },
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
