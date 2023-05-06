@@ -12,12 +12,6 @@ module.exports = {
     },
     plugins: [
         {
-            resolve: "gatsby-plugin-brotli",
-            options: {
-                extensions: ["css", "html", "js", "svg","io"],
-            },
-        },
-        {
             resolve: `gatsby-plugin-google-gtag`,
             options: {
                 trackingIds: ["G-9RH800R54W"],
