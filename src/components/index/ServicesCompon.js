@@ -55,6 +55,7 @@ const ServicesCompon = () => {
                 quality={100}
                 style={{ position: "absolute" }}
                 placeholder="blurred"
+                loading="lazy"
                 src="https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1693&q=80"
             />
 
@@ -77,7 +78,7 @@ const ServicesCompon = () => {
                             <div className="p-2 w-20 h-20 -mt-12 rounded-full shadow-md shadow-sky-500 bg-gradient-to-br from-emerald-300 to-blue-600">
                                 <GatsbyImage
                                     className="w-full h-full"
-                                    loading="lazy"
+                                    loading="eager"
                                     placeholder="blurred"
                                     image={getImage(node.img.gatsbyImageData)}
                                     alt={node.title}

@@ -44,6 +44,7 @@ const IndexPage = ({ data }) => {
                             <div class="flex flex-col lg:flex-row items-center lg:items-start">
                                 <div className="mb-4 -mt-10 md:mt-0 -z-10">
                                     <StaticImage
+                                        placeholder="blurred"
                                         quality={100}
                                         className="-rotate-[10deg] h-24 w-24 md:h-40 md:w-40 rounded-lg"
                                         src="../assets/browser.png"
