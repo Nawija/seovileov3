@@ -57,15 +57,6 @@ module.exports = {
                 ],
             },
         },
-        {
-            resolve: "gatsby-plugin-web-font-loader",
-            options: {
-                google: {
-                    families: ["Open Sans"],
-                    display: "swap",
-                },
-            },
-        },
         "gatsby-plugin-postcss",
         `gatsby-plugin-image`,
         {
