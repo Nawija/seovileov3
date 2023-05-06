@@ -84,9 +84,7 @@ const Usługi = () => {
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
-                                        alt={
-                                            node.img.alt || "Strona Internetowa"
-                                        }
+                                        alt={node.title}
                                     />
                                     <h3 class="tracking-widest text-emerald-700 text-[12px] font-bold title-font">
                                         Usługa
@@ -103,7 +101,6 @@ const Usługi = () => {
                     </div>
                 </div>
                 <div className="flex flex-col items-start justify-center max-w-screen-2xl lg:flex-row mx-auto px-5">
-                    
                     <div class="text-gray-800 body-font lg:w-1/2">
                         <div class="px-5">
                             <div>
@@ -132,15 +129,14 @@ const Usługi = () => {
                                     <div class="px-2 mb-4 w-52">
                                         <div class="flex flex-wrap w-full bg-gradient-to-bl from-indigo-500 rounded-xl to-blue-300 sm:py-24 py-16 sm:px-10 px-6 relative">
                                             <div class="text-center relative z-10 w-full">
-
-                                                    <StaticImage
-                                                        quality={100}
-                                                        className="object-contain"
-                                                        loading="eager"
-                                                        height={100}
-                                                        placeholder="blurred"
-                                                        src="../assets/logoBrowser.png"
-                                                    />
+                                                <StaticImage
+                                                    quality={100}
+                                                    className="object-contain"
+                                                    loading="eager"
+                                                    height={100}
+                                                    placeholder="blurred"
+                                                    src="../assets/logoBrowser.png"
+                                                />
 
                                                 <h2 class="text-xl text-gray-100  title-font font-semibold drop-shadow-md mb-2">
                                                     Projekty Logo
