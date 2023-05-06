@@ -11,10 +11,7 @@ const ServicesCompon = () => {
                     node {
                         img {
                             alt
-                            gatsbyImageData(
-                                layout: FULL_WIDTH
-                                formats: [AUTO, WEBP]
-                            )
+                            gatsbyImageData(layout: FULL_WIDTH)
                         }
                         opis
                         title
