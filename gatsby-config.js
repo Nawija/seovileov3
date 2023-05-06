@@ -12,11 +12,11 @@ module.exports = {
     },
     plugins: [
         {
-            resolve: 'gatsby-plugin-brotli',
+            resolve: "gatsby-plugin-brotli",
             options: {
-              extensions: ['css', 'html', 'js', 'svg']
-            }
-          }
+                extensions: ["css", "html", "js", "svg"],
+            },
+        },
         {
             resolve: `gatsby-plugin-google-gtag`,
             options: {
