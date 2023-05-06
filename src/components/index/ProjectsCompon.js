@@ -4,14 +4,19 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const ProjectsCompon = () => {
     const data = useStaticQuery(graphql`
-        query {
+        {
             allDatoCmsPortfolio(sort: { data: DESC }, limit: 4) {
                 edges {
                     node {
                         data
                         img {
                             alt
-                            gatsbyImageData(layout: FULL_WIDTH)
+                            gatsbyImageData(
+                                width: 200
+                                aspectRatio: 7
+                                placeholder: BLURRED
+                                height: 200
+                            )
                         }
                         krotkiTekst
                         link
@@ -55,8 +60,8 @@ const ProjectsCompon = () => {
                             >
                                 <GatsbyImage
                                     className="w-full h-full hover:scale-110 transition-transform duration-200"
-                                    loading="eager"
-                                    image={getImage(node.img.gatsbyImageData)}
+                                    loading="lazy"
+                                    image={getImage(node.img)}
                                     alt={node.title}
                                 />
                                 <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-500 via-transparent to-transparent opacity-50"></div>
@@ -80,7 +85,7 @@ const ProjectsCompon = () => {
                                         to={node.slug}
                                         className="text-center border-b-2 border-emerald-700 px-2 mt-2 py-2 text-emerald-700 md:hover:tracking-wider md:hover:text-amber-500 md:hover:border-amber-400  transition-all duration-200 md:font-bold text-sm rounded-lg font-semibold"
                                     >
-                                        Zobacz Projekt &#8594;
+                                        Zobacz &#8594;
                                     </Link>
                                 </div>
                             </div>
