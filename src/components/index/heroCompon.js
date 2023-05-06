@@ -12,6 +12,7 @@ const HeroCompon = () => {
                 <StaticImage
                     className="h-[38rem] lg:h-[48rem] w-full"
                     quality={100}
+                    width={600}
                     src="../../assets/hero.jpg"
                     loading="eager"
                     alt="Strona przyjazna seo"
