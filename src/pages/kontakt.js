@@ -373,7 +373,7 @@ const Kontakt = () => (
                     </div>
                 </div>
             </div>
-            <div class="text-gray-700 bg-gray-200 rounded-2xl lg:order-3 shadow-lg py-6 sm:py-8 lg:py-12 body-font relative w-full lg:w-1/2 mx-auto px-6">
+            <div class="text-gray-700 bg-gray-100 border-2 rounded-2xl lg:order-0 shadow-lg py-6 sm:py-8 lg:py-12 body-font relative w-full lg:w-1/2 mx-auto px-6">
                 <div class="flex flex-col text-center w-full mb-12">
                     <h2 class="sm:text-3xl text-2xl font-semibold title-font mb-4 text-gray-900">
                         Kontakt

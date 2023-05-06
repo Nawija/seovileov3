@@ -21,7 +21,7 @@ const ProjectTemplate = ({
                             image={getImage(datoCmsUslugi.img.gatsbyImageData)}
                             alt={datoCmsUslugi.img.alt}
                         />
-                        <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b bg-blend-multiply from-black/90 to-indigo-500/90" />
+                        <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-bl bg-blend-multiply from-black/90 via-emerald-600/70 to-sky-500" />
                     </div>
                     <svg
                         className="absolute w-full -bottom-1 left-0 z-0"
@@ -31,7 +31,7 @@ const ProjectTemplate = ({
                     >
                         <path
                             d="M2004 22.9898C2004 22.9898 1545.5 74.7165 1002 22.9898C458.5 -28.7372 0 22.9898 0 22.9898V94H2004V22.9898Z"
-                            fill="#f1f5f9"
+                            fill="#f8f8f8"
                         />
                     </svg>
                 </section>

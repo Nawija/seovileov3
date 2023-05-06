@@ -74,22 +74,22 @@ const ServicesCompon = () => {
                             to={node.slug}
                             className="relative border-2 border-t-4 w-[85%] sm:w-full mx-auto border-t-blue-200 hover:border-t-emerald-300 group rounded-xl hover:scale-105 hover:shadow-xl shadow-lg bg-gradient-to-b from-slate-50 to-gray-300 mb-8 sm:mb-0 p-6 pb-12 transition-all duration-200"
                         >
-                            <div className="p-2 w-20 h-20 -mt-12 rounded-full shadow-md shadow-emerald-800 bg-gradient-to-br from-emerald-500 to-emerald-900">
+                            <div className="p-2 w-20 h-20 -mt-12 rounded-full shadow-md shadow-sky-500 bg-gradient-to-br from-emerald-300 to-blue-600">
                                 <GatsbyImage
                                     className="w-full h-full"
                                     loading="lazy"
                                     placeholder="blurred"
                                     image={getImage(node.img.gatsbyImageData)}
-                                    alt={node.img.alt || "Strona Internetowa"}
+                                    alt={node.title}
                                 />
                             </div>
-                            <h2 className="font-bold my-3 text-gray-700">
+                            <h2 className="font-bold capitalize my-3 drop-shadow-lg text-sky-700">
                                 {node.title}
                             </h2>
                             <p className="font-medium text-sm">{node.opis}</p>
                             <p
                                 to={node.slug}
-                                className="px-3 py-2 text-black text-sm font-bold absolute bottom-2 right-2"
+                                className="px-3 py-2 text-black capitalize text-sm font-bold absolute bottom-2 right-2"
                             >
                                 Zobacz Więcej &#8594;
                             </p>

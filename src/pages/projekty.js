@@ -45,12 +45,12 @@ const IndexPage = ({ data }) => {
                                 <div className="mb-4 -mt-10 md:mt-0 -z-10">
                                     <StaticImage
                                         quality={100}
-                                        className="-rotate-[10deg] h-24 w-24 md:h-40 md:w-40 rounded-lg shadow-lg"
-                                        src="../assets/projekty.png"
+                                        className="-rotate-[10deg] h-24 w-24 md:h-40 md:w-40 rounded-lg"
+                                        src="../assets/browser.png"
                                         alt="projekty stron internetowych"
                                     />
                                 </div>
-                                <div class="mb-6 lg:mb-0 pl-4">
+                                <div class="mb-6 -mt-4 lg:mb-0 pl-4">
                                     <div class=" block lg:mt-12 rounded-lg py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
                                         <h1 class="text-3xl font-bold pb-2">
                                             Projekty Stron Internetowych
@@ -117,10 +117,10 @@ const IndexPage = ({ data }) => {
                     </p>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
                         {allDatoCmsPortfolio.edges.map(({ node }) => (
-                            <div className="flex mx-6 flex-col md:flex-row items-start gap-4 lg:gap-6">
+                            <div className="flex mx-12 flex-col md:flex-row items-start justify-center gap-4 lg:gap-6">
                                 <Link
                                     to={`/` + node.slug}
-                                    className="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
+                                    className="group w-full md:w-32 lg:w-44 h-56 md:h-28 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
                                 >
                                     <GatsbyImage
                                         className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
@@ -145,7 +145,7 @@ const IndexPage = ({ data }) => {
                                         </Link>
                                     </h2>
 
-                                    <p className="text-gray-500 w-full md:w-[70%]">
+                                    <p className="text-gray-500 w-full md:w-full">
                                         {node.krotkiTekst}
                                     </p>
 
@@ -154,7 +154,7 @@ const IndexPage = ({ data }) => {
                                             to={`/` + node.slug}
                                             className="linkColor hoverLink active:text-gray-900 font-semibold transition duration-100"
                                         >
-                                            Zobacz
+                                            Zobacz Projekt
                                         </Link>
                                     </div>
                                 </div>
