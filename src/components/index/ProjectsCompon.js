@@ -57,7 +57,7 @@ const ProjectsCompon = () => {
                                     className="w-full h-full hover:scale-110 transition-transform duration-200"
                                     loading="eager"
                                     image={getImage(node.img.gatsbyImageData)}
-                                    alt={node.img.alt || "Strona Internetowa"}
+                                    alt={node.title}
                                 />
                                 <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-500 via-transparent to-transparent opacity-50"></div>
 

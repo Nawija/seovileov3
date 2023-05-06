@@ -32,7 +32,7 @@ const ProjectTemplate = ({
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
                             image={getImage(datoCmsBlog.img.gatsbyImageData)}
-                            alt={datoCmsBlog.img.alt || "strona www"}
+                            alt={datoCmsBlog.title || "strona www"}
                         />
                         <div className="w-full h-full bg-gray-800/80 absolute top-0 left-0" />
                     </div>
@@ -167,7 +167,7 @@ const ProjectTemplate = ({
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
-                                        alt={node.img.alt}
+                                        alt={node.title}
                                     />
                                 </Link>
 

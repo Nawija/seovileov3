@@ -124,7 +124,7 @@ const ProjectTemplate = ({
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
-                                        alt={node.img.alt}
+                                        alt={node.title}
                                     />
                                 </Link>
 

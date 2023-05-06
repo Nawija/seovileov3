@@ -14,7 +14,7 @@ const HeroCompon = () => {
                     quality={100}
                     src="../../assets/hero.png"
                     loading="eager"
-                    alt="Strona Internetowa"
+                    alt="Błyskawiczna Strona"
                     placeholder="blurred"
                 />
                 <div className="absolute inset-0 w-full h-full bg-gray-900/70" />

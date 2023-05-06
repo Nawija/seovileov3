@@ -198,7 +198,7 @@ const ProjectTemplate = ({
                                     <GatsbyImage
                                         className="h-72 w-72 md:h-96 md:w-96 lg:py-72 lg:px-80 rounded-lg shadow-lg"
                                         image={image}
-                                        alt={datoCmsPortfolio.img.alt}
+                                        alt={datoCmsPortfolio.title}
                                     />
                                     <div className="flex items-start justify-end mx-3 space-x-4 my-4">
                                         <div className=" space-x-4">
@@ -313,7 +313,7 @@ const ProjectTemplate = ({
                                         image={getImage(
                                             node.img.gatsbyImageData
                                         )}
-                                        alt={node.img.alt}
+                                        alt={node.title}
                                     />
                                 </Link>
 
