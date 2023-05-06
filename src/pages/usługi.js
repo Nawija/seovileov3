@@ -74,11 +74,11 @@ const Usługi = () => {
                         {data.allDatoCmsUslugi.edges.map(({ node }) => (
                             <Link
                                 to={`/` + node.slug}
-                                class="xl:w-1/4 md:w-1/2 p-4 flex items-stretch justify-start flex-col"
+                                class="xl:w-1/4 md:w-1/2 p-4 mt-4 mx-auto flex items-stretch justify-start flex-col"
                             >
                                 <div class="bg-gray-100 md:hover:bg-gray-200 transition-colors duration-200 h-full p-6 rounded-lg shadow-lg flex items-stretch justify-center text-center flex-col relative">
                                     <GatsbyImage
-                                        className="h-auto rounded w-3/4 mx-auto object-cover mb-6"
+                                        className="h-24 rounded w-24 mx-auto object-cover mb-6"
                                         loading="eager"
                                         placeholder="blurred"
                                         image={getImage(
