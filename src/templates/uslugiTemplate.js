@@ -14,7 +14,7 @@ const ProjectTemplate = ({
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <section className="relative object-bottom flex items-center h-[12rem] justify-center w-full">
+                <section className="relative overflow-hidden object-bottom flex items-center h-[12rem] justify-center w-full">
                     <div className="w-full -mt-4">
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
@@ -25,7 +25,7 @@ const ProjectTemplate = ({
                         />
                         <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-bl bg-blend-multiply from-black/90 via-emerald-600/70 to-sky-500" />
                     </div>
-                    <div className="absolute right-1 sm:left-3/4 -bottom-10  bg-[#f8f8f8] sm:flex items-center justify-center h-16 w-16  sm:h-32 sm:w-32 p-2 rounded-full z-20 overflow-hidden">
+                    <div className="absolute right-1 sm:left-3/4 bottom-0  bg-[#f8f8f8] sm:flex items-center justify-center h-16 w-16  sm:h-24 sm:w-24 p-2 rounded-full z-20 overflow-hidden">
                         <GatsbyImage
                             className="h-full w-full"
                             image={getImage(datoCmsUslugi.img.gatsbyImageData)}
