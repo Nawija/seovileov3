@@ -19,11 +19,11 @@ const QACompon = () => {
         <div class="bg-slate-100 py-6 sm:py-8 lg:py-12">
             <div class="mx-auto max-w-screen-xl px-4 md:px-8">
                 <div class="mb-10 md:mb-16">
-                    <h4 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
+                    <h4 class="mb-4 text-center text-2xl font-semibold -tracking-wide text-emerald-900 md:mb-6 lg:text-3xl">
                         Najczęściej zadawanie pytania
                     </h4>
 
-                    <p class="mx-auto max-w-screen-md text-center text-gray-700">
+                    <p class="mx-auto max-w-screen-md text-center text-gray-800">
                         This is a section of some simple filler text, also known
                         as placeholder text. It shares some characteristics of a
                         real written text but is random or otherwise generated.
@@ -36,11 +36,11 @@ const QACompon = () => {
                         <div class="flex flex-col sm:flex-row items-start justify-start w-full sm:w-1/2 p-4">
                             <div class="flex-grow flex-shrink rounded-lg bg-white drop-shadow-lg p-5 mb-4 sm:mb-0">
                                 <div class="flex items-center justify-between gap-4 pb-4 border-b">
-                                    <h3 class="font-semibold text-amber-500 sm:text-lg md:text-xl">
+                                    <h3 class="font-semibold drop-shadow-lg text-lime-700 sm:text-lg md:text-xl">
                                         {node.title}
                                     </h3>
 
-                                    <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-300 text-gray-500">
+                                    <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-300 text-gray-700">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             class="h-6 w-6"

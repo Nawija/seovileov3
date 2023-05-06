@@ -39,7 +39,7 @@ const ProjectsCompon = () => {
                     </Link>
                 </div>
                 <div class="flex flex-col sm:flex-row mb-12 justify-between gap-8 items-center">
-                    <p class="max-w-screen-sm px-4 text-sm font-medium text-center sm:text-start text-gray-500 lg:text-base">
+                    <p class="max-w-screen-sm px-4 text-sm font-medium text-center sm:text-start text-gray-700 lg:text-base">
                         Każdy z tych projektów był realizowany w technologii
                         GatsbyJS i zawierał wiele zaawansowanych
                         funkcjonalności, co pozwoliło na uzyskanie bardzo
@@ -67,7 +67,7 @@ const ProjectsCompon = () => {
                             </Link>
                             <div className="flex flex-col items-start justify-center text-start mt-4">
                                 <div className="flex w-full px-4 mb-4 md:flex-row flex-wrap flex-col items-center justify-between">
-                                    <p className="text-gray-600 text-center sm:text-start sm:w-[40%] text-sm">
+                                    <p className="text-gray-700 text-center sm:text-start sm:w-[40%] text-sm">
                                         {node.data}
                                     </p>
                                     <p className="text-gray-800 font-medium text-center sm:text-start sm:w-[80%] text-sm">
