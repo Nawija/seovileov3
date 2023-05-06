@@ -12,6 +12,8 @@ const SpeedTestCompon = () => {
                 <div className="sm:w-4/5 -mt-24 w-full lg:w-1/2 mx-auto lg:my-auto flex mb-8 items-center justify-center lg:order-1">
                     <StaticImage
                         className="lg:-mt-20"
+                        quality={100}
+                        width={682}
                         loading="eager"
                         placeholder="blurred"
                         src="../../assets/speedTest.png"
