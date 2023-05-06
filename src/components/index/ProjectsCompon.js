@@ -10,7 +10,6 @@ const ProjectsCompon = () => {
                     node {
                         data
                         img {
-                            alt
                             gatsbyImageData(
                                 width: 200
                                 aspectRatio: 7
@@ -62,7 +61,7 @@ const ProjectsCompon = () => {
                                     className="w-full h-full hover:scale-110 transition-transform duration-200"
                                     loading="lazy"
                                     image={getImage(node.img)}
-                                    alt={node.title}
+                                    alt={node.naglowek}
                                 />
                                 <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-500 via-transparent to-transparent opacity-50"></div>
 
