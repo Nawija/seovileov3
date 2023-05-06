@@ -31,8 +31,8 @@ const ProjectTemplate = ({
                     <div className="w-full -mt-4 -z-20">
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
-                            image={getImage(datoCmsBlog.img.gatsbyImageData)}
-                            alt={datoCmsBlog.title || "strona www"}
+                            image={getImage(datoCmsBlog.img)}
+                            alt={datoCmsBlog.title}
                         />
                         <div className="w-full h-full bg-gray-800/80 absolute top-0 left-0" />
                     </div>
@@ -44,16 +44,16 @@ const ProjectTemplate = ({
                             <div class="flex flex-col lg:flex-row items-center md:items-start">
                                 <div className="lg:py-12 md:px-12 lg:-mr-14">
                                     <GatsbyImage
-                                        className="h-72 w-72 xl:py-64 xl:px-64 rounded-lg shadow-lg"
+                                        className="h-72 w-72 xl:py-64 xl:px-64 rounded-xl shadow-lg"
                                         image={getImage(
-                                            datoCmsBlog.img.gatsbyImageData
+                                            datoCmsBlog.img
                                         )}
-                                        alt={datoCmsBlog.img.alt}
+                                        alt={datoCmsBlog.title}
                                     />
                                     <div className="flex items-start justify-end mx-3 space-x-4 my-4">
                                         <div className=" space-x-4">
                                             <FacebookShareButton
-                                                url={`https://seovileo.pl/${datoCmsBlog.slug}`}
+                                                url={`https://seovileo.pl/blog/${datoCmsBlog.slug}`}
                                                 quote={datoCmsBlog.title}
                                                 hashtag="#seovileo"
                                             >
@@ -65,11 +65,10 @@ const ProjectTemplate = ({
                                                 </div>
                                             </FacebookShareButton>
                                             <TwitterShareButton
-                                                url={`https://seovileo.pl/${datoCmsBlog.slug}`}
+                                                url={`https://seovileo.pl/blog/${datoCmsBlog.slug}`}
                                                 title={datoCmsBlog.title}
                                                 hashtags={[
                                                     "seovileo",
-                                                    "strona internetowa",
                                                 ]}
                                             >
                                                 <div className="w-6 h-6">
@@ -80,7 +79,7 @@ const ProjectTemplate = ({
                                                 </div>
                                             </TwitterShareButton>
                                             <PinterestShareButton
-                                                url={`https://seovileo.pl/${datoCmsBlog.slug}`}
+                                                url={`https://seovileo.pl/blog/${datoCmsBlog.slug}`}
                                                 media={datoCmsBlog.img.url}
                                                 summary={
                                                     datoCmsBlog.smallDescription
@@ -95,7 +94,7 @@ const ProjectTemplate = ({
                                                 </div>
                                             </PinterestShareButton>
                                             <WhatsappShareButton
-                                                url={`https://seovileo.pl/${datoCmsBlog.slug}`}
+                                                url={`https://seovileo.pl/blog/${datoCmsBlog.slug}`}
                                                 title={datoCmsBlog.title}
                                                 summary={
                                                     datoCmsBlog.smallDescription
