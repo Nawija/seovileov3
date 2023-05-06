@@ -5,15 +5,9 @@
 html {
     scroll-padding-top: 50px;
 }
-@font-face {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2') format('woff2');
-    font-display: swap;
-}
 
 body {
+    font-family: "Open Sans";
     background-color: #f8f8f8;
 }
 
