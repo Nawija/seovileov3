@@ -6,7 +6,7 @@ module.exports = {
     pathPrefix: "/seovileov3",
     siteMetadata: {
         title: `Stwórz swoja stronę internetową`,
-        description: `Błyskawiczne strony internetowe, które zapewniają szybkie i płynne wrażenia użytkownikom. Najnowszye technologie`,
+        description: `Tworzenie Szybkich i Przyjaznych dla SEO Stron Internetowych z Niezależnym Freelancerem Korzystającym z Technologii GatsbyJS`,
         author: `Seovileo`,
         siteUrl: `https://seovileo.pl/`,
     },
