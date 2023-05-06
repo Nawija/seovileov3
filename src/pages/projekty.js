@@ -47,7 +47,7 @@ const IndexPage = ({ data }) => {
                                         placeholder="blurred"
                                         quality={100}
                                         className="-rotate-[10deg] h-24 w-24 md:h-40 md:w-40 rounded-lg"
-                                        src="../assets/browser.png"
+                                        src="../assets/browser.png" 
                                         alt="projekty stron internetowych"
                                     />
                                 </div>
