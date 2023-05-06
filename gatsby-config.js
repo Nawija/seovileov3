@@ -52,7 +52,13 @@ module.exports = {
         },
         "gatsby-plugin-postcss",
         `gatsby-plugin-image`,
-        `gatsby-source-filesystem`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `src`,
+                path: `${__dirname}/src`,
+            },
+        },
         `gatsby-transformer-sharp`,
         {
             resolve: `gatsby-plugin-sharp`,
