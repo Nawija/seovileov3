@@ -14,14 +14,23 @@ const ProjectTemplate = ({
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <section className="relative object-bottom flex items-center h-[11rem] overflow-hidden justify-center w-full">
+                <section className="relative object-bottom flex items-center h-[12rem] justify-center w-full">
                     <div className="w-full -mt-4">
                         <GatsbyImage
                             className="w-full h-full object-cover object-center absolute inset-0"
-                            image={getImage(datoCmsUslugi.img.gatsbyImageData)}
-                            alt={datoCmsUslugi.img.alt}
+                            image={getImage(
+                                datoCmsUslugi.imgclick.gatsbyImageData
+                            )}
+                            alt={datoCmsUslugi.title}
                         />
                         <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-bl bg-blend-multiply from-black/90 via-emerald-600/70 to-sky-500" />
+                    </div>
+                    <div className="absolute right-1 sm:left-3/4 -bottom-10 bg-[#f8f8f8] sm:flex items-center justify-center h-16 w-16  sm:h-32 sm:w-32 p-2 rounded-full z-20 overflow-hidden">
+                        <GatsbyImage
+                            className="h-full w-full"
+                            image={getImage(datoCmsUslugi.img.gatsbyImageData)}
+                            alt={datoCmsUslugi.title}
+                        />
                     </div>
                     <svg
                         className="absolute w-full -bottom-1 left-0 z-0"
@@ -42,11 +51,12 @@ const ProjectTemplate = ({
                             <div class="flex flex-col lg:flex-row items-start">
                                 <div>
                                     <GatsbyImage
-                                        className="h-72 w-72 -mt-24 lg:-mt-36 xl:py-64 xl:px-64 rounded-lg"
+                                        className="h-72 w-72 shadow-xl -mt-24 xl:py-52 xl:px-52 rounded-3xl"
                                         image={getImage(
-                                            datoCmsUslugi.img.gatsbyImageData
+                                            datoCmsUslugi.imgclick
+                                                .gatsbyImageData
                                         )}
-                                        alt={datoCmsUslugi.img.alt}
+                                        alt={datoCmsUslugi.title}
                                     />
                                 </div>
                                 <div class="mb-3 lg:mb-0">
@@ -54,7 +64,7 @@ const ProjectTemplate = ({
                                         <h1 class="text-3xl font-bold pb-2">
                                             {datoCmsUslugi.title}
                                         </h1>
-                                        <p class="text-gray-500 text-lg mb-4 pb-2">
+                                        <p class="text-gray-700 text-lg mb-4 pb-2">
                                             {datoCmsUslugi.opis}
                                         </p>
 
@@ -162,6 +172,9 @@ export const query = graphql`
             img {
                 url
                 alt
+                gatsbyImageData
+            }
+            imgclick {
                 gatsbyImageData
             }
             opis
