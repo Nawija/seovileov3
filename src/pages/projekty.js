@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
                                         quality={100}
                                         className="-rotate-[10deg] h-24 w-24 md:h-40 md:w-40 rounded-lg"
                                         src="../assets/browser.png" 
-                                        alt="projekty stron internetowych"
+                                        alt="przegladarki stron internetowych"
                                     />
                                 </div>
                                 <div class="mb-6 -mt-4 lg:mb-0 pl-4">

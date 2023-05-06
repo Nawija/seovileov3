@@ -66,18 +66,7 @@ module.exports = {
             },
         },
         `gatsby-transformer-sharp`,
-        {
-            resolve: `gatsby-plugin-sharp`,
-            options: {
-                fluid: {
-                    maxWidth: 1200,
-                    maxHeight: 800,
-                    sizes: [320, 768, 1024, 1280],
-                    breakpoints: [320, 768, 1024],
-                    fit: "inside",
-                },
-            },
-        },
+        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-plugin-manifest`,
             options: {

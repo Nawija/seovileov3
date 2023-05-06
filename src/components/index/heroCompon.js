@@ -12,9 +12,9 @@ const HeroCompon = () => {
                 <StaticImage
                     className="h-[38rem] lg:h-[48rem] w-full"
                     quality={100}
-                    src="../../assets/hero.png"
+                    src="../../assets/hero.jpg"
                     loading="eager"
-                    alt="Błyskawiczna Strona"
+                    alt="Strona przyjazna seo"
                     placeholder="blurred"
                 />
                 <div className="absolute inset-0 w-full h-full bg-gray-900/70" />
