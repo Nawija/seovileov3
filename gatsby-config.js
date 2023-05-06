@@ -64,13 +64,6 @@ module.exports = {
                     families: ["Open Sans"],
                     display: "swap",
                 },
-                custom: {
-                    families: ["my-custom-font"],
-                    urls: [
-                        "/src/fonts/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2",
-                    ],
-                    fontDisplay: "swap",
-                },
             },
         },
         "gatsby-plugin-postcss",
