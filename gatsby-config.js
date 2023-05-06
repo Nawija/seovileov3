@@ -12,6 +12,12 @@ module.exports = {
     },
     plugins: [
         {
+            resolve: "gatsby-plugin-zopfli",
+            options: {
+                extensions: ["css", "html", "js", "svg"],
+            },
+        },
+        {
             resolve: `gatsby-plugin-google-gtag`,
             options: {
                 trackingIds: ["G-9RH800R54W"],

@@ -401,6 +401,7 @@ const Kontakt = () => (
                                 <div class="relative">
                                     <label
                                         for="name"
+                                        htmlFor="name"
                                         class="leading-7 text-sm text-gray-600"
                                     >
                                         Imię
@@ -417,6 +418,7 @@ const Kontakt = () => (
                                 <div class="relative">
                                     <label
                                         for="email"
+                                        htmlFor="email"
                                         class="leading-7 text-sm text-gray-600"
                                     >
                                         Email
@@ -433,6 +435,7 @@ const Kontakt = () => (
                                 <div class="relative">
                                     <label
                                         for="message"
+                                        htmlFor="message"
                                         class="leading-7 text-sm text-gray-600"
                                     >
                                         Wiadomość

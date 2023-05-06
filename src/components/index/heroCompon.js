@@ -55,10 +55,12 @@ const HeroCompon = () => {
                 )}
                 <div className="h-8 w-[2px] my-4 bg-gray-600 rounded-3xl" />
                 <Link
+                    aria-label="facebook"
                     to="https://www.facebook.com/seovileo/"
                     class="text-gray-500"
                 >
                     <svg
+                        aria-label="facebook"
                         fill="white"
                         stroke-linecap="round"
                         stroke-linejoin="round"
