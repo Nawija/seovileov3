@@ -72,7 +72,7 @@ const ProjectsCompon = () => {
                                     </p>
                                     <p className="text-gray-800 font-medium text-center sm:text-start sm:w-[80%] text-sm">
                                         <strong className="font-medium">
-                                            Strona Internetowa
+                                            Projekt
                                         </strong>{" "}
                                         {node.naglowek}
                                     </p>
