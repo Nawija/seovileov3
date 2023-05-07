@@ -47,7 +47,7 @@ const IndexPage = ({ data }) => {
                                         placeholder="blurred"
                                         quality={100}
                                         className="-rotate-[10deg] h-24 w-24 md:h-40 md:w-40 rounded-lg"
-                                        src="../assets/browser.png" 
+                                        src="../assets/browser.png"
                                         alt="przegladarki stron internetowych"
                                     />
                                 </div>
@@ -120,15 +120,14 @@ const IndexPage = ({ data }) => {
                         {allDatoCmsPortfolio.edges.map(({ node }) => (
                             <div className="flex mx-12 flex-col md:flex-row items-start justify-center gap-4 lg:gap-6">
                                 <Link
+                                    aria-label={node.title}
                                     to={`/` + node.slug}
                                     className="group w-full md:w-32 lg:w-44 h-56 md:h-28 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
                                 >
                                     <GatsbyImage
                                         className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
-                                        image={getImage(
-                                            node.img.gatsbyImageData
-                                        )}
-                                        alt={node.img.alt}
+                                        image={getImage(node.img)}
+                                        alt={node.naglowek}
                                     />
                                 </Link>
 
@@ -139,6 +138,7 @@ const IndexPage = ({ data }) => {
 
                                     <h2 className="text-gray-800 w-full md:w-[70%] text-xl font-bold">
                                         <Link
+                                            aria-label={node.title}
                                             to={`/` + node.slug}
                                             className="hoverLink active:text-gray-900 transition duration-100"
                                         >
@@ -152,6 +152,7 @@ const IndexPage = ({ data }) => {
 
                                     <div>
                                         <Link
+                                            aria-label={node.title}
                                             to={`/` + node.slug}
                                             className="linkColor hoverLink active:text-gray-900 font-semibold transition duration-100"
                                         >
