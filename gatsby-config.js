@@ -65,7 +65,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `CKL-Facades`,
+                name: `Seovileo`,
                 short_name: `starter`,
                 start_url: `/`,
                 background_color: `#0C0904`,
