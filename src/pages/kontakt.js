@@ -1,7 +1,9 @@
-import * as React from "react";
-import Layout from "../components/layout";
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 import LiveBackground from "../components/liveBackground";
 
 const Kontakt = () => (
@@ -535,4 +537,5 @@ seovileo@email.com"
     </Layout>
 );
 
+export const Head = () => <Seo title="Strona wwww" />;
 export default Kontakt;

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -17,7 +17,7 @@ const Footer = () => (
                                 quality={100}
                                 className="h-full w-full"
                                 placeholder="blurred"
-                                src="../assets/logoBrowser.png"
+                                src="../assets/favicon.png"
                             />
                             <p className="font-bold text-gray-300 transition-all duration-200 text-2xl w-max -mt-1">
                                 Seovileo

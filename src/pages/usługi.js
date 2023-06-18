@@ -1,12 +1,14 @@
-import * as React from "react";
-import Layout from "../components/layout";
+import React from "react";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, Link } from "gatsby";
+
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 import LiveBackground from "../components/liveBackground";
 
 const Usługi = () => {
     const data = useStaticQuery(graphql`
-        query {
+        {
             allDatoCmsUslugi(sort: { position: ASC }) {
                 edges {
                     node {
@@ -135,7 +137,7 @@ const Usługi = () => {
                                                     loading="eager"
                                                     height={100}
                                                     placeholder="blurred"
-                                                    src="../assets/logoBrowser.png"
+                                                    src="../assets/favicon.png"
                                                 />
 
                                                 <h2 class="text-xl text-gray-100  title-font font-semibold drop-shadow-md mb-2">
@@ -208,5 +210,7 @@ const Usługi = () => {
         </Layout>
     );
 };
+
+export const Head = () => <Seo title="Strona wwww" />;
 
 export default Usługi;

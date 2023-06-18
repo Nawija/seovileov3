@@ -1,7 +1,9 @@
-import * as React from "react";
-import Layout from "../components/layout";
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 import LiveBackground from "../components/liveBackground";
 
 const Budowa = () => (
@@ -45,7 +47,7 @@ const Budowa = () => (
                         className="h-full w-full"
                         loading="eager"
                         placeholder="blurred"
-                        src="../assets/logoBrowser.png"
+                        src="../assets/favicon.png"
                     />
                 </div>
                 <p className="text-gray-700 text-2xl ml-2 -tracking-wide font-semibold">
@@ -71,4 +73,5 @@ const Budowa = () => (
     </Layout>
 );
 
+export const Head = () => <Seo title="Strony Internetowe" />;
 export default Budowa;

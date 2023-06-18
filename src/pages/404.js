@@ -1,11 +1,12 @@
-import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 import LiveBackground from "../components/liveBackground";
 
-const NotFoundPage = () => (
+const ErrorPage = () => (
     <Layout>
         <section className="relative flex items-center justify-center w-full ">
             <LiveBackground />
@@ -69,4 +70,4 @@ const NotFoundPage = () => (
 
 export const Head = () => <Seo title="Strona 404" />;
 
-export default NotFoundPage;
+export default ErrorPage;

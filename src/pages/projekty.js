@@ -1,9 +1,9 @@
-import * as React from "react";
+import React from "react";
+import { graphql, Link } from "gatsby";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { graphql } from "gatsby";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
 import LiveBackground from "../components/liveBackground";
 
 const IndexPage = ({ data }) => {

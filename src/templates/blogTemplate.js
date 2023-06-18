@@ -1,10 +1,9 @@
-import * as React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
+import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql, Link } from "gatsby";
 
-import "../styles/template.css";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 import {
     FacebookIcon,

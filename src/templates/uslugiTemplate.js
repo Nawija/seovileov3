@@ -1,11 +1,9 @@
-import * as React from "react";
+import React from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { graphql, Link } from "gatsby";
+
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { graphql } from "gatsby";
-import { Link } from "gatsby";
-
-import "../styles/template.css";
 
 const ProjectTemplate = ({
     pageContext: { slug },

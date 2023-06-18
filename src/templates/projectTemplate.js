@@ -1,10 +1,9 @@
-import * as React from "react";
+import React,{ useState } from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { graphql, Link } from "gatsby";
+
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { graphql } from "gatsby";
-import { Link } from "gatsby";
-import { useState } from "react";
 
 import Desktop from "../assets/liveSvg/desktop.svg";
 import Tablet from "../assets/liveSvg/tablet.svg";

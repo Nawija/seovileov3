@@ -1,7 +1,9 @@
-import * as React from "react";
-import Layout from "../components/layout";
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 import LiveBackground from "../components/liveBackground";
 
 const ThxForm = () => (
@@ -54,7 +56,7 @@ const ThxForm = () => (
                             className="h-full w-full"
                             loading="eager"
                             placeholder="blurred"
-                            src="../assets/logoBrowser.png"
+                            src="../assets/favicon.png"
                         />
                     </div>
                     <p className="text-gray-600 drop-shadow-md text-3xl ml-2 -tracking-wider font-semibold">
@@ -75,5 +77,5 @@ const ThxForm = () => (
         </section>
     </Layout>
 );
-
+export const Head = () => <Seo title="Strona wwww" />;
 export default ThxForm;

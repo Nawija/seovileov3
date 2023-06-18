@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import Layout from "../components/layout";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 import LiveBackground from "../components/liveBackground";
 
 const CalcPrice = () => {
@@ -452,9 +454,7 @@ const CalcPrice = () => {
                                         name="Treści"
                                         value="Zleceniodawca (Ty)"
                                     />
-                                    <label htmlFor="q18">
-                                        Zleceniodawca
-                                    </label>
+                                    <label htmlFor="q18">Zleceniodawca</label>
                                 </div>
                                 <div>
                                     <input
@@ -540,4 +540,5 @@ const CalcPrice = () => {
     );
 };
 
+export const Head = () => <Seo title="Strony Internetowe" />;
 export default CalcPrice;

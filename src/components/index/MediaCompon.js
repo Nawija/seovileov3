@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 const MediaCompon = () => {
@@ -25,7 +25,7 @@ const MediaCompon = () => {
                                     className="w-12 h-12 mt-1"
                                     loading="lazy"
                                     placeholder="blurred"
-                                    src="../../assets/logoBrowser.png"
+                                    src="../../assets/favicon.png"
                                     alt="seovileo strony internetowe"
                                 />
                             </div>

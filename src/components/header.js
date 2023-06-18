@@ -1,5 +1,4 @@
-import * as React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -59,7 +58,7 @@ const Header = () => {
                                 className="h-full w-full"
                                 loading="eager"
                                 placeholder="blurred"
-                                src="../assets/logoBrowser.png"
+                                src="../assets/favicon.png"
                             />
                         </div>
                         <p

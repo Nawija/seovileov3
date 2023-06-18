@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 function Seo({ description, title, children }) {
@@ -24,7 +24,7 @@ function Seo({ description, title, children }) {
             <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
             <meta name="description" content={metaDescription} />
             <meta property="og:title" content={title} />
-            <meta http-equiv="X-Robots-Tag" content="index" />
+            <meta name="robots" content="index, follow" />
             <meta
                 name="keywords"
                 content="seovileo strona internetowa www seo"
@@ -39,7 +39,7 @@ function Seo({ description, title, children }) {
             />
             <meta
                 name="twitter:creator"
-                content={site.siteMetadata?.author || ``}
+                content={site.siteMetadata?.author || `seovileo`}
             />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={metaDescription} />
