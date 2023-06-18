@@ -120,7 +120,7 @@ const Kontakt = () => (
                                         </span>
 
                                         <div class="flex h-4 flex-1 overflow-hidden rounded bg-gray-200">
-                                            <span class="h-full w-[3%] rounded bg-yellow-400"></span>
+                                            <span class="h-full w-[0%] rounded bg-yellow-400"></span>
                                         </div>
                                     </div>
 

@@ -13,14 +13,8 @@
 
 :root {
     --first-color: black;
-    --second-color: rgb(219, 219, 219);
-}
-
-.first-color {
-    color: var(--first-color);
-}
-.second-color {
-    color: var(--second-color);
+    --second-color: rgb(251, 251, 251);
+    --burger-color: #2d3d4b;
 }
 
 html {
@@ -32,42 +26,43 @@ body {
     background-color: #f8f8f8;
 }
 
+.first-color {
+    color: var(--first-color);
+}
+.second-color {
+    color: var(--second-color);
+}
+.burgerColor {
+    background-color: var(--burger-color);
+}
+.orange-btn {
+    padding: 0.6rem 0.93rem;
+    background-color: #f57c03;
+    box-shadow: 0 10px 15px -3px #e06a37, 0 4px 6px -4px #e06a37;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    color: white;
+    text-transform: capitalize;
+    transition-property: all;
+    transition-duration: 150ms;
+}
+.orange-btn:hover {
+    color: whitesmoke;
+    background-color: #9edb1a;
+    box-shadow: 0 10px 15px -3px #fff6a6, 0 4px 6px -4px #ffe7a6;
+}
+
 .titleSection {
     color: #333c51;
 }
 
-.btn {
-    @apply inline-block px-7 py-3 bgLogoColor text-white font-medium text-sm leading-snug uppercase rounded bg-gradient-to-tr from-gray-900 to-gray-700 shadow-gray-900 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-200 ease-in-out;
-}
-.btnEmerald {
-    @apply inline-block px-7 py-3 bgLogoColor text-white font-medium text-sm leading-snug uppercase rounded bg-gradient-to-tr from-emerald-800 to-emerald-600 shadow-emerald-800 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out;
-}
-.btnRed {
-    @apply inline-block px-5 py-2 bgLogoColor text-white font-medium text-sm leading-snug uppercase rounded bg-gradient-to-tr from-red-800 to-red-500 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition-all duration-200 ease-in-out;
-}
-.btnOrange {
-    @apply inline-block px-7 py-3 bgLogoColor text-white font-medium text-sm leading-snug uppercase rounded bg-gradient-to-tr from-amber-600 to-amber-300 shadow-amber-600 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition-all duration-200 ease-in-out;
-}
-.btnBlue {
-    @apply inline-block px-7 py-3 bgLogoColor text-white font-medium text-sm leading-snug uppercase rounded bg-gradient-to-tr from-blue-600 to-blue-400 shadow-blue-600 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition-all duration-200 ease-in-out;
-}
-
-.linkColor {
-    color: #357b0a;
-}
-
-.link {
-    font-size: 14px;
-    color: rgb(243, 244, 246);
-}
 .linkFooter {
     color: #828996;
     font-size: 14px;
 }
 
-.hoverLink:hover {
+.hover-link:hover {
     color: #e4b827;
-}
-.bgLogoColor {
-    background-color: #2d3d4b;
 }

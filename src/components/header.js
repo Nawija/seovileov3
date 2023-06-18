@@ -30,7 +30,7 @@ const Header = () => {
         >
             <div
                 className={
-                    "absolute top-0 bg-transparent mx-auto transition-colors duration-200 w-full"
+                    "absolute top-0 bg-transparent mx-auto transition-colors w-full"
                 }
             >
                 <div
@@ -46,7 +46,8 @@ const Header = () => {
                     <Link
                         to="/"
                         className="flex items-center justify-center"
-                        aria-label="logo"
+                        title="Logo Seovileo"
+                        aria-label="Logo"
                     >
                         <div className="h-auto w-10 ">
                             <StaticImage
@@ -70,45 +71,40 @@ const Header = () => {
                     <button
                         aria-label="Menu"
                         onClick={handleMenu}
-                        className="group lg:hidden bg-gray-100 p-2.5 transition-colors duration-200 z-50 rounded-lg"
+                        className="lg:hidden bg-gray-100 p-2.5 transition-colors z-50 rounded-lg"
                     >
                         <div
-                            className={
-                                !showMenu
-                                    ? "w-5 h-1 transition-all duration-200 bgLogoColor m-1 rounded-lg"
-                                    : "w-5 h-1 transition-all duration-200 bgLogoColor m-1 translate-y-2 rotate-45 rounded-lg"
-                            }
+                            className={`w-5 h-1 transition burgerColor m-1 rounded-lg ${
+                                showMenu ? "translate-y-2 rotate-45" : ""
+                            }`}
                         />
                         <div
-                            className={
-                                !showMenu
-                                    ? "w-3 h-1 transition-all duration-200 bgLogoColor m-1 rounded-lg"
-                                    : "w-3 h-1 transition-all duration-200 bgLogoColor m-1 opacity-0"
-                            }
+                            className={`w-3 h-1 transition burgerColor m-1 rounded-lg ${
+                                showMenu ? "opacity-0" : ""
+                            }`}
                         />
                         <div
-                            className={
-                                !showMenu
-                                    ? "w-5 h-1 transition-all duration-200 bgLogoColor m-1 rounded-lg"
-                                    : "w-5 h-1 transition-all duration-200 bgLogoColor m-1 -translate-y-2 -rotate-45 rounded-lg"
-                            }
+                            className={`w-5 h-1 transition burgerColor m-1 rounded-lg ${
+                                showMenu ? "-translate-y-2 -rotate-45" : ""
+                            }`}
                         />
                     </button>
                     <ul
-                        className={
+                        className={`absolute top-full left-0 w-full text-center text-main ${
                             showMenu
-                                ? "absolute text-lg top-full left-0 pb-4 flex flex-col lg:static text-main text-center w-full bg-gray-900 opacity-100 transition duration-200 -translate-y-0 -z-10"
-                                : "absolute top-full left-0 py-2 flex flex-col lg:opacity-100 lg:static lg:flex lg:flex-row lg:items-center lg:justify-end lg:top-0 lg:translate-y-0 lg:py-0 text-main text-center w-full opacity-0 -translate-y-full transition duration-100 -z-10 lg:z-10 lg:ml-8"
-                        }
+                                ? "text-lg bg-gray-900 opacity-100 transition -translate-y-0 -z-10"
+                                : "py-2 lg:opacity-100 lg:static lg:flex lg:flex-row lg:items-center lg:justify-end lg:top-0 lg:translate-y-0 lg:py-0 opacity-0 -translate-y-full transition -z-10 lg:z-10 lg:ml-8"
+                        }`}
                     >
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={closeMenu}
-                                aria-label="Home"
+                                title="Strona Główna"
+                                aria-label="Strona Główna"
                                 className={
                                     navbar
-                                        ? "font-semibold lg:text-gray-600 hoverLink link transition-colors duration-200"
-                                        : "font-semibold hoverLink link transition-colors duration-200"
+                                        ? "font-semibold first-color text-sm hover-link transition-colors"
+                                        : "font-semibold second-color text-sm hover-link transition-colors"
                                 }
                                 to="/"
                             >
@@ -118,11 +114,12 @@ const Header = () => {
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={closeMenu}
-                                aria-label="portfolio"
+                                title="Projekty"
+                                aria-label="Projekty"
                                 className={
                                     navbar
-                                        ? "font-semibold lg:text-gray-600 hoverLink link transition-colors duration-200"
-                                        : "font-semibold hoverLink link transition-colors duration-200"
+                                        ? "font-semibold first-color text-sm hover-link transition-colors"
+                                        : "font-semibold second-color text-sm hover-link transition-colors"
                                 }
                                 to="/projekty"
                             >
@@ -132,39 +129,28 @@ const Header = () => {
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={closeMenu}
-                                aria-label="usługi"
+                                title="Usługi"
+                                aria-label="Usługi"
                                 className={
                                     navbar
-                                        ? "font-semibold lg:text-gray-600 hoverLink link transition-colors duration-200"
-                                        : "font-semibold hoverLink link transition-colors duration-200"
+                                        ? "font-semibold first-color text-sm hover-link transition-colors"
+                                        : "font-semibold second-color text-sm hover-link transition-colors"
                                 }
                                 to="/usługi"
                             >
                                 Usługi
                             </Link>
                         </li>
-                        <li className="mx-5 my-2 px-2 py-2 order-1 lg:order-0">
-                            <Link
-                                onClick={closeMenu}
-                                aria-label="portfolio"
-                                className={
-                                    navbar
-                                        ? "font-semibold text-amber-500 text-[14px] border border-amber-500 drop-shadow-md py-2 px-3 rounded-xl shadow-lg lg:ml-12 transition-colors duration-200"
-                                        : "font-semibold text-amber-500 text-[14px] border border-amber-500 py-2 px-3 rounded-xl shadow-lg lg:ml-12 shadow-amber-500/30 transition-colors duration-200"
-                                }
-                                to="/darmowa-wycena"
-                            >
-                                Darmowa Wycena
-                            </Link>
-                        </li>
+
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={closeMenu}
-                                aria-label="portfolio"
+                                title="Blog"
+                                aria-label="Blog"
                                 className={
                                     navbar
-                                        ? "font-semibold lg:text-gray-600 hoverLink link transition-colors duration-200"
-                                        : "font-semibold hoverLink link transition-colors duration-200"
+                                        ? "font-semibold first-color text-sm hover-link transition-colors"
+                                        : "font-semibold second-color text-sm hover-link transition-colors"
                                 }
                                 to="/blog"
                             >
@@ -174,15 +160,27 @@ const Header = () => {
                         <li className="mx-5 my-2 px-2 py-2">
                             <Link
                                 onClick={closeMenu}
-                                aria-label="kontakt"
+                                title="Kontakt"
+                                aria-label="Kontakt"
                                 className={
                                     navbar
-                                        ? "font-semibold lg:text-gray-600 hoverLink link transition-colors duration-200"
-                                        : "font-semibold hoverLink link transition-colors duration-200"
+                                        ? "font-semibold first-color text-sm hover-link transition-colors"
+                                        : "font-semibold second-color text-sm hover-link transition-colors"
                                 }
                                 to="/kontakt"
                             >
                                 Kontakt
+                            </Link>
+                        </li>
+                        <li className="mx-5 my-2 px-2 py-2">
+                            <Link
+                                onClick={closeMenu}
+                                title="Darmowa Wycena"
+                                aria-label="Darmowa Wycena"
+                                className="orange-btn"
+                                to="/darmowa-wycena"
+                            >
+                                Darmowa Wycena
                             </Link>
                         </li>
                     </ul>
