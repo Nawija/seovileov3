@@ -42,7 +42,7 @@ const HeroCompon = () => {
                     freelancerem
                 </h1>
 
-                <Link to="/projekty" className="btnRed mt-4 lg:mt-6 border">
+                <Link to="/projekty" className="mt-4 lg:mt-6 border">
                     Projekty
                 </Link>
             </div>

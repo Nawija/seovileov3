@@ -9,7 +9,7 @@ module.exports = {
         title: `Stwórz swoja stronę internetową`,
         description: `Tworzenie Szybkich i Przyjaznych dla SEO Stron Internetowych z Niezależnym Freelancerem Korzystającym z Technologii GatsbyJS`,
         author: `Seovileo`,
-        siteUrl: `https://seovileo.pl/`,
+        siteUrl: `https://seovileo.pl`,
     },
     plugins: [
         `gatsby-plugin-sitemap`,
