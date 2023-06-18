@@ -10,7 +10,7 @@ const Header = () => {
     const [navbar, setNavbar] = useState(false);
 
     const changeBackground = () => {
-        if (window.scrollY >= 10) {
+        if (window.scrollY >= 1) {
             setNavbar(true);
         } else {
             setNavbar(false);
@@ -34,18 +34,14 @@ const Header = () => {
                 }
             >
                 <div
-                    className={
-                        !navbar
-                            ? "h-full w-full mx-auto py-1 absolute top-0 -z-10 transition-colors duration-300"
-                            : "h-full w-full mx-auto py-1 bg-white shadow-lg absolute top-0 -z-10 transition-colors duration-300"
-                    }
-                ></div>
+                    className={`h-full w-full mx-auto py-1 absolute top-0 -z-10 transition-colors duration-300 ${
+                        navbar ? "bg-white shadow-lg" : ""
+                    }`}
+                />
                 <nav
-                    className={
-                        showMenu
-                            ? "max-w-screen-2xl mx-auto px-4 py-2 md:py-4 flex items-center justify-between w-full navTextColor bg-gray-900 transition-colors duration-100 z-50"
-                            : "max-w-screen-2xl mx-auto px-4 py-2 md:py-2 flex items-center justify-between w-full navTextColor transition-colors duration-100 z-50"
-                    }
+                    className={`max-w-screen-2xl mx-auto px-4 py-2 flex items-center justify-between w-full navTextColor transition-colors duration-100 z-50 ${
+                        showMenu ? "bg-gray-900" : ""
+                    }`}
                 >
                     <Link
                         to="/"
@@ -62,11 +58,11 @@ const Header = () => {
                             />
                         </div>
                         <p
-                            className={
-                                navbar
-                                    ? "text-slate-500 ml-1 -tracking-wide transition-all duration-200 font-bold"
-                                    : "text-gray-100 ml-1 tracking-wide transition-all duration-200 font-bold"
-                            }
+                            className={`ml-1 tracking-wide transition-colors font-bold ${
+                                navbar && !showMenu
+                                    ? "first-color"
+                                    : "second-color"
+                            }`}
                         >
                             Seovileo
                         </p>

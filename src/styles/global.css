@@ -11,6 +11,18 @@
     @apply text-emerald-700 underline font-medium;
 }
 
+:root {
+    --first-color: black;
+    --second-color: rgb(219, 219, 219);
+}
+
+.first-color {
+    color: var(--first-color);
+}
+.second-color {
+    color: var(--second-color);
+}
+
 html {
     scroll-padding-top: 50px;
 }

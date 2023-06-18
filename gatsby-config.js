@@ -12,15 +12,6 @@ module.exports = {
     },
     plugins: [
         {
-            resolve: `gatsby-plugin-google-gtag`,
-            options: {
-                trackingIds: ["G-9RH800R54W"],
-                pluginConfig: {
-                    head: true,
-                },
-            },
-        },
-        {
             resolve: `gatsby-transformer-remark`,
             options: {},
         },
@@ -28,10 +19,6 @@ module.exports = {
             resolve: `gatsby-source-datocms`,
             options: {
                 apiToken: `0e6621bdd35bb44a65efb5a356263a`,
-                environment: `main`,
-                previewMode: false,
-                disableLiveReload: false,
-                pageSize: 500,
             },
         },
         {
