@@ -42,12 +42,17 @@ const HeroCompon = () => {
                     freelancerem
                 </h1>
 
-                <Link to="/projekty" className="mt-4 lg:mt-6 border">
+                <Link title="Projekty" to="/projekty" className="mt-4 lg:mt-6 border px-4 py-1 rounded-lg text-white bg-gradient-to-b from-red-600 to-red-800 md:hover:opacity-80 md:transition-opacity">
                     Projekty
                 </Link>
             </div>
 
-            <div className="text-gray-300 hidden lg:flex text-sm absolute left-2 flex-col items-center justify-center uppercase -my-3">
+            <Link
+                aria-label="Facebook"
+                title="Facebook"
+                to="https://www.facebook.com/seovileo/"
+                className="text-gray-300 hidden lg:flex text-sm absolute left-2 flex-col items-center justify-center uppercase -my-3"
+            >
                 {["K", "O", "O", "B", "E", "C", "A", "F"].map(
                     (letter, index) => (
                         <p className="-rotate-90" key={index}>
@@ -56,7 +61,7 @@ const HeroCompon = () => {
                     )
                 )}
                 <div className="h-8 w-[2px] my-4 bg-gray-600 rounded-3xl" />
-                <Link
+                <div
                     aria-label="facebook"
                     to="https://www.facebook.com/seovileo/"
                     class="text-gray-500"
@@ -72,8 +77,8 @@ const HeroCompon = () => {
                     >
                         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                     </svg>
-                </Link>
-            </div>
+                </div>
+            </Link>
         </section>
     );
 };
