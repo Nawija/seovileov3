@@ -1,17 +1,17 @@
-import HeroCompon from "./heroCompon";
-import CardsHeroCompon from "./CardsHeroCompon";
-import SpeedTestCompon from "./SpeedTestCompon";
-import ServicesCompon from "./ServicesCompon";
-import ProjectsCompon from "./ProjectsCompon";
-import MediaCompon from "./MediaCompon";
-import QACompon from "./QACompon";
+import Hero from "./Hero";
+import CardsHero from "./CardsHero";
+import SpeedTest from "./SpeedTest";
+import Services from "./Services";
+import Projects from "./Projects";
+import Media from "./Media";
+import Question from "./Question";
 
 export {
-    HeroCompon,
-    CardsHeroCompon,
-    SpeedTestCompon,
-    ServicesCompon,
-    ProjectsCompon,
-    MediaCompon,
-    QACompon,
+    Hero,
+    CardsHero,
+    SpeedTest,
+    Services,
+    Projects,
+    Media,
+    Question,
 };

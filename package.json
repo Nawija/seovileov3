@@ -2,7 +2,7 @@
     "name": "seovileo",
     "private": true,
     "description": "strony internetowe",
-    "version": "0.1.0",
+    "version": "3.0.0",
     "author": "Seovileo <seovileo@gmail.com>",
     "dependencies": {
         "gatsby": "^5.11.0",

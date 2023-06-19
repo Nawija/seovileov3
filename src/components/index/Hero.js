@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import LiveBackground from "../liveBackground";
 
-const HeroCompon = () => {
+const Hero = () => {
     return (
         <section className="relative flex items-center max-h-[32rem] justify-center w-full ">
             <LiveBackground />
@@ -13,11 +13,10 @@ const HeroCompon = () => {
                 <StaticImage
                     className="h-[38rem] lg:h-[48rem] w-full"
                     quality={100}
-                    width={600}
-                    src="../../assets/hero.jpg"
+                    src="../../assets/hero.webp"
                     loading="eager"
                     alt="Strona przyjazna seo"
-                    placeholder="blurred"
+                    placeholder="dominantColor"
                 />
                 <div className="absolute inset-0 w-full h-full bg-gray-900/70" />
 
@@ -42,7 +41,11 @@ const HeroCompon = () => {
                     freelancerem
                 </h1>
 
-                <Link title="Projekty" to="/projekty" className="mt-4 lg:mt-6 border px-4 py-1 rounded-lg text-white bg-gradient-to-b from-red-600 to-red-800 md:hover:opacity-80 md:transition-opacity">
+                <Link
+                    title="Projekty"
+                    to="/projekty"
+                    className="mt-4 lg:mt-6 border px-4 py-1 text-sm rounded-lg text-white bg-gradient-to-b from-red-600 to-red-800 md:hover:opacity-80 md:transition-opacity"
+                >
                     Projekty
                 </Link>
             </div>
@@ -83,4 +86,4 @@ const HeroCompon = () => {
     );
 };
 
-export default HeroCompon;
+export default Hero;

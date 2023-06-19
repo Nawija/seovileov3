@@ -1,6 +1,6 @@
 import React from "react";
 
-const CardsHeroCompon = () => {
+const CardsHero = () => {
     return (
         <section class="container max-w-screen-xl mt-4 lg:-mt-20 mb-6 md:mb-24 mx-auto">
             <div class=" text-gray-800 text-center">
@@ -126,4 +126,4 @@ const CardsHeroCompon = () => {
     );
 };
 
-export default CardsHeroCompon;
+export default CardsHero;

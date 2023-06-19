@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-const QACompon = () => {
+const Question = () => {
     const data = useStaticQuery(graphql`
         query {
             allDatoCmsQa(sort: { position: ASC }) {
@@ -66,4 +66,4 @@ const QACompon = () => {
     );
 };
 
-export default QACompon;
+export default Question;

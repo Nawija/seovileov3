@@ -16,7 +16,7 @@ const ServicesCompon = () => {
                                 width: 800
                                 breakpoints: [320, 768, 1024]
                                 placeholder: BLURRED
-                              )
+                            )
                         }
                         opis
                         title

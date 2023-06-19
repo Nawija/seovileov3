@@ -4,25 +4,25 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 import {
-    HeroCompon,
-    CardsHeroCompon,
-    SpeedTestCompon,
-    ServicesCompon,
-    ProjectsCompon,
-    MediaCompon,
-    QACompon,
-} from "../components/index";
+    Hero,
+    CardsHero,
+    SpeedTest,
+    Services,
+    Projects,
+    Media,
+    Question,
+} from "../components/index/index";
 
 const IndexPage = () => {
     return (
         <Layout>
-            <HeroCompon />
-            <CardsHeroCompon />
-            <SpeedTestCompon />
-            <ServicesCompon />
-            <ProjectsCompon />
-            <MediaCompon />
-            <QACompon />
+            <Hero />
+            <CardsHero />
+            <SpeedTest />
+            <Services />
+            <Projects />
+            <Media />
+            <Question />
         </Layout>
     );
 };
