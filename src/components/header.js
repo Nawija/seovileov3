@@ -90,9 +90,9 @@ const Header = () => {
                         />
                     </button>
                     <ul
-                        className={`absolute top-full left-0 w-full text-center text-main ${
+                        className={`absolute top-full left-0 w-full text-center ${
                             showMenu
-                                ? "text-lg bg-gray-900 opacity-100 transition -translate-y-0 -z-10"
+                                ? "text-lg bg-gray-900 opacity-100 transition py-2 -translate-y-0 -z-10"
                                 : "py-2 lg:opacity-100 lg:static lg:flex lg:flex-row lg:items-center lg:justify-end lg:top-0 lg:translate-y-0 lg:py-0 opacity-0 -translate-y-full transition -z-10 lg:z-10 lg:ml-8"
                         }`}
                     >
@@ -177,7 +177,11 @@ const Header = () => {
                                 onClick={closeMenu}
                                 title="Darmowa Wycena"
                                 aria-label="Darmowa Wycena"
-                                className={`orange-btn flex items-center justify-center w-max ${navbar && !showMenu ? "":"text-white"}`}
+                                className={`flex items-center justify-center text-sm w-max mx-auto font-semibold shadow-lg px-4 py-2 border-2 rounded-lg transition md:hover:scale-[.98] ${
+                                    navbar && !showMenu
+                                        ? "border-orange-400 text-orange-600 shadow-orange-600/40"
+                                        : "border-orange-400 text-orange-400 shadow-orange-400/50"
+                                }`}
                                 to="/darmowa-wycena"
                             >
                                 <p className="mr-1">Darmowa Wycena</p>

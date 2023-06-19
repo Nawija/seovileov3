@@ -44,7 +44,7 @@ const Hero = () => {
                 <Link
                     title="Projekty"
                     to="/projekty"
-                    className="mt-4 lg:mt-6 border px-4 py-1 text-sm rounded-lg text-white bg-gradient-to-b from-red-600 to-red-800 md:hover:opacity-80 md:transition-opacity"
+                    className="mt-4 lg:mt-6 border px-4 py-1 text-sm rounded-lg text-white bg-gradient-to-b from-red-600 to-red-800 md:hover:opacity-90 md:transition md:hover:scale-[.98]"
                 >
                     Projekty
                 </Link>

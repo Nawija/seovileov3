@@ -35,23 +35,6 @@ body {
 .burgerColor {
     background-color: var(--burger-color);
 }
-.orange-btn {
-    padding: 0.55rem 0.93rem;
-    border: 1.5px solid orange;
-    box-shadow: 0 10px 15px -3px #4b1903, 0 4px 6px -4px #e06a37;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 600;
-    border-radius: 0.375rem;
-    text-transform: capitalize;
-    transition-property: all;
-    transition-duration: 150ms;
-}
-.orange-btn:hover {
-    color: whitesmoke;
-    background-color: orange;
-    box-shadow: 0 10px 15px -3px #fff6a6, 0 4px 6px -4px #ffe7a6;
-}
 
 .titleSection {
     color: #333c51;

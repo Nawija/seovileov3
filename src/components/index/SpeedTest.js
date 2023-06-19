@@ -1,13 +1,34 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { TypeAnimation } from "react-type-animation";
 
 const SpeedTestCompon = () => {
     return (
         <section className="lg:-mt-10 py-10 md:pt-0 lg:pt-10 max-w-screen-2xl mx-auto">
-            <h2 className="text-center px-12 text-lg uppercase md:text-xl titleSection font-bold -tracking-wider drop-shadow-lg ">
-                Szybka <strong>Strona Internetowa</strong>
-            </h2>
-            <div className=" bg-gradient-to-r from-amber-400 w-[30%] md:w-[18%] h-1 rounded-3xl mb-20 lg:mb-6 mx-auto" />
+            <TypeAnimation
+                className="text-center mx-auto text-lg md:text-xl lg:text-2xl"
+                sequence={[
+                    "Strony Seovileo są",
+                    1000,
+                    "Szalenie szybkie!!",
+                    1000,
+                    "Przyjazne dla SEO!",
+                    1000,
+                    "Tanie w utrzymaniu",
+                    1000,
+                ]}
+                wrapper="p"
+                speed={70}
+                style={{
+                    padding: "0 2rem",
+                    fontWeight: "700",
+                    margin: "0 auto",
+                    textAlign: "center",
+                    textTransform:"uppercase"
+                }}
+                repeat={Infinity}
+            />
+            <div className="bg-gradient-to-r from-amber-400 w-[30%] md:w-[18%] h-1 rounded-3xl mb-20 lg:mb-6 mx-auto" />
             <div className="flex flex-col lg:mt-20 px-4 lg:flex-row py-6 md:pb-16">
                 <div className="sm:w-4/5 -mt-24 w-full lg:w-1/2 mx-auto lg:my-auto flex mb-8 items-center justify-center lg:order-1">
                     <StaticImage
