@@ -35,7 +35,9 @@ const Header = () => {
             >
                 <div
                     className={`h-full w-full mx-auto py-1 absolute top-0 -z-10 transition-colors duration-300 ${
-                        navbar ? "bg-white shadow-lg" : ""
+                        navbar
+                            ? "bg-white lg:bg-white/90 lg:backdrop-blur-xl shadow-lg"
+                            : ""
                     }`}
                 />
                 <nav
@@ -96,45 +98,45 @@ const Header = () => {
                                 : "py-2 lg:opacity-100 lg:static lg:flex lg:flex-row lg:items-center lg:justify-end lg:top-0 lg:translate-y-0 lg:py-0 opacity-0 -translate-y-full transition -z-10 lg:z-10 lg:ml-8"
                         }`}
                     >
-                        <li className="mx-5 my-2 px-2 py-2">
+                        <li className="mx-5 my-2">
                             <Link
                                 onClick={closeMenu}
                                 title="Strona Główna"
                                 aria-label="Strona Główna"
                                 className={
                                     navbar && !showMenu
-                                        ? "font-semibold first-color text-sm hover-link transition-colors"
-                                        : "font-semibold second-color text-sm hover-link transition-colors"
+                                        ? "font-semibold first-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        : "font-semibold second-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                 }
                                 to="/"
                             >
                                 Home
                             </Link>
                         </li>
-                        <li className="mx-5 my-2 px-2 py-2">
+                        <li className="mx-5 my-2">
                             <Link
                                 onClick={closeMenu}
                                 title="Projekty"
                                 aria-label="Projekty"
                                 className={
                                     navbar && !showMenu
-                                        ? "font-semibold first-color text-sm hover-link transition-colors"
-                                        : "font-semibold second-color text-sm hover-link transition-colors"
+                                        ? "font-semibold first-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        : "font-semibold second-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                 }
                                 to="/projekty"
                             >
                                 Projekty
                             </Link>
                         </li>
-                        <li className="mx-5 my-2 px-2 py-2">
+                        <li className="mx-5 my-2">
                             <Link
                                 onClick={closeMenu}
                                 title="Usługi"
                                 aria-label="Usługi"
                                 className={
                                     navbar && !showMenu
-                                        ? "font-semibold first-color text-sm hover-link transition-colors"
-                                        : "font-semibold second-color text-sm hover-link transition-colors"
+                                        ? "font-semibold first-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        : "font-semibold second-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                 }
                                 to="/usługi"
                             >
@@ -142,45 +144,45 @@ const Header = () => {
                             </Link>
                         </li>
 
-                        <li className="mx-5 my-2 px-2 py-2">
+                        <li className="mx-5 my-2">
                             <Link
                                 onClick={closeMenu}
                                 title="Blog"
                                 aria-label="Blog"
                                 className={
                                     navbar && !showMenu
-                                        ? "font-semibold first-color text-sm hover-link transition-colors"
-                                        : "font-semibold second-color text-sm hover-link transition-colors"
+                                        ? "font-semibold first-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        : "font-semibold second-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                 }
                                 to="/blog"
                             >
                                 Blog
                             </Link>
                         </li>
-                        <li className="mx-5 my-2 px-2 py-2">
+                        <li className="mx-5 my-2">
                             <Link
                                 onClick={closeMenu}
                                 title="Kontakt"
                                 aria-label="Kontakt"
                                 className={
                                     navbar && !showMenu
-                                        ? "font-semibold first-color text-sm hover-link transition-colors"
-                                        : "font-semibold second-color text-sm hover-link transition-colors"
+                                        ? "font-semibold first-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        : "font-semibold second-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                 }
                                 to="/kontakt"
                             >
                                 Kontakt
                             </Link>
                         </li>
-                        <li className="mx-5 my-2 px-2 py-2">
+                        <li className="mx-5 my-2">
                             <Link
                                 onClick={closeMenu}
                                 title="Darmowa Wycena"
                                 aria-label="Darmowa Wycena"
-                                className={`flex items-center justify-center text-sm w-max mx-auto font-semibold shadow-lg px-4 py-2 border-2 rounded-lg transition md:hover:scale-[.98] ${
+                                className={`flex items-center justify-center border-yellow-500 text-sm w-max mx-auto font-semibold shadow-lg px-4 py-2 border rounded-lg transition md:hover:scale-[.98] ${
                                     navbar && !showMenu
-                                        ? "border-orange-400 text-orange-600 shadow-orange-600/40"
-                                        : "border-orange-400 text-orange-400 shadow-orange-400/50"
+                                        ? ""
+                                        : "text-yellow-500 shadow-yellow-400/30 md:hover:shadow-xl"
                                 }`}
                                 to="/darmowa-wycena"
                             >

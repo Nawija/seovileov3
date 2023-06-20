@@ -25,56 +25,6 @@ const IndexPage = ({ data }) => {
                                     alt="przegladarki stron internetowych"
                                 />
                             </div>
-                            <div class="mb-6 -mt-4 lg:mb-0 pl-4">
-                                <div class=" block lg:mt-12 rounded-lg py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
-                                    <h1 class="text-3xl font-bold pb-2">
-                                        Projekty Stron Internetowych
-                                    </h1>
-                                    <p class="text-gray-700 text-start mb-4 pb-2">
-                                        Freelancer, który tworzy strony
-                                        internetowe, to specjalista z
-                                        doświadczeniem w projektowaniu i
-                                        tworzeniu różnego rodzaju witryn
-                                        internetowych. Tutaj znajdziesz i
-                                        zobaczysz "Live" projekty, które zostały
-                                        wykonane przeze mnie, które są
-                                        prezentowane w pełni funkcjonalnej
-                                        formie. Dzięki temu możesz nie tylko
-                                        zobaczyć, jak wyglądają projekty, ale
-                                        także przetestować ich funkcjonalność i
-                                        interaktywność.
-                                    </p>
-                                    <p class="text-gray-700 text-start mb-4 pb-2">
-                                        Oglądając te projekty, możesz znaleźć
-                                        inspirację dla swojego własnego projektu
-                                        lub po prostu podziwiać kreatywność i
-                                        umiejętności tych specjalistów. Każdy
-                                        projekt jest inny i unikalny, z
-                                        uwzględnieniem potrzeb i wymagań klienta
-                                        oraz specyfikacji technicznej.
-                                    </p>
-
-                                    <Link
-                                        to="/usługi"
-                                        type="button"
-                                        className="btn my-1 mr-4"
-                                        data-mdb-ripple="true"
-                                        data-mdb-ripple-color="light"
-                                    >
-                                        Usługi
-                                    </Link>
-
-                                    <Link
-                                        to="/kontakt"
-                                        type="button"
-                                        className="btnOrange my-1"
-                                        data-mdb-ripple="true"
-                                        data-mdb-ripple-color="light"
-                                    >
-                                        Kontakt
-                                    </Link>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>
@@ -125,9 +75,9 @@ const IndexPage = ({ data }) => {
                                     <Link
                                         aria-label={node.title}
                                         to={`/` + node.slug}
-                                        className="linkColor hoverLink active:text-gray-900 font-semibold transition duration-100"
+                                        className="linkColor hoverLink active:text-gray-900 font-medium self-end transition duration-100"
                                     >
-                                        Zobacz Projekt
+                                        Zobacz
                                     </Link>
                                 </div>
                             </div>

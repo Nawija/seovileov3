@@ -3,6 +3,29 @@ const path = require("path");
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
 
+    const queryUsługa = await graphql(`
+        {
+            allDatoCmsUsluga {
+                nodes {
+                    slug
+                }
+            }
+        }
+    `);
+
+    const uslugiTemplate = path.resolve(`./src/templates/uslugiTemplate.js`);
+
+    queryUsługa.data.allDatoCmsUsluga.nodes.forEach((node) => {
+        const { slug } = node;
+        createPage({
+            path: slug,
+            component: uslugiTemplate,
+            context: {
+                slug,
+            },
+        });
+    });
+
     const queryProjects = await graphql(`
         {
             allDatoCmsPortfolio {
@@ -25,33 +48,6 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         });
     });
-
-    const queryUsługi = await graphql(`
-        {
-            allDatoCmsUslugi {
-                nodes {
-                    slug
-                }
-            }
-        }
-    `);
-
-    const uslugiTemplate = path.resolve(`./src/templates/uslugiTemplate.js`);
-
-    queryUsługi.data.allDatoCmsUslugi.nodes.forEach((node) => {
-        const { slug } = node;
-        createPage({
-            path: slug,
-            component: uslugiTemplate,
-            context: {
-                slug,
-            },
-        });
-    });
-
-
-
-
 
     const queryBlog = await graphql(`
         {

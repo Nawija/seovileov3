@@ -3,27 +3,28 @@
 @tailwind utilities;
 
 #descriptionHtml div,
-#descriptionHtml p {
-    @apply mb-6;
+#descriptionHtml p,
+#descriptionHtml img {
+    @apply my-6;
 }
 
 #descriptionHtml a {
-    @apply text-emerald-700 underline font-medium;
+    @apply text-blue-700 underline font-medium;
 }
 
 :root {
+    --body-bg-color: white;
     --first-color: black;
     --second-color: rgb(251, 251, 251);
     --burger-color: #2d3d4b;
 }
 
-html {
-    scroll-padding-top: 50px;
-}
-
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: #f8f8f8;
+    background-color: var(--body-bg-color);
+}
+.fill-body-bg-color{
+    fill: var(--body-bg-color);
 }
 
 .first-color {

@@ -29,8 +29,8 @@ const Hero = () => {
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <path
+                        className="fill-body-bg-color"
                         d="M0 37.9955C0 37.9955 458.5 122.495 1002 37.9955C1545.5 -46.5045 2004 37.9955 2004 37.9955V153.996H0V37.9955Z"
-                        fill="#f8f8f8"
                     />
                 </svg>
             </div>

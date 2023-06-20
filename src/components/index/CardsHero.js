@@ -4,7 +4,7 @@ const CardsHero = () => {
     return (
         <section class="container max-w-screen-xl mt-4 lg:-mt-20 mb-6 md:mb-24 mx-auto">
             <div class=" text-gray-800 text-center">
-                <div class="grid lg:gap-x-12 md:grid-cols-3 lg:px-4">
+                <div class="grid lg:gap-x-3 md:grid-cols-3 lg:px-6">
                     <div class="mb-12 lg:mb-0">
                         <div class="rounded-lg shadow-xl h-full block bg-white/60 backdrop-blur-xl w-[90%] sm:w-[90%] lg:w-full mx-auto px-4">
                             <div class="flex justify-center">
