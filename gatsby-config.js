@@ -4,7 +4,7 @@
 
 module.exports = {
     siteMetadata: {
-        title: `Stwórz swoja stronę internetową`,
+        title: ``,
         description: `Tworzenie Szybkich i Przyjaznych dla SEO Stron Internetowych z Niezależnym Freelancerem Korzystającym z Technologii GatsbyJS`,
         author: `Seovileo`,
         siteUrl: `https://seovileo.pl`,
