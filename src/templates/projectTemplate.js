@@ -1,9 +1,10 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql, Link } from "gatsby";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import HeroLinks from "../components/HeroLinks";
 
 import Desktop from "../assets/liveSvg/desktop.svg";
 import Tablet from "../assets/liveSvg/tablet.svg";
@@ -178,16 +179,7 @@ const ProjectTemplate = ({
                     </div>
                 )}
 
-                <section className="relative flex items-center min-h-[13rem] overflow-hidden max-h-24 justify-center w-full">
-                    <div
-                        className="w-full h-40 bg-contain bg-repeat"
-                        style={{
-                            backgroundImage: `url(${datoCmsPortfolio.img.url})`,
-                        }}
-                    >
-                        <div className="w-full h-full bg-gradient-to-tr from-amber-800/50 to-emerald-900 absolute top-0 left-0" />
-                    </div>
-                </section>
+                <HeroLinks />
 
                 <section class="container -mt-36 lg:-mt-28 px-6 mx-auto">
                     <section class=" mb-6 md:mb-12 text-gray-800">
@@ -208,7 +200,7 @@ const ProjectTemplate = ({
                                             >
                                                 <div className="w-6 h-6">
                                                     <FacebookIcon
-                                                        size={35}
+                                                        size={33}
                                                         round={true}
                                                     />
                                                 </div>
@@ -223,7 +215,7 @@ const ProjectTemplate = ({
                                             >
                                                 <div className="w-6 h-6">
                                                     <TwitterIcon
-                                                        size={35}
+                                                        size={33}
                                                         round={true}
                                                     />
                                                 </div>
@@ -238,7 +230,7 @@ const ProjectTemplate = ({
                                             >
                                                 <div className="w-6 h-6">
                                                     <PinterestIcon
-                                                        size={35}
+                                                        size={33}
                                                         round={true}
                                                     />
                                                 </div>
@@ -253,7 +245,7 @@ const ProjectTemplate = ({
                                             >
                                                 <div className="w-6 h-6">
                                                     <WhatsappIcon
-                                                        size={35}
+                                                        size={33}
                                                         round={true}
                                                     />
                                                 </div>

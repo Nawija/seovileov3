@@ -91,13 +91,17 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
     query MyQuery {
-        allDatoCmsPortfolio(sort: { data: DESC }, limit: 4) {
+        allDatoCmsPortfolio(sort: { data: DESC }) {
             edges {
                 node {
                     data
                     img {
-                        alt
-                        gatsbyImageData
+                        gatsbyImageData(
+                            placeholder: NONE
+                            height: 160
+                            width: 176
+                            forceBlurhash: false
+                        )
                     }
                     krotkiTekst
                     link
@@ -110,6 +114,6 @@ export const query = graphql`
     }
 `;
 
-export const Head = () => <Seo title="Strona wwww" />;
+export const Head = () => <Seo title="Strona wwww projekty - seovileo.pl" />;
 
 export default IndexPage;

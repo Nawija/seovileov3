@@ -13,8 +13,12 @@ const Usługi = () => {
                 edges {
                     node {
                         img {
-                            alt
-                            gatsbyImageData
+                            gatsbyImageData(
+                                placeholder: NONE
+                                height: 64
+                                width: 64
+                                forceBlurhash: false
+                            )
                         }
                         opis
                         title
@@ -186,6 +190,6 @@ const Usługi = () => {
     );
 };
 
-export const Head = () => <Seo title="Strona wwww" />;
+export const Head = () => <Seo title="Usługi Seovileo - Strony Seo Logo Design" />;
 
 export default Usługi;

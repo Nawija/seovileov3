@@ -22,7 +22,7 @@ import {
 
 const ServiceTemp = ({
     pageContext: { slug },
-    data: { datoCmsUsluga, allDatoCmsUsluga },
+    data: { datoCmsUsluga, allDatoCmsUsluga, allDatoCmsBlog },
 }) => {
     const [navbar, setNavbar] = useState(false);
     const [itemsPosition, setItemsPosition] = useState(false);
@@ -94,7 +94,7 @@ const ServiceTemp = ({
 
                 <section
                     id="wrapperFixed"
-                    className={`flex justify-start w-full lg:w-[24%] mb-6 lg:mb-12 ${
+                    className={`flex justify-center lg:justify-start w-full lg:w-[24%] mb-6 lg:mb-12 ${
                         itemsPosition ? "items-end" : "items-start"
                     }`}
                 >
@@ -176,6 +176,35 @@ const ServiceTemp = ({
                     </div>
                 </section>
             </div>
+            <div className="bg-gray-100 py-8 md:py-12 lg:py-16">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 lg:gap-8 xl:gap-16 xl:ml-32 max-w-screen-xl mx-auto">
+                    {allDatoCmsBlog.edges.map(({ node }) => (
+                        <Link
+                            to={`/blog/` + node.slug}
+                            className="flex border border-transparent md:hover:border-gray-300 transition-colors rounded-lg mx-6 flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6"
+                        >
+                            <div className=" w-full lg:w-40 h-56 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
+                                <GatsbyImage
+                                    className="object-cover object-center absolute inset-0"
+                                    image={getImage(node.img.gatsbyImageData)}
+                                    alt={node.title}
+                                    title={node.title}
+                                />
+                            </div>
+
+                            <div className="flex flex-col gap-2">
+                                <h3 className="text-gray-900 w-full text-xl font-bold">
+                                    {node.title}
+                                </h3>
+
+                                <p className="text-gray-800 w-full">
+                                    {node.smallDescription}
+                                </p>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </div>
         </Layout>
     );
 };
@@ -230,6 +259,24 @@ export const query = graphql`
                             forceBlurhash: false
                             placeholder: NONE
                         )
+                    }
+                }
+            }
+        }
+        allDatoCmsBlog(sort: { position: ASC }) {
+            edges {
+                node {
+                    description
+                    img {
+                        alt
+                        gatsbyImageData
+                    }
+                    slug
+                    smallDescription
+                    title
+                    tag {
+                        description
+                        title
                     }
                 }
             }
