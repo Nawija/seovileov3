@@ -2,13 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-#descriptionHtml div,
-#descriptionHtml p,
-#descriptionHtml img {
-    @apply my-6;
+#descHtml span,
+#descHtml div,
+#descHtml p {
+    font-size: 19px !important;
+}
+#descHtml div,
+#descHtml p,
+#descHtml img {
+    margin: 1.5rem 0;
+}
+#descHtml h2,
+#descHtml h2 strong {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-#descriptionHtml a {
+#descHtml a {
     @apply text-blue-700 underline font-medium;
 }
 
@@ -23,7 +34,7 @@ body {
     font-family: "Open Sans", sans-serif;
     background-color: var(--body-bg-color);
 }
-.fill-body-bg-color{
+.fill-body-bg-color {
     fill: var(--body-bg-color);
 }
 
