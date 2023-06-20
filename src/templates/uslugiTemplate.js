@@ -108,7 +108,7 @@ const ServiceTemp = ({
                             </p>
                             <div className="flex items-center justify-start space-x-4 mx-3 my-4">
                                 <FacebookShareButton
-                                    url={`https://seovileo.pl/blog/${datoCmsUsluga.slug}`}
+                                    url={`https://seovileo.pl/${datoCmsUsluga.slug}`}
                                     quote={datoCmsUsluga.title}
                                     hashtag="#seovileo"
                                 >
@@ -117,7 +117,7 @@ const ServiceTemp = ({
                                     </div>
                                 </FacebookShareButton>
                                 <TwitterShareButton
-                                    url={`https://seovileo.pl/blog/${datoCmsUsluga.slug}`}
+                                    url={`https://seovileo.pl/${datoCmsUsluga.slug}`}
                                     title={datoCmsUsluga.descUsluga[0].title}
                                     hashtags={["seovileo"]}
                                 >
@@ -126,7 +126,7 @@ const ServiceTemp = ({
                                     </div>
                                 </TwitterShareButton>
                                 <PinterestShareButton
-                                    url={`https://seovileo.pl/blog/${datoCmsUsluga.slug}`}
+                                    url={`https://seovileo.pl/${datoCmsUsluga.slug}`}
                                     media={datoCmsUsluga.descUsluga[0].img.url}
                                     summary={datoCmsUsluga.title}
                                     source="seovileo.pl"
@@ -136,7 +136,7 @@ const ServiceTemp = ({
                                     </div>
                                 </PinterestShareButton>
                                 <WhatsappShareButton
-                                    url={`https://seovileo.pl/blog/${datoCmsUsluga.slug}`}
+                                    url={`https://seovileo.pl/${datoCmsUsluga.slug}`}
                                     title={datoCmsUsluga.title}
                                     summary={datoCmsUsluga.desc}
                                     source="seovileo.pl"
