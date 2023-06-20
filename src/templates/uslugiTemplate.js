@@ -61,7 +61,7 @@ const ServiceTemp = ({
                         <div class="mx-auto text-start lg:text-left md:px-12">
                             <div class="flex flex-col items-center">
                                 <div className="flex flex-col items-center justify-center">
-                                    <h1 class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-800 font-bold text-start pb-2 mb-5">
+                                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-800 font-bold text-start pb-2 mb-3">
                                         {datoCmsUsluga.descUsluga[0].title}
                                     </h1>
                                     <GatsbyImage
@@ -76,7 +76,7 @@ const ServiceTemp = ({
                                     />
                                 </div>
 
-                                <div class="block mt-1 -tracking-wide rounded-lg py-3 text-start">
+                                <div class="block -mt-6 -tracking-wide rounded-lg text-start">
                                     <div class="text-lg pb-2">
                                         <div
                                             id="descHtml"
