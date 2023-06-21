@@ -9,7 +9,7 @@ const Kontakt = () => (
     <Layout>
         <HeroLinks />
 
-        <section className="flex flex-col lg:flex-row items-start justify-center max-w-screen-2xl mx-auto px-3">
+        <section className="flex flex-col lg:flex-row items-start justify-center max-w-[1400px] mx-auto px-3">
             <div class="py-6 sm:py-8 lg:py-12 w-full lg:w-1/3 md:w-3/4 order-1">
                 <div class="mx-auto max-w-screen-xl px-4 md:px-8">
                     <div class="grid gap-8 lg:gap-12">
@@ -360,7 +360,7 @@ const Kontakt = () => (
                     </p>
                     <Link
                         to="mailto:seovileo@email.com"
-                        class="text-amber-500 w-max mx-auto"
+                        class="text-yellow-700 hover:text-yellow-600 transition-colors w-max mx-auto"
                     >
                         seovileo@gmail.com
                     </Link>
@@ -423,7 +423,7 @@ const Kontakt = () => (
                                 </div>
                             </div>
                             <div class="p-2 w-full">
-                                <button class="flex mx-auto text-white bg-amber-500 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-600 rounded text-lg">
+                                <button class="flex mx-auto text-white bg-yellow-600 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-700 rounded text-sm transition-colors">
                                     Wyślij Wiadomość
                                 </button>
                             </div>

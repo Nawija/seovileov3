@@ -25,14 +25,9 @@ const Header = () => {
     return (
         <header
             className="
-                    z-50 mx-auto sticky top-0 text-center
+                    z-50 mx-auto fixed w-full top-0 text-center
             "
         >
-            <div
-                className={
-                    "absolute top-0 bg-transparent mx-auto transition-colors w-full"
-                }
-            >
                 <div
                     className={`h-full w-full mx-auto py-1 absolute top-0 -z-10 transition-colors duration-300 ${
                         navbar
@@ -215,7 +210,6 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
-            </div>
         </header>
     );
 };
