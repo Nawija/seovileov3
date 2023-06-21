@@ -42,6 +42,10 @@ function Seo({ description, title, children }) {
             />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={metaDescription} />
+            <meta
+                name="msvalidate.01"
+                content="EA5601D9EBC3A3E3F1678CF47F3B487F"
+            />
             {children}
         </>
     );
