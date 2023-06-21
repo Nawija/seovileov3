@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <HeroLinks />
-            <section class="container -mt-24 lg:-mt-32 px-2 mx-auto">
+            <div class="container -mt-24 lg:-mt-32 px-2 mx-auto">
                 <section class=" mb-6 md:mb-12 text-gray-800">
                     <div class="container mx-auto xl:px-32 text-center lg:text-left">
                         <div class="flex flex-col lg:flex-row items-center lg:items-start">
@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
                         </div>
                     </div>
                 </section>
-            </section>
+            </div>
 
             <section
                 id="projekty"
@@ -106,7 +106,6 @@ export const query = graphql`
                     krotkiTekst
                     link
                     naglowek
-                    seoTekst
                     slug
                 }
             }
