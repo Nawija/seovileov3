@@ -44,9 +44,7 @@ const ProjectTemplate = ({
                                 <div className="lg:py-12 md:px-12 lg:-mr-14">
                                     <GatsbyImage
                                         className="h-72 w-72 xl:py-64 xl:px-64 rounded-xl shadow-lg"
-                                        image={getImage(
-                                            datoCmsBlog.img
-                                        )}
+                                        image={getImage(datoCmsBlog.img)}
                                         alt={datoCmsBlog.title}
                                     />
                                     <div className="flex items-start justify-end mx-3 space-x-4 my-4">
@@ -66,9 +64,7 @@ const ProjectTemplate = ({
                                             <TwitterShareButton
                                                 url={`https://seovileo.pl/blog/${datoCmsBlog.slug}`}
                                                 title={datoCmsBlog.title}
-                                                hashtags={[
-                                                    "seovileo",
-                                                ]}
+                                                hashtags={["seovileo"]}
                                             >
                                                 <div className="w-6 h-6">
                                                     <TwitterIcon
@@ -206,7 +202,10 @@ const ProjectTemplate = ({
 };
 
 export const Head = ({ data: { datoCmsBlog } }) => (
-    <Seo title={datoCmsBlog.title} />
+    <Seo
+        title={datoCmsBlog.title}
+        siteUrl={`https://seovileo.pl/blog/` + datoCmsBlog.slug}
+    />
 );
 
 export default ProjectTemplate;

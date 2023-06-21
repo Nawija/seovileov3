@@ -213,6 +213,7 @@ export const Head = ({ data: { datoCmsUsluga } }) => (
     <Seo
         title={datoCmsUsluga.seo.title}
         description={datoCmsUsluga.seo.description}
+        siteUrl={`https://seovileo.pl/` + datoCmsUsluga.slug}
     />
 );
 

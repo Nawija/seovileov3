@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import HeroLinks from "../components/HeroLinks";
 
-const IndexPage = ({ data }) => {
+const ProjectPage = ({ data }) => {
     const { allDatoCmsPortfolio } = data;
 
     return (
@@ -113,6 +113,11 @@ export const query = graphql`
     }
 `;
 
-export const Head = () => <Seo title="Strona wwww projekty - seovileo.pl" />;
+export const Head = () => (
+    <Seo
+        title="Strona wwww projekty - seovileo.pl"
+        siteUrl="https://seovileo.pl/projekty"
+    />
+);
 
-export default IndexPage;
+export default ProjectPage;

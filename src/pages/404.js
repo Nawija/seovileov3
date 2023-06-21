@@ -42,6 +42,6 @@ const ErrorPage = () => (
     </Layout>
 );
 
-export const Head = () => <Seo title="Strona 404" />;
+export const Head = () => <Seo title="Strona 404" siteUrl="https://seovileo.pl/404" />;
 
 export default ErrorPage;

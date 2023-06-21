@@ -510,5 +510,7 @@ seovileo@email.com"
     </Layout>
 );
 
-export const Head = () => <Seo title="Strona wwww" />;
+export const Head = () => (
+    <Seo title="Strona wwww" siteUrl="https://seovileo.pl/kontakt" />
+);
 export default Kontakt;

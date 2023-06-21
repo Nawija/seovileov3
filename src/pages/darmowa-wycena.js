@@ -513,5 +513,5 @@ const CalcPrice = () => {
     );
 };
 
-export const Head = () => <Seo title="Strony Internetowe" />;
+export const Head = () => <Seo title="Strony Internetowe" siteUrl="https://seovileo.pl/darmowa-wycena"/>;
 export default CalcPrice;

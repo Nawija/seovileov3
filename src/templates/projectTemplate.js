@@ -345,7 +345,10 @@ const ProjectTemplate = ({
 };
 
 export const Head = ({ data: { datoCmsPortfolio } }) => (
-    <Seo title={datoCmsPortfolio.naglowek} />
+    <Seo
+        title={datoCmsPortfolio.naglowek}
+        siteUrl={`https://seovileo.pl/` + datoCmsPortfolio.slug}
+    />
 );
 
 export default ProjectTemplate;

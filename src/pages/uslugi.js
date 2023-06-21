@@ -76,7 +76,10 @@ const Usługi = () => {
 };
 
 export const Head = () => (
-    <Seo title="Usługi Seovileo - Strony Seo Logo Design" />
+    <Seo
+        title="Usługi Seovileo - Strony Seo Logo Design"
+        siteUrl="https://seovileo.pl/uslugi"
+    />
 );
 
 export default Usługi;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-function Seo({ description, title, siteUrl, children }) {
+function Seo({ title, description, siteUrl, children }) {
     const { site } = useStaticQuery(
         graphql`
             query {
@@ -9,17 +9,18 @@ function Seo({ description, title, siteUrl, children }) {
                     siteMetadata {
                         title
                         description
-                        author
                         siteUrl
+                        author
                     }
                 }
             }
         `
     );
 
-    const metaDescription = description || site.siteMetadata.description;
     const defaultTitle = site.siteMetadata?.title;
-    const canonicalUrl = site.siteMetadata?.siteUrl;
+    const metaDescription = description || site.siteMetadata.description;
+    const canonicalUrl = siteUrl || site.siteMetadata.siteUrl;
+
 
     return (
         <>
@@ -28,10 +29,7 @@ function Seo({ description, title, siteUrl, children }) {
             <meta property="og:title" content={title} />
             <link rel="canonical" href={canonicalUrl} />
             <meta name="robots" content="index, follow" />
-            <meta
-                name="keywords"
-                content="seovileo strona internetowa www seo"
-            />
+            <meta name="keywords" content="seovileo" />
             <meta property="og:description" content={metaDescription} />
             <meta property="og:type" content="website" />
             <meta name="twitter:card" content="summary" />

@@ -27,5 +27,5 @@ const IndexPage = () => {
     );
 };
 
-export const Head = () => <Seo title="Strony Internetowe" />;
+export const Head = () => <Seo title="Szalenie szybkie strony internetowe - seovileo.pl" />;
 export default IndexPage;
