@@ -20,6 +20,8 @@ import {
     WhatsappShareButton,
 } from "react-share";
 
+import "../styles/template.css";
+
 const ServiceTemp = ({
     pageContext: { slug },
     data: { datoCmsUsluga, allDatoCmsUsluga, allDatoCmsBlog },
@@ -54,7 +56,7 @@ const ServiceTemp = ({
             <HeroLinks />
             <div
                 className="flex flex-col
-             lg:flex-row w-full z-10 -mt-10 md:-mt-2"
+             lg:flex-row w-full z-10 -mt-10 md:-mt-2 max-w-[1400px] mx-auto"
             >
                 <section class="container px-4 xl:px-24 mx-auto lg:w-4/5 xl:w-[90%]">
                     <section class=" text-gray-800">
@@ -177,7 +179,7 @@ const ServiceTemp = ({
                 </section>
             </div>
             <div className="bg-gray-100 py-8 md:py-12 lg:py-16">
-                <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 lg:gap-8 xl:gap-16 xl:ml-32 max-w-screen-xl mx-auto">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 lg:gap-8 max-w-screen-xl mx-auto">
                     {allDatoCmsBlog.edges.map(({ node }) => (
                         <Link
                             to={`/blog/` + node.slug}

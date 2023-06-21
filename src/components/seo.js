@@ -21,7 +21,6 @@ function Seo({ title, description, siteUrl, children }) {
     const metaDescription = description || site.siteMetadata.description;
     const canonicalUrl = siteUrl || site.siteMetadata.siteUrl;
 
-
     return (
         <>
             <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
@@ -32,6 +31,10 @@ function Seo({ title, description, siteUrl, children }) {
             <meta name="keywords" content="seovileo" />
             <meta property="og:description" content={metaDescription} />
             <meta property="og:type" content="website" />
+            <meta
+                property="og:image"
+                content="https://res.cloudinary.com/djseas9ht/image/upload/v1687364780/logo_Seovileo_1_1_sotedx.jpg"
+            />
             <meta name="twitter:card" content="summary" />
             <meta
                 name="viewport"

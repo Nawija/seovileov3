@@ -136,7 +136,7 @@ seovileo@email.com"
 
                         <div>
                             <Link
-                                to="/usługi"
+                                to="/uslugi"
                                 className=" transition duration-100 hoverLink linkFooter"
                             >
                                 Usługi

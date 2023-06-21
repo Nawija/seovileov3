@@ -138,7 +138,7 @@ const Header = () => {
                                         ? "font-semibold first-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                         : "font-semibold second-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                 }
-                                to="/usługi"
+                                to="/uslugi"
                             >
                                 Usługi
                             </Link>
