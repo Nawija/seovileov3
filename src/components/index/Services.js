@@ -29,7 +29,7 @@ const ServicesCompon = () => {
             <div className="absolute inset-0 -z-20 w-full h-full bg-gradient-to-t from-[#1f2d57] to-[#0C1530]" />
 
             <div
-                className="absolute inset-0 -z-10 opacity-10 bg-fixed"
+                className="absolute inset-0 -z-10 opacity-20 bg-fixed"
                 style={{
                     backgroundImage:
                         "url(https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1693&q=80)",
