@@ -94,7 +94,7 @@ const Header = () => {
                     <ul
                         className={`absolute top-full left-0 w-full text-center ${
                             showMenu
-                                ? "text-lg bg-gray-900 opacity-100 transition py-2 -translate-y-0 -z-10"
+                                ? "text-lg bg-gray-900 space-y-5 lg:space-y-0 opacity-100 transition pt-2 pb-12 lg:pb-2 -translate-y-0 -z-10"
                                 : "py-2 lg:opacity-100 lg:static lg:flex lg:flex-row lg:items-center lg:justify-end lg:top-0 lg:translate-y-0 lg:py-0 opacity-0 -translate-y-full transition -z-10 lg:z-10 lg:ml-8"
                         }`}
                     >
@@ -105,8 +105,8 @@ const Header = () => {
                                 aria-label="Strona Główna"
                                 className={
                                     navbar && !showMenu
-                                        ? "font-semibold first-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
-                                        : "font-semibold second-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        ? "font-semibold first-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        : "font-semibold second-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                 }
                                 to="/"
                             >
@@ -120,8 +120,8 @@ const Header = () => {
                                 aria-label="Projekty"
                                 className={
                                     navbar && !showMenu
-                                        ? "font-semibold first-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
-                                        : "font-semibold second-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        ? "font-semibold first-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        : "font-semibold second-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                 }
                                 to="/projekty"
                             >
@@ -135,8 +135,8 @@ const Header = () => {
                                 aria-label="Usługi"
                                 className={
                                     navbar && !showMenu
-                                        ? "font-semibold first-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
-                                        : "font-semibold second-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        ? "font-semibold first-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        : "font-semibold second-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                 }
                                 to="/usługi"
                             >
@@ -151,8 +151,8 @@ const Header = () => {
                                 aria-label="Blog"
                                 className={
                                     navbar && !showMenu
-                                        ? "font-semibold first-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
-                                        : "font-semibold second-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        ? "font-semibold first-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        : "font-semibold second-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                 }
                                 to="/blog"
                             >
@@ -166,8 +166,8 @@ const Header = () => {
                                 aria-label="Kontakt"
                                 className={
                                     navbar && !showMenu
-                                        ? "font-semibold first-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
-                                        : "font-semibold second-color text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        ? "font-semibold first-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
+                                        : "font-semibold second-color text-base lg:text-sm hover-link transition-colors px-2 py-2 rounded-lg"
                                 }
                                 to="/kontakt"
                             >
@@ -179,7 +179,7 @@ const Header = () => {
                                 onClick={closeMenu}
                                 title="Darmowa Wycena"
                                 aria-label="Darmowa Wycena"
-                                className={`flex items-center justify-center border-yellow-500 text-sm w-max mx-auto font-semibold shadow-lg px-4 py-2 border rounded-lg transition md:hover:scale-[.98] ${
+                                className={`flex items-center justify-center border-yellow-500 text-base lg:text-sm w-max mx-auto font-semibold shadow-lg px-4 py-2 border rounded-lg transition md:hover:scale-[.98] ${
                                     navbar && !showMenu
                                         ? ""
                                         : "text-yellow-500 shadow-yellow-400/30 md:hover:shadow-xl"
