@@ -187,7 +187,7 @@ const ServiceTemp = ({
                             className="flex border border-transparent md:hover:border-yellow-500 transition-colors rounded-lg p-4 flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6 overflow-hidden"
                         >
                             <GatsbyImage
-                                style={{ height: "200px", width: "90%" }}
+                                style={{ height: "200px", width: "90%",borderRadius:"8px" }}
                                 image={getImage(node.img.gatsbyImageData)}
                                 alt={node.title}
                                 title={node.title}
