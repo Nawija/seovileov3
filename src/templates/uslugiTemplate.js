@@ -67,7 +67,7 @@ const ServiceTemp = ({
                                         {datoCmsUsluga.descUsluga[0].title}
                                     </h1>
                                     <GatsbyImage
-                                        className="rounded-xl"
+                                        className="rounded-xl w-full h-96"
                                         image={getImage(
                                             datoCmsUsluga.descUsluga[0].img
                                         )}
@@ -243,7 +243,7 @@ export const query = graphql`
                 desc
                 img {
                     alt
-                    gatsbyImageData(height: 1248, placeholder: NONE)
+                    gatsbyImageData(height: 600, placeholder: NONE)
                     title
                     url
                 }
