@@ -178,23 +178,22 @@ const ServiceTemp = ({
                     </div>
                 </section>
             </div>
-            <div className="bg-gray-100 py-8 md:py-12 lg:py-16">
+            <div className="bg-gray-100 py-12 md:py-16 lg:py-20 mt-4">
+                    <p className="text-center text-xl font-semibold pb-6 md:pb-12 lg:pb-16 text-gray-700">Ciekawe Posty:</p>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 lg:gap-8 max-w-screen-xl mx-auto">
                     {allDatoCmsBlog.edges.map(({ node }) => (
                         <Link
                             to={`/blog/` + node.slug}
-                            className="flex border border-transparent md:hover:border-gray-300 transition-colors rounded-lg mx-6 flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6"
+                            className="flex border border-transparent md:hover:border-yellow-500 transition-colors rounded-lg p-4 flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6 overflow-hidden"
                         >
-                            <div className=" w-full lg:w-40 h-56 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative">
-                                <GatsbyImage
-                                    className="object-cover object-center absolute inset-0"
-                                    image={getImage(node.img.gatsbyImageData)}
-                                    alt={node.title}
-                                    title={node.title}
-                                />
-                            </div>
+                            <GatsbyImage
+                                style={{ height: "200px", width: "90%" }}
+                                image={getImage(node.img.gatsbyImageData)}
+                                alt={node.title}
+                                title={node.title}
+                            />
 
-                            <div className="flex flex-col gap-2">
+                            <div className="flex flex-col gap-2 lg:w-2/3">
                                 <h3 className="text-gray-900 w-full text-xl font-bold">
                                     {node.title}
                                 </h3>
@@ -271,8 +270,13 @@ export const query = graphql`
                 node {
                     description
                     img {
-                        alt
-                        gatsbyImageData
+                        gatsbyImageData(
+                            placeholder: NONE
+                            height: 300
+                            width: 300
+                            aspectRatio: 0.5
+                            outputPixelDensities: 0.5
+                        )
                     }
                     slug
                     smallDescription
