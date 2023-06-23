@@ -12,19 +12,18 @@ const CalcPrice = () => {
             allDatoCmsBlog(sort: { position: ASC }, limit: 5) {
                 edges {
                     node {
-                        description
                         img {
-                            alt
-                            gatsbyImageData
+                            gatsbyImageData(
+                                placeholder: NONE
+                                height: 178
+                                width: 600
+                                forceBlurhash: false
+                            )
                         }
+                        desc
                         slug
-                        smallDescription
+                        sdesc
                         title
-                        tag {
-                            description
-                            title
-                            twitterCard
-                        }
                     }
                 }
             }
@@ -54,11 +53,10 @@ const CalcPrice = () => {
     return (
         <Layout>
             <HeroLinks />
-            <div className="flex flex-col items-center justify-center text-center -mt-12 sm:-mt-5 mb-16 px-2">
-                <div className="font-semibold text-lg lg:text-xl capitalize mb-4 sm:mb-8">
-                    <h2>Kalkulator wyceny strony internetowej </h2>
-                    <h1>Wycena strony internetowej</h1>
-                </div>
+            <div className="flex flex-col items-center justify-center text-center -mt-10 mb-16 px-2">
+                <h1 className="title">
+                    Kalkulator wyceny strony internetowej{" "}
+                </h1>
                 <div className="text-sm pl-4 text-start w-[90%] sm:w-4/5 md:w-4/6 lg:w-full mx-auto max-w-screen-2xl lg:text-center">
                     <p className="mb-2 lg:mb-1 text-base text-gray-700">
                         Wycena strony internetowej Kalkulator wyceny strony
@@ -159,21 +157,6 @@ const CalcPrice = () => {
                         <p className="text-sm text-gray-700 mt-1 px-1 md:w-[80%]">
                             Opisz zakres usług jakie wykonuje Twoja firma, ma to
                             również wpływ na ilość podstron.
-                        </p>
-                    </div>
-                    <div className="flex flex-col items-start justify-start px-1 py-3">
-                        <label className="font-semibold mb-1" htmlFor="t3">
-                            Opisz konkurencję
-                        </label>
-                        <textarea
-                            className="mr-2 w-full px-4 py-3 h-24 rounded-xl"
-                            type="text"
-                            id="t3"
-                            name="Konkurencja"
-                        />
-                        <p className="text-sm text-gray-700 mt-1 px-1 md:w-[80%]">
-                            Możesz opisać konkurencję lub załączyć linki do ich
-                            stron internetowych.
                         </p>
                     </div>
                     <div className="flex flex-col items-start justify-start px-1 py-3">
@@ -413,10 +396,19 @@ const CalcPrice = () => {
                                 />
                                 <label htmlFor="8">Chat Online</label>
                             </div>
+                            <div>
+                                <input
+                                    className="mr-2 scale-110"
+                                    type="checkbox"
+                                    id="inne"
+                                    name="inne"
+                                />
+                                <label htmlFor="inne">Inne</label>
+                            </div>
                         </div>
                         <div className="mb-2 mt-2">
                             <p className="font-semibold mb-1">
-                                Kto dostarczy treści? *
+                                Kto dostarczy treści?
                             </p>
                             <div className="ml-2 py-2">
                                 <div>
@@ -461,24 +453,24 @@ const CalcPrice = () => {
                         <p className="font-bold w-28 md:text-xl text-emerald-700">
                             Cena: {totalValue}
                         </p>
-                        <button className="inline-block px-3 md:px-7 py-3 bgLogoColor text-white font-medium text-sm leading-snug uppercase rounded bg-gradient-to-tr from-gray-900 to-gray-700 shadow-gray-900 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-200 ease-in-out;">
+                        <button className="inline-block px-3 md:px-7 py-3 bgLogoColor text-white font-medium text-sm leading-snug uppercase rounded bg-gradient-to-tr from-gray-900 to-gray-700 shadow-gray-900 hover:bg-gray-800 hover:shadow-lg focus:bg-gray-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition ease-in-out;">
                             Wyślij Zapytanie
                         </button>
                     </div>
                 </form>
-                <div className="flex flex-col space-y-5 lg:ml-6 w-full lg:w-1/4">
+                <div className="flex flex-col space-y-5 lg:ml-6 w-full sm:px-8 lg:px-0 md:w-3/4 lg:w-1/4">
                     <p className="font-semibold mx-6">Ciekawe Posty:</p>
                     {data.allDatoCmsBlog.edges.map(({ node }) => (
                         <div className="flex mx-6 flex-col items-start gap-4 lg:gap-6">
                             <Link
                                 to={`/blog/` + node.slug}
-                                className="group w-full md:w-24 lg:w-full h-44 md:h-22 lg:h-44 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
+                                className="group w-full lg:w-full h-44 lg:h-44 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
                             >
                                 <GatsbyImage
-                                    className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
+                                    className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-105 transition"
                                     loading="eager"
-                                    image={getImage(node.img.gatsbyImageData)}
-                                    alt={node.img.title}
+                                    image={getImage(node.img)}
+                                    alt={node.title}
                                 />
                             </Link>
 
@@ -493,7 +485,7 @@ const CalcPrice = () => {
                                 </h2>
 
                                 <p className="text-gray-500 w-full text-sm md:w-[90%]">
-                                    {node.smallDescription}
+                                    {node.sdesc}
                                 </p>
 
                                 <div className="mb-12">
@@ -513,5 +505,10 @@ const CalcPrice = () => {
     );
 };
 
-export const Head = () => <Seo title="Strony Internetowe" siteUrl="https://seovileo.pl/darmowa-wycena"/>;
+export const Head = () => (
+    <Seo
+        title="Strony Internetowe"
+        siteUrl="https://seovileo.pl/darmowa-wycena"
+    />
+);
 export default CalcPrice;

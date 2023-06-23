@@ -206,7 +206,12 @@ export const query = graphql`
             img {
                 url
                 alt
-                gatsbyImageData
+                gatsbyImageData(
+                    placeholder: NONE
+                    height: 512
+                    width: 512
+                    forceBlurhash: false
+                )
             }
             desc
             slug
@@ -219,7 +224,12 @@ export const query = graphql`
                 node {
                     img {
                         alt
-                        gatsbyImageData
+                        gatsbyImageData(
+                            placeholder: NONE
+                            height: 224
+                            width: 528
+                            forceBlurhash: false
+                        )
                     }
                     slug
                     sdesc

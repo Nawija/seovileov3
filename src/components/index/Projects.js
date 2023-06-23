@@ -5,22 +5,18 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const ProjectsCompon = () => {
     const data = useStaticQuery(graphql`
         {
-            allDatoCmsPortfolio(sort: { data: DESC }, limit: 4) {
+            allDatoCmsProjekty(sort: { data: DESC }, limit: 4) {
                 edges {
                     node {
-                        data
                         img {
                             gatsbyImageData(
                                 width: 200
-                                aspectRatio: 7
-                                placeholder: BLURRED
+                                placeholder: NONE
                                 height: 200
                             )
                         }
-                        krotkiTekst
-                        link
-                        naglowek
-                        seoTekst
+                        data
+                        title
                         slug
                     }
                 }
@@ -51,42 +47,34 @@ const ProjectsCompon = () => {
                     </p>
                 </div>
                 <div class="pb-6 grid grid-cols-2 gap-4 sm:px-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-12 lg:gap-4 xl:gap-8">
-                    {data.allDatoCmsPortfolio.edges.map(({ node }) => (
+                    {data.allDatoCmsProjekty.edges.map(({ node }) => (
                         <div>
                             <Link
-                                to={node.slug}
+                                to={"/projekty/" + node.slug}
                                 class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gray-100 shadow-xl md:h-64"
                             >
                                 <GatsbyImage
                                     className="w-full h-full hover:scale-110 transition-transform duration-200"
                                     loading="lazy"
                                     image={getImage(node.img)}
-                                    alt={node.naglowek}
+                                    alt={node.title}
                                 />
                                 <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-500 via-transparent to-transparent opacity-50"></div>
 
                                 <span class="absolute bg-gray-900/50 text-[12px] rounded-3xl px-2 ml-2 mb-3 inline-block text-white md:ml-3">
-                                    {node.naglowek}
+                                    {node.title}
                                 </span>
                             </Link>
-                            <div className="flex flex-col items-start justify-center text-start mt-4">
-                                <div className="flex w-full px-4 mb-4 md:flex-row flex-wrap flex-col items-center justify-between">
-                                    <p className="text-gray-700 text-center sm:text-start sm:w-[40%] text-sm">
-                                        {node.data}
-                                    </p>
-                                    <p className="text-gray-800 font-medium text-center sm:text-start sm:w-[80%] text-sm">
-                                        <strong className="font-medium">
-                                            Projekt
-                                        </strong>{" "}
-                                        {node.naglowek}
-                                    </p>
-                                    <Link
-                                        to={node.slug}
-                                        className="text-center border-b-2 border-emerald-700 px-2 mt-2 py-2 text-emerald-700 md:hover:tracking-wider md:hover:text-amber-500 md:hover:border-amber-400  transition-all duration-200 md:font-bold text-sm rounded-lg font-semibold"
-                                    >
-                                        Zobacz &#8594;
-                                    </Link>
-                                </div>
+                            <div className="flex w-full px-4 my-4 flex-row items-center justify-between">
+                                <p className="text-gray-700 text-center sm:text-start text-sm">
+                                    {node.data}
+                                </p>
+                                <Link
+                                    to={"/projekty/" + node.slug}
+                                    className="text-gray-800 font-bold text-center sm:text-start text-sm"
+                                >
+                                    Więcej
+                                </Link>
                             </div>
                         </div>
                     ))}

@@ -36,7 +36,7 @@ const Usługi = () => {
             <HeroLinks />
             <section className="relative">
                 <div className="mx-auto max-w-screen-xl px-4 md:px-8 -mt-10">
-                    <h1 className="text-center text-2xl lg:text-3xl mb-4 text-[#006647] font-bold tracking-wide ">
+                    <h1 className="title">
                         Usługi Seovileo
                     </h1>
                     <div className="mb-12 max-w-screen-sm mx-auto text-center">

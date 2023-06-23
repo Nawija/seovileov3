@@ -26,9 +26,9 @@ import {
 
 const ProjectTemplate = ({
     pageContext: { slug },
-    data: { datoCmsPortfolio, allDatoCmsPortfolio },
+    data: { datoCmsProjekty, allDatoCmsProjekty },
 }) => {
-    const image = getImage(datoCmsPortfolio.img);
+    const image = getImage(datoCmsProjekty.img);
 
     const [showLive, setLive] = useState(false);
     const [hiddenBody, setBody] = useState(false);
@@ -36,7 +36,7 @@ const ProjectTemplate = ({
     const web = () => {
         setLive(!showLive);
         setBody(!hiddenBody);
-        setUrlLive(datoCmsPortfolio.link);
+        setUrlLive(datoCmsProjekty.link);
     };
 
     let [changeWidthLive, setChangeWidthLive] = useState("h-full w-full");
@@ -189,13 +189,13 @@ const ProjectTemplate = ({
                                     <GatsbyImage
                                         className="h-72 w-72 md:h-96 md:w-96 lg:py-72 lg:px-80 rounded-lg shadow-lg"
                                         image={image}
-                                        alt={datoCmsPortfolio.title}
+                                        alt={datoCmsProjekty.title}
                                     />
                                     <div className="flex items-start justify-end mx-3 space-x-4 my-4">
                                         <div className=" space-x-4">
                                             <FacebookShareButton
-                                                url={`https://seovileo.pl/${datoCmsPortfolio.slug}`}
-                                                quote={datoCmsPortfolio.title}
+                                                url={`https://seovileo.pl/${datoCmsProjekty.slug}`}
+                                                quote={datoCmsProjekty.title}
                                                 hashtag="#seovileo"
                                             >
                                                 <div className="w-6 h-6">
@@ -206,8 +206,8 @@ const ProjectTemplate = ({
                                                 </div>
                                             </FacebookShareButton>
                                             <TwitterShareButton
-                                                url={`https://seovileo.pl/${datoCmsPortfolio.slug}`}
-                                                title={datoCmsPortfolio.title}
+                                                url={`https://seovileo.pl/${datoCmsProjekty.slug}`}
+                                                title={datoCmsProjekty.title}
                                                 hashtags={[
                                                     "seovileo",
                                                     "strona internetowa",
@@ -221,10 +221,10 @@ const ProjectTemplate = ({
                                                 </div>
                                             </TwitterShareButton>
                                             <PinterestShareButton
-                                                url={`https://seovileo.pl/${datoCmsPortfolio.slug}`}
-                                                media={datoCmsPortfolio.img.url}
+                                                url={`https://seovileo.pl/${datoCmsProjekty.slug}`}
+                                                media={datoCmsProjekty.img.url}
                                                 summary={
-                                                    datoCmsPortfolio.smallDescription
+                                                    datoCmsProjekty.title
                                                 }
                                                 source="Seovileo.pl"
                                             >
@@ -236,10 +236,10 @@ const ProjectTemplate = ({
                                                 </div>
                                             </PinterestShareButton>
                                             <WhatsappShareButton
-                                                url={`https://seovileo.pl/${datoCmsPortfolio.slug}`}
-                                                title={datoCmsPortfolio.title}
+                                                url={`https://seovileo.pl/${datoCmsProjekty.slug}`}
+                                                title={datoCmsProjekty.title}
                                                 summary={
-                                                    datoCmsPortfolio.smallDescription
+                                                    datoCmsProjekty.title
                                                 }
                                                 source="Seovileo.pl"
                                             >
@@ -256,10 +256,10 @@ const ProjectTemplate = ({
                                 <div class="mb-12 lg:mb-0">
                                     <div class="block rounded-lg px-6 py-4 lg:py-12 md:px-12 lg:-mr-14 text-start">
                                         <h1 class="text-3xl font-bold pb-2">
-                                            {datoCmsPortfolio.naglowek}
+                                            {datoCmsProjekty.title}
                                         </h1>
                                         <p class="text-gray-500 mb-4 pb-2">
-                                            {datoCmsPortfolio.seoTekst}
+                                            {datoCmsProjekty.sdesc}
                                         </p>
 
                                         <Link
@@ -287,65 +287,15 @@ const ProjectTemplate = ({
                         </div>
                     </section>
                 </section>
-
-                <section className="mt-2 mb-16 max-w-screen-xl mx-auto">
-                    <p className="ml-4 lg:ml-[10vw] mb-4 font-bold text-sm">
-                        Wiecej Projektów:
-                    </p>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16 xl:ml-32">
-                        {allDatoCmsPortfolio.edges.map(({ node }) => (
-                            <div className="flex mx-6 flex-col md:flex-row items-start gap-4 lg:gap-6">
-                                <Link
-                                    to={`/` + node.slug}
-                                    className="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
-                                >
-                                    <GatsbyImage
-                                        className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
-                                        image={getImage(node.img)}
-                                        alt={node.title}
-                                    />
-                                </Link>
-
-                                <div className="flex flex-col gap-2">
-                                    <span className="text-gray-400 text-sm">
-                                        {node.date}
-                                    </span>
-
-                                    <h2 className="text-gray-800 w-full md:w-[70%] text-xl font-bold">
-                                        <Link
-                                            to={`/` + node.slug}
-                                            className="hoverLink active:text-gray-900 transition duration-100"
-                                        >
-                                            {node.naglowek}
-                                        </Link>
-                                    </h2>
-
-                                    <p className="text-gray-500 w-full md:w-[70%]">
-                                        {node.krotkiTekst}
-                                    </p>
-
-                                    <div>
-                                        <Link
-                                            to={`/` + node.slug}
-                                            className="linkColor hoverLink active:text-gray-900 font-semibold transition duration-100"
-                                        >
-                                            Zobacz
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </section>
             </div>
         </Layout>
     );
 };
 
-export const Head = ({ data: { datoCmsPortfolio } }) => (
+export const Head = ({ data: { datoCmsProjekty } }) => (
     <Seo
-        title={datoCmsPortfolio.naglowek}
-        siteUrl={`https://seovileo.pl/` + datoCmsPortfolio.slug}
+        title={datoCmsProjekty.title}
+        siteUrl={`https://seovileo.pl/` + datoCmsProjekty.slug}
     />
 );
 
@@ -353,30 +303,27 @@ export default ProjectTemplate;
 
 export const query = graphql`
     query MyQuery($slug: String) {
-        datoCmsPortfolio(slug: { eq: $slug }) {
+        datoCmsProjekty(slug: { eq: $slug }) {
             img {
                 url
-                alt
                 gatsbyImageData(layout: FULL_WIDTH)
             }
-            smallDescription
-            krotkiTekst
+            sdesc
             link
-            naglowek
-            seoTekst
+            title
+            sdesc
             slug
         }
-        allDatoCmsPortfolio(sort: { data: DESC }) {
+        allDatoCmsProjekty(sort: { data: DESC }) {
             edges {
                 node {
                     img {
-                        alt
                         gatsbyImageData(layout: FULL_WIDTH)
                     }
-                    krotkiTekst
+                    sdesc
                     link
-                    naglowek
-                    seoTekst
+                    title
+                    sdesc
                     slug
                 }
             }
