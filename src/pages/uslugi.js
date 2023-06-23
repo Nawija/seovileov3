@@ -24,8 +24,13 @@ const Usługi = () => {
             }
         }
     `);
-    const [showFaq, setFaq] = useState(false);
-    const handeFaq = () => setFaq(!showFaq);
+    const [showFaq, setFaqState] = useState(false);
+    const handleFaq = (buttonId) => {
+        setFaqState((prevState) => ({
+            ...prevState,
+            [buttonId]: !prevState[buttonId], // Inwertuje stan dla danego przycisku
+        }));
+    };
     return (
         <Layout>
             <HeroLinks />
@@ -90,7 +95,7 @@ const Usługi = () => {
                     <div class="mx-auto flex max-w-screen-sm flex-col border-t">
                         <div class="border-b">
                             <button
-                                onClick={handeFaq}
+                                onClick={() => handleFaq(1)}
                                 class="flex cursor-pointer w-full justify-between gap-2 py-4 text-black hover:text-indigo-700 active:text-indigo-600"
                             >
                                 <span class="font-semibold transition duration-100 md:text-lg">
@@ -99,7 +104,7 @@ const Usługi = () => {
 
                                 <span
                                     class={`text-indigo-700 transition-transform ${
-                                        !showFaq ? "rotate-0" : "rotate-180"
+                                        showFaq[1] ? "rotate-0" : "rotate-180"
                                     }`}
                                 >
                                     <svg
@@ -120,8 +125,10 @@ const Usługi = () => {
                             </button>
 
                             <p
-                                class={`text-gray-700 overflow-hidden transition-all ${
-                                    !showFaq ? "h-0" : "h-max mb-4"
+                                class={`text-gray-700 overflow-hidden transition-all duration-300 ${
+                                    showFaq[1]
+                                        ? "h-0 opacity-0"
+                                        : "h-max opacity-100 mb-4"
                                 }`}
                             >
                                 This is a section of some simple filler text,
@@ -135,7 +142,7 @@ const Usługi = () => {
 
                         <div class="border-b">
                             <button
-                                onClick={handeFaq}
+                                onClick={() => handleFaq(2)}
                                 class="flex w-full cursor-pointer justify-between gap-2 py-4 text-black hover:text-indigo-700 active:text-indigo-600"
                             >
                                 <span class="font-semibold transition duration-100 md:text-lg">
@@ -144,7 +151,7 @@ const Usługi = () => {
 
                                 <span
                                     class={`text-indigo-700 transition-transform ${
-                                        !showFaq ? "rotate-0" : "rotate-180"
+                                        !showFaq[2] ? "rotate-0" : "rotate-180"
                                     }`}
                                 >
                                     <svg
@@ -165,8 +172,10 @@ const Usługi = () => {
                             </button>
 
                             <p
-                                class={`text-gray-700 overflow-hidden transition-all ${
-                                    showFaq ? "h-0" : "h-max mb-4"
+                                class={`text-gray-700 overflow-hidden transition-all duration-300 ${
+                                    !showFaq[2]
+                                        ? "h-0 opacity-0"
+                                        : "h-max opacity-100 mb-4"
                                 }`}
                             >
                                 This is a section of some simple filler text,
@@ -180,7 +189,7 @@ const Usługi = () => {
 
                         <div class="border-b">
                             <button
-                                onClick={handeFaq}
+                                onClick={() => handleFaq(3)}
                                 class="flex cursor-pointer w-full justify-between gap-2 py-4 text-black hover:text-indigo-700 active:text-indigo-600"
                             >
                                 <span class="font-semibold transition duration-100 md:text-lg">
@@ -189,7 +198,7 @@ const Usługi = () => {
 
                                 <span
                                     class={`text-indigo-700 transition-transform ${
-                                        !showFaq ? "rotate-0" : "rotate-180"
+                                        !showFaq[3] ? "rotate-0" : "rotate-180"
                                     }`}
                                 >
                                     <svg
@@ -210,8 +219,10 @@ const Usługi = () => {
                             </button>
 
                             <p
-                                class={`text-gray-700 overflow-hidden transition-all ${
-                                    showFaq ? "h-0" : "h-max mb-4"
+                                class={`text-gray-700 overflow-hidden transition-all duration-300 ${
+                                    !showFaq[3]
+                                        ? "h-0 opacity-0"
+                                        : "h-max opacity-100 mb-4"
                                 }`}
                             >
                                 This is a section of some simple filler text,
@@ -224,7 +235,7 @@ const Usługi = () => {
                         </div>
                         <div class="border-b">
                             <button
-                                onClick={handeFaq}
+                                onClick={() => handleFaq(4)}
                                 class="flex cursor-pointer w-full justify-between gap-2 py-4 text-black hover:text-indigo-700 active:text-indigo-600"
                             >
                                 <span class="font-semibold transition duration-100 md:text-lg">
@@ -233,7 +244,7 @@ const Usługi = () => {
 
                                 <span
                                     class={`text-indigo-700 transition-transform ${
-                                        !showFaq ? "rotate-0" : "rotate-180"
+                                        !showFaq[4] ? "rotate-0" : "rotate-180"
                                     }`}
                                 >
                                     <svg
@@ -254,8 +265,10 @@ const Usługi = () => {
                             </button>
 
                             <p
-                                class={`text-gray-700 overflow-hidden transition-all ${
-                                    showFaq ? "h-0" : "h-max mb-4"
+                                class={`text-gray-700 overflow-hidden transition-all duration-300 ${
+                                    !showFaq[4]
+                                        ? "h-0 opacity-0"
+                                        : "h-max opacity-100 mb-4"
                                 }`}
                             >
                                 This is a section of some simple filler text,
