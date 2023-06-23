@@ -188,7 +188,7 @@ const ServiceTemp = ({
                         >
                             <GatsbyImage
                                 style={{ height: "200px", width: "90%",borderRadius:"8px" }}
-                                image={getImage(node.img.gatsbyImageData)}
+                                image={getImage(node.img)}
                                 alt={node.title}
                                 title={node.title}
                             />
@@ -199,7 +199,7 @@ const ServiceTemp = ({
                                 </h3>
 
                                 <p className="text-gray-800 w-full">
-                                    {node.smallDescription}
+                                    {node.sdesc}
                                 </p>
                             </div>
                         </Link>
@@ -242,7 +242,6 @@ export const query = graphql`
                 title
                 desc
                 img {
-                    alt
                     gatsbyImageData(height: 600, placeholder: NONE)
                     title
                     url
@@ -268,7 +267,6 @@ export const query = graphql`
         allDatoCmsBlog(sort: { position: ASC }) {
             edges {
                 node {
-                    description
                     img {
                         gatsbyImageData(
                             placeholder: NONE
@@ -279,12 +277,8 @@ export const query = graphql`
                         )
                     }
                     slug
-                    smallDescription
+                    sdesc
                     title
-                    tag {
-                        description
-                        title
-                    }
                 }
             }
         }

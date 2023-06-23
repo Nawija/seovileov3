@@ -301,9 +301,7 @@ const ProjectTemplate = ({
                                 >
                                     <GatsbyImage
                                         className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
-                                        image={getImage(
-                                            node.img.gatsbyImageData
-                                        )}
+                                        image={getImage(node.img)}
                                         alt={node.title}
                                     />
                                 </Link>
@@ -356,12 +354,12 @@ export default ProjectTemplate;
 export const query = graphql`
     query MyQuery($slug: String) {
         datoCmsPortfolio(slug: { eq: $slug }) {
-            data
             img {
                 url
                 alt
                 gatsbyImageData(layout: FULL_WIDTH)
             }
+            smallDescription
             krotkiTekst
             link
             naglowek
@@ -371,7 +369,6 @@ export const query = graphql`
         allDatoCmsPortfolio(sort: { data: DESC }) {
             edges {
                 node {
-                    data
                     img {
                         alt
                         gatsbyImageData(layout: FULL_WIDTH)

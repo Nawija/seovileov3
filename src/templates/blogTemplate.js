@@ -76,9 +76,7 @@ const ProjectTemplate = ({
                                             <PinterestShareButton
                                                 url={`https://seovileo.pl/blog/${datoCmsBlog.slug}`}
                                                 media={datoCmsBlog.img.url}
-                                                summary={
-                                                    datoCmsBlog.smallDescription
-                                                }
+                                                summary={datoCmsBlog.sdesc}
                                                 source="Seovileo.pl"
                                             >
                                                 <div className="w-6 h-6">
@@ -91,9 +89,7 @@ const ProjectTemplate = ({
                                             <WhatsappShareButton
                                                 url={`https://seovileo.pl/blog/${datoCmsBlog.slug}`}
                                                 title={datoCmsBlog.title}
-                                                summary={
-                                                    datoCmsBlog.smallDescription
-                                                }
+                                                summary={datoCmsBlog.sdesc}
                                                 source="Seovileo.pl"
                                             >
                                                 <div className="w-6 h-6">
@@ -115,7 +111,7 @@ const ProjectTemplate = ({
                                             <div
                                                 id="descriptionHtml"
                                                 dangerouslySetInnerHTML={{
-                                                    __html: datoCmsBlog.description,
+                                                    __html: datoCmsBlog.desc,
                                                 }}
                                             />
                                         </p>
@@ -158,18 +154,12 @@ const ProjectTemplate = ({
                                 >
                                     <GatsbyImage
                                         className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
-                                        image={getImage(
-                                            node.img.gatsbyImageData
-                                        )}
+                                        image={getImage(node.img)}
                                         alt={node.title}
                                     />
                                 </Link>
 
                                 <div className="flex flex-col gap-2">
-                                    <span className="text-gray-400 text-sm">
-                                        {node.date}
-                                    </span>
-
                                     <h2 className="text-gray-800 w-full md:w-[70%] text-xl font-bold">
                                         <Link
                                             to={`/blog/` + node.slug}
@@ -180,7 +170,7 @@ const ProjectTemplate = ({
                                     </h2>
 
                                     <p className="text-gray-500 w-full capitalize md:w-[70%]">
-                                        {node.smallDescription}
+                                        {node.sdesc}
                                     </p>
 
                                     <div>
@@ -211,40 +201,29 @@ export const Head = ({ data: { datoCmsBlog } }) => (
 export default ProjectTemplate;
 
 export const query = graphql`
-    query MyQuery($slug: String) {
+    query ($slug: String) {
         datoCmsBlog(slug: { eq: $slug }) {
-            description
             img {
                 url
                 alt
                 gatsbyImageData
             }
+            desc
             slug
-            smallDescription
+            sdesc
             title
-            tag {
-                description
-                title
-                twitterCard
-            }
         }
 
         allDatoCmsBlog(sort: { position: ASC }) {
             edges {
                 node {
-                    description
                     img {
                         alt
                         gatsbyImageData
                     }
                     slug
-                    smallDescription
+                    sdesc
                     title
-                    tag {
-                        description
-                        title
-                        twitterCard
-                    }
                 }
             }
         }
