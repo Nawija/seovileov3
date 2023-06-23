@@ -36,14 +36,14 @@ const Usługi = () => {
             <HeroLinks />
             <section className="relative">
                 <div className="mx-auto max-w-screen-xl px-4 md:px-8 -mt-10">
-                    <h3 className="text-center text-xl md:text-2xl mb-4 text-[#006647] font-bold tracking-wide ">
-                        Usługi
-                    </h3>
+                    <h1 className="text-center text-2xl lg:text-3xl mb-4 text-[#006647] font-bold tracking-wide ">
+                        Usługi Seovileo
+                    </h1>
                     <div className="mb-12 max-w-screen-sm mx-auto text-center">
-                        <p className=" text-gray-900 lg:text-base">
+                        <p className=" text-gray-900">
                             Oferuję szeroki zakres usług związanych z
-                            projektowaniem i tworzeniem szybkich stron
-                            internetowych
+                            projektowaniem, pozycjonowaniem i tworzeniem
+                            szalenie szybkich stron internetowych
                         </p>
                     </div>
                     <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 md:mb-8 xl:grid-cols-4 md:gap-6 xl:gap-8">
@@ -81,29 +81,31 @@ const Usługi = () => {
                 <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
                     <div class="mb-10 md:mb-16">
                         <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
-                            Frequently asked questions
+                            Najczęściej zadawane pytania
                         </h2>
 
-                        <p class="mx-auto max-w-screen-md text-center text-gray-700 md:text-lg">
-                            This is a section of some simple filler text, also
-                            known as placeholder text. It shares some
-                            characteristics of a real written text but is random
-                            or otherwise generated.
+                        <p class="mx-auto max-w-screen-md text-center text-gray-700">
+                            Znajdziesz tu odpowiedzi na najważniejsze pytania
+                            dotyczące procesu tworzenia profesjonalnych stron,
+                            skutecznej promocji w wyszukiwarkach oraz
+                            kreatywnego projektowania logo, aby Twoja marka
+                            wyróżniała się wśród konkurencji
                         </p>
                     </div>
 
-                    <div class="mx-auto flex max-w-screen-sm flex-col border-t">
+                    <div class="mx-auto flex max-w-screen-md flex-col border-t">
                         <div class="border-b">
                             <button
                                 onClick={() => handleFaq(1)}
-                                class="flex cursor-pointer w-full justify-between gap-2 py-4 text-black hover:text-indigo-700 active:text-indigo-600"
+                                class="flex cursor-pointer w-full justify-between gap-2 py-4 text-black hover:text-[#006647]"
                             >
-                                <span class="font-semibold transition duration-100 md:text-lg">
-                                    How does the product work?
-                                </span>
+                                <h3 class="font-semibold transition duration-100 md:text-lg">
+                                    Jakie są najważniejsze kroki przy
+                                    projektowaniu strony internetowej?
+                                </h3>
 
                                 <span
-                                    class={`text-indigo-700 transition-transform ${
+                                    class={`text-[#006647] transition-transform ${
                                         showFaq[1] ? "rotate-0" : "rotate-180"
                                     }`}
                                 >
@@ -131,26 +133,24 @@ const Usługi = () => {
                                         : "h-max opacity-100 mb-4"
                                 }`}
                             >
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is
-                                random or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing.
+                                Analiza celów i oczekiwań, projektowanie
+                                interfejsu, tworzenie responsywnego designu,
+                                optymalizacja wydajności
                             </p>
                         </div>
 
                         <div class="border-b">
                             <button
                                 onClick={() => handleFaq(2)}
-                                class="flex w-full cursor-pointer justify-between gap-2 py-4 text-black hover:text-indigo-700 active:text-indigo-600"
+                                class="flex w-full cursor-pointer justify-between gap-2 py-4 text-black hover:text-[#006647]"
                             >
-                                <span class="font-semibold transition duration-100 md:text-lg">
-                                    What are the features?
-                                </span>
+                                <h3 class="font-semibold transition duration-100 md:text-lg">
+                                    Jakie są korzyści pozycjonowania SEO dla
+                                    mojej strony?
+                                </h3>
 
                                 <span
-                                    class={`text-indigo-700 transition-transform ${
+                                    class={`text-[#006647] transition-transform ${
                                         !showFaq[2] ? "rotate-0" : "rotate-180"
                                     }`}
                                 >
@@ -178,26 +178,24 @@ const Usługi = () => {
                                         : "h-max opacity-100 mb-4"
                                 }`}
                             >
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is
-                                random or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing.
+                                Wyższa widoczność w wynikach wyszukiwania,
+                                większy ruch organiczny, zwiększenie liczby
+                                potencjalnych klientów, wzrost konwersji i
+                                zwiększenie świadomości marki.
                             </p>
                         </div>
-
                         <div class="border-b">
                             <button
                                 onClick={() => handleFaq(3)}
-                                class="flex cursor-pointer w-full justify-between gap-2 py-4 text-black hover:text-indigo-700 active:text-indigo-600"
+                                class="flex cursor-pointer w-full justify-between gap-2 py-4 text-black hover:text-[#006647]"
                             >
-                                <span class="font-semibold transition duration-100 md:text-lg">
-                                    What about integrations?
-                                </span>
+                                <h3 class="font-semibold transition duration-100 md:text-lg">
+                                    Jakie są popularne techniki pozycjonowania
+                                    SEO?
+                                </h3>
 
                                 <span
-                                    class={`text-indigo-700 transition-transform ${
+                                    class={`text-[#006647] transition-transform ${
                                         !showFaq[3] ? "rotate-0" : "rotate-180"
                                     }`}
                                 >
@@ -225,25 +223,24 @@ const Usługi = () => {
                                         : "h-max opacity-100 mb-4"
                                 }`}
                             >
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is
-                                random or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing.
+                                Optymalizacja treści i meta-tagów, budowa
+                                zdrowej struktury strony, link building, analiza
+                                słów kluczowych, responsywność i szybkość
+                                ładowania strony, unikalne i wartościowe treści
                             </p>
                         </div>
+
                         <div class="border-b">
                             <button
                                 onClick={() => handleFaq(4)}
-                                class="flex cursor-pointer w-full justify-between gap-2 py-4 text-black hover:text-indigo-700 active:text-indigo-600"
+                                class="flex cursor-pointer w-full justify-between gap-2 py-4 text-black hover:text-[#006647]"
                             >
-                                <span class="font-semibold transition duration-100 md:text-lg">
-                                    Is support available?
-                                </span>
+                                <h3 class="font-semibold transition duration-100 md:text-lg">
+                                    Jakie elementy powinno zawierać dobre logo?
+                                </h3>
 
                                 <span
-                                    class={`text-indigo-700 transition-transform ${
+                                    class={`text-[#006647] transition-transform ${
                                         !showFaq[4] ? "rotate-0" : "rotate-180"
                                     }`}
                                 >
@@ -271,12 +268,9 @@ const Usługi = () => {
                                         : "h-max opacity-100 mb-4"
                                 }`}
                             >
-                                This is a section of some simple filler text,
-                                also known as placeholder text. It shares some
-                                characteristics of a real written text but is
-                                random or otherwise generated. It may be used to
-                                display a sample of fonts or generate text for
-                                testing.
+                                Unikalność, czytelność w różnych rozmiarach,
+                                odzwierciedlenie wartości marki, prostota,
+                                trwałość, skalowalność i łatwość zapamiętywania.
                             </p>
                         </div>
                     </div>

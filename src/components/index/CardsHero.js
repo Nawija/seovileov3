@@ -26,12 +26,12 @@ const CardsHero = () => {
                                     Szybkość działania
                                 </h2>
                                 <p>
-                                    Dzięki wykorzystaniu technologii GatsbyJS
-                                    tworzymy strony internetowe, które działają
-                                    bardzo szybko. Nasze strony ładują się w
-                                    mgnieniu oka, co przekłada się na pozytywne
-                                    doświadczenie użytkownika i lepsze wyniki w
-                                    wyszukiwarkach.
+                                    Przywitaj się z przyszłością stron
+                                    internetowych! Z GatsbyJS Twoja witryna
+                                    działa jak błyskawica. Czas ładowania?
+                                    Mgnienie oka! Wyszukiwarki kochają nas.
+                                    Postaw na szybkość i jakość, Stwórz z nami
+                                    stronę
                                 </p>
                             </div>
                         </div>
@@ -68,11 +68,12 @@ const CardsHero = () => {
                                     Przyjazna SEO
                                 </h2>
                                 <p>
-                                    Dla klientów posiadających strony
-                                    internetowe wsparcie 24/7 to kluczowe
-                                    rozwiązanie. Dzięki temu klienci otrzymują
-                                    szybką i profesjonalną pomoc w przypadku
-                                    problemów z działaniem strony internetowej
+                                    Tajemnica sukcesu online. Zainteresuj się
+                                    możliwościami optymalizacji, która przyciąga
+                                    uwagę klientów, Dominuj w wynikach
+                                    wyszukiwania, zdobywaj większy ruch i
+                                    zwiększać sprzedaż. Skontaktuj się z nami i
+                                    podbij świat online!
                                 </p>
                             </div>
                         </div>
@@ -110,12 +111,12 @@ const CardsHero = () => {
                                     Technologia Premium
                                 </h2>
                                 <p>
-                                    Nowoczesne technologie oferują wiele
-                                    korzyści dla stron internetowych. Pozwalają
-                                    one na łatwe dostosowanie SEO i
-                                    pozycjonowania w wyszukiwarkach, a także na
-                                    poprawę jakości użytkowania dla
-                                    odwiedzających.
+                                    Odkryj korzyści, jakie oferuje nowoczesność.
+                                    Z łatwością dostosuj SEO i pozycjonowanie, a
+                                    także zapewnij wyjątkowe doświadczenie
+                                    odwiedzającym. Zostań liderem! Zainwestuj w
+                                    technologię Premium i przyciągnij rzesze
+                                    klientów!
                                 </p>
                             </div>
                         </div>
