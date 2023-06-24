@@ -125,7 +125,7 @@ const ProjectTemplate = ({
                                         <Link
                                             to="/projekty"
                                             type="button"
-                                            class="btn my-1 mr-4"
+                                            class="btn my-1 mr-4 scale-110"
                                             data-mdb-ripple="true"
                                             data-mdb-ripple-color="light"
                                         >
@@ -135,7 +135,7 @@ const ProjectTemplate = ({
                                         <Link
                                             to="/kontakt"
                                             type="button"
-                                            class="btn my-1"
+                                            class="btn my-1 scale-110"
                                             data-mdb-ripple="true"
                                             data-mdb-ripple-color="light"
                                         >
