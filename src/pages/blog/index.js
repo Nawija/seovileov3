@@ -35,17 +35,17 @@ const BlogPage = ({ data }) => {
                         <h1 className="text-xl md:text-2xl">Blog</h1>
                     </div>
                 </div>
-                <div class="container mt-6 mb-12 mx-auto md:px-6">
+                <div className="container mt-6 mb-12 mx-auto md:px-6">
                     <section>
-                        <h2 class="mb-8 text-center text-3xl font-bold">
+                        <h2 className="mb-8 text-center text-2xl font-bold">
                             Ostatnie Artykuły
                         </h2>
-                        <div class="grid gap-2 mx-2 sm:gap-6 grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+                        <div className="grid gap-2 mx-2 sm:gap-6 grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
                             {allDatoCmsBlog.edges
                                 .slice(0, 4)
                                 .map(({ node }) => (
                                     <div
-                                        class="zoom relative overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
+                                        className="zoom relative overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
                                         data-te-ripple-init
                                         data-te-ripple-color="light"
                                     >
@@ -56,10 +56,10 @@ const BlogPage = ({ data }) => {
                                             alt={node.title}
                                         />
                                         <Link to={"/blog/" + node.slug}>
-                                            <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[#000000cb] bg-fixed">
-                                                <div class="flex h-full items-start justify-start">
-                                                    <div class="m-4 text-white">
-                                                        <h2 class="mb-2 text-sm sm:text-base font-bold">
+                                            <div className="w-full h-full bg-black/70 absolute inset-0 transition-colors hover:bg-black/60">
+                                                <div className="flex h-full items-start justify-start">
+                                                    <div className="m-4 text-white">
+                                                        <h2 className="mb-2 text-sm sm:text-base font-bold">
                                                             {node.title}
                                                         </h2>
                                                         <p className="text-sm hidden sm:flex mb-2">
@@ -79,48 +79,51 @@ const BlogPage = ({ data }) => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed transition duration-300 ease-in-out hover:bg-[#fcfcfc26]"></div>
                                         </Link>
                                     </div>
                                 ))}
                         </div>
 
-                        <div class="my-10 mx-auto md:px-6 max-w-screen-2xl">
-                            <section class="text-center">
-                                <h2 class="mb-8 pb-4 text-center text-3xl font-bold">
+                        <div className="my-10 mx-auto md:px-6 max-w-screen-2xl">
+                            <section className="text-center">
+                                <h2 className="mb-8 pb-4 text-center text-2xl font-bold">
                                     Więcej Postów
                                 </h2>
 
-                                <div class="grid gap-2 mx-2 sm:gap-6 grid-cols-1 sm:grid-cols-2  lg:grid-cols-4">
+                                <div className="grid gap-2 mx-2 sm:gap-6 grid-cols-1 sm:grid-cols-2  lg:grid-cols-4">
                                     {allDatoCmsBlog.edges
                                         .slice(0)
                                         .map(({ node }) => (
-                                            <div class="mb-20 lg:mb-0">
-                                                <div class="relative block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-                                                    <div class="flex">
-                                                        <div
-                                                            class="relative mx-auto -mt-4 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
-                                                            data-te-ripple-init
-                                                            data-te-ripple-color="light"
-                                                        >
+
+                                                <div className="relative block rounded-lg bg-white shadow-lg mb-20 mx-6 sm:mx-0 transition-all">
+                                                    <div className="flex items-stretch justify-center">
+                                                        <div className="relative">
                                                             <GatsbyImage
-                                                                className="w-full"
+                                                                className="w-full rounded-md mx-auto"
                                                                 loading="lazy"
                                                                 image={getImage(
                                                                     node.img
                                                                 )}
                                                                 alt={node.title}
                                                             />
-                                                            <a href="#!">
-                                                                <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]"></div>
-                                                            </a>
+                                                            <Link
+                                                                title={
+                                                                    node.title
+                                                                }
+                                                                to={
+                                                                    "/blog/" +
+                                                                    node.slug
+                                                                }
+                                                            >
+                                                                <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]"></div>
+                                                            </Link>
                                                         </div>
                                                     </div>
-                                                    <div class="p-6">
-                                                        <h2 class="mb-2 text-lg font-bold">
+                                                    <div className="p-6">
+                                                        <h2 className="mb-2 text-lg font-bold">
                                                             {node.seo.title}
                                                         </h2>
-                                                        <p class="mb-2 text-neutral-500 dark:text-neutral-300">
+                                                        <p className="mb-2 text-neutral-500 dark:text-neutral-300">
                                                             <small>
                                                                 Data publikacji{" "}
                                                                 <u>
@@ -128,7 +131,7 @@ const BlogPage = ({ data }) => {
                                                                 </u>
                                                             </small>
                                                         </p>
-                                                        <p class="mb-4 pb-2">
+                                                        <p className="mb-4 pb-2">
                                                             {
                                                                 node.seo
                                                                     .description
@@ -139,11 +142,12 @@ const BlogPage = ({ data }) => {
                                                                 "/blog/" +
                                                                 node.slug
                                                             }
-                                                            className="py-2 px-4 text-sm text-white font-medium bg-orange-600 rounded-lg shadow-md shadow-orange-400"
-                                                        >Czytaj Post</Link>
+                                                            className="py-2 px-4 text-sm text-white font-medium bg-red-700 rounded-lg shadow-md shadow-red-400 transition-colors hover:bg-red-800"
+                                                        >
+                                                            Czytaj Post
+                                                        </Link>
                                                     </div>
                                                 </div>
-                                            </div>
                                         ))}
                                 </div>
                             </section>
