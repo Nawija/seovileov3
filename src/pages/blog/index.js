@@ -40,14 +40,12 @@ const BlogPage = ({ data }) => {
                         <h2 className="mb-8 text-center text-2xl font-bold">
                             Ostatnie Artykuły
                         </h2>
-                        <div className="grid gap-2 mx-2 sm:gap-6 grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+                        <div className="grid gap-2 mx-3 sm:gap-6 grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
                             {allDatoCmsBlog.edges
                                 .slice(0, 4)
                                 .map(({ node }) => (
                                     <div
-                                        className="zoom relative overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
-                                        data-te-ripple-init
-                                        data-te-ripple-color="light"
+                                        className="relative overflow-hidden rounded-lg shadow-lg"
                                     >
                                         <GatsbyImage
                                             className="w-full align-middle transition duration-300 ease-linear"
@@ -56,7 +54,7 @@ const BlogPage = ({ data }) => {
                                             alt={node.title}
                                         />
                                         <Link to={"/blog/" + node.slug}>
-                                            <div className="w-full h-full bg-black/70 absolute inset-0 transition-colors hover:bg-black/60">
+                                            <div className="w-full h-full bg-black/60 absolute inset-0 transition-colors hover:bg-black/50">
                                                 <div className="flex h-full items-start justify-start">
                                                     <div className="m-4 text-white">
                                                         <h2 className="mb-2 text-sm sm:text-base font-bold">
@@ -95,7 +93,7 @@ const BlogPage = ({ data }) => {
                                         .slice(0)
                                         .map(({ node }) => (
 
-                                                <div className="relative block rounded-lg bg-white shadow-lg mx-6 sm:mx-0 transition-all">
+                                                <div className="relative block rounded-lg bg-white shadow-lg mx-1 mb-10 sm:mx-0 transition-all">
                                                     <div className="flex items-stretch justify-center">
                                                         <div className="relative">
                                                             <GatsbyImage
