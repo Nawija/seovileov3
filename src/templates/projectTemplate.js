@@ -10,6 +10,8 @@ import Desktop from "../assets/liveSvg/desktop.svg";
 import Tablet from "../assets/liveSvg/tablet.svg";
 import Phone from "../assets/liveSvg/phone.svg";
 
+import "../styles/template.css";
+
 import {
     FacebookIcon,
     TwitterIcon,
@@ -223,9 +225,7 @@ const ProjectTemplate = ({
                                             <PinterestShareButton
                                                 url={`https://seovileo.pl/${datoCmsProjekty.slug}`}
                                                 media={datoCmsProjekty.img.url}
-                                                summary={
-                                                    datoCmsProjekty.title
-                                                }
+                                                summary={datoCmsProjekty.title}
                                                 source="Seovileo.pl"
                                             >
                                                 <div className="w-6 h-6">
@@ -238,9 +238,7 @@ const ProjectTemplate = ({
                                             <WhatsappShareButton
                                                 url={`https://seovileo.pl/${datoCmsProjekty.slug}`}
                                                 title={datoCmsProjekty.title}
-                                                summary={
-                                                    datoCmsProjekty.title
-                                                }
+                                                summary={datoCmsProjekty.title}
                                                 source="Seovileo.pl"
                                             >
                                                 <div className="w-6 h-6">

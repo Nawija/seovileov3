@@ -5,6 +5,8 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
+import "../styles/template.css";
+
 import {
     FacebookIcon,
     TwitterIcon,
@@ -111,14 +113,14 @@ const ProjectTemplate = ({
                                         <h1 class="text-3xl font-bold capitalize pb-2 mb-5">
                                             {datoCmsBlog.title}
                                         </h1>
-                                        <p class="text-gray-500 text-lg mb-4 pb-2">
+
                                             <div
                                                 id="descHtml"
                                                 dangerouslySetInnerHTML={{
                                                     __html: datoCmsBlog.desc,
                                                 }}
                                             />
-                                        </p>
+
 
                                         <Link
                                             to="/projekty"
@@ -215,8 +217,8 @@ export const query = graphql`
                 alt
                 gatsbyImageData(
                     placeholder: NONE
-                    height: 512
-                    width: 512
+                    height: 600
+                    width: 600
                     forceBlurhash: false
                 )
             }

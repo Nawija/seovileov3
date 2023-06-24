@@ -90,12 +90,12 @@ const BlogPage = ({ data }) => {
                                     Więcej Postów
                                 </h2>
 
-                                <div className="grid gap-2 mx-2 sm:gap-6 grid-cols-1 sm:grid-cols-2  lg:grid-cols-4">
+                                <div className="grid gap-2 mx-2 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                                     {allDatoCmsBlog.edges
                                         .slice(0)
                                         .map(({ node }) => (
 
-                                                <div className="relative block rounded-lg bg-white shadow-lg mb-20 mx-6 sm:mx-0 transition-all">
+                                                <div className="relative block rounded-lg bg-white shadow-lg mx-6 sm:mx-0 transition-all">
                                                     <div className="flex items-stretch justify-center">
                                                         <div className="relative">
                                                             <GatsbyImage
@@ -131,7 +131,7 @@ const BlogPage = ({ data }) => {
                                                                 </u>
                                                             </small>
                                                         </p>
-                                                        <p className="mb-4 pb-2">
+                                                        <p className="mb-4 pb-10">
                                                             {
                                                                 node.seo
                                                                     .description
@@ -142,7 +142,7 @@ const BlogPage = ({ data }) => {
                                                                 "/blog/" +
                                                                 node.slug
                                                             }
-                                                            className="py-2 px-4 text-sm text-white font-medium bg-red-700 rounded-lg shadow-md shadow-red-400 transition-colors hover:bg-red-800"
+                                                            className="absolute bottom-5 left-1/2 -translate-x-1/2 py-2 px-4 text-sm text-white font-medium bg-red-700 rounded-lg shadow-md shadow-red-400 transition-colors hover:bg-red-800"
                                                         >
                                                             Czytaj Post
                                                         </Link>
