@@ -145,22 +145,6 @@ const CalcPrice = () => {
                             name="OpisFirmy"
                         />
                     </div>
-
-                    <div className="flex flex-col items-start justify-start px-1 py-3">
-                        <label className="font-semibold mb-1" htmlFor="t2">
-                            Zakres usług
-                        </label>
-                        <textarea
-                            className="mr-2 w-full px-4 py-3 h-24 rounded-xl"
-                            type="text"
-                            id="t2"
-                            name="ZakresUsług"
-                        />
-                        <p className="text-sm text-gray-700 mt-1 px-1 md:w-[80%]">
-                            Opisz zakres usług jakie wykonuje Twoja firma, ma to
-                            również wpływ na ilość podstron.
-                        </p>
-                    </div>
                     <div className="flex flex-col items-start justify-start px-1 py-3">
                         <label className="font-semibold mb-1" htmlFor="t4">
                             Posiadasz identyfikację wizualną firmy?
