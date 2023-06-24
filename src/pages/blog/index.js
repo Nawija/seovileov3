@@ -12,7 +12,7 @@ const BlogPage = ({ data }) => {
     return (
         <Layout>
             <div className="overflow-hidden w-full z-10">
-                <div className="relative flex items-center h-[9.5rem] md:h-[19rem] overflow-hidden justify-center w-full">
+                <div className="relative flex items-center h-[9.5rem] md:h-[13rem] overflow-hidden justify-center w-full">
                     <LiveBackground />
                     <div className="relative w-full h-full -mt-4 -z-20 ">
                         <StaticImage
@@ -35,62 +35,146 @@ const BlogPage = ({ data }) => {
                         <h1 className="text-xl md:text-2xl">Blog</h1>
                     </div>
                 </div>
+                <div class="container mt-6 mb-12 mx-auto md:px-6">
+                    <section>
+                        <h2 class="mb-8 text-center text-3xl font-bold">
+                            Ostatnie Artykuły
+                        </h2>
+                        <div class="grid gap-2 mx-2 sm:gap-6 grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+                            {allDatoCmsBlog.edges
+                                .slice(0, 4)
+                                .map(({ node }) => (
+                                    <div
+                                        class="zoom relative overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
+                                        data-te-ripple-init
+                                        data-te-ripple-color="light"
+                                    >
+                                        <GatsbyImage
+                                            className="w-full align-middle transition duration-300 ease-linear"
+                                            loading="eager"
+                                            image={getImage(node.img)}
+                                            alt={node.title}
+                                        />
+                                        <Link to={"/blog/" + node.slug}>
+                                            <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[#000000cb] bg-fixed">
+                                                <div class="flex h-full items-start justify-start">
+                                                    <div class="m-4 text-white">
+                                                        <h2 class="mb-2 text-sm sm:text-base font-bold">
+                                                            {node.title}
+                                                        </h2>
+                                                        <p className="text-sm hidden sm:flex mb-2">
+                                                            {
+                                                                node.seo
+                                                                    .description
+                                                            }
+                                                        </p>
+                                                        <p className="hidden sm:flex">
+                                                            <small>
+                                                                Opublikowano{" "}
+                                                                <u>
+                                                                    {node.date}
+                                                                </u>
+                                                            </small>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed transition duration-300 ease-in-out hover:bg-[#fcfcfc26]"></div>
+                                        </Link>
+                                    </div>
+                                ))}
+                        </div>
 
-                <section className="py-6 md:py-10 max-w-screen-xl px-8 md:px-6 mx-auto">
-                    <div class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:mb-8 lg:grid-cols-4 md:gap-6 xl:gap-8">
-                        {allDatoCmsBlog.edges.map(({ node }) => (
-                            <Link
-                                to={node.slug}
-                                title={node.title}
-                                className="mx-auto border border-yellow-500 overflow-hidden rounded-md"
-                            >
-                                <div class="relative flex h-32 items-end overflow-hidden rounded-xl  md:h-62">
-                                    <GatsbyImage
-                                        className="w-full h-full group-hover:scale-110 transition-transform duration-200"
-                                        loading="eager"
-                                        image={getImage(node.img)}
-                                        alt={node.title}
-                                    />
-                                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
-                                    <p className="absolute text-white text-[13px] rounded-xl font-semibold bg-gray-900/70 py-1 px-3 bottom-2 right-4">
-                                        Zobacz
-                                    </p>
-                                </div>
+                        <div class="my-10 mx-auto md:px-6 max-w-screen-2xl">
+                            <section class="text-center">
+                                <h2 class="mb-8 pb-4 text-center text-3xl font-bold">
+                                    Więcej Postów
+                                </h2>
 
-                                <div className="p-2">
-                                    <h2 class=" mt-2 font-bold -tracking-wide capitalize text-start text-gray-800">
-                                        {node.title}
-                                    </h2>
-                                    <div className="border-b w-full h-1 rounded-3xl my-2" />
-                                    <p className="text-sm font-medium">
-                                        {node.sdesc}
-                                    </p>
+                                <div class="grid gap-2 mx-2 sm:gap-6 grid-cols-1 sm:grid-cols-2  lg:grid-cols-4">
+                                    {allDatoCmsBlog.edges
+                                        .slice(0)
+                                        .map(({ node }) => (
+                                            <div class="mb-20 lg:mb-0">
+                                                <div class="relative block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                                                    <div class="flex">
+                                                        <div
+                                                            class="relative mx-auto -mt-4 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
+                                                            data-te-ripple-init
+                                                            data-te-ripple-color="light"
+                                                        >
+                                                            <GatsbyImage
+                                                                className="w-full"
+                                                                loading="lazy"
+                                                                image={getImage(
+                                                                    node.img
+                                                                )}
+                                                                alt={node.title}
+                                                            />
+                                                            <a href="#!">
+                                                                <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]"></div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="p-6">
+                                                        <h2 class="mb-2 text-lg font-bold">
+                                                            {node.seo.title}
+                                                        </h2>
+                                                        <p class="mb-2 text-neutral-500 dark:text-neutral-300">
+                                                            <small>
+                                                                Data publikacji{" "}
+                                                                <u>
+                                                                    {node.date}
+                                                                </u>
+                                                            </small>
+                                                        </p>
+                                                        <p class="mb-4 pb-2">
+                                                            {
+                                                                node.seo
+                                                                    .description
+                                                            }
+                                                        </p>
+                                                        <Link
+                                                            to={
+                                                                "/blog/" +
+                                                                node.slug
+                                                            }
+                                                            className="py-2 px-4 text-sm text-white font-medium bg-orange-600 rounded-lg shadow-md shadow-orange-400"
+                                                        >Czytaj Post</Link>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
                                 </div>
-                            </Link>
-                        ))}
-                    </div>
-                </section>
+                            </section>
+                        </div>
+                    </section>
+                </div>
             </div>
         </Layout>
     );
 };
 
 export const query = graphql`
-    query MyQuery {
+    query {
         allDatoCmsBlog(sort: { position: ASC }) {
             edges {
                 node {
                     img {
                         gatsbyImageData(
-                            height: 128
-                            width: 350
+                            height: 200
+                            width: 300
                             forceBlurhash: false
                             placeholder: NONE
                         )
                     }
+                    date(locale: "pl", formatString: "DD.MM.YYYY")
                     slug
-                    sdesc
                     title
+                    seo {
+                        description
+                        title
+                    }
                 }
             }
         }

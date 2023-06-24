@@ -179,7 +179,9 @@ const ServiceTemp = ({
                 </section>
             </div>
             <div className="bg-gray-100 py-12 md:py-16 lg:py-20 mt-4">
-                    <p className="text-center text-xl font-semibold pb-6 md:pb-12 lg:pb-16 text-gray-700">Ciekawe Posty:</p>
+                <p className="text-center text-xl font-semibold pb-6 md:pb-12 lg:pb-16 text-gray-700">
+                    Ciekawe Posty:
+                </p>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 lg:gap-8 max-w-screen-xl mx-auto">
                     {allDatoCmsBlog.edges.map(({ node }) => (
                         <Link
@@ -187,19 +189,23 @@ const ServiceTemp = ({
                             className="flex border border-transparent md:hover:border-yellow-500 transition-colors rounded-lg p-4 flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6 overflow-hidden"
                         >
                             <GatsbyImage
-                                style={{ height: "200px", width: "90%",borderRadius:"8px" }}
+                                style={{
+                                    height: "200px",
+                                    width: "90%",
+                                    borderRadius: "8px",
+                                }}
                                 image={getImage(node.img)}
-                                alt={node.title}
+                                alt={node.seo.title}
                                 title={node.title}
                             />
 
                             <div className="flex flex-col gap-2 lg:w-2/3">
                                 <h3 className="text-gray-900 w-full text-xl font-bold">
-                                    {node.title}
+                                    {node.seo.title}
                                 </h3>
 
                                 <p className="text-gray-800 w-full">
-                                    {node.sdesc}
+                                    {node.seo.description}
                                 </p>
                             </div>
                         </Link>
@@ -277,8 +283,11 @@ export const query = graphql`
                         )
                     }
                     slug
-                    sdesc
                     title
+                    seo {
+                        description
+                        title
+                    }
                 }
             }
         }

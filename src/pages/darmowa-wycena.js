@@ -20,10 +20,12 @@ const CalcPrice = () => {
                                 forceBlurhash: false
                             )
                         }
-                        desc
                         slug
-                        sdesc
                         title
+                        seo {
+                            description
+                            title
+                        }
                     }
                 }
             }
@@ -480,12 +482,12 @@ const CalcPrice = () => {
                                         to={`/blog/` + node.slug}
                                         className="hoverLink active:text-gray-900 transition duration-100"
                                     >
-                                        {node.title}
+                                        {node.seo.title}
                                     </Link>
                                 </h2>
 
                                 <p className="text-gray-500 w-full text-sm md:w-[90%]">
-                                    {node.sdesc}
+                                    {node.seo.description}
                                 </p>
 
                                 <div className="mb-12">

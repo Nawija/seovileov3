@@ -51,7 +51,7 @@ const ProjectTemplate = ({
                                         <div className=" space-x-4">
                                             <FacebookShareButton
                                                 url={`https://seovileo.pl/blog/${datoCmsBlog.slug}`}
-                                                quote={datoCmsBlog.title}
+                                                quote={datoCmsBlog.seo.title}
                                                 hashtag="#seovileo"
                                             >
                                                 <div className="w-6 h-6">
@@ -63,7 +63,7 @@ const ProjectTemplate = ({
                                             </FacebookShareButton>
                                             <TwitterShareButton
                                                 url={`https://seovileo.pl/blog/${datoCmsBlog.slug}`}
-                                                title={datoCmsBlog.title}
+                                                title={datoCmsBlog.seo.title}
                                                 hashtags={["seovileo"]}
                                             >
                                                 <div className="w-6 h-6">
@@ -76,7 +76,9 @@ const ProjectTemplate = ({
                                             <PinterestShareButton
                                                 url={`https://seovileo.pl/blog/${datoCmsBlog.slug}`}
                                                 media={datoCmsBlog.img.url}
-                                                summary={datoCmsBlog.sdesc}
+                                                summary={
+                                                    datoCmsBlog.seo.description
+                                                }
                                                 source="Seovileo.pl"
                                             >
                                                 <div className="w-6 h-6">
@@ -88,8 +90,10 @@ const ProjectTemplate = ({
                                             </PinterestShareButton>
                                             <WhatsappShareButton
                                                 url={`https://seovileo.pl/blog/${datoCmsBlog.slug}`}
-                                                title={datoCmsBlog.title}
-                                                summary={datoCmsBlog.sdesc}
+                                                title={datoCmsBlog.seo.title}
+                                                summary={
+                                                    datoCmsBlog.seo.description
+                                                }
                                                 source="Seovileo.pl"
                                             >
                                                 <div className="w-6 h-6">
@@ -109,7 +113,7 @@ const ProjectTemplate = ({
                                         </h1>
                                         <p class="text-gray-500 text-lg mb-4 pb-2">
                                             <div
-                                                id="descriptionHtml"
+                                                id="descHtml"
                                                 dangerouslySetInnerHTML={{
                                                     __html: datoCmsBlog.desc,
                                                 }}
@@ -156,6 +160,7 @@ const ProjectTemplate = ({
                                         className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
                                         image={getImage(node.img)}
                                         alt={node.title}
+                                        title={node.title}
                                     />
                                 </Link>
 
@@ -165,12 +170,12 @@ const ProjectTemplate = ({
                                             to={`/blog/` + node.slug}
                                             className="hoverLink active:text-gray-900 capitalize transition duration-100"
                                         >
-                                            {node.title}
+                                            {node.seo.title}
                                         </Link>
                                     </h2>
 
                                     <p className="text-gray-500 w-full capitalize md:w-[70%]">
-                                        {node.sdesc}
+                                        {node.seo.description}
                                     </p>
 
                                     <div>
@@ -193,7 +198,8 @@ const ProjectTemplate = ({
 
 export const Head = ({ data: { datoCmsBlog } }) => (
     <Seo
-        title={datoCmsBlog.title}
+        title={datoCmsBlog.seo.title}
+        description={datoCmsBlog.seo.description}
         siteUrl={`https://seovileo.pl/blog/` + datoCmsBlog.slug}
     />
 );
@@ -215,8 +221,11 @@ export const query = graphql`
             }
             desc
             slug
-            sdesc
             title
+            seo {
+                description
+                title
+            }
         }
 
         allDatoCmsBlog(sort: { position: ASC }) {
@@ -232,8 +241,11 @@ export const query = graphql`
                         )
                     }
                     slug
-                    sdesc
                     title
+                    seo {
+                        description
+                        title
+                    }
                 }
             }
         }
