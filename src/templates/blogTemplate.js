@@ -168,7 +168,7 @@ const ProjectTemplate = ({
                                 </Link>
 
                                 <div className="flex flex-col gap-2">
-                                    <h2 className="text-gray-800 w-full md:w-[70%] text-xl font-bold">
+                                    <h2 className="text-gray-900 w-full md:w-[80%] text-xl font-bold">
                                         <Link
                                             to={`/blog/` + node.slug}
                                             className="hoverLink active:text-gray-900 capitalize transition duration-100"
@@ -177,18 +177,9 @@ const ProjectTemplate = ({
                                         </Link>
                                     </h2>
 
-                                    <p className="text-gray-500 w-full capitalize md:w-[70%]">
+                                    <p className="text-gray-700 w-full capitalize md:w-[90%]">
                                         {node.seo.description}
                                     </p>
-
-                                    <div>
-                                        <Link
-                                            to={`/blog/` + node.slug}
-                                            className="linkColor hoverLink active:text-gray-900 font-semibold transition duration-100"
-                                        >
-                                            Zobacz
-                                        </Link>
-                                    </div>
                                 </div>
                             </div>
                         ))}
