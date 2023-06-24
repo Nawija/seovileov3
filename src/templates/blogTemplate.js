@@ -132,7 +132,8 @@ const ProjectTemplate = ({
 
                                         <Link
                                             to="/kontakt"
-                                            class="btnEmerald my-1"
+                                            type="button"
+                                            class="btn my-1"
                                             data-mdb-ripple="true"
                                             data-mdb-ripple-color="light"
                                         >
