@@ -24,7 +24,7 @@ const BlogPage = ({ data }) => {
                         />
                         <div className="w-full h-full bg-black/70 absolute inset-0" />
                     </div>
-                    <div className="absolute left-[10%] md:bottom-1/2 flex flex-col items-start justify-center text-white">
+                    <div className="absolute left-[10%] md:top-1/3 flex flex-col items-start justify-center text-white">
                         <div className="flex items-center justify-center text-sm font-semibold mt-12 md:mt-5 lg:mt-8">
                             <Link className="text-orange-500" to="/">
                                 Strona Główna
