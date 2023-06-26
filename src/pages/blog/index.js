@@ -44,9 +44,7 @@ const BlogPage = ({ data }) => {
                             {allDatoCmsBlog.edges
                                 .slice(0, 4)
                                 .map(({ node }) => (
-                                    <div
-                                        className="relative overflow-hidden rounded-lg shadow-lg"
-                                    >
+                                    <div className="relative overflow-hidden rounded-lg shadow-lg">
                                         <GatsbyImage
                                             className="w-full align-middle transition duration-300 ease-linear"
                                             loading="eager"
@@ -90,62 +88,53 @@ const BlogPage = ({ data }) => {
 
                                 <div className="grid gap-2 mx-2 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                                     {allDatoCmsBlog.edges
-                                        .slice(0)
+                                        .slice(4)
                                         .map(({ node }) => (
-
-                                                <div className="relative block rounded-lg bg-white shadow-lg mx-1 mb-10 sm:mx-0 transition-all">
-                                                    <div className="flex items-stretch justify-center">
-                                                        <div className="relative">
-                                                            <GatsbyImage
-                                                                className="w-full rounded-md mx-auto"
-                                                                loading="lazy"
-                                                                image={getImage(
-                                                                    node.img
-                                                                )}
-                                                                alt={node.title}
-                                                            />
-                                                            <Link
-                                                                title={
-                                                                    node.title
-                                                                }
-                                                                to={
-                                                                    "/blog/" +
-                                                                    node.slug
-                                                                }
-                                                            >
-                                                                <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]"></div>
-                                                            </Link>
-                                                        </div>
-                                                    </div>
-                                                    <div className="p-6">
-                                                        <h2 className="mb-2 text-lg font-bold">
-                                                            {node.seo.title}
-                                                        </h2>
-                                                        <p className="mb-2 text-neutral-500 dark:text-neutral-300">
-                                                            <small>
-                                                                Data publikacji{" "}
-                                                                <u>
-                                                                    {node.date}
-                                                                </u>
-                                                            </small>
-                                                        </p>
-                                                        <p className="mb-4 pb-10">
-                                                            {
-                                                                node.seo
-                                                                    .description
-                                                            }
-                                                        </p>
+                                            <div className="relative block rounded-lg bg-white shadow-lg mx-1 mb-10 sm:mx-0 transition-all">
+                                                <div className="flex items-stretch justify-center">
+                                                    <div className="relative">
+                                                        <GatsbyImage
+                                                            className="w-full rounded-md mx-auto"
+                                                            loading="lazy"
+                                                            image={getImage(
+                                                                node.img
+                                                            )}
+                                                            alt={node.title}
+                                                        />
                                                         <Link
+                                                            title={node.title}
                                                             to={
                                                                 "/blog/" +
                                                                 node.slug
                                                             }
-                                                            className="absolute bottom-5 left-1/2 -translate-x-1/2 py-2 px-4 text-sm text-white font-medium bg-red-700 rounded-lg shadow-md shadow-red-400 transition-colors hover:bg-red-800"
                                                         >
-                                                            Czytaj Post
+                                                            <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]"></div>
                                                         </Link>
                                                     </div>
                                                 </div>
+                                                <div className="p-6">
+                                                    <h2 className="mb-2 text-lg font-bold">
+                                                        {node.seo.title}
+                                                    </h2>
+                                                    <p className="mb-2 text-neutral-500 dark:text-neutral-300">
+                                                        <small>
+                                                            Data publikacji{" "}
+                                                            <u>{node.date}</u>
+                                                        </small>
+                                                    </p>
+                                                    <p className="mb-4 pb-10">
+                                                        {node.seo.description}
+                                                    </p>
+                                                    <Link
+                                                        to={
+                                                            "/blog/" + node.slug
+                                                        }
+                                                        className="absolute bottom-5 left-1/2 -translate-x-1/2 py-2 px-4 text-sm text-white font-medium bg-red-700 rounded-lg shadow-md shadow-red-400 transition-colors hover:bg-red-800"
+                                                    >
+                                                        Czytaj Post
+                                                    </Link>
+                                                </div>
+                                            </div>
                                         ))}
                                 </div>
                             </section>
