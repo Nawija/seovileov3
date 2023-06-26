@@ -122,7 +122,7 @@ const ProjectTemplate = ({
                                             to={datoCmsProjekty.link}
                                             target="_blank"
                                             type="button"
-                                            class="btnEmerald my-1"
+                                            class="btn my-1"
                                             data-mdb-ripple="true"
                                             data-mdb-ripple-color="light"
                                         >
