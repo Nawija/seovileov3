@@ -17,7 +17,7 @@ module.exports = {
             options: {
                 color: `#ffd500`,
                 showSpinner: true,
-                minimum: 0.0,
+                minimum: 0.1,
             },
         },
         {

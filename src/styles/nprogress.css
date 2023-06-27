@@ -1,5 +1,8 @@
 #nprogress {
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 10000;
     position: fixed;
     height: 100vh;
@@ -15,6 +18,8 @@
   }
   
   #nprogress .spinner-icon {
+    height: 30px;
+    width: 30px;
     border-top-color: #caa500;
     border-left-color: #caa500;
   }
