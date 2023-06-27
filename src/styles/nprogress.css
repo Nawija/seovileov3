@@ -14,13 +14,14 @@
 #nprogress .bar {
     background: linear-gradient(
         20deg,
-        rgba(14, 80, 103, 1) 87%,
-        rgba(231, 189, 0, 1) 100%
+        rgb(14, 80, 103) 87%,
+        rgb(230, 187, 0) 100%
     );
 }
 
 #nprogress .spinner-icon {
-    color: #077197;
+    color: #e7bd00;
+    border-width: 6px !important;
     height: 100px !important;
     width: 100px !important;
     position: fixed;
