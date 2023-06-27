@@ -270,7 +270,7 @@ export const query = graphql`
                 }
             }
         }
-        allDatoCmsBlog(sort: { position: ASC }) {
+        allDatoCmsBlog(limit: 6) {
             edges {
                 node {
                     img {

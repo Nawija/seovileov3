@@ -10,9 +10,9 @@ const ProjectsCompon = () => {
                     node {
                         img {
                             gatsbyImageData(
-                                width: 200
+                                width: 300
                                 placeholder: NONE
-                                height: 200
+                                height: 300
                             )
                         }
                         data

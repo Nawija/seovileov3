@@ -114,13 +114,12 @@ const ProjectTemplate = ({
                                             {datoCmsBlog.title}
                                         </h1>
 
-                                            <div
-                                                id="descHtml"
-                                                dangerouslySetInnerHTML={{
-                                                    __html: datoCmsBlog.desc,
-                                                }}
-                                            />
-
+                                        <div
+                                            id="descHtml"
+                                            dangerouslySetInnerHTML={{
+                                                __html: datoCmsBlog.desc,
+                                            }}
+                                        />
 
                                         <Link
                                             to="/projekty"
@@ -222,7 +221,7 @@ export const query = graphql`
             }
         }
 
-        allDatoCmsBlog(sort: { position: ASC }) {
+        allDatoCmsBlog {
             edges {
                 node {
                     img {
