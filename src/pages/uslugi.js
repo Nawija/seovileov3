@@ -80,7 +80,7 @@ const Usługi = () => {
             <div class="bg-white py-6 sm:py-8 lg:py-12">
                 <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
                     <div class="mb-10 md:mb-16">
-                        <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
+                        <h2 class="mb-4 text-center text-xl font-bold text-gray-800 md:mb-6 lg:text-2xl">
                             Najczęściej zadawane pytania
                         </h2>
 
@@ -99,7 +99,7 @@ const Usługi = () => {
                                 onClick={() => handleFaq(1)}
                                 class="flex cursor-pointer w-full justify-between gap-2 py-4 text-black hover:text-[#006647]"
                             >
-                                <h3 class="font-semibold transition duration-100 md:text-lg">
+                                <h3 class="font-semibold transition text-base">
                                     Jakie są najważniejsze kroki przy
                                     projektowaniu strony internetowej?
                                 </h3>
@@ -127,7 +127,7 @@ const Usługi = () => {
                             </button>
 
                             <p
-                                class={`text-gray-700 overflow-hidden transition-all duration-300 ${
+                                class={`text-gray-700 overflow-hidden transition-all ${
                                     showFaq[1]
                                         ? "h-0 opacity-0"
                                         : "h-max opacity-100 mb-4"
@@ -144,7 +144,7 @@ const Usługi = () => {
                                 onClick={() => handleFaq(2)}
                                 class="flex w-full cursor-pointer justify-between gap-2 py-4 text-black hover:text-[#006647]"
                             >
-                                <h3 class="font-semibold transition duration-100 md:text-lg">
+                                <h3 class="font-semibold transition duration-100 text-base">
                                     Jakie są korzyści pozycjonowania SEO dla
                                     mojej strony?
                                 </h3>

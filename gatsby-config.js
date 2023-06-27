@@ -13,6 +13,15 @@ module.exports = {
         `gatsby-plugin-sitemap`,
         `gatsby-plugin-robots-txt`,
         {
+            resolve: `gatsby-plugin-nprogress`,
+            options: {
+                // Setting a color is optional.
+                color: `tomato`,
+                // Disable the loading spinner.
+                showSpinner: true,
+            },
+        },
+        {
             resolve: `gatsby-transformer-remark`,
             options: {},
         },
