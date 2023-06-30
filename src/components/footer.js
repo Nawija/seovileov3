@@ -18,6 +18,7 @@ const Footer = () => (
                                 className="h-full w-full"
                                 placeholder="blurred"
                                 src="../assets/favicon.png"
+                                alt="seovileo"
                             />
                             <p className="font-bold text-gray-300 transition-all duration-200 text-2xl w-max -mt-1">
                                 Seovileo

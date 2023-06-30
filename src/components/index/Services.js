@@ -11,7 +11,6 @@ const ServicesCompon = () => {
                 edges {
                     node {
                         img {
-                            alt
                             gatsbyImageData(width: 55, placeholder: NONE)
                         }
                         desc

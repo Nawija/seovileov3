@@ -53,6 +53,7 @@ const Header = () => {
                                 loading="eager"
                                 placeholder="blurred"
                                 src="../assets/favicon.png"
+                                alt="seovileo logo"
                             />
                         </div>
                         <p
