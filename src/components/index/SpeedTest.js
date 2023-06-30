@@ -15,9 +15,9 @@ const SpeedTestCompon = () => {
                         quality={100}
                         width={682}
                         loading="eager"
-                        placeholder="blurred"
-                        src="../../assets/speedTest.png"
-                        alt="test szybkosci strony internetowej"
+                        src="../../assets/tworzenie strony internetowej.png"
+                        alt="tworzenie strony internetowej"
+                        title="tworzenie strony internetowej"
                     />
                 </div>
                 <div className="lg:w-[60%] lg:px-2">
