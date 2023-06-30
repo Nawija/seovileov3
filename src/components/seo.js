@@ -33,10 +33,6 @@ function Seo({ title, description, siteUrl, children }) {
             <meta property="og:type" content="website" />
             <meta name="twitter:card" content="summary" />
             <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1"
-            />
-            <meta
                 name="twitter:creator"
                 content={site.siteMetadata?.author || `seovileo`}
             />
