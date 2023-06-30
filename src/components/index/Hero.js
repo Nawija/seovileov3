@@ -37,7 +37,7 @@ const Hero = () => {
 
             <div className="absolute flex flex-col items-center justify-cente">
                 <h1 className="text-2xl md:w-[60%] sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl xl:py-0 font-bold text-gray-100 text-center px-6">
-                    Projektowanie i tworzenie stron www w języku HTML
+                Projektowanie i tworzenie stron internetowych w HTML
                 </h1>
                 <p className="mt-4 text-white px-3 sm:w-3/4 md:w-1/2 text-center">
                     <strong>Tworzenie strony internetowej</strong> to wyjątkowy proces, który
