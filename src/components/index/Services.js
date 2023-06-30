@@ -34,7 +34,7 @@ const ServicesCompon = () => {
                     backgroundImage:
                         "url(https://images.unsplash.com/photo-1644088379091-d574269d422f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1693&q=80)",
                 }}
-            ></div>
+            />
 
             <div className="mx-auto max-w-screen-xl px-4 md:px-8">
                 <h3 className="text-center sm:text-start text-xl md:text-2xl mb-4 text-amber-400 font-bold tracking-wide ">

@@ -3,11 +3,11 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const SpeedTestCompon = () => {
     return (
-        <section className="lg:-mt-10 py-10 md:pt-0 lg:pt-10 max-w-screen-2xl mx-auto">
+        <section className="lg:-mt-10 md:pt-0 lg:pt-10 max-w-screen-2xl mx-auto">
             <p className="text-center font-semibold mx-auto text-lg md:text-xl lg:text-2xl">
                 Szalenie szybka strona!!
             </p>
-            <div className="bg-gradient-to-r from-amber-400 w-[30%] md:w-[18%] h-1 rounded-3xl mb-20 lg:mb-6 mx-auto" />
+            <div className="bg-gradient-to-r from-amber-400 w-[30%] md:w-[18%] h-1 rounded-3xl lg:mb-6 mx-auto" />
             <div className="flex flex-col lg:mt-20 px-4 lg:flex-row py-6 md:pb-16">
                 <div className="sm:w-4/5 -mt-24 w-full lg:w-1/2 mx-auto lg:my-auto flex mb-8 items-center justify-center lg:order-1">
                     <StaticImage

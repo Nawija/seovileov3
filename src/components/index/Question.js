@@ -1,6 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
+import "../../styles/template.css";
+
 const Question = () => {
     const data = useStaticQuery(graphql`
         query {
@@ -16,31 +18,29 @@ const Question = () => {
     `);
 
     return (
-        <div class="bg-slate-100 py-6 sm:py-8 lg:py-12">
+        <div class="bg-sky-50 py-8 sm:py-8 lg:py-12">
             <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-                <div class="mb-10 md:mb-16">
-                    <h4 class="mb-4 text-center text-2xl font-semibold -tracking-wide text-emerald-900 md:mb-6 lg:text-3xl">
+                <div class="mb-8 md:mb-10">
+                    <h2 class="mb-4 text-center text-2xl font-semibold bg-gradient-to-t from-amber-400 to-amber-200 shadow-amber-500 shadow-lg py-2 px-4 w-max mx-auto text-gray-700 md:mb-6 lg:text-3xl rounded-lg">
                         Najczęściej zadawanie pytania
-                    </h4>
+                    </h2>
 
                     <p class="mx-auto max-w-screen-md text-center text-gray-800">
-                        This is a section of some simple filler text, also known
-                        as placeholder text. It shares some characteristics of a
-                        real written text but is random or otherwise generated.
+                        Masz pytania? Mamy odpowiedzi! Nie trać czasu na
+                        przeszukiwanie internetu w poszukiwaniu informacji
+                        znajdź wszystkie potrzebne odpowiedzi poniżej
                     </p>
                 </div>
-
-                {/* <div class="grid gap-4 sm:grid-cols-2 md:gap-8"> */}
                 <div class="flex flex-wrap justify-center items-start mx-auto">
                     {data.allDatoCmsQa.edges.map(({ node }) => (
                         <div class="flex flex-col sm:flex-row items-start justify-start w-full sm:w-1/2 p-4">
                             <div class="flex-grow flex-shrink rounded-lg bg-white drop-shadow-lg p-5 mb-4 sm:mb-0">
                                 <div class="flex items-center justify-between gap-4 pb-4 border-b">
-                                    <h3 class="font-semibold drop-shadow-lg text-lime-700 sm:text-lg md:text-xl">
+                                    <h2 class="font-semibold text-sky-800 sm:text-lg md:text-xl">
                                         {node.title}
-                                    </h3>
+                                    </h2>
 
-                                    <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-300 text-gray-700">
+                                    <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-t from-amber-500 to-amber-300 shadow-amber-600 shadow-lg text-gray-700">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             class="h-6 w-6"
@@ -55,8 +55,12 @@ const Question = () => {
                                         </svg>
                                     </span>
                                 </div>
-
-                                <p class="text-gray-700">{node.description}</p>
+                                <div
+                                    id="descHtml"
+                                    dangerouslySetInnerHTML={{
+                                        __html: node.description,
+                                    }}
+                                />
                             </div>
                         </div>
                     ))}
