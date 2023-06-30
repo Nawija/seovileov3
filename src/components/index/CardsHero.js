@@ -21,17 +21,15 @@ const CardsHero = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <div class="px-2 py-6 sm:px-6">
+                            <div class="px-2 pt-8 pb-12 sm:px-6">
                                 <h2 class="text-lg font-bold mb-4">
-                                    Szybkość działania
+                                    Przewaga w szybkości
                                 </h2>
                                 <p>
-                                    Przywitaj się z przyszłością stron
-                                    internetowych! Z GatsbyJS Twoja witryna
-                                    działa jak błyskawica. Czas ładowania?
-                                    Mgnienie oka! Wyszukiwarki kochają nas.
-                                    Postaw na szybkość i jakość, Stwórz z nami
-                                    stronę
+                                    Dzięki optymalizacji i zaawansowanej
+                                    technologii, Twoja witryna będzie ładować
+                                    się w mgnieniu oka, zachwycając
+                                    użytkowników.
                                 </p>
                             </div>
                         </div>
@@ -63,17 +61,15 @@ const CardsHero = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <div class="px-2 py-6 sm:px-6">
+                            <div class="px-2 pt-8 pb-12 sm:px-6">
                                 <h2 class="text-lg font-bold mb-4">
-                                    Przyjazna SEO
+                                    Mistrzowska widoczność
                                 </h2>
                                 <p>
-                                    Tajemnica sukcesu online. Zainteresuj się
-                                    możliwościami optymalizacji, która przyciąga
-                                    uwagę klientów, Dominuj w wynikach
-                                    wyszukiwania, zdobywaj większy ruch i
-                                    zwiększać sprzedaż. Skontaktuj się z nami i
-                                    podbij świat online!
+                                    Gwarantujemy, że Twoja witryna osiągnie
+                                    wyższe pozycje w wynikach wyszukiwania
+                                    dzięki zoptymalizowanej strukturze i
+                                    doskonałemu SEO.
                                 </p>
                             </div>
                         </div>
@@ -106,17 +102,15 @@ const CardsHero = () => {
                                     </svg>
                                 </div>
                             </div>
-                            <div class="px-2 py-6 sm:px-6">
+                            <div class="px-2 pt-8 pb-12 sm:px-6">
                                 <h2 class="text-lg font-bold mb-4">
-                                    Technologia Premium
+                                    Nieograniczona elastyczność
                                 </h2>
                                 <p>
-                                    Odkryj korzyści, jakie oferuje nowoczesność.
-                                    Z łatwością dostosuj SEO i pozycjonowanie, a
-                                    także zapewnij wyjątkowe doświadczenie
-                                    odwiedzającym. Zostań liderem! Zainwestuj w
-                                    technologię Premium i przyciągnij rzesze
-                                    klientów!
+                                    Tworzymy skalowalne rozwiązania, które
+                                    dostosowują się do Twoich potrzeb
+                                    biznesowych, zapewniając swobodę rozbudowy i
+                                    dostosowania.
                                 </p>
                             </div>
                         </div>
