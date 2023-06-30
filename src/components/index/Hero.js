@@ -40,7 +40,7 @@ const Hero = () => {
                     Projektowanie i tworzenie stron www w języku HTML
                 </h1>
                 <p className="mt-4 text-white px-3 sm:w-3/4 md:w-1/2 text-center">
-                    Tworzenie strony internetowej to wyjątkowy proces, który
+                    <strong>Tworzenie strony internetowej</strong> to wyjątkowy proces, który
                     łączy projektowanie i tworzenie witryn dla użytkowników
                     online. Przy użyciu HTML, kodujemy responsywne szablony,
                     które gwarantują optymalne wyświetlanie na różnych
